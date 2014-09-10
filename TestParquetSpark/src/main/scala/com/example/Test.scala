@@ -1,0 +1,7 @@
+object Test{
+  def main(){
+  }
+
+
+
+}

@@ -1,0 +1,15 @@
+@namespace("com.example")
+protocol Social {
+  enum PrivacyType { FRIENDS, FRIENDS_OF_FRIENDS, PUBLIC, CUSTOM }
+
+  record Person {
+    string name;
+    int year_of_birth;
+    string country = "US";
+    string state;
+    array<Person> friends = [];
+    array<string> languages = [ "English" , "Java" ];
+    PrivacyType defaultPrivacy = "FRIENDS";
+  }
+}
+
