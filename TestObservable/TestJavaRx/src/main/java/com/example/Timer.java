@@ -38,11 +38,24 @@ public class Timer {
   }
   
   public static void debugSeq() {
-	  Observable.just(1,2,3,4,5).map(func).subsribe();
-	  
+	  Observable.just(1,2,3,4,5).map(new Func1<Integer,Integer>(){
+		  @Override
+		  public Integer call(Integer i){
+			  System.out.println(Thread.currentThread().getName());
+			  return i;
+		  }
+	  }).subscribe(new Action1<Integer>(){
+		  @Override
+		  public void call(Integer i){
+			  System.out.println("onNext: " + i);
+		  }
+	  });
   }
+	  
+  
   
   public static void main(String args[]) throws InterruptedException{
 	debugTimer();
+	  //debugSeq();
   }
 }

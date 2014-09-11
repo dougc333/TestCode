@@ -9,7 +9,7 @@ public class ObservableCreate {
 	  Observable.create(new CreateObservable<Integer>()).subscribe(new Action1<Integer>() {
 			@Override
 		    public void call(Integer integer) {
-		        System.out.println("onNext: " + integer);
+		        
 		    }
 		});
   }
