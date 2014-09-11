@@ -1,7 +1,8 @@
-Test the nonasync version I/F java.util.Observer and class java.util.Observable
+javaRx examples
+1) show stream and subscriber; create stream; print out stream using subscriber
+   Observable.just()
 
-An observer is an object which is registred to be notified of changes 
-Observable is an object with state which changes and when the state changes the observers are to be notified
-
-An observable class should have a list of observers and a way to register callbacks 
+2) Observable.just uses Observable.create()
+3) Obserbable.apply is used for stream operations
+4) Observable scheduler for adding threads
 

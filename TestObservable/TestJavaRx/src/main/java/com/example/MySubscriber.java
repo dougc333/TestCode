@@ -1,12 +1,12 @@
+package com.example;
+
 import rx.Subscriber;
-
-
 
 class MySubscriber<Integer> extends Subscriber<Integer>{
 		@Override
 		public void onCompleted() {
 			// TODO Auto-generated method stub
-			System.out.println("Completed Observable.");
+			System.out.println("onComplete");
 		}
 
 		@Override
@@ -19,7 +19,7 @@ class MySubscriber<Integer> extends Subscriber<Integer>{
 		@Override
 		public void onNext(Object arg0) {
 			// TODO Auto-generated method stub
-	        System.out.println("Got: " + arg0);		
+	        System.out.println("onNext: " + arg0);		
 		}
 		  
 	  }
