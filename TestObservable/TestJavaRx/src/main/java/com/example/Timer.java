@@ -7,7 +7,7 @@ import rx.functions.Func1;
 import java.util.concurrent.*;
 
 public class Timer {
-  static CountDownLatch latch = new CountDownLatch(5);
+  static CountDownLatch latch = new CountDownLatch(50);
      
   public static void noDebug() throws InterruptedException{
 	  Observable.interval(1,TimeUnit.SECONDS).subscribe(new Action1<Long>(){
@@ -51,11 +51,20 @@ public class Timer {
 		  }
 	  });
   }
-	  
   
+  
+  
+  
+  //parallel with observeOn vs. subscribeOn
+  public static void debugMap() throws InterruptedException{
+	  Observable.just(1,2,3,4,5,6,7,8,9,10);
+	  
+	  
+  }
   
   public static void main(String args[]) throws InterruptedException{
-	debugTimer();
+	//debugTimer();
 	  //debugSeq();
+	debugMap();
   }
 }
