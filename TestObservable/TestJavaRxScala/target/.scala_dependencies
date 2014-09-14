@@ -1,11 +1,12 @@
 /home/dc/TestCode/TestObservable/TestJavaRxScala/target/classes:/home/dc/.m2/repository/org/scala-lang/scala-library/2.10.4/scala-library-2.10.4.jar:/home/dc/.m2/repository/com/netflix/rxjava/rxjava-scala/0.19.0/rxjava-scala-0.19.0.jar:/home/dc/.m2/repository/com/netflix/rxjava/rxjava-core/0.19.0/rxjava-core-0.19.0.jar:/home/dc/.m2/repository/com/netflix/rxjava/rxjava-async-util/0.19.0/rxjava-async-util-0.19.0.jar:/home/dc/.m2/repository/joda-time/joda-time/2.3/joda-time-2.3.jar
 -------
+../src/main/scala/com/example/ThreadingUtils.scala -> ../src/main/scala/com/example/ThreadingUtils.scala
 ../src/main/scala/com/example/Test.scala -> ../src/main/scala/com/example/Test.scala
-../src/main/scala/com/example/Test.scala -> ../src/main/scala/com/example/package.scala
-../src/main/scala/com/example/package.scala -> ../src/main/scala/com/example/package.scala
+../src/main/scala/com/example/Test.scala -> ../src/main/scala/com/example/ThreadingUtils.scala
 -------
-../src/main/scala/com/example/Test.scala -> classes/com/example/threading/Test$$anonfun$main$1.class
-../src/main/scala/com/example/Test.scala -> classes/com/example/threading/Test.class
-../src/main/scala/com/example/Test.scala -> classes/com/example/threading/Test$.class
-../src/main/scala/com/example/package.scala -> classes/com/example/threading/package.class
-../src/main/scala/com/example/package.scala -> classes/com/example/threading/package$.class
+../src/main/scala/com/example/ThreadingUtils.scala -> classes/com/example/ThreadingUtils$Hate.class
+../src/main/scala/com/example/ThreadingUtils.scala -> classes/com/example/ThreadingUtils.class
+../src/main/scala/com/example/ThreadingUtils.scala -> classes/com/example/ThreadingUtils$Hate$$anonfun$debug$1.class
+../src/main/scala/com/example/ThreadingUtils.scala -> classes/com/example/ThreadingUtils$.class
+../src/main/scala/com/example/Test.scala -> classes/com/example/Test$.class
+../src/main/scala/com/example/Test.scala -> classes/com/example/Test.class
