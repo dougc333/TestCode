@@ -1,0 +1,17 @@
+[0m[[0minfo[0m] [0mPackaging /home/dc/TestCode/TestSparkPerf/target/scala-2.10/benchmark-app_2.10-0.1-SNAPSHOT.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	DataGenerator.class[0m
+[0m[[0mdebug[0m] [0m	  /home/dc/TestCode/TestSparkPerf/target/scala-2.10/classes/DataGenerator.class[0m
+[0m[[0mdebug[0m] [0m	Benchmark$$anonfun$1.class[0m
+[0m[[0mdebug[0m] [0m	  /home/dc/TestCode/TestSparkPerf/target/scala-2.10/classes/Benchmark$$anonfun$1.class[0m
+[0m[[0mdebug[0m] [0m	RateLimitedOutputStream.class[0m
+[0m[[0mdebug[0m] [0m	  /home/dc/TestCode/TestSparkPerf/target/scala-2.10/classes/RateLimitedOutputStream.class[0m
+[0m[[0mdebug[0m] [0m	Benchmark$.class[0m
+[0m[[0mdebug[0m] [0m	  /home/dc/TestCode/TestSparkPerf/target/scala-2.10/classes/Benchmark$.class[0m
+[0m[[0mdebug[0m] [0m	DataGenerator$.class[0m
+[0m[[0mdebug[0m] [0m	  /home/dc/TestCode/TestSparkPerf/target/scala-2.10/classes/DataGenerator$.class[0m
+[0m[[0mdebug[0m] [0m	Benchmark.class[0m
+[0m[[0mdebug[0m] [0m	  /home/dc/TestCode/TestSparkPerf/target/scala-2.10/classes/Benchmark.class[0m
+[0m[[0mdebug[0m] [0m	Benchmark$$anonfun$main$1.class[0m
+[0m[[0mdebug[0m] [0m	  /home/dc/TestCode/TestSparkPerf/target/scala-2.10/classes/Benchmark$$anonfun$main$1.class[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m
