@@ -1,5 +1,8 @@
-Run inside ecliipse
+Run inside ecliipse or 
+[dc@localhost TestTwitter2]$ mvn exec:java -Dexec.mainClass=com.example.Test
+
 output in README.md
 
 Streaming code API docs not accurate
-
+Add Servlet to create packets so we can repeat and debug
+Adding benchmarking from  TD github
