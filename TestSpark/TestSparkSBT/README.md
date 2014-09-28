@@ -3,6 +3,7 @@ run sbt/bin/sbt
 >package
 >run
 
+manually install the spark streaming jar in the sbt. Build from source, manually install in ivy cache
 
 For some reason I also copied the project to /usr/lib/spark. Can't remember why. 
 

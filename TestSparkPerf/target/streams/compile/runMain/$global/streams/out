@@ -1,4 +1,4 @@
-[0m[[0minfo[0m] [0mRunning DataGenerator 9999 100-bytes-lines.txt 1000000[0m
+[0m[[0minfo[0m] [0mRunning Benchmark 1 localhost 9999 1000[0m
 [0m[[0mdebug[0m] [0mWaiting for threads to exit or System.exit to be called.[0m
 [0m[[0mdebug[0m] [0m  Classpath:[0m
 [0m[[0mdebug[0m] [0m	/home/dc/TestCode/TestSparkPerf/target/scala-2.10/classes[0m
