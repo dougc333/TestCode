@@ -1,0 +1,24 @@
+apply plugin: 'groovy'
+apply plugin: 'java'
+
+def ifExists = { url->
+   if (url==null){
+	println('url null')
+	return
+   }
+   println 'url exists'
+   URLConnection urlConn = new URL(url).openConnection()
+   return (urlConn as HttpURLConnection).responseCode==200
+}
+
+task testMe << {
+  ifExists('http://www.google.com')
+}
+
+task dlGit << {
+  def list=[1,2,3,4,5] 
+  list.each{
+    println it 
+  }
+  
+}

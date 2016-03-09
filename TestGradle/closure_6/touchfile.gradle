@@ -1,0 +1,9 @@
+apply plugin: 'groovy'
+
+def touchFile={ name->
+  GFileUtils.touch new File(name)
+}
+
+task testMe<<{
+ touchFile('/Users/dc/TestGradle/a.txt')
+}

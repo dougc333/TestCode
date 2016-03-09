@@ -1,0 +1,6 @@
+task initDb
+initDb << {println "one"}
+initDb << {println "two"}
+initDb  {println "three"}
+
+

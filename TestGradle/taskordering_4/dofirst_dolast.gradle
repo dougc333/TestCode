@@ -1,0 +1,17 @@
+
+
+task first << {
+  println('first')
+}
+
+task second << {
+  println('second')
+}
+
+second.doFirst  {
+  println('third')
+}
+
+first.doLast {
+  
+}

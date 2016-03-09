@@ -1,0 +1,22 @@
+
+apply plugin: 'java'
+apply plugin: 'groovy'
+
+String currDir = System.getProperty("user.dir")
+
+
+def tarzip = { fileDir->
+  println currDir
+  def mkHere = new File(currDir+'/testDir').mkdirs()
+  mkdir('tempdir')
+  def writer = new File("asdf.txt")
+  writer.text = "this is a test file"
+  //this isn't consistent naming convention, should be rmdir not delete!!
+  delete('tempdir')
+  delete('testDir')  
+}
+
+task tarzip << {
+  tarzip()
+
+}

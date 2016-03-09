@@ -1,0 +1,21 @@
+task first<< {
+  println("print first")
+}
+
+task second(dependsOn:first)<< {
+  println('print second')
+}
+
+task third(dependsOn:[second])<<{
+  println('print third')
+}
+
+task fourth(dependsOn:[second, third])<<{
+  println("print fourth")
+}
+
+task fifth(dependsOn:[third,second]) << {
+  println 'print fifth'
+}
+
+
