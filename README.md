@@ -1,5 +1,17 @@
 for my own notes
 
+When black vs. blue, the black indicates a git submodule
+
+Use:
+git rm --cached submodule-name
+git commit -m "Remove submodule entry"
+git push
+
+To remove the submodules. 
+
+
+
+
 TestAvro: Avro avsc generator
 TestFuture: creating Scala Future via Promise and future{}
 TestGradle: transition to Gradle from Makefile, add test nodes
