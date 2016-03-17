@@ -14,6 +14,7 @@ import com.google.common.collect.Lists;
  * Service manager running BenchmarkService
  * Add jmx
  * Add quartz
+ * Add jobs and tasks into service
  */
 public class App 
 {
