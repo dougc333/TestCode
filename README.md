@@ -1,25 +1,18 @@
-for my own notes
+to run the d3 files cd into the directory with the index.html and main.js files. 
+run python SimpleHTTPServer 8888
 
-When black vs. blue, the black indicates a git submodule
+the python server will automatically serve the contents of the directory it is running on
 
-Use:
-git rm --cached submodule-name
-git commit -m "Remove submodule entry"
-git push
+from a browser: use http://localhost:8888/index.html
 
-To remove the submodules. 
+DO NOT USE file:///Users/dc/Downloads/TestD3/index.html
+
+this will load index.html but you will get XHRRequest.. Errors which will make no sense to a beginner
+You will see a security request error of the form: 
+Failed to load resource: net::ERR_CONNECTION_REFUSED
+
+there is also an XHRRequest.. damn can't replicate it when I need it....
 
 
-
-
-TestAvro: Avro avsc generator
-TestFuture: creating Scala Future via Promise and future{}
-TestGradle: transition to Gradle from Makefile, add test nodes
-TestGuava: Guava examples; I keep having to write small test code snippets to remember how syntax works
-TestGuice: Guice examples. not documented anywhere
-TestGuiceHttp: http server Jetty + Guice. Easier than Spring
-TestJavaTwitter4J: authentication is hard to debug. Setting up account sucks
-TestObservable: javarx, javarx-scala. 
-TestSpark: spark wordcount, spark streaming to twitter stream, spark streaming benchmark with spark as data source
-TestTwitter2: twitter streaming example; docs are wrong, had to use Holden's example
+http://techslides.com/over-1000-d3-js-examples-and-demos
 
