@@ -7,16 +7,10 @@ def server_static(filename):
   return static_file(filename,root='/Users/dc/Downloads/TestBackbone/Example1_Models')
 
 
-@route('testcourse',method='POST')
-def testpost(attrs):
+@route('/testcourse',method='POST')
+def testpost():
    print "calling testpost()"
-   print attrs
    return "return from post function in server.py"
-
-@get('/test')
-def testGet():
-  print 'testGet()'
-  return 'testGet() method'
 
 
 @post('/test')
