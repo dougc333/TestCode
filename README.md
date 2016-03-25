@@ -1,4 +1,7 @@
-1) Example1_Models. Wow this is fantastic. Udemy makes everything so easy.
-Models for MVC. Models should have only set/get methods. set/get synonym for REST GET/PUT
+1) Example1_Models - show interaction between Python Bottle servicing POST/GET requests from backbone model
 
-2) 
+2) Example2_Views - show interaction between UI elements (mouse) and model/view
+
+Integrate with D3.js?  
+Show some Hadoop/ML visualizations
+
