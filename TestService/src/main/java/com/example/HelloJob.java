@@ -14,7 +14,7 @@ public class HelloJob implements Job{
 	
 	@Override
 	public void execute(JobExecutionContext arg0) throws JobExecutionException {
-		System.out.println("Hello Wrolds");
+		System.out.println("Hello Job");
 	}
 
 }
