@@ -1,0 +1,34 @@
+[root@r2341-d5-us01 cdhautomation]# ./debughdfs.py
+all_services: <ApiList>(4): [<ApiService>: yarn (cluster: HDDTest), <ApiService>: hive (cluster: HDDTest), <ApiService>: hdfs (cluster: HDDTest), <ApiService>: impala (cluster: HDDTest)]
+service config: ({u'hdfs_service': u'hdfs'}, {})
+role config groups: <ApiList>(5): [<ApiRoleConfigGroup>: yarn-RESOURCEMANAGER-BASE (cluster: HDDTest; service: yarn), <ApiRoleConfigGroup>: yarn-JOBHISTORY-BASE (cluster: HDDTest; service: yarn), <ApiRoleConfigGroup>: yarn-GATEWAY-BASE (cluster: HDDTest; service: yarn), <ApiRoleConfigGroup>: yarn-NODEMANAGER-1 (cluster: HDDTest; service: yarn), <ApiRoleConfigGroup>: yarn-NODEMANAGER-BASE (cluster: HDDTest; service: yarn)]
+rcg: <ApiRoleConfigGroup>: yarn-RESOURCEMANAGER-BASE (cluster: HDDTest; service: yarn)	config: {u'yarn_scheduler_maximum_allocation_mb': u'8192'}
+rcg: <ApiRoleConfigGroup>: yarn-JOBHISTORY-BASE (cluster: HDDTest; service: yarn) 	config: {}
+rcg: <ApiRoleConfigGroup>: yarn-GATEWAY-BASE (cluster: HDDTest; service: yarn) 	config: {u'mapred_reduce_tasks': u'48', u'mapred_submit_replication': u'1'}
+rcg: <ApiRoleConfigGroup>: yarn-NODEMANAGER-1 (cluster: HDDTest; service: yarn) 	config: {u'yarn_nodemanager_local_dirs': u'/yarn/nm', u'yarn_nodemanager_resource_cpu_vcores': u'32', u'yarn_nodemanager_heartbeat_interval_ms': u'100'}
+rcg: <ApiRoleConfigGroup>: yarn-NODEMANAGER-BASE (cluster: HDDTest; service: yarn) 	config: {u'yarn_nodemanager_local_dirs': u'/testdir/yarn/nm', u'yarn_nodemanager_resource_cpu_vcores': u'32', u'yarn_nodemanager_heartbeat_interval_ms': u'100'}
+service config: ({u'hive_metastore_database_port': u'7432', u'hive_metastore_database_password': u'2fzsThuYUA', u'hive_metastore_database_host': u'r2341-d5-us01.dssd.com', u'hive_metastore_database_name': u'hive', u'hive_metastore_database_type': u'postgresql', u'mapreduce_yarn_service': u'yarn'}, {})
+role config groups: <ApiList>(4): [<ApiRoleConfigGroup>: hive-WEBHCAT-BASE (cluster: HDDTest; service: hive), <ApiRoleConfigGroup>: hive-GATEWAY-BASE (cluster: HDDTest; service: hive), <ApiRoleConfigGroup>: hive-HIVESERVER2-BASE (cluster: HDDTest; service: hive), <ApiRoleConfigGroup>: hive-HIVEMETASTORE-BASE (cluster: HDDTest; service: hive)]
+rcg: <ApiRoleConfigGroup>: hive-WEBHCAT-BASE (cluster: HDDTest; service: hive) 	config: {}
+rcg: <ApiRoleConfigGroup>: hive-GATEWAY-BASE (cluster: HDDTest; service: hive) 	config: {}
+rcg: <ApiRoleConfigGroup>: hive-HIVESERVER2-BASE (cluster: HDDTest; service: hive) 	config: {}
+rcg: <ApiRoleConfigGroup>: hive-HIVEMETASTORE-BASE (cluster: HDDTest; service: hive) 	config: {}
+service config: ({u'dfs_block_local_path_access_user': u'impala'}, {})
+role config groups: <ApiList>(10): [<ApiRoleConfigGroup>: hdfs-FAILOVERCONTROLLER-BASE (cluster: HDDTest; service: hdfs), <ApiRoleConfigGroup>: hdfs-BALANCER-BASE (cluster: HDDTest; service: hdfs), <ApiRoleConfigGroup>: hdfs-JOURNALNODE-BASE (cluster: HDDTest; service: hdfs), <ApiRoleConfigGroup>: hdfs-DATANODE-1 (cluster: HDDTest; service: hdfs), <ApiRoleConfigGroup>: hdfs-NFSGATEWAY-BASE (cluster: HDDTest; service: hdfs), <ApiRoleConfigGroup>: hdfs-DATANODE-BASE (cluster: HDDTest; service: hdfs), <ApiRoleConfigGroup>: hdfs-NAMENODE-BASE (cluster: HDDTest; service: hdfs), <ApiRoleConfigGroup>: hdfs-GATEWAY-BASE (cluster: HDDTest; service: hdfs), <ApiRoleConfigGroup>: hdfs-SECONDARYNAMENODE-BASE (cluster: HDDTest; service: hdfs), <ApiRoleConfigGroup>: hdfs-HTTPFS-BASE (cluster: HDDTest; service: hdfs)]
+rcg: <ApiRoleConfigGroup>: hdfs-FAILOVERCONTROLLER-BASE (cluster: HDDTest; service: hdfs) 	config: {}
+rcg: <ApiRoleConfigGroup>: hdfs-BALANCER-BASE (cluster: HDDTest; service: hdfs) 	config: {}
+rcg: <ApiRoleConfigGroup>: hdfs-JOURNALNODE-BASE (cluster: HDDTest; service: hdfs) 	config: {}
+rcg: <ApiRoleConfigGroup>: hdfs-DATANODE-1 (cluster: HDDTest; service: hdfs) 	config: {u'dfs_datanode_data_dir_perm': u'755', u'dfs_data_dir_list': u'/dfs/dn'}
+rcg: <ApiRoleConfigGroup>: hdfs-NFSGATEWAY-BASE (cluster: HDDTest; service: hdfs) 	config: {}
+rcg: <ApiRoleConfigGroup>: hdfs-DATANODE-BASE (cluster: HDDTest; service: hdfs) 	config: {u'dfs_datanode_data_dir_perm': u'755', u'dfs_data_dir_list': u'/testdir/dfs/dn'}
+rcg: <ApiRoleConfigGroup>: hdfs-NAMENODE-BASE (cluster: HDDTest; service: hdfs) 	config: {u'dfs_namenode_servicerpc_address': u'8022', u'dfs_name_dir_list': u'/testdir/dfs/nn'}
+rcg: <ApiRoleConfigGroup>: hdfs-GATEWAY-BASE (cluster: HDDTest; service: hdfs) 	config: {u'dfs_client_use_trash': u'true'}
+rcg: <ApiRoleConfigGroup>: hdfs-SECONDARYNAMENODE-BASE (cluster: HDDTest; service: hdfs) 	config: {u'fs_checkpoint_dir_list': u'/testdir/dfs/snn'}
+rcg: <ApiRoleConfigGroup>: hdfs-HTTPFS-BASE (cluster: HDDTest; service: hdfs) 	config: {}
+service config: ({u'hdfs_service': u'hdfs', u'hive_service': u'hive'}, {})
+role config groups: <ApiList>(5): [<ApiRoleConfigGroup>: impala-STATESTORE-BASE (cluster: HDDTest; service: impala), <ApiRoleConfigGroup>: impala-IMPALAD-BASE (cluster: HDDTest; service: impala), <ApiRoleConfigGroup>: impala-IMPALAD-1 (cluster: HDDTest; service: impala), <ApiRoleConfigGroup>: impala-CATALOGSERVER-BASE (cluster: HDDTest; service: impala), <ApiRoleConfigGroup>: impala-LLAMA-BASE (cluster: HDDTest; service: impala)]
+rcg: <ApiRoleConfigGroup>: impala-STATESTORE-BASE (cluster: HDDTest; service: impala) 	config: {}
+rcg: <ApiRoleConfigGroup>: impala-IMPALAD-BASE (cluster: HDDTest; service: impala) 	config: {u'scratch_dirs': u'/testdir/impala/impalad', u'impalad_memory_limit': u'86536880128'}
+rcg: <ApiRoleConfigGroup>: impala-IMPALAD-1 (cluster: HDDTest; service: impala) 	config: {u'scratch_dirs': u'/impala/impalad', u'impalad_memory_limit': u'86536880128'}
+rcg: <ApiRoleConfigGroup>: impala-CATALOGSERVER-BASE (cluster: HDDTest; service: impala) 	config: {}
+rcg: <ApiRoleConfigGroup>: impala-LLAMA-BASE (cluster: HDDTest; service: impala) 	config: {}
