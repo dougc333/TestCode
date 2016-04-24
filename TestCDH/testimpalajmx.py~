@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+
+
+
+impalad_nodes=['http://r2341-d5-us02:25000','http://r2341-d5-us03:25000','http://r2341-d5-us04:25000']
+
+
+def main():
+  print "testing jmx and metric capture"
+  for hosts in impalad_nodes:
+     print "getting impalad from %s", hosts
+     print curl -i hosts
+
+
+
+if __name__=='__main__':
+  main()

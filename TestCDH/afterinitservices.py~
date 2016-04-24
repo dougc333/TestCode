@@ -1,0 +1,363 @@
+#!/usr/bin/env python
+
+#reverify we need the empty roles
+
+from cm_api.api_client import ApiResource
+from cm_api.endpoints.clusters import ApiCluster
+from cm_api.endpoints.clusters import create_cluster
+from cm_api.endpoints.parcels import ApiParcel
+from cm_api.endpoints.parcels import get_parcel
+from cm_api.endpoints.cms import ClouderaManager
+from cm_api.endpoints.services import ApiService, ApiServiceSetupInfo
+from cm_api.endpoints.services import create_service
+from cm_api.endpoints.types import ApiCommand, ApiRoleConfigGroupRef
+from cm_api.endpoints.role_config_groups import get_role_config_group
+from cm_api.endpoints.role_config_groups import ApiRoleConfigGroup
+from cm_api.endpoints.roles import ApiRole
+from time import sleep
+
+#may have to replace w/hostid
+CLUSTER_HOSTS=['r2341-d5-us02.dssd.com','r2341-d5-us03.dssd.com','r2341-d5-us04.dssd.com']
+CM_HOST='r2341-d5-us01.dssd.com'
+
+hosts = {
+        'r2341-d5-us01.dssd.com': '86de389a-7182-4017-bab1-888ea2cff999',
+        'r2341-d5-us02.dssd.com': '80366fcb-7a0a-448e-836e-d02e299e7975',
+        'r2341-d5-us03.dssd.com': '79af8cf4-18e5-4192-b44b-fe7baa8e87a2',
+        'r2341-d5-us04.dssd.com': '24b2bf04-e4f3-41b5-993c-0633f44b087c'
+   }
+
+
+HDFS_SERVICE_NAME = "HDFS"
+HDFS_SERVICE_CONFIG = {
+  'dfs_replication': 3,
+  'dfs_permissions': 'false',
+  'dfs_block_local_path_access_user': 'impala,hbase,mapred,spark'
+}
+
+HDFS_NAMENODE_SERVICE_NAME = "nn"
+HDFS_NAMENODE_HOST = CM_HOST
+HDFS_NAMENODE_CONFIG = {
+  'dfs_name_dir_list': '/testdir/dfs/nn',
+  'dfs_namenode_handler_count': 30,
+  'dfs_namenode_servicerpc_address': 'r2341-d5-us01.dssd.com:8022',
+  'dfs.namenode.name.dir':'file:///testdir/dfs/nn',
+  'dfs.https.port':'50470',
+  'fs.defaultFS':'hdfs://r2341-d5-us01.dssd.com:8020',
+  'dfs.namenode.acls.enabled':'false',
+  'io.compression.codecs':'',
+  'dfs.blocksize':'134217728',
+  'fs.permissions.umask-mode':'022',
+  'dfs.datanode.hdfs-blocks-metadata.enabled':'true'
+}
+
+
+
+HDFS_SECONDARY_NAMENODE_HOST = CM_HOST
+HDFS_SECONDARY_NAMENODE_CONFIG = {
+  'fs_checkpoint_dir_list': '/testdir/dfs/snn'
+#  'fs_checkpoint_dir_list': HADOOP_DATA_DIR_PREFIX + '/namesecondary',
+}
+# this isnt right, should be 3; what is format for hosts? 
+HDFS_DATANODE_HOSTS = list(CLUSTER_HOSTS)
+#dfs_datanode_du_reserved must be smaller than the amount of free space across the data dirs
+#Ideally each data directory will have at least 1TB capacity; they need at least 100GB at a minimum 
+#dfs_datanode_failed_volumes_tolerated must be less than the number of different data dirs (ie volumes) in dfs_data_dir_list
+HDFS_DATANODE_CONFIG = {
+  'dfs_data_dir_list': '/testdir/dfs/dn',
+  'dfs_datanode_handler_count': 30,
+  #'dfs_datanode_du_reserved': 42949672960,
+  'dfs_datanode_du_reserved': 1073741824,
+  'dfs_datanode_failed_volumes_tolerated': 0,
+  'dfs_datanode_data_dir_perm': 755,
+  'dfs.client.domain.socket.data.traffic':'false',
+  'hadoop.rpc.protection':'authentication',
+  'fs.trash.interval':'1',
+  'hadoop.security.authentication':'simple',
+  'hadoop.security.authorization':'false',
+  'hadoop.ssl.require.client.cert':'false',
+  'dfs.https.address':'r2341-d5-us01.dssd.com:50470',
+  'dfs.https.port':'50470',
+}
+
+HDFS_GATEWAY_HOSTS = list(CLUSTER_HOSTS)
+HDFS_GATEWAY_HOSTS.append(CM_HOST)
+HDFS_GATEWAY_CONFIG = {
+  'dfs_client_use_trash' : 'false',
+  'dfs.client.read.shortcircuit':'true',
+  'dfs.client.read.shortcircuit.skip.checksum':'true',
+  'dfs.client.domain.socket.data.traffic':'false',
+  'dfs.client.use.legacy.blockreader':'false',
+  'dfs.client.use.datanode.hostname':'false'
+}
+
+HDFS_FAILOVER={}
+HDFS_BALANCER={}
+HDFS_JOURNALNODE={}
+HDFS_NFS_GATEWAY={}
+HDFS_HTTP = {}
+
+
+YARN_SERVICE_NAME = "YARN"
+YARN_SERVICE_CONFIG = {
+  'hdfs_service': 'hdfs'
+}
+YARN_RM_HOST = CM_HOST
+YARN_RM_CONFIG = {u'yarn_scheduler_maximum_allocation_mb': u'8192' }
+YARN_JHS_HOST = CM_HOST
+YARN_JHS_CONFIG = { }
+YARN_NM_HOSTS = list(CLUSTER_HOSTS)
+YARN_NM_CONFIG = {
+  u'yarn_nodemanager_local_dirs': u'/testdir/yarn/nm',
+  u'yarn_nodemanager_resource_cpu_vcores': u'32', 
+  u'yarn_nodemanager_heartbeat_interval_ms': u'100'
+}
+
+YARN_GW_HOSTS = list(CLUSTER_HOSTS)
+YARN_GW_CONFIG = {
+  u'mapred_submit_replication': u'1',
+  u'mapred_reduce_tasks': u'48'
+}
+
+
+HIVE_SERVICE_CONFIG={
+  u'hive_metastore_database_port': u'7432', 
+  u'hive_metastore_database_password': u'2fzsThuYUA', 
+  u'hive_metastore_database_host': u'r2341-d5-us01.dssd.com', 
+  u'hive_metastore_database_name': u'hive', 
+  u'hive_metastore_database_type': u'postgresql', 
+  u'mapreduce_yarn_service': u'yarn'
+}
+
+HIVE_WEBHCAT={}
+HIVE_GATEWAY={}
+HIVESERVER2={}
+HIVE_METASTORE={}
+
+IMPALA_SERVICE_CONFIG={u'hdfs_service': u'hdfs', u'hive_service': u'hive'}
+STATESTORE={}
+IMPALAD={u'scratch_dirs': u'/testdir/impala/impalad', u'impalad_memory_limit': u'86536880128'}
+CATALOG={}
+LLAMA={}
+
+
+
+def inspect_hosts(api):
+  cluster = api.get_cluster("HDDTest")
+  print "cluster:", cluster
+  print "Inspecting hosts. This might take a few minutes."
+  #cm = api.get_cloudera_manager()
+  #print "cm:", cm
+  
+  #cmd = cm.inspect_hosts()
+  #while cmd.success == None:
+  #  cmd = cmd.fetch()
+  #
+  #  if cmd.success != True:
+  #      print "Host inpsection failed!"
+  #      exit(0)
+  #
+  #print "Hosts successfully inspected: \n" + cmd.resultMessage
+
+
+def deploy_hdfs(cluster, hdfs_service_name, hdfs_config, hdfs_nn_service_name, hdfs_nn_host, hdfs_nn_config, hdfs_snn_host, hdfs_snn_config, hdfs_dn_hosts, hdfs_dn_config, hdfs_gw_hosts, hdfs_gw_config):
+   hdfs_service = cluster.create_service(hdfs_service_name, "HDFS")
+   hdfs_service.update_config(hdfs_config)
+   
+   nn_role_group = hdfs_service.get_role_config_group("{0}-NAMENODE-BASE".format(hdfs_service_name))
+   nn_role_group.update_config(hdfs_nn_config)
+   nn_service_pattern = "{0}-" + hdfs_nn_service_name
+   hdfs_service.create_role(nn_service_pattern.format(hdfs_service_name), "NAMENODE", hdfs_nn_host)
+   
+   snn_role_group = hdfs_service.get_role_config_group("{0}-SECONDARYNAMENODE-BASE".format(hdfs_service_name))
+   snn_role_group.update_config(hdfs_snn_config)
+   hdfs_service.create_role("{0}-snn".format(hdfs_service_name), "SECONDARYNAMENODE", hdfs_snn_host)
+   
+   dn_role_group = hdfs_service.get_role_config_group("{0}-DATANODE-BASE".format(hdfs_service_name))
+   dn_role_group.update_config(hdfs_dn_config)
+   
+   gw_role_group = hdfs_service.get_role_config_group("{0}-GATEWAY-BASE".format(hdfs_service_name))
+   gw_role_group.update_config(hdfs_gw_config)
+   
+   datanode = 0
+   for host in hdfs_dn_hosts:
+      datanode += 1
+      hdfs_service.create_role("{0}-dn-".format(hdfs_service_name) + str(datanode), "DATANODE", host)
+   
+   gateway = 0
+   for host in hdfs_gw_hosts:
+      gateway += 1
+      hdfs_service.create_role("{0}-gw-".format(hdfs_service_name) + str(gateway), "GATEWAY", host)
+   
+   return hdfs_service
+
+
+
+# Deploys Impala - statestore, catalogserver, impalads
+def deploy_impala(cluster, impala_service_name, impala_service_config, impala_ss_host, impala_ss_config, impala_cs_host, impala_cs_config, impala_id_hosts, impala_id_config):
+   impala_service = cluster.create_service(impala_service_name, "IMPALA")
+   impala_service.update_config(impala_service_config)
+   
+   ss = impala_service.get_role_config_group("{0}-STATESTORE-BASE".format(impala_service_name))
+   ss.update_config(impala_ss_config)
+   impala_service.create_role("{0}-ss".format(impala_service_name), "STATESTORE", impala_ss_host)
+   
+   cs = impala_service.get_role_config_group("{0}-CATALOGSERVER-BASE".format(impala_service_name))
+   cs.update_config(impala_cs_config)
+   impala_service.create_role("{0}-cs".format(impala_service_name), "CATALOGSERVER", impala_cs_host)
+   
+   id = impala_service.get_role_config_group("{0}-IMPALAD-BASE".format(impala_service_name))
+   id.update_config(impala_id_config)
+   
+   impalad = 0
+   for host in impala_id_hosts:
+      impalad += 1
+      impala_service.create_role("{0}-id-".format(impala_service_name) + str(impalad), "IMPALAD", host)
+
+   # Don't think we need these at the end:
+   #impala_service.create_impala_catalog_database()
+   #impala_service.create_impala_catalog_database_tables()
+   #impala_service.create_impala_user_dir()
+   
+   return impala_service
+   
+   
+
+def deploy_hive(cluster, hive_service_name, hive_service_config, hive_hms_host, hive_hms_config, hive_hs2_host, hive_hs2_config, hive_whc_host, hive_whc_config, hive_gw_hosts, hive_gw_config):
+   hive_service = cluster.create_service(hive_service_name, "HIVE")
+   hive_service.update_config(hive_service_config)
+   
+   hms = hive_service.get_role_config_group("{0}-HIVEMETASTORE-BASE".format(hive_service_name))
+   hms.update_config(hive_hms_config)
+   hive_service.create_role("{0}-hms".format(hive_service_name), "HIVEMETASTORE", hive_hms_host)
+   
+   hs2 = hive_service.get_role_config_group("{0}-HIVESERVER2-BASE".format(hive_service_name))
+   hs2.update_config(hive_hs2_config)
+   hive_service.create_role("{0}-hs2".format(hive_service_name), "HIVESERVER2", hive_hs2_host)
+   
+   whc = hive_service.get_role_config_group("{0}-WEBHCAT-BASE".format(hive_service_name))
+   whc.update_config(hive_whc_config)
+   hive_service.create_role("{0}-whc".format(hive_service_name), "WEBHCAT", hive_whc_host)
+   
+   gw = hive_service.get_role_config_group("{0}-GATEWAY-BASE".format(hive_service_name))
+   gw.update_config(hive_gw_config)
+   
+   gateway = 0
+   for host in hive_gw_hosts:
+      gateway += 1
+      hive_service.create_role("{0}-gw-".format(hive_service_name) + str(gateway), "GATEWAY", host)
+   
+   return hive_service
+
+
+
+def deploy_yarn(cluster, yarn_service_name, yarn_service_config, yarn_rm_host, yarn_rm_config, yarn_jhs_host, yarn_jhs_config, yarn_nm_hosts, yarn_nm_config, yarn_gw_hosts, yarn_gw_config):
+   yarn_service = cluster.create_service(yarn_service_name, "YARN")
+   yarn_service.update_config(yarn_service_config)
+      
+   rm = yarn_service.get_role_config_group("{0}-RESOURCEMANAGER-BASE".format(yarn_service_name))
+   rm.update_config(yarn_rm_config)
+   yarn_service.create_role("{0}-rm".format(yarn_service_name), "RESOURCEMANAGER", yarn_rm_host)
+      
+   jhs = yarn_service.get_role_config_group("{0}-JOBHISTORY-BASE".format(yarn_service_name))
+   jhs.update_config(yarn_jhs_config)
+   yarn_service.create_role("{0}-jhs".format(yarn_service_name), "JOBHISTORY", yarn_jhs_host)
+   
+   nm = yarn_service.get_role_config_group("{0}-NODEMANAGER-BASE".format(yarn_service_name))
+   nm.update_config(yarn_nm_config)
+   
+   nodemanager = 0
+   for host in yarn_nm_hosts:
+      nodemanager += 1
+      yarn_service.create_role("{0}-nm-".format(yarn_service_name) + str(nodemanager), "NODEMANAGER", host)
+   
+   gw = yarn_service.get_role_config_group("{0}-GATEWAY-BASE".format(yarn_service_name))
+   gw.update_config(yarn_gw_config)
+   
+   gateway = 0
+   for host in yarn_gw_hosts:
+      gateway += 1
+      yarn_service.create_role("{0}-gw-".format(yarn_service_name) + str(gateway), "GATEWAY", host)
+   
+   #TODO need api version 6 for these, but I think they are done automatically?
+   #yarn_service.create_yarn_job_history_dir()
+   #yarn_service.create_yarn_node_manager_remote_app_log_dir()
+   
+   return yarn_service
+
+
+
+  
+
+def deploy_hdfs1(api):
+   cluster = api.get_cluster("HDDTest")
+   hdfs_service = cluster.create_service("HDFS", "HDFS")
+   hdfs_service.update_config(HDFS_SERVICE_CONFIG)
+   
+   nn_role_group = hdfs_service.get_role_config_group("{0}-NAMENODE-BASE".format("hdfs"))
+   nn_role_group.update_config(HDFS_NN_CONFIG)
+   nn_service_pattern = "{0}-" + "NAMENODE"
+   hdfs_service.create_role(nn_service_pattern.format('hdfs'), "NAMENODE", hosts['r2341-d5-us01.dssd.com'])
+   
+   snn_role_group = hdfs_service.get_role_config_group("{0}-SECONDARYNAMENODE-BASE".format("hdfs"))
+   snn_role_group.update_config(HDFS_SNN_CONFIG)
+   hdfs_service.create_role("{0}-snn".format("hdfs"), "SECONDARYNAMENODE", hosts['r2341-d5-us01.dssd.com'])
+   
+   dn_role_group = hdfs_service.get_role_config_group("{0}-DATANODE-BASE".format("hdfs"))
+   dn_role_group.update_config(HDFS_DN_CONFIG)
+   
+   gw_role_group = hdfs_service.get_role_config_group("{0}-GATEWAY-BASE".format("hdfs"))
+   gw_role_group.update_config(HDFS_GW_CONFIG)
+   
+   datanode = 0
+   for host in CLUSTER_HOSTS:
+      datanode += 1
+      hdfs_service.create_role("{0}-DATANODE-".format("hdfs") + str(datanode), "DATANODE", hosts[host])
+   
+   gateway = 0
+   for host in CLUSTER_HOSTS:
+      gateway += 1
+      hdfs_service.create_role("{0}-gw-".format("hdfs") + str(gateway), "GATEWAY", hosts[host])
+
+   #format NN
+   cmd = hdfs_service.format_hdfs("{0}-NAMENODE".format("hdfs"))[0]
+   if not cmd.wait(30).success:
+      print "WARNING: Failed to format HDFS, attempting to continue with the setup" 
+   
+
+   hdfs_service.start().wait()
+   #start NN
+   
+   #start SNN
+   
+   #start DN
+
+
+def init_hdfs(hdfs_service, hdfs_name):
+   cmd = hdfs_service.format_hdfs("{0}-nn".format(hdfs_name))[0]
+   if not cmd.wait(60).success:
+      print "WARNING: Failed to format HDFS, attempting to continue with the setup" 
+   hdfs_service.start().wait()
+
+
+def main():
+  print "parcels downloaded, verify you can see the services in add services"
+  print "and parcels are activated for CDH, "
+  api = ApiResource('r2341-d5-us01', username='admin', password='admin')
+  print "api:",api
+  inspect_hosts(api)
+  CLUSTER = api.get_cluster("HDDTest") 
+  hdfs_service = deploy_hdfs(CLUSTER, HDFS_SERVICE_NAME, HDFS_SERVICE_CONFIG, HDFS_NAMENODE_SERVICE_NAME, HDFS_NAMENODE_HOST, HDFS_NAMENODE_CONFIG, HDFS_SECONDARY_NAMENODE_HOST, HDFS_SECONDARY_NAMENODE_CONFIG, HDFS_DATANODE_HOSTS, HDFS_DATANODE_CONFIG, HDFS_GATEWAY_HOSTS, HDFS_GATEWAY_CONFIG)
+  print "Deployed HDFS service " + HDFS_SERVICE_NAME + " using NameNode on " + HDFS_NAMENODE_HOST + ", SecondaryNameNode on " + HDFS_SECONDARY_NAMENODE_HOST + ", and DataNodes running on: "
+  #PRETTY_PRINT.pprint(HDFS_DATANODE_HOSTS)
+  #init_hdfs(hdfs_service, HDFS_SERVICE_NAME)
+  #print "Initialized HDFS service"
+  # 
+  print 'installing yarn'
+  yarn_service = deploy_yarn(CLUSTER, YARN_SERVICE_NAME, YARN_SERVICE_CONFIG, YARN_RM_HOST, YARN_RM_CONFIG, YARN_JHS_HOST, YARN_JHS_CONFIG, YARN_NM_HOSTS, YARN_NM_CONFIG, YARN_GW_HOSTS, YARN_GW_CONFIG)
+  print "Deployed YARN service " + YARN_SERVICE_NAME + " using ResourceManager on " + YARN_RM_HOST + ", JobHistoryServer on " + YARN_JHS_HOST + ", and NodeManagers on "
+  #PRETTY_PRINT.pprint(YARN_NM_HOSTS)
+
+  
+if __name__ == '__main__':
+   main()

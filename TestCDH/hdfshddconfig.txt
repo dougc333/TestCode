@@ -1,0 +1,10 @@
+rcg: <ApiRoleConfigGroup>: hdfs-FAILOVERCONTROLLER-BASE (cluster: HDDTest; service: hdfs) 	config: {}
+rcg: <ApiRoleConfigGroup>: hdfs-BALANCER-BASE (cluster: HDDTest; service: hdfs) 	config: {}
+rcg: <ApiRoleConfigGroup>: hdfs-JOURNALNODE-BASE (cluster: HDDTest; service: hdfs) 	config: {}
+rcg: <ApiRoleConfigGroup>: hdfs-DATANODE-1 (cluster: HDDTest; service: hdfs) 	config: {u'dfs_data_dir_list': u'/dfs/dn'}
+rcg: <ApiRoleConfigGroup>: hdfs-NFSGATEWAY-BASE (cluster: HDDTest; service: hdfs) 	config: {}
+rcg: <ApiRoleConfigGroup>: hdfs-DATANODE-BASE (cluster: HDDTest; service: hdfs) 	config: {u'dfs_data_dir_list': u'/testdir/dfs/dn'}
+rcg: <ApiRoleConfigGroup>: hdfs-NAMENODE-BASE (cluster: HDDTest; service: hdfs) 	config: {u'dfs_namenode_servicerpc_address': u'8022', u'dfs_name_dir_list': u'/testdir/dfs/nn'}
+rcg: <ApiRoleConfigGroup>: hdfs-GATEWAY-BASE (cluster: HDDTest; service: hdfs) 	config: {u'dfs_client_use_trash': u'true'}
+rcg: <ApiRoleConfigGroup>: hdfs-SECONDARYNAMENODE-BASE (cluster: HDDTest; service: hdfs) 	config: {u'fs_checkpoint_dir_list': u'/testdir/dfs/snn'}
+rcg: <ApiRoleConfigGroup>: hdfs-HTTPFS-BASE (cluster: HDDTest; service: hdfs) 	config: {}

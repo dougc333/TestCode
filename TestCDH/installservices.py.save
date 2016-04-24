@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+
+
+
+
+#start with host_check (have to run swappy.sh externally till we setup pexpect)
+def main():
+  
+
+
+
+
+if __name__=='__main__':
+  main()

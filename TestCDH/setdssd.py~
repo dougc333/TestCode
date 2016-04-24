@@ -1,0 +1,23 @@
+#/usr/bin/evn python
+
+import argparse
+
+
+
+def cm_args_parser():
+  parser=argparse.ArgumentParser()
+  parser.add_argument("--cm_host",default='r2341-d5-us01',help='host name')
+  parser.add_argument("--cm_user",default='admin',help='cloudera manager login user name')
+  parser.add_argument("--cm_password",default='admin',help='cloudera manager login user password')
+  return parser
+
+def main():
+  parser = cm_args.parser()
+  args = parser.parse_args()
+  print "conencting to host:",args.cm_host
+  api = ApiResource(args.cm_host, args.cm_user, args.cm_password)
+  cm = api.get_cloudera_manager()
+  cm.update_config("dssd_enabled","true")  
+
+if __name__=="__main__":
+  main()
