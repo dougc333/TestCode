@@ -10,12 +10,14 @@ class Match(object):
     c=conn.cursor()
     
     def __init__(self):
+        #for ipython only...
         self.logger = logging.getLogger()
         self.logger.setLevel(logging.INFO)
         self.logger.info("do you see me in red? testing root logger")
         print self.logger.handlers
         for handler in self.logger.handlers:
             self.logger.removeHandler(handler)
+        #end ipython
         
         handler = logging.FileHandler('/Users/dc/TestCode/TestCoding/match.log', 'a')
         handler.setLevel(logging.INFO)
@@ -26,20 +28,42 @@ class Match(object):
         self.matchResult= []
         self.zeroBaseResult=0
         self.numBaseResult = 0
+        self.oneTerm=0
+        self.twoTerm=0
+        self.threeTerm=0
+        self.fourTerm=0
+        self.oneTermResult=0
+        self.twoTermResult=0
+        self.threeTermResult=0
+        self.fourTermResult=0
+        
         
     def processQuery(self,query):
-        findParen = query.find("(")
-        if findParen != -1:
-            self.processBase(query[0:findParen])
-            print "found paren numBaseResult:%d" % len(self.baseResult) 
-            self.logger.info( "found paren numBaseResult:%d" % len(self.baseResult)) 
-            self.processParen(query[findParen+1:query.find(")")])
-        else:
-            self.baseResult = self.processBase(query)
+        removeParen = re.sub(r"[\(\)]", "", self.cleanQuery(query))
+        self.baseResult = self.processBase(removeParen)
+        
+        #findParen = query.find("(")
+        #if findParen != -1:
+        #    self.processBase(query[0:findParen])
+        #    print "found paren numBaseResult:%d" % len(self.baseResult) 
+        #    self.logger.info( "found paren numBaseResult:%d" % len(self.baseResult)) 
+        #    self.processParen(query[findParen+1:query.find(")")])
+        #else:
+        #    self.baseResult = self.processBase(query)
             
         
     def processBase(self,query):
         cleanQ = self.cleanBaseQuery(query)
+        baseTerms = cleanQ.split()
+        if len(baseTerms) ==1:
+            self.oneTerm += 1
+        elif len(baseTerms) ==2:
+            self.twoTerm += 1
+        elif len(baseTerms) ==3:
+            self.threeTerm +=1
+        elif len(baseTerms) >=4:
+            self.fourTerm +=1
+        
         print "processBase query:%s" % cleanQ
         self.logger.info("processBase query:%s" % cleanQ)
         q = "select * from lookup where name like \'%"+cleanQ+"%\'"
@@ -52,6 +76,15 @@ class Match(object):
         
         if len(self.baseResult) == 0:
             self.zeroBaseResult+=1
+            if len(baseTerms) ==1:
+		self.logger.info("incrementing oneTermResult")
+                self.oneTermResult += 1
+            elif len(baseTerms) ==2:
+                self.twoTermResult += 1
+            elif len(baseTerms) ==3:
+                self.threeTermResult +=1
+            elif len(baseTerms) >=4:
+                self.fourTermResult +=1
         else:
             self.numBaseResult += 1
         
@@ -137,16 +170,46 @@ class Match(object):
     
     def test(self):
         with open("/Users/dc/TestCode/TestCoding/nomatch.csv") as f:
-            for line in f:
-                print line
-                self.processQuery(line)
+            for x in range(5):
+                for line in f:
+                    print line
+                    self.processQuery(line)
     def close(self):
         #self.logger.close()
         print "numBaseResult:%d" % self.numBaseResult
         print "self.zeroBaseResult:%d" % self.zeroBaseResult
-        
-        
+        print "----------------------------------------"
+        print "self.oneTerm:%d" % self.oneTerm
+        print "self.twoTerm:%d" % self.twoTerm
+        print "self.threeTerm:%d" % self.threeTerm
+        print "self.fourTerm:%d" % self.fourTerm
+        print "----------------------------------------"
+        print "self.oneTermResult:%d" % self.oneTermResult
+        print "self.twoTermResult:%d" % self.twoTermResult
+        print "self.threeTermResult:%d" % self.threeTermResult
+        print "self.fourTermResult:%d" % self.fourTermResult
+
+    def findAbbrev(self):
+        self.num2=0
+        self.numTokens=0
+
+        for line in open("/Users/dc/TestCode/TestCoding/nomatch.csv"):
+            print "line:%s" % line.lower().split("|")[0]
+            foo = re.sub(r"[()]","",line.lower().split("|")[0])
+            print foo
+           # removePO= re.sub(r"po","",foo)
+           # print removePO
+            for tokens in foo.split():
+                if len(tokens) <=2:
+                    self.num2+=1
+                else:
+                    self.numTokens+=1
+            print "num2:%d" %  self.num2       
+            print "numTokens:%s" % self.numTokens
+            #break
 m = Match()
-m.test()
-m.close()
+m.findAbbrev()
+
+#m.test()
+#m.close()
 
