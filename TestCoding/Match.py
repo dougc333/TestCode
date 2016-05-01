@@ -8,6 +8,7 @@ import sys
 class Match(object):
     conn = sqlite3.connect('/Users/dc/TestCode/TestCoding/clinical.sqlite')
     c=conn.cursor()
+    dictTerms= {"PO":"oral", "or":"oral","\"":""}
     
     def __init__(self):
         #for ipython only...
@@ -42,27 +43,20 @@ class Match(object):
         removeParen = re.sub(r"[\(\)]", "", self.cleanQuery(query))
         self.baseResult = self.processBase(removeParen)
         
-        #findParen = query.find("(")
-        #if findParen != -1:
-        #    self.processBase(query[0:findParen])
-        #    print "found paren numBaseResult:%d" % len(self.baseResult) 
-        #    self.logger.info( "found paren numBaseResult:%d" % len(self.baseResult)) 
-        #    self.processParen(query[findParen+1:query.find(")")])
-        #else:
-        #    self.baseResult = self.processBase(query)
+        findParen = query.find("(")
+        if findParen != -1:
+            self.processBase(query[0:findParen])
+            print "found paren numBaseResult:%d" % len(self.baseResult) 
+            self.logger.info( "found paren numBaseResult:%d" % len(self.baseResult)) 
+            self.processBase(query[findParen+1:query.find(")")])
+        else:
+            self.baseResult = self.processBase(query)
             
         
     def processBase(self,query):
         cleanQ = self.cleanBaseQuery(query)
+        
         baseTerms = cleanQ.split()
-        if len(baseTerms) ==1:
-            self.oneTerm += 1
-        elif len(baseTerms) ==2:
-            self.twoTerm += 1
-        elif len(baseTerms) ==3:
-            self.threeTerm +=1
-        elif len(baseTerms) >=4:
-            self.fourTerm +=1
         
         print "processBase query:%s" % cleanQ
         self.logger.info("processBase query:%s" % cleanQ)
@@ -153,6 +147,7 @@ class Match(object):
     
     def cleanBaseQuery(self, query):
         """
+        add the dictionary, replace PO with oral
         """
         return query.lower().strip()
                                       
@@ -175,7 +170,6 @@ class Match(object):
                     print line
                     self.processQuery(line)
     def close(self):
-        #self.logger.close()
         print "numBaseResult:%d" % self.numBaseResult
         print "self.zeroBaseResult:%d" % self.zeroBaseResult
         print "----------------------------------------"
@@ -189,27 +183,8 @@ class Match(object):
         print "self.threeTermResult:%d" % self.threeTermResult
         print "self.fourTermResult:%d" % self.fourTermResult
 
-    def findAbbrev(self):
-        self.num2=0
-        self.numTokens=0
-
-        for line in open("/Users/dc/TestCode/TestCoding/nomatch.csv"):
-            print "line:%s" % line.lower().split("|")[0]
-            foo = re.sub(r"[()]","",line.lower().split("|")[0])
-            print foo
-           # removePO= re.sub(r"po","",foo)
-           # print removePO
-            for tokens in foo.split():
-                if len(tokens) <=2:
-                    self.num2+=1
-                else:
-                    self.numTokens+=1
-            print "num2:%d" %  self.num2       
-            print "numTokens:%s" % self.numTokens
-            #break
+    
 m = Match()
-m.findAbbrev()
-
-#m.test()
-#m.close()
+m.test()
+m.close()
 
