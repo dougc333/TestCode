@@ -2,3 +2,8 @@ clinical.sqlite
 clinical.*
 *.csv
 *.log
+*.logbackup
+*.html
+*.pdf
+
+
