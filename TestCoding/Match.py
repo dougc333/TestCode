@@ -4,11 +4,16 @@ import sqlite3
 import re
 import logging
 import sys
+from __builtin__ import True
 
+#recall @50% improve recall
 class Match(object):
     conn = sqlite3.connect('/Users/dc/TestCode/TestCoding/clinical.sqlite')
     c=conn.cursor()
     dictTerms= {"PO":"oral", "or":"oral","\"":""}
+    needOneTermStats = True
+    bagOfWords = True
+    numOneTermZeroResults = 0
     
     def __init__(self):
         #for ipython only...
@@ -24,82 +29,85 @@ class Match(object):
         handler.setLevel(logging.INFO)
         self.logger.addHandler(handler)
         self.logger.info("match init")        
-        self.baseResult = []
-        self.ParenResult = []
-        self.matchResult= []
-        self.zeroBaseResult=0
-        self.numBaseResult = 0
-        self.oneTerm=0
-        self.twoTerm=0
-        self.threeTerm=0
-        self.fourTerm=0
-        self.oneTermResult=0
-        self.twoTermResult=0
-        self.threeTermResult=0
-        self.fourTermResult=0
+        self.firstQueryResult = []
+        self.parenResult = []
         
         
     def processQuery(self,query):
-        removeParen = re.sub(r"[\(\)]", "", self.cleanQuery(query))
-        self.baseResult = self.processBase(removeParen)
+        #removeParen = re.sub(r"[\(\)]", "", self.cleanQuery(query))
+        #self.baseResult = self.processBase(removeParen)
         
         findParen = query.find("(")
         if findParen != -1:
-            self.processBase(query[0:findParen])
-            print "found paren numBaseResult:%d" % len(self.baseResult) 
-            self.logger.info( "found paren numBaseResult:%d" % len(self.baseResult)) 
-            self.processBase(query[findParen+1:query.find(")")])
+            #split into 2 queries
+            self.firstQueryResult = self.processBase(query[0:findParen])
+            print "found paren numBaseResult:%d" % len(self.firstQueryResult) 
+            self.logger.info( "found paren numBaseResult:%d" % len(self.firstQueryResult)) 
+            self.parenResult = self.processBase(query[findParen+1:query.find(")")])
         else:
-            self.baseResult = self.processBase(query)
+            self.firstQueryResult = self.processBase(query)
             
         
     def processBase(self,query):
-        cleanQ = self.cleanBaseQuery(query)
+        """
+        2 cases for documentation
+        1) treat query as single query term. Problem is longer query strings have higher probability of 0 results
+        2) break apart query into first term and treat as bag of words narrowing scope using BOW. Problem first term has too many results
+        3) do BOW only if single query term has 0 results. 
+        """
         
-        baseTerms = cleanQ.split()
+        print "processBase query:%s" % query
+        self.logger.info("processBase query:%s" % query)
         
-        print "processBase query:%s" % cleanQ
-        self.logger.info("processBase query:%s" % cleanQ)
-        q = "select * from lookup where name like \'%"+cleanQ+"%\'"
-        print "processBase q:%s" % q
-        self.logger.info("processBase q:%s" % q)
-        self.c.execute(q)
-        self.baseResult = self.c.fetchall()
-        print "num baseResult:%d" , len(self.baseResult)
-        print "setBaseResult:%d", len(set(self.baseResult))
+        cleanQ = self.cleanPunct(query)
+        #baseTerms = cleanQ.split()
+        #baseTerms["po"] = "oral"
+        print "processBase cleanQ:%s" % cleanQ
+        self.logger.info("processBase cleanQ:%s" % cleanQ)
+            
+        if (self.needOneTermStats):   
+            q = "select * from lookup where name like \'%"+cleanQ+"%\'"
+            #q = "select * from lookup where name like \'%"+baseTerms[0]+"%\'"        
+            print "processBase q:%s" % q
+            self.logger.info("processBase q:%s" % q)
+            self.c.execute(q)
+            result = self.c.fetchall()
+            for r in result:
+                self.logger.info("processBase r:%s", r)
+            print "oneTermStats num baseResult:%d" , len(result)
+            if (len(result)==0):
+                self.numOneTermZeroResults +=1
+                
+        if (self.bagWords):
+            #generate terms list and process first term then narrow recall. first document 100% recall
+            terms = cleanQ.split()
+            print "bagWords terms:"
         
-        if len(self.baseResult) == 0:
-            self.zeroBaseResult+=1
-            if len(baseTerms) ==1:
-		self.logger.info("incrementing oneTermResult")
-                self.oneTermResult += 1
-            elif len(baseTerms) ==2:
-                self.twoTermResult += 1
-            elif len(baseTerms) ==3:
-                self.threeTermResult +=1
-            elif len(baseTerms) >=4:
-                self.fourTermResult +=1
-        else:
-            self.numBaseResult += 1
         
-        self.logger.info("num baseResult:%d" , len(self.baseResult))
-        self.logger.info("setBaseResult:%d", len(set(self.baseResult)))
         
-        qDistinct = "select distinct(rxcui) from lookup where name like \'%"+cleanQ+"%\'"
-        print "distinctQuery:%s" % qDistinct
-        self.logger.info("distinctQuery:%s" % qDistinct)
-        self.c.execute(qDistinct)
-        distinctResult = self.c.fetchall()
-        print "numDistinct:%d", len(distinctResult)
-        print "set numDistinct:%d", len(set(distinctResult))
-        self.logger.info("numDistinct:%d", len(distinctResult))
-        self.logger.info("set numDistinct:%d", len(set(distinctResult)))
+        
+        return result
+        
+        #print "setBaseResult:%d", len(set(self.baseResult))
+        
+                
+        #qDistinct = "select distinct(rxcui) from lookup where name like \'%"+cleanQ+"%\'"
+        #print "distinctQuery:%s" % qDistinct
+        #self.logger.info("distinctQuery:%s" % qDistinct)
+        #self.c.execute(qDistinct)
+        #distinctResult = self.c.fetchall()
+        #print "numDistinct:%d", len(distinctResult)
+        #print "set numDistinct:%d", len(set(distinctResult))
+        #self.logger.info("numDistinct:%d", len(distinctResult))
+        #self.logger.info("set numDistinct:%d", len(set(distinctResult)))
         
         
     def processParen(self,query):
         """
         using ferrous sulfate example the paren terms are a separate set and have to
         be anded with the original terms. Return list with best match and put on top. 
+        refactor this out. only need the replacement of po w/oral or or w/oral.
+        add the dictionary processing on terms 
         """
         print "processParen query:%s" % query
         self.logger.info("processParen query:%s" % query)
@@ -144,21 +152,26 @@ class Match(object):
  #          self.logger.info()
             print set(terms).issubset(set(r[0].split()))
  #          self.logger.info()
-    
-    def cleanBaseQuery(self, query):
+       
+    def cleanTerms(self, terms):
         """
-        add the dictionary, replace PO with oral
+        replace terms with dict
+        """                            
+        for key in self.dictTerms:
+            if key in terms:
+                terms[key] = self.dictTerms[key] 
+        
+        
+    def cleanPunct(self,query):
         """
-        return query.lower().strip()
-                                      
-    def cleanQuery(self,query):
-        """
-        this will end up becoming list of queries PO->oral, pill, etc...
+        removes punctuation:
+        replace - with space, have to be careful with the hyphen. Sometimes this is not correct
+        replace ' with nothing
         """
         print "query before clean punct:%s" % query
         self.logger.info("query before clean punct:%s" % query)
         replaceSpace = re.sub("-"," ",query.lower())
-        cleanPunct = re.sub("'", "", replaceSpace)
+        cleanPunct = re.sub("'", "", replaceSpace).strip()
         print "clean punct:%s" % cleanPunct
         self.logger.info("clean punct:%s" % cleanPunct)
         return cleanPunct
@@ -169,20 +182,11 @@ class Match(object):
                 for line in f:
                     print line
                     self.processQuery(line)
+                    
     def close(self):
         print "numBaseResult:%d" % self.numBaseResult
-        print "self.zeroBaseResult:%d" % self.zeroBaseResult
-        print "----------------------------------------"
-        print "self.oneTerm:%d" % self.oneTerm
-        print "self.twoTerm:%d" % self.twoTerm
-        print "self.threeTerm:%d" % self.threeTerm
-        print "self.fourTerm:%d" % self.fourTerm
-        print "----------------------------------------"
-        print "self.oneTermResult:%d" % self.oneTermResult
-        print "self.twoTermResult:%d" % self.twoTermResult
-        print "self.threeTermResult:%d" % self.threeTermResult
-        print "self.fourTermResult:%d" % self.fourTermResult
-
+        if (self.needOneTermStats):
+            print "self.numOneTermStats:%d" % self.numOneTermZeroResults
     
 m = Match()
 m.test()
