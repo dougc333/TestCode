@@ -129,6 +129,7 @@ class Match(object):
         print "query before clean punct:%s" % query
         self.logger.info("query before clean punct:%s" % query)
         replaceSpace = re.sub("[-|/,]"," ",query.lower())
+        self.logger.info("replaceSpace:%s", replaceSpace)
         cleanPunct = re.sub("'", "", replaceSpace).strip()
         print "clean punct:%s" % cleanPunct
         self.logger.info("clean punct:%s" % cleanPunct)
@@ -140,16 +141,27 @@ class Match(object):
                 for line in f:
                     print line
                     self.processQuery(line)
+    
+    
+    def writeToCSV(self,fileWrite,dict):
+        for keys in dict:
+            fileWrite.write(str(keys)+":"+str(dict[keys]))
+            fileWrite.write("\n")
+        fileWrite.close()
+        
                     
     def close(self):
         print "self.numQueriesProcessed:%d" % self.numQueriesProcessed
         if (self.needOneTermStats):
             print "self.numOneZeroResults:%d" % self.numOneTermZeroResults
             print self.resultStatsQ
+            self.writeToCSV(open("/Users/dc/TestCode/TestCoding/statsQ.txt","w"), self.resultStatsQ)
             
         if(self.bagOfWords):
             print "bagWords numBagWordsZeroResults:%d" % self.numBagWordsZeroResults
             print self.resultStatsBOW
+            self.writeToCSV(open("/Users/dc/TestCode/TestCoding/BOW.txt","w"), self.resultStatsBOW)
+            
 m = Match()
 m.test()
 m.close()
