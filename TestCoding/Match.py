@@ -36,7 +36,7 @@ class Match(object):
         self.logger.info("match init")        
         self.firstQueryResult = []
         self.parenResult = []
-        
+        self.filterResult=[]
         
     def processQuery(self,query):
         #removeParen = re.sub(r"[\(\)]", "", self.cleanQuery(query))
@@ -96,16 +96,24 @@ class Match(object):
             result = self.c.fetchall()
             self.resultStatsBOW[self.numQueriesProcessed] = len(result)
 
-            #for r in result:
-            #    self.logger.info("processBase bagWords r:%s", r)
             print "bagWords num baseResult:%d" , len(result)
             self.logger.info("bagWords num baseResult:%d" , len(result))
             if (len(result)==0):
                 self.numBagWordsZeroResults +=1
                 self.logger.info("BOW 0 RESULTS")
             #pick out best query matches
+            self.filterResult = self.filterResult(result,terms)
         return       
         
+    def filterResult(self,resultList,terms):
+        """
+        input: resultList from first term like, term list
+        output: filtered resultList matching all terms
+        """
+        for r in resultList:
+            print "processing match for r:%s" % r
+            
+       
        
     def cleanTerms(self, terms):
         """
