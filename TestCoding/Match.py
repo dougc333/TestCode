@@ -36,7 +36,6 @@ class Match(object):
         self.logger.info("match init")        
         self.firstQueryResult = []
         self.parenResult = []
-        self.filterResult=[]
         
     def processQuery(self,query):
         #removeParen = re.sub(r"[\(\)]", "", self.cleanQuery(query))
@@ -94,6 +93,10 @@ class Match(object):
             self.logger.info("processBase bagWords q:%s" % q)
             self.c.execute(q)
             result = self.c.fetchall()
+            print "---------------"
+            print result
+            print "---------------"
+            
             self.resultStatsBOW[self.numQueriesProcessed] = len(result)
 
             print "bagWords num baseResult:%d" , len(result)
@@ -101,20 +104,29 @@ class Match(object):
             if (len(result)==0):
                 self.numBagWordsZeroResults +=1
                 self.logger.info("BOW 0 RESULTS")
-            #pick out best query matches
-            self.filterResult = self.filterResult(result,terms)
+            else:
+                self.filterResult(terms)
         return       
+    
+    
         
-    def filterResult(self,resultList,terms):
+    def filterResult(self,terms):
         """
         input: resultList from first term like, term list
         output: filtered resultList matching all terms
         """
-        for r in resultList:
-            print "processing match for r:%s" % r
-            
-       
-       
+        print "filterResult terrms:", terms
+        for t in terms:
+            print "terms:%s" % t
+        
+        #for r in resultList:
+        #    print "processing match for r:%s" % r
+        #    print "matching term:", terms
+        #    print "set(terms):", set(terms)
+        #    print "set(r):", set(r)
+        #    print "set(r) is subset:", set(r).issubset(set(terms))
+        #break
+        
     def cleanTerms(self, terms):
         """
         replace terms with dict
