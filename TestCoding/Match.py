@@ -10,7 +10,7 @@ from __builtin__ import True
 class Match(object):
     conn = sqlite3.connect('/Users/dc/TestCode/TestCoding/clinical.sqlite')
     c=conn.cursor()
-    dictTerms= {"PO":"oral", "or":"oral","\"":""}
+    dictTerms= {"PO":"oral","po":"oral", "or":"oral","\"":""}
     needOneTermStats = True
     bagOfWords = True
     numOneTermZeroResults = 0
@@ -45,13 +45,14 @@ class Match(object):
         findParen = query.find("(")
         if findParen != -1:
             #split into 2 queries
-            self.processBase(query[0:findParen])
-            self.processBase(query[findParen+1:query.find(")")])
+            self.processBase(query[0:findParen],query[findParen+1:query.find(")")])
+            #in some cases we have process the paren term as a separate base term
+            #self.processBase(query[findParen+1:query.find(")")])
         else:
             self.firstQueryResult = self.processBase(query)
             
         
-    def processBase(self,query):
+    def processBase(self,query,parenString):
         """
         2 cases for documentation
         1) treat query as single query term. Problem is longer query strings have higher probability of 0 results
@@ -70,6 +71,7 @@ class Match(object):
             
         if (self.needOneTermStats):   
             q = "select * from lookup where name like \'%"+cleanQ+"%\'"
+            qCount = "select distinct(rxcui) from lookup where name like \'%"+cleanQ+"%\'"
             #q = "select * from lookup where name like \'%"+baseTerms[0]+"%\'"        
             print "processBase needOneTermStats q:%s" % q
             self.logger.info("processBase needOneTermStats q:%s" % q)
@@ -78,10 +80,29 @@ class Match(object):
             self.resultStatsQ[self.numQueriesProcessed] = len(result)
             for r in result:
                 self.logger.info("processBase needOneTermStats r:%s", r)
+                print "needOneTermStats result:", r
             print "oneTermStats num result:%d" , len(result)
+            self.c.execute(qCount)
+            resultNumRXCUI = self.c.fetchall()
+            print "numDistinct rxcui:%d for cleanQ:%s" % (len(resultNumRXCUI),cleanQ)
+            
             if (len(result)==0):
                 self.numOneTermZeroResults +=1
-                
+            else:
+                """
+                """
+                print "parenString:%s" % parenString
+                cleanParenString=self.cleanPunct(parenString)
+                print "cleanParenString:%s" % cleanParenString
+                termParen=cleanParenString.split()
+                self.cleanTerms(termParen)
+                print "termParen:", termParen
+                self.numTrue=0
+                self.filterResult(result,termParen)
+                print "----------------------"
+                print "numTrue:%d" % self.numTrue
+                print "----------------------"
+        
                 
         if (self.bagOfWords):
             terms = cleanQ.split()
@@ -94,7 +115,7 @@ class Match(object):
             self.c.execute(q)
             result = self.c.fetchall()
             print "---------------"
-            print result
+            #print result
             print "---------------"
             
             self.resultStatsBOW[self.numQueriesProcessed] = len(result)
@@ -105,35 +126,53 @@ class Match(object):
                 self.numBagWordsZeroResults +=1
                 self.logger.info("BOW 0 RESULTS")
             else:
-                self.filterResult(terms)
+                self.filterResult(result , terms)
         return       
     
     
         
-    def filterResult(self,terms):
+    def filterResult(self,rTupleList, terms):
         """
         input: resultList from first term like, term list
         output: filtered resultList matching all terms
         """
-        print "filterResult terrms:", terms
-        for t in terms:
-            print "terms:%s" % t
+        print "calling filterResult"
+        self.logger.info("calling filterResult")
+        self.logger.info("-----------------------")
+        #self.logger.info("rList:"+rList)
+        self.logger.info("-----------------------")
         
-        #for r in resultList:
-        #    print "processing match for r:%s" % r
-        #    print "matching term:", terms
-        #    print "set(terms):", set(terms)
-        #    print "set(r):", set(r)
-        #    print "set(r) is subset:", set(r).issubset(set(terms))
-        #break
         
+        for rTuple in rTupleList:
+#            print "resultString:%s" % rTuple[0]
+            #self.logger.info("resultString:%s" % rTuple[0])
+            
+ #           print "rxcui:%s" % rTuple[1]
+            #self.logger.info("rxcui:%s" % rTuple[1])
+            
+            
+  #          print "processing match for:%s" % rTuple[0].split()
+            #self.logger.info("processign match for r:%s" % rTuple[0].split())
+   #         print "matching term:", terms
+            #self.logger.info("matching term:", terms)
+    #        print "set(terms):", set(terms)
+            #self.logger.info("set(terms):", str(set(terms)))
+     #       print "set(r):", set(rTuple[0].split())
+            #self.logger.info("set(r):", str(set(rTuple[0].split())))
+            trueOrFalse = set(terms).issubset(set(rTuple[0].split()))
+      #      print "set(r) is subset:", trueOrFalse
+            if trueOrFalse==True:
+                self.numTrue+=1
+            
+            #self.logger.info("set(r) is subset:", str(set(rTuple[0]).issubset((set(terms)))))
+            
     def cleanTerms(self, terms):
         """
         replace terms with dict
         """                            
         for index in range(len(terms)):
-            print index
-            print terms[index]
+            print "cleanTerms:%d" % index
+            print "cleanTerms: %s" % terms[index]
             if terms[index] in self.dictTerms:
                 print "terms[index] in dictTerms"
                 foo = self.dictTerms[terms[index]]
@@ -170,7 +209,7 @@ class Match(object):
         fileWrite.close()
         
                     
-    def close(self):
+    def close(self):        
         print "self.numQueriesProcessed:%d" % self.numQueriesProcessed
         if (self.needOneTermStats):
             print "self.numOneZeroResults:%d" % self.numOneTermZeroResults
