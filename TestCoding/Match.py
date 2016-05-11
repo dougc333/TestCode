@@ -30,7 +30,7 @@ class Match(object):
             self.logger.removeHandler(handler)
         #end ipython
         
-        handler = logging.FileHandler('/Users/dc/TestCode/TestCoding/match.log', 'a')
+        handler = logging.FileHandler('/Users/dc/TestCode/TestCoding/match.log', 'w')
         handler.setLevel(logging.INFO)
         self.logger.addHandler(handler)
         self.logger.info("match init")        
@@ -49,7 +49,7 @@ class Match(object):
             #in some cases we have process the paren term as a separate base term
             #self.processBase(query[findParen+1:query.find(")")])
         else:
-            self.firstQueryResult = self.processBase(query)
+            self.firstQueryResult = self.processBase(query,"")
             
         
     def processBase(self,query,parenString):
@@ -82,9 +82,12 @@ class Match(object):
                 self.logger.info("processBase needOneTermStats r:%s", r)
                 print "needOneTermStats result:", r
             print "oneTermStats num result:%d" , len(result)
+            self.logger.info("oneTermStats num result:%d" , len(result))
+            
             self.c.execute(qCount)
             resultNumRXCUI = self.c.fetchall()
             print "numDistinct rxcui:%d for cleanQ:%s" % (len(resultNumRXCUI),cleanQ)
+            self.logger.info("numDistinct rxcui:%d for cleanQ:%s" % (len(resultNumRXCUI),cleanQ))
             
             if (len(result)==0):
                 self.numOneTermZeroResults +=1
@@ -92,21 +95,30 @@ class Match(object):
                 """
                 """
                 print "parenString:%s" % parenString
+                self.logger.info( "parenString:%s" % parenString)
                 cleanParenString=self.cleanPunct(parenString)
                 print "cleanParenString:%s" % cleanParenString
+                self.logger.info( "cleanParenString:%s" % cleanParenString)
                 termParen=cleanParenString.split()
                 self.cleanTerms(termParen)
                 print "termParen:", termParen
+                self.logger.info( "termParen:")
+                self.logger.info(" ".join(termParen))
                 self.numTrue=0
                 self.filterResult(result,termParen)
                 print "----------------------"
                 print "numTrue:%d" % self.numTrue
+                self.logger.info("numTrue:%d" % self.numTrue)
                 print "----------------------"
         
-                
+        """
+        add parenString to terms, cleanPunct, lowercase, split
+        """        
         if (self.bagOfWords):
             terms = cleanQ.split()
             print "bagWords terms:", terms
+            self.logger.info("bagWords terms:")
+            self.logger.info(" ".join(terms))
             self.cleanTerms(terms)
             print "bagWords after replacement", terms 
             q = "select * from lookup where name like \'%"+terms[0]+"%\'"
@@ -114,9 +126,9 @@ class Match(object):
             self.logger.info("processBase bagWords q:%s" % q)
             self.c.execute(q)
             result = self.c.fetchall()
-            print "---------------"
+            #print "---------------"
             #print result
-            print "---------------"
+            #print "---------------"
             
             self.resultStatsBOW[self.numQueriesProcessed] = len(result)
 
@@ -126,6 +138,9 @@ class Match(object):
                 self.numBagWordsZeroResults +=1
                 self.logger.info("BOW 0 RESULTS")
             else:
+                self.logger.info("calling filterResult:")
+                for t in terms:
+                    self.logger.info("terms:%s", t)
                 self.filterResult(result , terms)
         return       
     
@@ -137,6 +152,7 @@ class Match(object):
         output: filtered resultList matching all terms
         """
         print "calling filterResult"
+        print "numResults:%d" % len(rTupleList)
         self.logger.info("calling filterResult")
         self.logger.info("-----------------------")
         #self.logger.info("rList:"+rList)
@@ -144,7 +160,6 @@ class Match(object):
         
         
         for rTuple in rTupleList:
-#            print "resultString:%s" % rTuple[0]
             #self.logger.info("resultString:%s" % rTuple[0])
             
  #           print "rxcui:%s" % rTuple[1]
@@ -160,21 +175,23 @@ class Match(object):
      #       print "set(r):", set(rTuple[0].split())
             #self.logger.info("set(r):", str(set(rTuple[0].split())))
             trueOrFalse = set(terms).issubset(set(rTuple[0].split()))
-      #      print "set(r) is subset:", trueOrFalse
             if trueOrFalse==True:
                 self.numTrue+=1
+                #print "resultString:%s" % rTuple[0]
+                self.logger.info("resultString:%s" % rTuple[0])               
+                #print "set(r) is subset:", trueOrFalse
+                self.logger.info( "set(r) is subset:%s", str(trueOrFalse))
             
-            #self.logger.info("set(r) is subset:", str(set(rTuple[0]).issubset((set(terms)))))
             
     def cleanTerms(self, terms):
         """
         replace terms with dict
         """                            
         for index in range(len(terms)):
-            print "cleanTerms:%d" % index
-            print "cleanTerms: %s" % terms[index]
+            #print "cleanTerms index:%d" % index
+            #print "cleanTerms: %s" % terms[index]
             if terms[index] in self.dictTerms:
-                print "terms[index] in dictTerms"
+             #   print "terms[index] in dictTerms"
                 foo = self.dictTerms[terms[index]]
                 terms[index] = foo 
         
@@ -189,7 +206,7 @@ class Match(object):
         self.logger.info("query before clean punct:%s" % query)
         replaceSpace = re.sub("[-|/,]"," ",query.lower())
         self.logger.info("replaceSpace:%s", replaceSpace)
-        cleanPunct = re.sub("'", "", replaceSpace).strip()
+        cleanPunct = re.sub("['[\],]*", "", replaceSpace).strip()
         print "clean punct:%s" % cleanPunct
         self.logger.info("clean punct:%s" % cleanPunct)
         return cleanPunct
