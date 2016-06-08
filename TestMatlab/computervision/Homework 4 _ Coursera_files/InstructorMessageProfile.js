@@ -1,0 +1,1 @@
+define("bundles/ondemand/shapes/InstructorMessageProfile",["require","exports","module","react-with-addons"],function(require,exports,module){"use strict";var e=require("react-with-addons");module.exports=e.PropTypes.shape({photo:e.PropTypes.string,fullName:e.PropTypes.string})});
