@@ -1,4 +1,8 @@
+
 import os
+print 'need a subdirectory ~/testindex'
+print 'input file lookup.csv'
+
 
 f=open('/Users/dc/TestCode/TestCoding/lookup.csv')
 for line in iter(lambda: f.readline(), ''):
