@@ -1,0 +1,1 @@
+define("bundles/programming/models/instructions",["require","exports","module","backbone-associations"],function(require,exports,module){"use strict";var Backbone=require("backbone-associations"),s=Backbone.AssociatedModel.extend({defaults:{assignmentInstructions:null}});module.exports=s});
