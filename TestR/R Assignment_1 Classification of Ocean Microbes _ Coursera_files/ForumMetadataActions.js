@@ -1,0 +1,1 @@
+define("bundles/discussions/actions/ForumMetadataActions",["require","exports","module"],function(require,exports,module){"use strict";exports.setCurrentForumMetadata=function(t,s){t.dispatch("SET_CURRENT_FORUM_METADATA",s)},exports.loadAllForumMetadatas=function(t,s){t.dispatch("LOAD_ALL_FORUM_METADATAS",s)}});

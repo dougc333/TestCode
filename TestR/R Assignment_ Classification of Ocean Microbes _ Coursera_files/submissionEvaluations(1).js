@@ -1,0 +1,1 @@
+define("bundles/programming/data/submissionEvaluations",["require","exports","module","bundles/programming/api/submissionEvaluations"],function(require,exports,module){"use strict";var i=require("bundles/programming/api/submissionEvaluations");module.exports=function(s){return i.get(s)}});

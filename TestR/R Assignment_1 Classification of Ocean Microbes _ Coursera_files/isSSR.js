@@ -1,0 +1,1 @@
+define("bundles/ssr/util/isSSR",["require","exports","module"],function(require,exports,module){"use strict";module.exports="undefined"==typeof window});
