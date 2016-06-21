@@ -1,35 +1,16 @@
-
-
-
-img=imread('/Users/dc/TestCode/TestMatlab/computervision/updownsample.jpg')
-imgdouble = im2double(img)
-%lpf imgdouble
-lpf=[(1/9) (1/9) (1/9); (1/9) (1/9) (1/9); (1/9) (1/9) (1/9)]
-imgdoublpf=imfilter(imgdouble,lpf,'replicate')
-imgsmall=imgdoublpf(1:2:end,1:2:end)
-z=zeros(359,479)
-for i=1:359
-    for j=1:479
-        if(mod(i,2)==1 && mod(j,2)==1)
-            fprintf ('i:%d j:%d \n',i,j)
-            z(i,j)=imgsmall((i+1)/2,(j+1)/2);
-        end
-    end
-end
-bilinear=[0.25,0.5,0.25;0.5,1,0.5;0.25,0.5,0.25]
-res=imfilter(z,bilinear)
-
-dist=abs(res-imgdouble).^2
-mse=sum(dist(:))/numel(imgdouble)
-psnr=10*log10(255^2/mse)
-
+%week4
 %calculate MSE between 2 matrices
-X=[1 1 2 2; 1 1 2 2; 2 2 3 4; 2 2 5 6]
-Y = [2 2 1 1; 2 2 2 2; 2 2 6 4; 2 2 5 3]
-distxy=abs(X-Y).^2
-msexy=sum(distxy(:)/numel(X))
+%X=[1 1 2 2; 1 1 2 2; 2 2 3 4; 2 2 5 6]
+%Y = [2 2 1 1; 2 2 2 2; 2 2 6 4; 2 2 5 3]
+%distxy=abs(X-Y).^2
+%msexy=sum(distxy(:)/numel(X))
 
 %msexy =
+
+%
+% ALWAYS CLEAR WORKSPACE BEFORE RUNNING ELSE GET INCORRCT RESULTS WO ERROR
+% MSG or get ERROR MSG which is not debuggable. 
+%
 
 %    1.5000
 %MAE calculation example
@@ -69,9 +50,103 @@ mae4=sum(dist4(:))
 %
 %   351
    
-%example for up/down sampling
-%gaussian/laplace pyramid
+mae1Real=mae1/16;
+mae2Real=mae2/16;
+mae3Real=mae3/16;
+mae4Real=mae4/16;
+
+test=[1 2 3 4; 5 6 7 8; 9 10 11 12; 13 14 15 16];
+for n=1:3
+for m=1:3
+s=test([n:n+1],[m:m+1]);
+end
+end
+
+%{
+s =
+
+     1     2
+     5     6
 
 
+s =
+
+     2     3
+     6     7
 
 
+s =
+
+     3     4
+     7     8
+
+
+s =
+
+     5     6
+     9    10
+
+
+s =
+
+     6     7
+    10    11
+
+
+s =
+
+     7     8
+    11    12
+
+
+s =
+
+     9    10
+    13    14
+
+
+s =
+
+    10    11
+    14    15
+
+
+s =
+
+    11    12
+    15    16
+%}
+
+I1=im2double(imread('/Users/dc/TestCode/TestMatlab/computervision/hw4frame1.jpg'))
+I2=im2double(imread('/Users/dc/TestCode/TestMatlab/computervision/hw4frame2.jpg'))
+
+Btarget=I2(65:96,81:112)
+size(Btarget)
+
+size(I1)
+mseArr=zeros(1,(288-32))
+writeFile = fopen('mseresults.txt', 'wt');
+
+min=1000.0;
+minn=0;
+minm=0;
+for n=1:(288-32)
+    for m=1:(352-32)
+        s=I1([n:n+31],[m:m+31]);
+        dist=abs(s-Btarget);
+        s=sum(dist(:));
+        mse1=s/(32.0*32.0);
+        if(mse1<min)
+            min=mse1;
+            minn=n;
+            minm=m;
+        end
+        fprintf(writeFile,'iteration n:%d m:%d mse:% 4f\n',n,m,mse1);
+    end
+end
+fprintf(writeFile,'min:% 4f minn:%d minm:%d', min,minn,minm);
+fclose(writeFile)
+
+%for n:1:(288-32)
+%    mseArr[n]
+%end
