@@ -1,11 +1,16 @@
 %week4
 %calculate MSE between 2 matrices
-X=[1 1 2 2; 1 1 2 2; 2 2 3 4; 2 2 5 6]
-Y = [2 2 1 1; 2 2 2 2; 2 2 6 4; 2 2 5 3]
-distxy=abs(X-Y).^2
-msexy=sum(distxy(:)/numel(X))
+%X=[1 1 2 2; 1 1 2 2; 2 2 3 4; 2 2 5 6]
+%Y = [2 2 1 1; 2 2 2 2; 2 2 6 4; 2 2 5 3]
+%distxy=abs(X-Y).^2
+%msexy=sum(distxy(:)/numel(X))
 
 %msexy =
+
+%
+% ALWAYS CLEAR WORKSPACE BEFORE RUNNING ELSE GET INCORRCT RESULTS WO ERROR
+% MSG or get ERROR MSG which is not debuggable. 
+%
 
 %    1.5000
 %MAE calculation example
@@ -45,11 +50,15 @@ mae4=sum(dist4(:))
 %
 %   351
    
+mae1Real=mae1/16;
+mae2Real=mae2/16;
+mae3Real=mae3/16;
+mae4Real=mae4/16;
 
-test=[1 2 3 4; 5 6 7 8; 9 10 11 12; 13 14 15 16]
+test=[1 2 3 4; 5 6 7 8; 9 10 11 12; 13 14 15 16];
 for n=1:3
 for m=1:3
-s=test([n:n+1],[m:m+1])
+s=test([n:n+1],[m:m+1]);
 end
 end
 
@@ -115,17 +124,28 @@ Btarget=I2(65:96,81:112)
 size(Btarget)
 
 size(I1)
-%mseArr[1:288]=0
+mseArr=zeros(1,(288-32))
+writeFile = fopen('mseresults.txt', 'wt');
 
+min=1000.0;
+minn=0;
+minm=0;
 for n=1:(288-32)
     for m=1:(352-32)
-        s=I1([n:n+31],[m:m+31])
-        dist=abs(s-Btarget)
-        sum=dist(:)
-        mse1=(32*32)^(-1)*sum
-        %mseArr[n]=mse
+        s=I1([n:n+31],[m:m+31]);
+        dist=abs(s-Btarget);
+        s=sum(dist(:));
+        mse1=s/(32.0*32.0);
+        if(mse1<min)
+            min=mse1;
+            minn=n;
+            minm=m;
+        end
+        fprintf(writeFile,'iteration n:%d m:%d mse:% 4f\n',n,m,mse1);
     end
 end
+fprintf(writeFile,'min:% 4f minn:%d minm:%d', min,minn,minm);
+fclose(writeFile)
 
 %for n:1:(288-32)
 %    mseArr[n]
