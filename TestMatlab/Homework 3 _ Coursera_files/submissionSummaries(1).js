@@ -1,1 +1,0 @@
-define("bundles/programming/data/submissionSummaries",["require","exports","module","bundles/programming/api/submissionSummaries"],function(require,exports,module){"use strict";var i=require("bundles/programming/api/submissionSummaries");module.exports=function(s){return i.list(s)}});

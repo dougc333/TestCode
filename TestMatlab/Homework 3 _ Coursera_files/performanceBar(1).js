@@ -1,1 +1,0 @@
-define("pages/open-course/common/views/nls/performanceBar",["require","exports","module"],function(require,exports,module){"use strict";module.exports={}});
