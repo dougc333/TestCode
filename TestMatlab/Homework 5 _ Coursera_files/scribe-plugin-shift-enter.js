@@ -1,0 +1,1 @@
+define("bundles/scribe-plugins/scribe-plugin-shift-enter",["require","exports","module"],function(require,exports,module){"use strict";module.exports=function(){return function(e){e.el.addEventListener("keypress",function(e){13===e.keyCode&&e.shiftKey&&(e.preventDefault(),e.stopPropagation())})}}});

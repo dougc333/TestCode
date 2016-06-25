@@ -1,1 +1,0 @@
-define("js/lib/keyMirror",["require","exports","module","underscore"],function(require,exports,module){"use strict";var _=require("underscore"),e=function keyMirror(e){return _(e).chain().map(function(r,e){return[e,e]}).object().value()};module.exports=e});

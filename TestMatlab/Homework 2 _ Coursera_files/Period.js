@@ -1,1 +1,0 @@
-define("bundles/ondemand/shapes/Period",["require","exports","module","react-with-addons"],function(require,exports,module){"use strict";var e=require("react-with-addons");module.exports=e.PropTypes.shape({moduleIds:e.PropTypes.arrayOf(e.PropTypes.string).isRequired,numberOfWeeks:e.PropTypes.number})});

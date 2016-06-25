@@ -1,1 +1,0 @@
-define("bundles/assess/questionTypes/optionBase/student/nls/optionTemplate",["require","exports","module"],function(require,exports,module){"use strict";module.exports={}});

@@ -1,0 +1,1 @@
+define("bundles/ondemand/utils/isPreviewMode",["require","exports","module","bundles/phoenix/template/models/userIdentity"],function(require,exports,module){"use strict";var e=require("bundles/phoenix/template/models/userIdentity");module.exports=function(t,n){return e.get("authenticated")?t?!0:n?!1:!0:!0}});

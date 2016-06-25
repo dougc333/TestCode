@@ -1,0 +1,1 @@
+define("bundles/programming/models/scriptSubmissionBuilderSchema",["require","exports","module","backbone"],function(require,exports,module){"use strict";var Backbone=require("backbone"),e=Backbone.Model.extend({defaults:{typeName:"script"}});module.exports=e});
