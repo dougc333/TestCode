@@ -1,0 +1,1 @@
+define("pages/open-course/supplement/constants/config",["require","exports","module"],function(require,exports,module){"use strict";module.exports={supplementsApi:"onDemandSupplements.v1"}});
