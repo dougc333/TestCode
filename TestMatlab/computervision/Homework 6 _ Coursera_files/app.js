@@ -1,0 +1,1 @@
+define("bundles/asset-admin/app",["require","exports","module","vendor/cnpm/fluxible.v0-4/index","bundles/asset-admin/stores/AssetAdminStore"],function(require,exports,module){"use strict";var s=require("vendor/cnpm/fluxible.v0-4/index"),n=require("bundles/asset-admin/stores/AssetAdminStore"),e=new s;e.registerStore(n),module.exports=e});
