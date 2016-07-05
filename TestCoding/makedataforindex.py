@@ -1,4 +1,4 @@
-
+#!/bin/python
 import os
 print 'need a subdirectory ~/testindex'
 print 'input file lookup.csv'
