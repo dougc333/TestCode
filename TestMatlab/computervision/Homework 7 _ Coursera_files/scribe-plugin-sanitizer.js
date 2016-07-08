@@ -1,0 +1,1 @@
+define("bundles/vendor/scribe-plugins/scribe-plugin-sanitizer",["js/vendor/html-janitor.v1-0-1"],function(e){return function(n){return n.tags.em||(n.tags.em={}),n.tags.em["class"]="scribe-marker",n.tags.br={},function(i){var r=new e(n);i.registerHTMLFormatter("sanitize",r.clean.bind(r))}}});
