@@ -1,0 +1,12 @@
+%hw1 
+
+%given matrix, vectorize matrix
+
+test_mat = [1 2 3;4 5 6;7 8 9]
+
+
+
+BASE_PATH='/Users/dc/TestCode/TestMatlab/computervision3/';
+
+img = imread(strcat(BASE_PATH,'blocks1.gif'));
+imshow(img);
