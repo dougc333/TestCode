@@ -10,6 +10,7 @@ import scipy.sparse as sparse
 import numpy as np
 from sklearn.datasets import load_svmlight_file
 from sklearn import svm
+import sys
 
 class Configuration(object):
     """
@@ -32,6 +33,7 @@ class Configuration(object):
         :param feature_extractor: a function which operates on tokens, the
             stack, the buffer and returns a list of string features
         """
+        print 'transitionparser.py configuration object init'
         # dep_graph.nodes contain list of token for a sentence
         self.stack = [0]  # The root element
         self.buffer = range(1, len(dep_graph.nodes))  # The rest is in the buffer
@@ -50,6 +52,7 @@ class Configuration(object):
         Extracts features from the configuration
         :return: list(str)
         """
+        print 'config object extract_features'
         return self._user_feature_extractor(self._tokens, self.buffer, self.stack, self.arcs)
 
 class TransitionParser(object):
@@ -58,6 +61,7 @@ class TransitionParser(object):
     """
 
     def __init__(self, transition, feature_extractor):
+        print 'transitionparser init'
         self._dictionary = {}
         self._transition = {}
         self._match_transition = {}
@@ -66,6 +70,7 @@ class TransitionParser(object):
         self.transitions = transition
 
     def _get_dep_relation(self, idx_parent, idx_child, depgraph):
+        print '_get_dep_relation'
         p_node = depgraph.nodes[idx_parent]
         c_node = depgraph.nodes[idx_child]
 
@@ -87,8 +92,11 @@ class TransitionParser(object):
         :return : string of binary features in libsvm format  which is
             'featureID:value' pairs
         """
+        print 'convert_to_binary_features'
         unsorted_result = []
+        print 'len features:%d' % len(features)
         for feature in features:
+            print "featureID:%s" % feature
             self._dictionary.setdefault(feature, len(self._dictionary))
             unsorted_result.append(self._dictionary[feature])
 
@@ -100,6 +108,7 @@ class TransitionParser(object):
         """
         Checks if a dependency graph is projective
         """
+        print 'is_projective'
         arc_list = set()
         for key in depgraph.nodes:
             node = depgraph.nodes[key]
@@ -127,6 +136,7 @@ class TransitionParser(object):
         """
         write the binary features to input file and update the transition dictionary
         """
+        print 'write_to'
         self._transition.setdefault(key, len(self._transition) + 1)
         self._match_transition[self._transition[key]] = key
 
@@ -138,14 +148,18 @@ class TransitionParser(object):
         Create the training example in the libsvm format and write it to the input_file.
         Reference : 'A Dynamic Oracle for Arc-Eager Dependency Parsing' by Joav Goldberg and Joakim Nivre
         """
+        print 'create_training_examples_arc_eager'
         training_seq = []
 
         projective_dependency_graphs = [dg for dg in depgraphs if TransitionParser._is_projective(dg)]
         countProj = len(projective_dependency_graphs)
 
+        print 'countProj:%d' % countProj
+        #print 'num projective_dep_graphs:%d' % len(projective_dep_graphs)
+        
         for depgraph in projective_dependency_graphs:
             conf = Configuration(depgraph, self._user_feature_extractor.extract_features)
-
+            
             while conf.buffer:
                 b0 = conf.buffer[0]
                 features = conf.extract_features()
@@ -201,15 +215,16 @@ class TransitionParser(object):
         :param depgraphs : list of DependencyGraph as the training data
         :type depgraphs : DependencyGraph
         """
-
+        print 'transitionparser train'
+        
         try:
             input_file = tempfile.NamedTemporaryFile(
                 prefix='transition_parse.train',
                 dir=tempfile.gettempdir(),
                 delete=False)
-
+            
             self._create_training_examples_arc_eager(depgraphs, input_file)
-
+            
             input_file.close()
             # Using the temporary file to train the libsvm classifier
             x_train, y_train = load_svmlight_file(input_file.name)
@@ -237,6 +252,7 @@ class TransitionParser(object):
         :type depgraphs: list(DependencyGraph)
         :return: list (DependencyGraph) with the 'head' and 'rel' information
         """
+        print 'parse'
         result = []
         if not self._model:
             raise ValueError('No model trained!')
@@ -264,9 +280,12 @@ class TransitionParser(object):
                 sorted_predicted_values = [
                     self._model.classes_[x[0]]
                     for x in sorted(enumerate(pred_prob), key=operator.itemgetter(1), reverse=True)]
-
+                
+                print 'parse asdf'
                 # Note that SHIFT is always a valid operation
                 for y_pred in sorted_predicted_values:
+                    print 'y_pred:%s' % y_pred
+                    sys.exit()
                     if y_pred in self._match_transition:
                         strTransition = self._match_transition[y_pred]
                         try:
