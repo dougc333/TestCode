@@ -12,14 +12,20 @@ class Transition(object):
     def __init__(self):
         raise ValueError('Do not construct this object!')
 
+
     @staticmethod
     def left_arc(conf, relation):
         """
             :param configuration: is the current configuration
             :return : A new configuration or -1 if the pre-condition is not satisfied
         """
-        raise NotImplementedError('Please implement left_arc!')
-        return -1
+    	print 'calling left_arc'
+        if not conf.buffer or not conf.stack:
+            return -1
+        s=conf.stack[-1]
+        b=conf.buffer.pop(0)
+        conf.stack.pop()
+        conf.arcs.append((b, relation, s))
 
     @staticmethod
     def right_arc(conf, relation):
@@ -27,6 +33,7 @@ class Transition(object):
             :param configuration: is the current configuration
             :return : A new configuration or -1 if the pre-condition is not satisfied
         """
+    	print 'calling right_arc'
         if not conf.buffer or not conf.stack:
             return -1
 
@@ -38,14 +45,21 @@ class Transition(object):
         conf.stack.append(idx_wj)
         conf.arcs.append((idx_wi, relation, idx_wj))
 
+
+
     @staticmethod
     def reduce(conf):
         """
             :param configuration: is the current configuration
             :return : A new configuration or -1 if the pre-condition is not satisfied
         """
-        raise NotImplementedError('Please implement reduce!')
-        return -1
+    	print 'calling reduce'
+        if not conf.buffer or not conf.stack:
+            return -1
+        #pop stack
+        conf.stack.pop()
+
+
 
     @staticmethod
     def shift(conf):
@@ -53,5 +67,10 @@ class Transition(object):
             :param configuration: is the current configuration
             :return : A new configuration or -1 if the pre-condition is not satisfied
         """
-        raise NotImplementedError('Please implement shift!')
-        return -1
+    	print 'calling shift'
+    	if not conf.buffer or not conf.stack:
+            return -1
+        #remove first from buffer and push to stack
+        temp=conf.buffer.pop(0)
+        conf.stack.append(temp)
+
