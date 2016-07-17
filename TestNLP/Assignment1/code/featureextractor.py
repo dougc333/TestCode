@@ -23,7 +23,6 @@ class FeatureExtractor(object):
 
     @staticmethod
     def find_left_right_dependencies(idx, arcs):
-        print 'find_left_right_dependencies'
         left_most = 1000000
         right_most = -1
         dep_left_most = ''
@@ -58,8 +57,7 @@ class FeatureExtractor(object):
 
         [http://books.google.com/books/about/Dependency_Parsing.html?id=k3iiup7HB9UC]
         """
-        print 'extract_features'
-        
+
         result = []
 
 
@@ -72,7 +70,6 @@ class FeatureExtractor(object):
         if stack:
             stack_idx0 = stack[-1]
             token = tokens[stack_idx0]
-            print 'token:%s' % token
             if FeatureExtractor._check_informative(token['word'], True):
                 result.append('STK_0_FORM_' + token['word'])
 
