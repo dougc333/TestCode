@@ -6,9 +6,9 @@ from featureextractor import FeatureExtractor
 from transition import Transition
 
 if __name__ == '__main__':
-    #data = dataset.get_swedish_train_corpus().parsed_sents()
-    #random.seed(1234)
-    #subdata = random.sample(data, 200)
+    data = dataset.get_swedish_train_corpus().parsed_sents()
+    random.seed(1234)
+    subdata = random.sample(data, 200)
 
     try:
         tp = TransitionParser(Transition, FeatureExtractor)

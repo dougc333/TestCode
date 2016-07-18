@@ -222,7 +222,7 @@ class TransitionParser(object):
                 coef0=0,
                 gamma=0.2,
                 C=0.5,
-                verbose=False,
+                verbose=True,
                 probability=True)
 
             print('Training support vector machine...')
@@ -244,11 +244,16 @@ class TransitionParser(object):
         for depgraph in depgraphs:
             conf = Configuration(depgraph, self._user_feature_extractor.extract_features)
             while conf.buffer:
+                print '--conf.buffer--------'
+                print conf.buffer
+                print '---------------------'
                 features = conf.extract_features()
                 col = []
                 row = []
                 data = []
+                print 'features:%s' % features
                 for feature in features:
+                    print 'feature:%s' % feature
                     if feature in self._dictionary:
                         col.append(self._dictionary[feature])
                         row.append(0)
@@ -257,20 +262,33 @@ class TransitionParser(object):
                 np_row = np.array(row)
                 np_data = np.array(data)
 
+                print 'np_col:%s' % np_col
+                print 'np_row:%s' % np_row
+                print 'np_data:%s' % np_data
+                
                 x_test = sparse.csr_matrix((np_data, (np_row, np_col)), shape=(1, len(self._dictionary)))
 
                 pred_prob = self._model.predict_proba(x_test)[0]
 
+                print 'pred_prob:%s' % pred_prob
+                
                 sorted_predicted_values = [
                     self._model.classes_[x[0]]
                     for x in sorted(enumerate(pred_prob), key=operator.itemgetter(1), reverse=True)]
 
+                print 'sorted_predicted_values:%s' % sorted_predicted_values
+                
                 # Note that SHIFT is always a valid operation
                 for y_pred in sorted_predicted_values:
+                    print 'y_pred:%s' % y_pred
+                    print 'self._match_transition:%s' % self._match_transition
+                    
                     if y_pred in self._match_transition:
                         strTransition = self._match_transition[y_pred]
+                        print 'strTransition:%s' % strTransition
                         try:
                             baseTransition, relation = strTransition.split(":")
+                            print 'baseTransition:%s relation:%s' % (baseTransition, relation)
                         except ValueError:
                             baseTransition = strTransition
 

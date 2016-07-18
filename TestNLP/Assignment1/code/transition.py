@@ -20,9 +20,9 @@ class Transition(object):
         """
         #raise NotImplementedError('Please implement left_arc!')
         #return -1
-	b=conf.buffer[0]
-	s=conf.stack.pop()
-	conf.arcs.append((b,relation,s))
+        b=conf.buffer[0]
+        s=conf.stack.pop()
+        conf.arcs.append((b,relation,s))
 
     @staticmethod
     def right_arc(conf, relation):
@@ -49,7 +49,7 @@ class Transition(object):
         """
         #raise NotImplementedError('Please implement reduce!')
         #return -1
-	conf.stack.pop()
+        conf.stack.pop()
 
     @staticmethod
     def shift(conf):
@@ -59,5 +59,5 @@ class Transition(object):
         """
         #raise NotImplementedError('Please implement shift!')
         #return -1
-	b=conf.buffer.pop(0)
-	conf.stack.append(b)
+        b=conf.buffer.pop(0)
+        conf.stack.append(b)
