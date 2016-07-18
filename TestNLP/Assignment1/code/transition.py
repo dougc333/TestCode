@@ -18,8 +18,11 @@ class Transition(object):
             :param configuration: is the current configuration
             :return : A new configuration or -1 if the pre-condition is not satisfied
         """
-        raise NotImplementedError('Please implement left_arc!')
-        return -1
+        #raise NotImplementedError('Please implement left_arc!')
+        #return -1
+	b=conf.buffer[0]
+	s=conf.stack.pop()
+	conf.arcs.append((b,relation,s))
 
     @staticmethod
     def right_arc(conf, relation):
@@ -44,8 +47,9 @@ class Transition(object):
             :param configuration: is the current configuration
             :return : A new configuration or -1 if the pre-condition is not satisfied
         """
-        raise NotImplementedError('Please implement reduce!')
-        return -1
+        #raise NotImplementedError('Please implement reduce!')
+        #return -1
+	conf.stack.pop()
 
     @staticmethod
     def shift(conf):
@@ -53,5 +57,7 @@ class Transition(object):
             :param configuration: is the current configuration
             :return : A new configuration or -1 if the pre-condition is not satisfied
         """
-        raise NotImplementedError('Please implement shift!')
-        return -1
+        #raise NotImplementedError('Please implement shift!')
+        #return -1
+	b=conf.buffer.pop(0)
+	conf.stack.append(b)
