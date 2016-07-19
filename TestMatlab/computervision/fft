@@ -1,7 +1,0 @@
-when computing a fft of a signal; the assumption is you are calculating in whole periods. 
-Non integer periods lead to discontunities 
-and introduce high frequency components higher than the nyquist frequency
-
-windowing reduces the effect of these high frequency discontuinities; 
-the worst window is a box type function which adds an edge discontunity at the edge. 
-a more commonly used approximation is a smooth curve which tapers to 0. This reduces the high frequency artifact problem. 
