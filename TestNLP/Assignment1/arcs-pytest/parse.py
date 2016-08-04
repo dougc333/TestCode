@@ -22,9 +22,9 @@ class Classifier:
         self.labels = labels
 
     def score(self, fv):
-
         scores = dict((label, 0) for label in self.labels)
-
+        print 'scores:', scores
+        print 'fv.items():', fv.items()
         for k, v in fv.items():
 
             if v == 0:
@@ -106,7 +106,7 @@ class GreedyDepParser:
 
     @staticmethod
     def get_gold_conf(sentence):
-        print 'GreedyParser.get_gold_conf sentence:', str(sentence)
+        #print 'GreedyParser.get_gold_conf sentence:', str(sentence)
         gold_conf = GoldConfiguration()
         for dep in range(len(sentence)):
             head = sentence[dep][2]
@@ -114,8 +114,8 @@ class GreedyDepParser:
             if head not in gold_conf.deps:
                 gold_conf.deps[head] = []
             gold_conf.deps[head].append(dep)
-        print "GreedyParser.get_gold_conf heads:",gold_conf.heads
-        print 'GreedyParser.get_gold_conf.deps:',gold_conf.deps
+        #print "GreedyParser.get_gold_conf heads:",gold_conf.heads
+        #print 'GreedyParser.get_gold_conf.deps:',gold_conf.deps
         return gold_conf
 
     def run(self, sentence):
@@ -132,23 +132,23 @@ class GreedyDepParser:
     # We need to have arcs that are dominated with no crossing lines, excluding the root
     @staticmethod
     def non_projective(conf):
-        print 'non_projective keys:', str(conf.heads.keys())
+        #print 'non_projective keys:', str(conf.heads.keys())
         for dep1 in conf.heads.keys():
             head1 = conf.heads[dep1]
             for dep2 in conf.heads.keys():
                 head2 = conf.heads[dep2]
-                print 'processing head1:', str(head1), ' dep1:', str(dep1), " head2:", str(head2), " dep2:", str(dep2)
+                #print 'processing head1:', str(head1), ' dep1:', str(dep1), " head2:", str(head2), " dep2:", str(dep2)
                 if head1 < 0 or head2 < 0:
                     continue
                 if (dep1 > head2 and dep1 < dep2 and head1 < head2) or (dep1 < head2 and dep1 > dep2 and head1 < dep2):
-                    print 'True1:dep1,dep2,head1,head2', dep1,dep2,head1,head2
+                   # print 'True1:dep1,dep2,head1,head2', dep1,dep2,head1,head2
                     return True
 
                 if dep1 < head1 and head1 is not head2:
                     if (head1 > head2 and head1 < dep2 and dep1 < head2) or (head1 < head2 and head1 > dep2 and dep1 < dep2):
-                        print 'True2:dep1,dep2,head1,head2', dep1, dep2, head1, head2
+                    #    print 'True2:dep1,dep2,head1,head2', dep1, dep2, head1, head2
                         return True
-        print 'false'
+        #print 'false'
         return False
 
     def train(self, sentence, iter_num):
@@ -551,6 +551,7 @@ if __name__ == '__main__':
                     gold_proj.append(s)
                 elif opts.v is True:
                     print('Skipping non-projective sentence', s)
+            print 'filter_non_projective orig_size:', str(len(gold)), 'size_proj:', str(len(gold_proj))
             return gold_proj
 
     # Defaults
@@ -568,13 +569,14 @@ if __name__ == '__main__':
 
     gold = filter_non_projective(fileio.read_conll_deps(opts.train))
     model = Classifier({}, [0, 1, 2, 3])
-    
+
+
     parser = Parser(model, feature_extractor)
     print('performing %d iterations' % opts.n)
     for i in range(0, opts.n):
         correct_iter = 0
         all_iter = 0
-        random.shuffle(gold)
+        #random.shuffle(gold)
         for gold_sent in gold:
             correct_s, all_s = parser.train(gold_sent, i)
             correct_iter += correct_s
