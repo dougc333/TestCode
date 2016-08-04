@@ -137,7 +137,7 @@ class GreedyDepParser:
             head1 = conf.heads[dep1]
             for dep2 in conf.heads.keys():
                 head2 = conf.heads[dep2]
-                print 'processing head1:', str(head1), ' head2:', str(head2), " dep1:", str(dep1), " dep2:", str(dep2)
+                print 'processing head1:', str(head1), ' dep1:', str(dep1), " head2:", str(head2), " dep2:", str(dep2)
                 if head1 < 0 or head2 < 0:
                     continue
                 if (dep1 > head2 and dep1 < dep2 and head1 < head2) or (dep1 < head2 and dep1 > dep2 and head1 < dep2):
