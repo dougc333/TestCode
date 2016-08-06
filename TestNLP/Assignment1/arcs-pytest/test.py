@@ -35,5 +35,5 @@ if __name__ == '__main__':
     #conf.deps
     print str(conf.heads)
     #, str(conf.deps)
-    non_projective(conf)
+    print non_projective(conf)
 
