@@ -22,5 +22,5 @@ def read_conll_deps(f):
                 sentence = []
                 continue
             sentence.append((row[1].lower(), row[3], int(row[6]) - 1, row[7]))
-
+    print 'fileio.py len sentences:', len(sentences)
     return sentences
