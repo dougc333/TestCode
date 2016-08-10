@@ -54,17 +54,18 @@ def init():
         for l in reader:
             # print l, len(l)
             if len(l) > 0:
-                if l[1] == '?':
-                    print '----------'
-                    print l
-                    print '----------'
                 print l[WORD],l[POS],int(l[HEAD])-1,l[ALT_HEAD]
                 sentences.append((l[WORD],l[POS],int(l[HEAD])-1,l[ALT_HEAD]))
                 print 'len(sentences):',len(sentences)
         return sentences
 
-def make_heads_deps(s[]):
-    
+
+
+def make_heads_deps(sentences):
+    heads = defaultdict()
+    for s in sentences:
+        print s
+        sys.exit()
 
 if __name__ == '__main__':
     conf = Config()
