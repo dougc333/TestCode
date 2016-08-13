@@ -25,7 +25,12 @@ draw.line((1190,0,1190,3264),fill=128)
 draw.line((1191,0,1191,3264),fill=128)
 
 del draw
+im.save('/Users/dc/TestCode/TestBear/redline.jpg')
 im.show()
+
+#crop
+#test=img.crop((1160,1460,1190,1490))
+#test.show() #verifies as only bear in 30x30
 
 #test sobel
 im2=scipy.misc.imread('/Users/dc/Desktop/IMG_1400.jpg')
