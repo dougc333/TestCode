@@ -1,2 +1,0 @@
-work queue notes rabbitmq
-
