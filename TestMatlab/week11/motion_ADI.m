@@ -21,7 +21,7 @@ start3 = 40;
 start4 = 110;
 
 %threshold T as in euations in the lecture slides regarding ADI
-T = ?
+T = 0
 
 %initialize the reference frame R
 A(start1:start2, start3:start4) = 1;
@@ -32,7 +32,7 @@ figure,imshow(A,[], 'border','tight');
 j = 0;
 for i = 5: 5 :50
         j = j + 12;
-        A2 = zeros(256,256);
+        A2 = zeros(256,256 );
         A2(start1 + i: start2 + i, start3 + j: start4 + j) = 1;
         
         % You need to code up the follwing part that calculate the ADIs
@@ -40,10 +40,12 @@ for i = 5: 5 :50
         % Equations can be found in lecture slides regarding ADIs
         % You need to decide on the appropriate threshold T for this case
         % at line 23
-        ADI_abs ?
-        ADI_pos ?
-        ADI_neg ?
+        findABS(A,A2)       
+        findPos(A,A2)
+        findNeg(A,A2)
 end
+
+
 
 % The following part will calculate the moving speed 
 % and the total space(in pixel number) occupied by the moving object
@@ -58,3 +60,6 @@ total_space_occupied = sum(sum(ADI_abs > 0))
 figure,imshow(ADI_abs,[], 'border','tight');
 figure,imshow(ADI_pos,[], 'border','tight');
 figure,imshow(ADI_neg,[], 'border','tight');
+
+
+
