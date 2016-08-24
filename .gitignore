@@ -1,4 +1,4 @@
 clinical.*
 TestCoding/clinical.*
 *.csv
-test/*
+TestMatlab/test/*
