@@ -1,3 +1,4 @@
 clinical.*
 TestCoding/clinical.*
 *.csv
+test/*
