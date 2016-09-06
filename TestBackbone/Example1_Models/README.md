@@ -12,6 +12,5 @@ var t=new test()
 t.save() to produce a POST request back to the server. Server prints out the POST method
 
 
-2) add bottle server to the backbone main.js code/verify post requests working
 
 
