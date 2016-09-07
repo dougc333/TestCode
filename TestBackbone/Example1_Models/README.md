@@ -7,7 +7,7 @@ show post request in browser console when you create an object test or courses a
 To run: 
 python server.py
 point browser to http://localhost:8080/testserver.html
-in browser console
+in browser start the browser console debugger w/F12
 var t=new test()
 t.save() to produce a POST request back to the server. Server prints out the POST method
 
