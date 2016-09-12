@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>{% block title %}{% endblock %}Base title</title>
 <head>
-    {% block head %}
-    {% endblock %}
+    {% if title %}
+        <title>{{ title }}</title>
+    {% else %}
+        <title>defautl title</title>
+    {% end if%}
 </head>
 <body>
-    {%block body%}
-    {%endblock%}
+<div><a href="/index"></a>Home</div>
+<hr>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% if messages %}
+                {% for mesg in messages %}
+                <li>{{message}}</li>
+                {% end for%}
+                </ul>
+                {%endif%}
+    {%endwith%}
+{%block content%}{%endcontent%}
 </body>
 </html>
