@@ -1,0 +1,25 @@
+<html>
+<head>
+ {% if title %}
+  <title>{{ title }}</title>
+ {% else %}
+  <title>Default Title </title>
+ {% endif %}
+</head>
+<body>
+  <div>
+  Microblog:<a href="/index">Home</a>
+  </div>
+  <hr>
+  {%with messages = get_flushed_messages() %}
+    {% if messages%}
+      <ul>
+      {% for m in messages%}
+       <li>{{m}}</li>
+      {%endfor%}
+      </ul>
+      {%endif%}
+  {%endwith%}
+  {%block content%}{%endblock%}
+</body>
+</html>
