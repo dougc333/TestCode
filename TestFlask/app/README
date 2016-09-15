@@ -1,0 +1,3 @@
+./install_requirements
+../run.py
+http://localhost:5000
