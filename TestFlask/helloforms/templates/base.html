@@ -1,0 +1,20 @@
+
+
+
+<html>
+<head>
+{% if title%}
+<title>{{title}}</title>
+{%else%}
+<title>Default title</title>
+{%endif%}
+</head>
+<a href="index.html">Home</a>
+{%with messages =get_flashed_messages() %}
+{%if messages%}
+{%for m in messages%}
+ <div>{{m}}</div>
+{%endfor%}
+<%endif%>
+<%endwith%>
+</html>
