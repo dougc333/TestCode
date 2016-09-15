@@ -1,6 +1,10 @@
-<html>
-<head></head>
-<body>
-cant find this
-</body>
-</html>
+
+{% extends 'base.html' %}
+{% block content%}
+<p>template index.html start block</p>
+{%for p in posts%}
+<p>{{p.author.nickname}} has post:{{p.body}}</p>
+
+{%endfor%}
+<p>template index.html end block</p>
+{%endblock%}
