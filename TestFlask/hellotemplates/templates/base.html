@@ -1,0 +1,15 @@
+<html>
+<head>
+{% if title %}
+<title>{{title}}</title>
+{%else%}
+<title>Default title</title>
+{%endif%}
+</head>
+<body>
+<div>
+<a href="/index">Home Page</a>
+</div>
+{%block content%}{%endblock%}
+</body>
+</html>
