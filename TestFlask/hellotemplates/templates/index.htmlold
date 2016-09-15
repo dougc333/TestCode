@@ -1,8 +1,0 @@
-
-{% extends 'base.html' %}
-{%begin block%}
-<p>template index.html start block</p>
-
-
-<p>template index.html end block</p>
-{%endcontent%}
