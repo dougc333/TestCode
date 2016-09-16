@@ -1,6 +1,3 @@
-
-
-
 <html>
 <head>
 {% if title%}
@@ -9,7 +6,8 @@
 <title>Default title</title>
 {%endif%}
 </head>
-<a href="index.html">Home</a>
+<body>
+<div>TestForms<a href="index.html">Home</a></div>
 {%with messages =get_flashed_messages() %}
 {%if messages%}
 {%for m in messages%}
@@ -17,4 +15,6 @@
 {%endfor%}
 <%endif%>
 <%endwith%>
+{%block content%}{%endblock%}
+</body>
 </html>
