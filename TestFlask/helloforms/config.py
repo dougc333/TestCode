@@ -1,4 +1,5 @@
-WTF_CRSF_ENABLED=True
+WTF_CRSF_ENABLED=False
+CRSF_ENABLED=False
 SECRET_KEY="a"
 OPENID_PROVIDERS = [
     {'name': 'Google', 'url': 'https://www.google.com/accounts/o8/id'},
