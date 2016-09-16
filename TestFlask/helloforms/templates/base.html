@@ -8,13 +8,13 @@
 </head>
 <body>
 <div>TestForms<a href="index.html">Home</a></div>
-{%with messages =get_flashed_messages() %}
-{%if messages%}
-{%for m in messages%}
- <div>{{m}}</div>
-{%endfor%}
-<%endif%>
-<%endwith%>
+ {%with messages =get_flashed_messages() %}
+  {%if messages%}
+    {%for m in messages%}
+      <div>{{m}}</div>
+    {%endfor%}
+  {%endif%}
+ {%endwith%}
 {%block content%}{%endblock%}
 </body>
 </html>
