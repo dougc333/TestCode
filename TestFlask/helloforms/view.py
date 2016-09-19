@@ -6,6 +6,11 @@ from .forms import LoginForm
 @app.route('/index')
 def index():
 	print 'calling index'
+	user = {'nickname':'nickname1'}
+	posts = [
+	{'author':{'nickname':'a'},'post':'user1 first post'},
+	{'author':{'nickname':'b'},'post':'user2 first post'},
+	{'author':{'nickname':'c'},'post':'user3 first post'}]
 	return render_template('index.html')
 
 
