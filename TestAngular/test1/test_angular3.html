@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<!-- example dependency injection w controller -->
+<html lang="en" ng-app="testModule">
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script type="text/javascript">
+    angular.module('testModule', []).controller("TestController",[function(){console.log("TestController");
+    }]
+    );
+    </script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-controller="TestController">
+test_angular3 {{3+4}}
+</body>
+</html>
