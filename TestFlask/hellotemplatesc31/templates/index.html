@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+
+{%block head%}
+{%endblock%}
+
+{%block body%}
+
+<script type="text/javascript">
+var chart = c3.generate({
+    data: {
+        columns: [
+            ['Lulu', 50],
+            ['Olaf', 50],
+        ],
+        type : 'donut'
+    },
+    donut: {
+        title: "Dogs love:",
+    }
+});
+</script>
+
+
+test index
+
+<div id="chart"></div>
+
+
+{%endblock%}

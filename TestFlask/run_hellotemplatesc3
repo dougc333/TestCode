@@ -1,0 +1,4 @@
+#!/Users/dc/TestCode/TestFlask/flask/bin/python
+from hellotemplatesc31 import app
+
+app.run(debug=True)
