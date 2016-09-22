@@ -17,3 +17,7 @@ def index():
         }
     	]
 	return render_template('index.html', title='Home', user=user,posts=posts)
+
+@app.route('/column')
+def content():
+	return render_template('column.html',title='Content')
