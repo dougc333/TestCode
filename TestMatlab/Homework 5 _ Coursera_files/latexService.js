@@ -1,1 +1,0 @@
-define("bundles/assess/questionTypes/mathExpression/student/latexService",["require","exports","module","js/lib/api"],function(require,exports,module){"use strict";var e=require("js/lib/api"),s=e("/api/assess/v1/",{type:"rest"}),t={latex:function latex(e){return s.get("latex",{data:{userText:e}})}};module.exports=t});
