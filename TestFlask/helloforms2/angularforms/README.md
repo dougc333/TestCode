@@ -1,2 +1,4 @@
-modify the example to have the variable set in flask vs. javascript
+make sure you are in flask venv before running example
+
+source ~/TestCode/TestFlask/flask/bin/activate
 

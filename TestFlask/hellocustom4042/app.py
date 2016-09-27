@@ -11,7 +11,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
   print 'function index()'
-  return send_file('templates/index.html')
+  return send_file('templates/simplejquery.html')
 
 @app.route('/simple')
 def simple():
