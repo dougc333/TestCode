@@ -1,8 +1,8 @@
 from flask import render_template,redirect, flash
-from helloforms import app
+from helloforms2 import app
 from .forms import LoginForm
 
-
+@app.route('/')
 @app.route('/index')
 def index():
 	print 'calling index'
@@ -14,7 +14,7 @@ def index():
 	return render_template('index.html')
 
 
-@app.route('/login')
+@app.route('/login', methods=['GET','POST'])
 def login():
 	form=LoginForm(csrf_enabled=False)
 	if form.validate_on_submit():
