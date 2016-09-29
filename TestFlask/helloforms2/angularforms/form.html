@@ -5,11 +5,15 @@
 <div ng-app='myApp' ng-controller='formCtrl'>
 <form>
   First Name:<input type="text" ng-model="firstname">
-</for>
+  Debug: {{firstname}}
+</form>
 </div>
 </body>
 <script>
 var app=angular.module("myApp",[]);
 app.controller('formCtrl', function($scope){$scope.firstname="asdf"});
 </script>
+<div ng-controller='formCtrl'>
+<p>Debugging tool TextBox is:</p>{{firstname}}
+</div>
 </html>
