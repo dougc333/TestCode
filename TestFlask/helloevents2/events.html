@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<style>
+body{
+   background-color: grey;
+}
+#box{
+   position:fixed;
+   top:100px;
+   left 50px;
+   width:50%;
+   height:30%;
+   background-color: pink;
+   z-index:1;
+}
+#resetCount{
+   position:fixed;
+   top:300px;
+   left 50px;
+   width:100px;
+   height:100px;
+   background-color:yellow;
+   z-index:1;
+}
+
+#hidden{
+  position:fixed;
+  top:500px;
+  left:50px;
+  width:100px;
+  height:100px;
+  background-color:teal;
+  z-index:1;
+}
+
+#content {
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    background-color:red;
+}
+</style>
+<script src="static/angular.min.js"></script>
+<script>
+  var app=angular.module("myApp",[]);
+  app.controller("myCtrl",function($scope){
+     $scope.count=0;
+     $scope.showMe=true;
+     $scope.clickFunc=function(){
+       $scope.showMe=!$scope.showMe;
+     }
+  });
+</script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<p>this is the background/body</p>
+<div id="box" ng-mousemove="count = count + 1">
+This is the box div
+{{count}}
+</div>
+<div id="resetCount" ng-mousemove="count=0">
+reset box
+</div>
+<div id="hidden" ng-show="showMe">
+hidden div
+</div>
+<button ng-click="clickFunc()">Click here</button>
+</body>
+</html>
