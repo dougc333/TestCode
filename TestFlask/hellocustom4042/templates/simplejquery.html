@@ -1,11 +1,19 @@
 <!doctype html>
 <html>
 <head>
-<script src="static/js/jquery.min.js"></script>
+<script src="../static/js/jquery.min.js"></script>
 </head>
 <body>
-this is simplejquery.html
-<script type="text/javascript" >$document.ready(function(alert("asdfasdf")));</script>
-<script type="text/javascript">alert("js alert!!!!")</script>
+this is simplejquery.html example
+<script type="text/javascript">
+  $(document).ready(function(){
+      $("#basic_button").click(function(){
+         alert("asdfasdf");
+      });
+   });
+</script>
+<p>
+<input id="basic_button" type ="button" value="alert alert alert" />
+</p>
 </body>
 </html>
