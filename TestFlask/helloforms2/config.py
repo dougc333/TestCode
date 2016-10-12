@@ -1,3 +1,5 @@
+print "running config.py"
+
 WTF_CRSF_ENABLED=False
 CRSF_ENABLED=False
 SECRET_KEY="a"
