@@ -1,6 +1,6 @@
 from flask import Flask
 
-print 'helloforms2 __init__.py'
+
 
 app = Flask('__name__', root_path='helloforms2')
 print 'before loading config'

@@ -1,31 +1,19 @@
 <!doctype html>
-<head>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<script>
-var app=angular.module('myApp',[]);
-app.run(function($rootScope){
-  $rootScope.color = 'blue';
-});
-app.controller('myController',function($scope){
-  $scope.color='red';
-});
-app.controller('app1Controller',function($scope){
-    $scope.color='yellow';
-  });
-</script>
-</head>
 <html>
-<body ng-app="myApp">
-<h4>app Rootscope color:{{color}}</h4>
-<div ng-controller="myController">
-  <h4>app Controller color:{{color}}</h4>
-</div>
-<div ng-app="noApp">
- noApp color:{{ color }}
-</div>
-<div ng-controller="app1Controller">
-app1Controller color:{{color}}
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js'></script>
+<body>
+<div ng-app='myApp' ng-controller='formCtrl'>
+<form>
+  First Name:<input type="text" ng-model="firstname">
+  Debug: {{firstname}}
+</form>
 </div>
 </body>
-
+<script>
+var app=angular.module("myApp",[]);
+app.controller('formCtrl', function($scope){$scope.firstname="asdf"});
+</script>
+<div ng-controller='formCtrl'>
+<p>Debugging tool TextBox is:</p>{{firstname}}
+</div>
 </html>
