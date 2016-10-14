@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<script src="../static/js/angular.min.js"></script>
+<script type="text/javascript">
+     var app = angular.module("myApp",[]);
+     app.controller("mc",function($scope){
+         $scope.showMe=true;
+         $scope.foo = function(){
+             alert("$scope.foo angular controller function");
+          }
+         $scope.showhide = function(){
+            //alert("showhide");
+            $scope.showMe = !$scope.showMe;
+         }
+     });
+     function toggle(){
+        alert("loading function toggle w/no angular");
+     }
+</script>
+</head>
+<body ng-app="myApp">
+<div id="t">
+<p>Buttons Everywhere</p>
+<button type="button" onClick="toggle()">Click Me to run toggle()!</button>
+</div>
+<div ng-controller="mc" >
+<button  ng-click="foo()">button here</button>
+<button  ng-click="showhide()">hide and show</button>
+<p  ng-show="showMe">hidden text do you see me? </p>
+</div>
+<div  ng-show="!showMe">asdfasasasdfasdfasdfasfsa</div>
+</body>
+</html>
