@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<script src="../../static/js/angular.min.js"></script>
+<script type="text/javascript">
+  var ang = angular.module("testApp",[]);
+  ang.controller("myCont", function($scope){
+    $scope.addMe=false;
+    $scope.toggle = function(){
+       //alert("$scope.toggle")
+       $scope.addMe=!$scope.addMe;
+    }
+    
+  });
+</script>
+</head>
+<div ng-app="testApp" ng-controller="myCont" >
+<a href="#" ng-click="toggle()">click this link </a>
+<div ng-show="addMe">
+<ol>
+   <li>row 1</li>
+   <li>row 2</li>
+   <li>row 3</li>
+</ol>
+</div>
+</div>
+</html>
