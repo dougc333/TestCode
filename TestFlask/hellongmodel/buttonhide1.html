@@ -1,0 +1,35 @@
+<doctype html>
+<html>
+<head>
+<script src="../static/js/angular.min.js"></script>
+<script type="text/javascript">
+  app = angular.module('mA',[]);
+  app.controller('mc',function($scope){
+     $scope.showMe=false;
+     $scope.foo = function(){
+       $scope.showMe = !$scope.showMe;
+     } 
+  });
+</script>
+</head>
+<body>
+
+<div ng-app="mA" ng-controller="mc">
+
+<button ng-click="foo()">Click Me!</button>
+
+<div ng-show="showMe">
+    <h1>Menu:</h1>
+    <div>Pizza</div>
+    <div>Pasta</div>
+    <div>Pesce</div>
+</div>
+
+</div>
+
+<p>Click the button to show/hide the menu.</p>
+
+</body>
+</html>
+
+
