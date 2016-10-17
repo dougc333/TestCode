@@ -1,11 +1,12 @@
 from flask import Flask
-from flask_sockets import Sockets
+from flask_socketio import SocketIO
 
 
 
-app=Flask("__name__")
-sockets = Sockets(app)
-
+app=Flask(__name__)
+sockets = SocketIO(app)
+if __name__ == "__main__":
+	sockets.run(app)
 
 @sockets.route('/echo')
 def es(ws):
