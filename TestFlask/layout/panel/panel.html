@@ -1,0 +1,28 @@
+<!doctype html>
+<head>
+<script src="../../static/js/angular.min.js"></script>
+<script src="../../static/js/ui-bootstrap.min.js"></script>
+
+<script type="text/javascript">
+  var ang = angular.module("myApp", [ui.bootstrap]);
+  
+</script>
+<style rel="stylesheet" type="text/css" href="../../static/css/bootstrap.min.css"></style>
+</head>
+<body>
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title" >
+       panel title 
+         <a data-toggle="collapse" href="#collapse1">data toggle</a>
+      </h4>   
+    </div>
+    <div id="collapse1" class="panel-collapse collapse">
+       <div class="panel-body">panel body</div>
+       <div class="panel-footer">panel footer</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
