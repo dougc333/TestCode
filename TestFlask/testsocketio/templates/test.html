@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <script src="../static/js/angular.min.js"></script>
+    <script src="../static/js/socket.io.min.js"></script>
+    <script src="../static/js/jquery.min.js"></script>
+    <script type="text/javascript">
+        var ang = angular.module("myApp", [])
+        var socket;
+        $(document).ready(function(){
+           socket = io.connect("http://localhost:5000/chat");
+
+           socket.on('connect',function(){
+              socket.emit('joined',{});
+              console.log('connect ')
+           });
+
+           socket.on('status',function(data){
+              $('#chat').val($('#chat').val() + data.msg + '\n');
+              $('#chat').scrollTop($('#chat')[0].scrollHeight);
+           });
+
+           $('#text').keypress(function(e){
+              var code = e.keyCode || e.which;
+              if (code == 13){
+                 text = $('#text').val();
+                 $('#text').val('');
+                 socket.emit('text', {msg:text});
+               }
+           });
+
+        });
+</script>
+</head>
+<body ng-app="myApp">
+test body
+<p>Enter in message:</p>
+<textarea id="chat" row="20", col="80"></textarea>
+<input id="text" size="80" placeholder="enter text"><br><br>
+<a href="#" onclick="leaveroom()">leave room</a>
+</body>
+<html>
