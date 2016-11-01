@@ -1,9 +1,10 @@
 
 import cv2
+import cv
 
 class VideoCamera(object):
     def __init__(self):
-        self.video = cv2.VideoCapture("visiontraffic.avi")
+        self.video = cv2.VideoCapture("video.avi")
     
     def __del__(self):
         self.video.release()
