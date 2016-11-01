@@ -4,7 +4,7 @@ import cv
 
 class VideoCamera(object):
     def __init__(self):
-        self.video = cv2.VideoCapture("video.avi")
+        self.video = cv2.VideoCapture("video.mov")
     
     def __del__(self):
         self.video.release()

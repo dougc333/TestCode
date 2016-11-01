@@ -1,7 +1,7 @@
 import cv2
 from flask import Flask, render_template, Response
 from camera import VideoCamera
-
+import time
 
 app = Flask(__name__)
 
@@ -13,9 +13,10 @@ def index():
 def gen(camera):
     print "gen"
     while True:
-	print 'before camera.get_frame()'
+	#print 'before camera.get_frame()'
         frame = camera.get_frame()
-	print'after camera.get_frame()'
+	#print'after camera.get_frame()'
+	#time.sleep(.3)
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
 
