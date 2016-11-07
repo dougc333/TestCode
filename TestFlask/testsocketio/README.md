@@ -1,4 +1,4 @@
-curl -w "@test.txt" -o /dev/null -s "localhost:8000/hello"
+curl -w "@test.txt" -o /dev/null -s "localhost:5000/test"
 
 SocketIO is an async API with broadcast messages. Ideal use case for chat room. 
 socketio = SocketIO()
