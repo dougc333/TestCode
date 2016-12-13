@@ -2,3 +2,7 @@ clinical.*
 TestCoding/clinical.*
 *.csv
 TestMatlab/test/*
+TestUdacityDN/*.tar.gz
+TestUdacityDN/notMNIST_large/*
+TestUdacityDN/notMNIST_small/*
+
