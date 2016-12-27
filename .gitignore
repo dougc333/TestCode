@@ -6,4 +6,6 @@ TestUdacityDN/*.tar.gz
 TestUdacityDN/notMNIST_large/*
 TestUdacityDN/notMNIST_small/*
 TestUdacityDN/notMNIST.pickle
+TestUdacityDN/caltech-lane-detection/*.zip
+TestUdacityDN/caltech-lane-detection/caltech-lanes/*
 
