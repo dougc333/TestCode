@@ -139,7 +139,15 @@ $(document).click(function(loc){
 
 $("#main").append(internationalizeButton);
 
-function inName(firstName, secondName){
-
-
+function inName(name){
+    firstName = name.split(" ")[0];
+    lastName = name.split(" ")[1];
+    firstName = firstName.toLowerCase();
+    firstName = firstName[0].toUpperCase() + firstName.slice(1,firstName.length);
+    lastName = lastName.toUpperCase();
+    return firstName +" " +lastName;
 }
+
+console.log("-----------");
+console.log(inName("sebastian thrun")==="Sebastian THRUN");
+console.log("------------");
