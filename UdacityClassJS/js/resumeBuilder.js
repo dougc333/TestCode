@@ -7,7 +7,7 @@ var bio={
        "email":"jdoe@gmail.com",
        "github":"johndoe",
        "twitter":"@johndoe",
-       "location":"San Francisco"
+       "location":"San Francisco,CA"
    },
    "welcomeMessage":"welcome thee this is more text, text..text hello hi hi hi hi hi hi hi hi hi",
     "skills":["program1","program2","program3","program4"],
@@ -116,19 +116,18 @@ cat.speak();
 
 console.log(cat.bankaccounts);
 
-  work.jobs.forEach(function(jobItem){
-     console.log(jobItem)
-     $("#workExperience").append(HTMLworkStart);
-     //$("#workExperience").append("LLLLLL");
-     var HTMLworkEmp = HTMLworkEmployer.replace("%data%",jobItem.employer);
-     var HTMLworkTit = HTMLworkTitle.replace("%data%",jobItem.title);
-     $(".work-entry:last").append(HTMLworkEmp+HTMLworkTit);
+work.jobs.forEach(function(jobItem){
+    console.log(jobItem)
+    $("#workExperience").append(HTMLworkStart);
+    var HTMLworkEmp = HTMLworkEmployer.replace("%data%",jobItem.employer);
+    var HTMLworkTit = HTMLworkTitle.replace("%data%",jobItem.title);
+    $(".work-entry:last").append(HTMLworkEmp+HTMLworkTit);
 
-     var HTMLworkda = HTMLworkDates.replace("%data%", jobItem.dates);
-     $(".work-entry:last").append(HTMLworkda);
-     var HTMLworkDesc = HTMLworkDescription.replace("%data%",jobItem.description);
-     $(".work-entry:last").append(HTMLworkDesc);
-  });
+    var HTMLworkda = HTMLworkDates.replace("%data%", jobItem.dates);
+    $(".work-entry:last").append(HTMLworkda);
+    var HTMLworkDesc = HTMLworkDescription.replace("%data%",jobItem.description);
+    $(".work-entry:last").append(HTMLworkDesc);
+});
 
 $(document).click(function(loc){
   console.log(loc.clientX);
@@ -151,3 +150,5 @@ function inName(name){
 console.log("-----------");
 console.log(inName("sebastian thrun")==="Sebastian THRUN");
 console.log("------------");
+
+$("#mapDiv").append(googleMap);

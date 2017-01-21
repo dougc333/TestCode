@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--call initMap() from browswer debugger to get the map to display.  -->
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+<script type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-dlx42TPRAxS0vy5xzYwcjvUp7xf2YU4&libraries=geometry,places,visualization&gcallback=initMap">
+</script>
+</head>
+<body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+</body>
+</html>
