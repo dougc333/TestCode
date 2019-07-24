@@ -1,7 +1,0 @@
-object Test{
-  def main(){
-  }
-
-
-
-}
