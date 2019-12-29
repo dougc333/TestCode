@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)https://canvas.stanford.edu/courses/105689/pages/project-3 -->
+<html class="" dir="ltr" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/css" rel="stylesheet">
+    <script async="" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/analytics.js"></script><script>if (navigator.userAgent.match(/(MSIE|Trident\/)/)) location.replace('/ie-is-not-supported.html')</script>
+  <script>
+//<![CDATA[
+
+!function(){
+  function get(u){document.write('<scr'+'ipt src="'+ u +'"></sc'+'ript>')}
+  var o,s,v;
+  if (!(window.Promise && Object.assign && Object.values && [].find && [].includes && (o={},s=Symbol(),v={},o[s]=v,o[s]===v) && (function f(){}).bind().name==='bound f')) {
+    get("https://du11hjcvx0uqb.cloudfront.net/br/dist/ie11-polyfill-5cf07f7aab.js");
+  }
+  if (!window.fetch) get("https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.min.js");
+}();
+      
+//]]>
+</script>
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/images/favicon-e10d657a73.ico">
+  <link rel="apple-touch-icon" href="https://du11hjcvx0uqb.cloudfront.net/br/dist/images/apple-touch-icon-585e5d997d.png">
+  <link rel="stylesheet" media="all" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/variables-8391c84da435c9cfceea2b2b3317ff66.css">
+  <link rel="stylesheet" media="all" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/common-7ff2aced75.css">
+  <meta name="apple-itunes-app" content="app-id=480883488">
+<link rel="manifest" href="https://canvas.stanford.edu/web-app-manifest/manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#726c63">
+  <link rel="stylesheet" media="all" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/wiki_page-46e7e026f6.css">
+  <link rel="stylesheet" media="all" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/StanfordCanvasLive_Master.css">
+  <script>
+    function _earlyClick(e){
+      var c = e.target
+      while (c && c.ownerDocument) {
+        if (c.getAttribute('href') == '#' || c.getAttribute('data-method')) {
+          e.preventDefault()
+          (_earlyClick.clicks = _earlyClick.clicks || []).push(c)
+          break
+        }
+        c = c.parentNode
+      }
+    }
+    document.addEventListener('click', _earlyClick)
+  </script>
+  <script>
+//<![CDATA[
+
+      ;["https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/85229dd7f6ee8714fcf57e362a39b7c6/variables-8391c84da435c9cfceea2b2b3317ff66.js"].forEach(function(src) {
+        var s = document.createElement('script')
+        s.src = src
+        s.async = false
+        document.head.appendChild(s)
+      });
+//]]>
+</script><script src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/variables-8391c84da435c9cfceea2b2b3317ff66.js"></script>
+
+
+  <script>
+    INST = {"environment":"production","allowMediaComments":true,"kalturaSettings":{"domain":"nv.instructuremedia.com","resource_domain":"nv.instructuremedia.com","rtmp_domain":"iad.rtmp.instructuremedia.com","partner_id":"9","subpartner_id":"0","player_ui_conf":"0","kcw_ui_conf":"0","upload_ui_conf":"0","max_file_size_bytes":534773760,"do_analytics":false,"hide_rte_button":false,"js_uploader":true},"logPageViews":true,"maxVisibleEditorButtons":3,"editorButtons":[{"name":"Commons Favorites","id":558,"url":"https://lor.instructure.com/api/lti/favorite-resources","icon_url":"https://lor.instructure.com/img/icon_commons.png","canvas_icon_class":null,"width":800,"height":400,"use_tray":true,"description":"\u003cp\u003eFind and share course content\u003c/p\u003e\n"},{"name":"Course Videos","id":4450,"url":"https://stanford-pilot.hosted.panopto.com/Panopto/LTI/LTI.aspx","icon_url":"https://stanford-pilot.hosted.panopto.com/Panopto/images/panopto_logo_globe.png","canvas_icon_class":null,"width":900,"height":700,"use_tray":false,"description":""}]};
+    ENV = {"ASSET_HOST":"https://du11hjcvx0uqb.cloudfront.net/br","active_brand_config_json_url":"https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/85229dd7f6ee8714fcf57e362a39b7c6/variables-8391c84da435c9cfceea2b2b3317ff66.json","url_to_what_gets_loaded_inside_the_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/85229dd7f6ee8714fcf57e362a39b7c6/variables-8391c84da435c9cfceea2b2b3317ff66.css","https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/new_styles_normal_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-b728856d48.css"],"url_for_high_contrast_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/default/variables-high_contrast-8391c84da435c9cfceea2b2b3317ff66.css","https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/new_styles_high_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-49f3a864d7.css"],"current_user_id":"179404","current_user_roles":["user","student"],"current_user_disabled_inbox":false,"files_domain":"cluster98.canvas-user-content.com","DOMAIN_ROOT_ACCOUNT_ID":35910000000000001,"k12":false,"use_responsive_layout":false,"use_rce_enhancements":false,"DIRECT_SHARE_ENABLED":false,"help_link_name":"Help","help_link_icon":"help","use_high_contrast":false,"LTI_LAUNCH_FRAME_ALLOWANCES":["geolocation *","microphone *","camera *","midi *","encrypted-media *","autoplay *"],"DEEP_LINKING_POST_MESSAGE_ORIGIN":"https://canvas.stanford.edu","DEEP_LINKING_LOGGING":null,"SETTINGS":{"open_registration":false,"collapse_global_nav":false,"show_feedback_link":true},"current_user":{"id":"179404","display_name":"Doug Chang","avatar_image_url":"https://canvas.stanford.edu/images/messages/avatar-50.png","html_url":"https://canvas.stanford.edu/about/179404","pronouns":null,"avatar_is_fallback":true},"page_view_update_url":"/page_views/e012ec05-5b27-469c-93bf-2e6a3d9b0c91?page_view_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpIjoiZTAxMmVjMDUtNWIyNy00NjljLTkzYmYtMmU2YTNkOWIwYzkxIiwidSI6MzU5MTAwMDAwMDAxNzk0MDQsImMiOiIyMDE5LTExLTA3VDAyOjEyOjU0LjYzWiJ9.S4pCscHVl-2Kwd6Fv6JtgwPbLTr5lZ6N7_E9kHe9Py0","context_asset_string":"course_105689","ping_url":"https://canvas.stanford.edu/api/v1/courses/105689/ping","TIMEZONE":"America/Los_Angeles","CONTEXT_TIMEZONE":"America/Los_Angeles","LOCALE":"en","BIGEASY_LOCALE":"en_US","FULLCALENDAR_LOCALE":"en","MOMENT_LOCALE":"en","WIKI_RIGHTS":{"read":true},"PAGE_RIGHTS":{"read":true},"DEFAULT_EDITING_ROLES":"teachers","WIKI_PAGES_PATH":"/courses/105689/pages","WIKI_PAGE":{"title":"Project 3","created_at":"2019-08-06T22:46:02Z","url":"project-3","editing_roles":"teachers","page_id":"118154","last_edited_by":{"id":"186210","display_name":"Alex Derry","avatar_image_url":"https://canvas.stanford.edu/images/messages/avatar-50.png","html_url":"https://canvas.stanford.edu/courses/105689/users/186210","pronouns":null},"published":true,"hide_from_students":false,"front_page":false,"html_url":"https://canvas.stanford.edu/courses/105689/pages/project-3","todo_date":null,"updated_at":"2019-11-02T18:57:33Z","locked_for_user":false,"body":"\u003cp\u003e\u003cspan style=\"font-size: 18pt;\"\u003eImportant Information\u003c/span\u003e\u003c/p\u003e\r\n\u003col\u003e\r\n\u003cli\u003eProject 3 is due by \u003cstrong\u003e11:59pm on November 12, 2018\u003c/strong\u003e. One late period may be used to extend this deadline to 11:59pm on November 14, 2018. \u003cstrong\u003eNo submissions will be accepted after November 14.\u003c/strong\u003e\n\u003c/li\u003e\r\n\u003c/ol\u003e\r\n\u003col start=\"2\"\u003e\r\n\u003cli\u003eProgramming projects must be completed individually. You may discuss algorithms with others, but the coding should be done alone. You must explicitly name everyone with whom you discussed this project in the header comments of your code and in the collaboration attestation in the project quiz. Students must abide by the terms of the Stanford Honor Code.\u003c/li\u003e\r\n\u003cli\u003eRemember to consult Piazza, as many common questions will be asked and answered there.\u003c/li\u003e\r\n\u003cli\u003ePrior to beginning the assignment, please read the \u003ca href=\"https://canvas.stanford.edu/courses/105689/pages/code-policy\" data-api-endpoint=\"https://canvas.stanford.edu/api/v1/courses/105689/pages/code-policy\" data-api-returntype=\"Page\"\u003eCode Policy\u003c/a\u003e.\u003c/li\u003e\r\n\u003cli\u003eYour source code must run \u003cstrong\u003eexactly\u003c/strong\u003e as specified below. We will be unit testing your code on Gradescope.\u003c/li\u003e\r\n\u003c/ol\u003e\r\n\u003cp\u003e\u003cspan style=\"font-size: 18pt;\"\u003eFiles to Download\u003c/span\u003e\u003c/p\u003e\r\n\u003cp\u003eYou can download all files required for the project \u003ca href=\"https://canvas.stanford.edu/courses/105689/files/folder/p3\"\u003ehere\u003c/a\u003e.\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003ePyRosetta\u003c/strong\u003e: Many of the utility functions in this project require PyRosetta, a Python wrapper for the Rosetta software suite. You will need to request an academic license for free at this link: \u003ca href=\"https://els.comotion.uw.edu/express_license_technologies/pyrosetta\"\u003ehttps://els.comotion.uw.edu/express_license_technologies/pyrosetta\u003c/a\u003e.\u003c/p\u003e\r\n\u003cp\u003eOnce approved, download the latest PyRosetta from \u003ca href=\"http://www.pyrosetta.org/dow\"\u003ehttp://www.pyrosetta.org/dow\u003c/a\u003e. Make sure you select the right distribution for your machine (Linux/MacOS vs. Windows). Follow the appropriate installation instructions at the bottom of the page.\u003c/p\u003e\r\n\u003cp\u003e**\u003cstrong\u003eMake sure to do this step as early as possible—installing PyRosetta may take a while**\u003c/strong\u003e\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003e \u003c/strong\u003e\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003eBiopython:\u003c/strong\u003e The other dependency you will need is \u003ca href=\"https://biopython.org/wiki/Documentation\"\u003eBiopython\u003c/a\u003e, which is useful for interacting with PDB files. This can be installed using `pip install biopython`.\u003c/p\u003e\r\n\u003cp\u003e\u003cspan style=\"font-size: 18pt;\"\u003eIntroduction\u003c/span\u003e\u003c/p\u003e\r\n\u003cp\u003eProteins are extraordinary molecular machines that perform and mediate fundamental functions in living organisms, including molecular signaling, reaction catalysis, and energy transformation. This remarkable diversity in function of natural proteins is made possible by variations in their three-dimensional structures, each of which has been optimized through evolution to perform its particular function. It is also known that a protein’s structure is determined by its amino acid sequence, and that the folded conformation of a protein corresponds to the minimum-energy state for its sequence. Thus, the ability to predict the structure of a protein from its amino acid sequence alone would be very useful for addressing many biological problems, such as predicting protein function from genomic data and rationally engineering novel proteins to perform a desired function. For this reason, the problem of \u003cstrong\u003eprotein structure prediction\u003c/strong\u003e has been a holy grail in structural bioinformatics for decades.\u003c/p\u003e\r\n\u003cp\u003eWe will focus on \u003cem\u003eab initio \u003c/em\u003estructure prediction, which aims to fold a protein from sequence alone without using a template structure. In this project, you will implement a fragment assembly algorithm, one of the most widely-used and successful approaches for \u003cem\u003eab initio \u003c/em\u003eprotein structure prediction. This is a simplified version of the Rosetta protein folding algorithm described in lecture, which uses a Monte Carlo simulation with simulated annealing to iteratively assemble fragments from known protein structures into a novel structure that matches the input sequence. For more information on Rosetta’s fragment assembly approach, see the following reference:\u003c/p\u003e\r\n\u003cp\u003eRohl, Carol A., Charlie E. M. Strauss, Kira M. S. Misura, and David Baker. 2004. “Protein Structure Prediction Using Rosetta.” \u003cem\u003eMethods in Enzymology\u003c/em\u003e, 383:66–93. Academic Press.\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003eLearning Goals\u003c/strong\u003e\u003c/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eUnderstand the energetic factors that drive protein folding, and how that influences the relationship between sequence and structure\u003c/li\u003e\r\n\u003cli\u003eImplement a Monte Carlo simulated annealing protocol, and understand the effect of different parameters on the simulation\u003c/li\u003e\r\n\u003cli\u003eFold a protein de novo and visualize using PyMol\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cp\u003e\u003cspan style=\"font-size: 18pt;\"\u003eData Formats\u003c/span\u003e\u003c/p\u003e\r\n\u003cp\u003eWe include data files in the following formats:\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003e.fasta files:\u003c/strong\u003e These files contain protein sequences, represented as a string of 1-letter amino acid codes. The lines starting with the symbol “\u0026gt;” simply denote the protein and chain that the sequence comes from.\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003e.pdb files:\u003c/strong\u003e This file format is used to store protein structures derived from X-ray crystallography data. These files are fixed-width and contain metadata information as well as the identity and xyz-coordinates of every atom in the protein. More information on the PDB file format is available on \u003ca href=\"https://en.wikipedia.org/wiki/Protein_Data_Bank_(file_format)\"\u003eWikipedia\u003c/a\u003e, but this is not necessary to complete the project; we provide functions to interact with PDB files as necessary.\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003e.frag files:\u003c/strong\u003e The fragment assembly protocol you will be implementing requires sampling from a “fragment library”, which contains a set of candidate fragments for each sequence position in the input protein. These fragment libraries are generated by comparing short windows in the input sequence with known protein structures using PSI-BLAST (a variation of BLAST for protein sequences) and secondary structure prediction. Based on these comparisons, the most similar fragments (typically the top 200) are generated for each position. We have pre-computed 3- and 9-residue fragment libraries and provide them to you in Rosetta fragment file format (see \u003ca href=\"https://www.rosettacommons.org/docs/latest/rosetta_basics/file_types/fragment-file\"\u003ehere\u003c/a\u003e for details). The only important data are the \u003cstrong\u003ephi \u003c/strong\u003eand \u003cstrong\u003epsi\u003c/strong\u003e columns, but it is useful to be familiar with the other information contained in these files.\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003e.rmsd files:\u003c/strong\u003e Typically, in \u003cem\u003eab initio\u003c/em\u003e folding you do not have access to the target structure (for obvious reasons), so you must sample randomly from the fragment library at each position. However, for this assignment you will be implementing \u003cem\u003ebiased \u003c/em\u003eforward folding, in which we reduce our sample space of fragments to only those which are closest in structure to the target fold. We have pre-calculated the root-mean-square deviation (RMSD) between each fragment in the fragment library and its corresponding fragment in the native structure. These files are tab-delimited with the following three columns:\u003c/p\u003e\r\n\u003cpre\u003eposition          fragment          rmsd\u003c/pre\u003e\r\n\u003cp\u003eYou do not need to modify these files, although the script used to generate the .rmsd files is given to you in \u003cem\u003ecode/get_lowRMS_frags.py\u003c/em\u003e if you are interested.\u003c/p\u003e\r\n\u003cp\u003e\u003cspan style=\"font-size: 18pt;\"\u003eProject Overview\u003c/span\u003e\u003c/p\u003e\r\n\u003cp\u003eIn this assignment, you will fold some small target (or \"native\") proteins. We give you data for three proteins:\u003c/p\u003e\r\n\u003col\u003e\r\n\u003cli\u003eHelix – this is a simple 17-residue alpha helix. We \u003cstrong\u003estrongly \u003c/strong\u003erecommend you use this structure for debugging and testing your code, as it should take less than 5 minutes to fold.\u003c/li\u003e\r\n\u003cli\u003e1FW4 – this is the crystal structure of the C-terminal domain of calmodulin, an important calcium binding signaling protein.\u003c/li\u003e\r\n\u003cli\u003e1UBQ – this is the crystal structure of ubiquitin, a small regulatory protein that is present in almost all eukaryotic tissues.\u003c/li\u003e\r\n\u003c/ol\u003e\r\n\u003cp\u003eImplement the fragment assembly protocol for \u003cem\u003eab initio\u003c/em\u003e protein folding by following the implementation details below. In each simulation, you will fold the protein from an extended configuration using two stages: (1) a coarse assembly stage, which samples fragments of length 9, and (2) a refinement stage, which samples fragments of length 3. After the full simulation, you will perform an energy minimization and report (1) the final energy of the folded conformation and (2) the RMSD to the target structure (in Angstroms).\u003c/p\u003e\r\n\u003cp\u003eFirst, make sure your program works consistently on \u003cem\u003ehelix.pdb\u003c/em\u003e. The total simulation should take 5 minutes or less on your local machine and achieve a final RMSD of less than 1Å to the target structure.\u003c/p\u003e\r\n\u003cp\u003eThen, run 10 simulations each for 1FW4 and 1UBQ. Since these proteins are slightly larger, each simulation could take 5-10 minutes. \u003cstrong\u003eWith this in mind, make sure you leave enough time to run all of these simulations. \u003c/strong\u003eIf it is taking longer than 10 minutes per simulation, think about how you could implement your code more efficiently—the most common reason for inefficient simulations is unnecessarily repeating operations during sampling.\u003c/p\u003e\r\n\u003cp\u003eFinally, visualize the lowest-RMSD structures in PyMol (details below).\u003c/p\u003e\r\n\u003cp\u003e\u003cspan style=\"font-size: 18pt;\"\u003eImplementation Details\u003c/span\u003e\u003c/p\u003e\r\n\u003cp\u003e\u003cspan style=\"font-size: 14pt;\"\u003e1. Monte Carlo sampling with simulated annealing\u003c/span\u003e\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003eMonte Carlo fragment sampling\u003c/strong\u003e\u003c/p\u003e\r\n\u003cp\u003eThis is probably the most widely used and successful strategy for folding a protein \u003cem\u003eab initio\u003c/em\u003e. This approach is so effective because it provides a \u003cstrong\u003efast\u003c/strong\u003e, \u003cstrong\u003eknowledge-based\u003c/strong\u003e strategy for searching the space of possible structures for a protein. This conformational space is intractably large, especially for longer sequences, so a naïve sampling approach that permutes the protein structure at random is likely to take a very long time to reach a “good” structure. However, we can leverage the more than 150,000 known protein structures in the PDB to selectively sample regions of the space that we predict to be close to the target structure. This results in \u003cstrong\u003efragment libraries\u003c/strong\u003e that are customized for the protein of interest, containing short sections of structures that have similar sequences to short windows of the input sequence. By sampling these fragments, we are able to effectively “jump” rapidly between different regions of the conformational space in search of low-energy configurations. In short, the procedure consists of a series of steps, or moves, where each move consists of two stages: (1) a fragment-based move in the conformational space and (2) an evaluation of the favorability of the move.\u003c/p\u003e\r\n\u003cp\u003eA typical \u003cem\u003eab initio\u003c/em\u003e folding protocol, such as Rosetta, starts with a round of coarse fragment assembly using 9-residue fragments. Each Monte Carlo move proceeds as follows:\u003c/p\u003e\r\n\u003col\u003e\r\n\u003cli\u003eSample a random position in the protein chain. Note that this position corresponds to the \u003cstrong\u003eleft-hand side\u003c/strong\u003e of the fragment window. Think carefully about which positions in the chain you can actually sample from; there are restrictions imposed by the fragment length and the definition of a torsional angle (for example, position 1 does not have a \u003cimg class=\"equation_image\" title=\"\\phi\" src=\"https://canvas.stanford.edu/equation_images/%255Cphi\" alt=\"LaTeX: \\phi\" data-equation-content=\"\\phi\" x-canvaslms-safe-mathml='\u0026lt;math xmlns=\"http://www.w3.org/1998/Math/MathML\"\u0026gt;\n  \u0026lt;mi\u0026gt;\u0026amp;#x03D5;\u0026lt;!-- ϕ --\u0026gt;\u0026lt;/mi\u0026gt;\n\u0026lt;/math\u0026gt;'\u003e angle!).\u003c/li\u003e\r\n\u003cli\u003eRetrieve list of candidate fragments for that position (see below).\u003c/li\u003e\r\n\u003cli\u003eSample a random fragment from this list of candidates\u003c/li\u003e\r\n\u003cli\u003eInsert the sampled fragment into the current protein chain at the sampled position \u003cstrong\u003ein torsion space. \u003c/strong\u003eIn other words, replace each torsion angle (\u003cimg class=\"equation_image\" title=\"\\phi\" src=\"https://canvas.stanford.edu/equation_images/%255Cphi\" alt=\"LaTeX: \\phi\" data-equation-content=\"\\phi\" x-canvaslms-safe-mathml='\u0026lt;math xmlns=\"http://www.w3.org/1998/Math/MathML\"\u0026gt;\n  \u0026lt;mi\u0026gt;\u0026amp;#x03D5;\u0026lt;!-- ϕ --\u0026gt;\u0026lt;/mi\u0026gt;\n\u0026lt;/math\u0026gt;'\u003e and \u003cimg class=\"equation_image\" title=\"\\psi\" src=\"https://canvas.stanford.edu/equation_images/%255Cpsi\" alt=\"LaTeX: \\psi\" data-equation-content=\"\\psi\" x-canvaslms-safe-mathml='\u0026lt;math xmlns=\"http://www.w3.org/1998/Math/MathML\"\u0026gt;\n  \u0026lt;mi\u0026gt;\u0026amp;#x03C8;\u0026lt;!-- ψ --\u0026gt;\u0026lt;/mi\u0026gt;\n\u0026lt;/math\u0026gt;'\u003e) in the current protein chain with corresponding torsion angles from the selected fragment.\u003c/li\u003e\r\n\u003cli\u003eScore the resulting conformation and accept or reject using the Metropolis criterion (see below).\u003c/li\u003e\r\n\u003c/ol\u003e\r\n\u003cp\u003eAfter this coarse 9-mer assembly, we perform a refinement stage that uses the same Monte Carlo procedure to sample from 3-mer fragments. This enables a finer adjustment of the torsions in small regions of the protein, which provides more precision in regions such as small loops.\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003eChoice of scoring function\u003c/strong\u003e\u003c/p\u003e\r\n\u003cp\u003eAfter making a move, we then need to evaluate whether the move was beneficial. To do this, we must define a scoring function. Since it has been shown that a protein sequence will fold into the conformation with the lowest free energy, the scoring function should represent the energy of the structure as well as possible; we call this the \u003cstrong\u003eenergy function.\u003c/strong\u003e\u003c/p\u003e\r\n\u003cp\u003eFor maximum accuracy, we could calculate energy using every atom in the simulation. However, this is extremely expensive and the full-atom conformational space is not very smooth, making Monte Carlo more difficult. To alleviate these issues, rather than calculating energy over every atom in the protein, we use a \u003cstrong\u003ecentroid \u003c/strong\u003erepresentation of each amino acid. In a centroid representation, the backbone atoms (N, C, C, O) remain the same, but the side chain is simplified to a single pseudo-“atom”, whose position is determined by the centroid of the side chain and whose radius and atomic properties (charge, polarity, etc.) are determined by the residue’s identity. This not only makes energy calculation faster, but also smooths out the energy landscape to aid in sampling. In this project, we use the Rosetta ‘score3’ centroid energy function, which is largely knowledge-based (i.e. derived from statistics calculated over known structures, rather than physics equations). See Table 1 in this \u003ca href=\"https://www-sciencedirect-com.stanford.idm.oclc.org/science/article/pii/S0076687904830040\"\u003epaper\u003c/a\u003e for a detailed description of each energy term. You will not be asked to calculate any of these terms, but you will need to have a conceptual understanding of their meaning for the quiz.\u003c/p\u003e\r\n\u003cp\u003e\u003cimg src=\"https://canvas.stanford.edu/users/186210/files/5031348/preview?verifier=PV5dngSkwh4cmk63suOefb6raOf7bnWbN3ZEo7Vp\" alt=\"Screen Shot 2019-10-15 at 5.29.19 PM.png\" width=\"2022\" height=\"1134\" data-api-endpoint=\"https://canvas.stanford.edu/api/v1/users/186210/files/5031348\" data-api-returntype=\"File\"\u003e\u003c/p\u003e\r\n\u003cp\u003eVisualization of all-atom vs. centroid representations. (\u003ca href=\"http://pubs.acs.org/doi/pdf/10.1021/acs.chemrev.6b00163\"\u003eKmiecik et al., 2016\u003c/a\u003e)\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003eMetropolis criterion\u003c/strong\u003e\u003c/p\u003e\r\n\u003cp\u003eAfter making a single move (i.e. permuting a fragment) and measuring the energy of the resulting structure, you need a way to decide whether or not to accept the move. Since we are seeking the global energy minimum, we generally want to accept moves that decrease energy and reject moves that increase it. However, a naïve solution that simply rejects all moves that increase energy will by construction force the simulation to find the nearest energy minimum, regardless of whether it is a global minimum. This results in sub-optimal structures for most simulations. We can relax this criterion by accepting some moves that increase energy, allowing the simulation to escape local minima and explore the energy landscape. Specifically, we accept moves with a probability that depends on how much the energy increases using the \u003cstrong\u003eMetropolis criterion:\u003c/strong\u003e\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003e\u003cimg class=\"equation_image\" title=\"P\\left(accept\\right)=\\begin{cases} 1\u0026amp;\\Delta E \\leq 0\\\\exp\\left(\\frac{-\\Delta E}{kT}\\right)\u0026amp;\\Delta E \u0026gt; 0\\end{cases}\" src=\"https://canvas.stanford.edu/equation_images/P%255Cleft(accept%255Cright)%253D%255Cbegin%257Bcases%257D%25201%2526%255CDelta%2520E%2520%255Cleq%25200%255C%255Cexp%255Cleft(%255Cfrac%257B-%255CDelta%2520E%257D%257BkT%257D%255Cright)%2526%255CDelta%2520E%2520%253E%25200%255Cend%257Bcases%257D\" alt=\"LaTeX: P\\left(accept\\right)=\\begin{cases} 1\u0026amp;\\Delta E \\leq 0\\\\exp\\left(\\frac{-\\Delta E}{kT}\\right)\u0026amp;\\Delta E \u0026gt; 0\\end{cases}\" data-equation-content=\"P\\left(accept\\right)=\\begin{cases} 1\u0026amp;\\Delta E \\leq 0\\\\exp\\left(\\frac{-\\Delta E}{kT}\\right)\u0026amp;\\Delta E \u0026gt; 0\\end{cases}\" x-canvaslms-safe-mathml='\u0026lt;math xmlns=\"http://www.w3.org/1998/Math/MathML\"\u0026gt;\n  \u0026lt;mi\u0026gt;P\u0026lt;/mi\u0026gt;\n  \u0026lt;mrow\u0026gt;\n    \u0026lt;mo\u0026gt;(\u0026lt;/mo\u0026gt;\n    \u0026lt;mi\u0026gt;a\u0026lt;/mi\u0026gt;\n    \u0026lt;mi\u0026gt;c\u0026lt;/mi\u0026gt;\n    \u0026lt;mi\u0026gt;c\u0026lt;/mi\u0026gt;\n    \u0026lt;mi\u0026gt;e\u0026lt;/mi\u0026gt;\n    \u0026lt;mi\u0026gt;p\u0026lt;/mi\u0026gt;\n    \u0026lt;mi\u0026gt;t\u0026lt;/mi\u0026gt;\n    \u0026lt;mo\u0026gt;)\u0026lt;/mo\u0026gt;\n  \u0026lt;/mrow\u0026gt;\n  \u0026lt;mo\u0026gt;=\u0026lt;/mo\u0026gt;\n  \u0026lt;mrow\u0026gt;\n    \u0026lt;mo\u0026gt;{\u0026lt;/mo\u0026gt;\n    \u0026lt;mtable columnalign=\"left left\" rowspacing=\".2em\" columnspacing=\"1em\" displaystyle=\"false\"\u0026gt;\n      \u0026lt;mtr\u0026gt;\n        \u0026lt;mtd\u0026gt;\n          \u0026lt;mn\u0026gt;1\u0026lt;/mn\u0026gt;\n        \u0026lt;/mtd\u0026gt;\n        \u0026lt;mtd\u0026gt;\n          \u0026lt;mi mathvariant=\"normal\"\u0026gt;\u0026amp;#x0394;\u0026lt;!-- Δ --\u0026gt;\u0026lt;/mi\u0026gt;\n          \u0026lt;mi\u0026gt;E\u0026lt;/mi\u0026gt;\n          \u0026lt;mo\u0026gt;\u0026amp;#x2264;\u0026lt;!-- ≤ --\u0026gt;\u0026lt;/mo\u0026gt;\n          \u0026lt;mn\u0026gt;0\u0026lt;/mn\u0026gt;\n        \u0026lt;/mtd\u0026gt;\n      \u0026lt;/mtr\u0026gt;\n      \u0026lt;mtr\u0026gt;\n        \u0026lt;mtd\u0026gt;\n          \u0026lt;mi\u0026gt;e\u0026lt;/mi\u0026gt;\n          \u0026lt;mi\u0026gt;x\u0026lt;/mi\u0026gt;\n          \u0026lt;mi\u0026gt;p\u0026lt;/mi\u0026gt;\n          \u0026lt;mrow\u0026gt;\n            \u0026lt;mo\u0026gt;(\u0026lt;/mo\u0026gt;\n            \u0026lt;mfrac\u0026gt;\n              \u0026lt;mrow\u0026gt;\n                \u0026lt;mo\u0026gt;\u0026amp;#x2212;\u0026lt;!-- − --\u0026gt;\u0026lt;/mo\u0026gt;\n                \u0026lt;mi mathvariant=\"normal\"\u0026gt;\u0026amp;#x0394;\u0026lt;!-- Δ --\u0026gt;\u0026lt;/mi\u0026gt;\n                \u0026lt;mi\u0026gt;E\u0026lt;/mi\u0026gt;\n              \u0026lt;/mrow\u0026gt;\n              \u0026lt;mrow\u0026gt;\n                \u0026lt;mi\u0026gt;k\u0026lt;/mi\u0026gt;\n                \u0026lt;mi\u0026gt;T\u0026lt;/mi\u0026gt;\n              \u0026lt;/mrow\u0026gt;\n            \u0026lt;/mfrac\u0026gt;\n            \u0026lt;mo\u0026gt;)\u0026lt;/mo\u0026gt;\n          \u0026lt;/mrow\u0026gt;\n        \u0026lt;/mtd\u0026gt;\n        \u0026lt;mtd\u0026gt;\n          \u0026lt;mi mathvariant=\"normal\"\u0026gt;\u0026amp;#x0394;\u0026lt;!-- Δ --\u0026gt;\u0026lt;/mi\u0026gt;\n          \u0026lt;mi\u0026gt;E\u0026lt;/mi\u0026gt;\n          \u0026lt;mo\u0026gt;\u0026amp;gt;\u0026lt;/mo\u0026gt;\n          \u0026lt;mn\u0026gt;0\u0026lt;/mn\u0026gt;\n        \u0026lt;/mtd\u0026gt;\n      \u0026lt;/mtr\u0026gt;\n    \u0026lt;/mtable\u0026gt;\n    \u0026lt;mo fence=\"true\" stretchy=\"true\" symmetric=\"true\"\u0026gt;\u0026lt;/mo\u0026gt;\n  \u0026lt;/mrow\u0026gt;\n\u0026lt;/math\u0026gt;'\u003e \u003c/strong\u003e\u003c/p\u003e\r\n\u003cp\u003ewhere \u003cimg class=\"equation_image\" title=\"\\Delta E=E_{after}-E_{before}\" src=\"https://canvas.stanford.edu/equation_images/%255CDelta%2520E%253DE_%257Bafter%257D-E_%257Bbefore%257D\" alt=\"LaTeX: \\Delta E=E_{after}-E_{before}\" data-equation-content=\"\\Delta E=E_{after}-E_{before}\" x-canvaslms-safe-mathml='\u0026lt;math xmlns=\"http://www.w3.org/1998/Math/MathML\"\u0026gt;\n  \u0026lt;mi mathvariant=\"normal\"\u0026gt;\u0026amp;#x0394;\u0026lt;!-- Δ --\u0026gt;\u0026lt;/mi\u0026gt;\n  \u0026lt;mi\u0026gt;E\u0026lt;/mi\u0026gt;\n  \u0026lt;mo\u0026gt;=\u0026lt;/mo\u0026gt;\n  \u0026lt;msub\u0026gt;\n    \u0026lt;mi\u0026gt;E\u0026lt;/mi\u0026gt;\n    \u0026lt;mrow class=\"MJX-TeXAtom-ORD\"\u0026gt;\n      \u0026lt;mi\u0026gt;a\u0026lt;/mi\u0026gt;\n      \u0026lt;mi\u0026gt;f\u0026lt;/mi\u0026gt;\n      \u0026lt;mi\u0026gt;t\u0026lt;/mi\u0026gt;\n      \u0026lt;mi\u0026gt;e\u0026lt;/mi\u0026gt;\n      \u0026lt;mi\u0026gt;r\u0026lt;/mi\u0026gt;\n    \u0026lt;/mrow\u0026gt;\n  \u0026lt;/msub\u0026gt;\n  \u0026lt;mo\u0026gt;\u0026amp;#x2212;\u0026lt;!-- − --\u0026gt;\u0026lt;/mo\u0026gt;\n  \u0026lt;msub\u0026gt;\n    \u0026lt;mi\u0026gt;E\u0026lt;/mi\u0026gt;\n    \u0026lt;mrow class=\"MJX-TeXAtom-ORD\"\u0026gt;\n      \u0026lt;mi\u0026gt;b\u0026lt;/mi\u0026gt;\n      \u0026lt;mi\u0026gt;e\u0026lt;/mi\u0026gt;\n      \u0026lt;mi\u0026gt;f\u0026lt;/mi\u0026gt;\n      \u0026lt;mi\u0026gt;o\u0026lt;/mi\u0026gt;\n      \u0026lt;mi\u0026gt;r\u0026lt;/mi\u0026gt;\n      \u0026lt;mi\u0026gt;e\u0026lt;/mi\u0026gt;\n    \u0026lt;/mrow\u0026gt;\n  \u0026lt;/msub\u0026gt;\n\u0026lt;/math\u0026gt;'\u003e is the change in energy produced by the move, k is the Boltzmann constant (k = 1 for this project), and T is the temperature of the system. Using this criterion, we guarantee that if we run the simulation for long enough (i.e. as time goes to infinity), the probability of observing any particular configuration is given by the Boltzmann distribution\u003c/p\u003e\r\n\u003cp\u003e\u003cimg class=\"equation_image\" title=\"P\\left(x\\right)\\propto exp\\left(\\frac{-U\\left(x\\right)}{kT}\\right)\" src=\"https://canvas.stanford.edu/equation_images/P%255Cleft(x%255Cright)%255Cpropto%2520exp%255Cleft(%255Cfrac%257B-U%255Cleft(x%255Cright)%257D%257BkT%257D%255Cright)\" alt=\"LaTeX: P\\left(x\\right)\\propto exp\\left(\\frac{-U\\left(x\\right)}{kT}\\right)\" data-equation-content=\"P\\left(x\\right)\\propto exp\\left(\\frac{-U\\left(x\\right)}{kT}\\right)\" x-canvaslms-safe-mathml='\u0026lt;math xmlns=\"http://www.w3.org/1998/Math/MathML\"\u0026gt;\n  \u0026lt;mi\u0026gt;P\u0026lt;/mi\u0026gt;\n  \u0026lt;mrow\u0026gt;\n    \u0026lt;mo\u0026gt;(\u0026lt;/mo\u0026gt;\n    \u0026lt;mi\u0026gt;x\u0026lt;/mi\u0026gt;\n    \u0026lt;mo\u0026gt;)\u0026lt;/mo\u0026gt;\n  \u0026lt;/mrow\u0026gt;\n  \u0026lt;mo\u0026gt;\u0026amp;#x221D;\u0026lt;!-- ∝ --\u0026gt;\u0026lt;/mo\u0026gt;\n  \u0026lt;mi\u0026gt;e\u0026lt;/mi\u0026gt;\n  \u0026lt;mi\u0026gt;x\u0026lt;/mi\u0026gt;\n  \u0026lt;mi\u0026gt;p\u0026lt;/mi\u0026gt;\n  \u0026lt;mrow\u0026gt;\n    \u0026lt;mo\u0026gt;(\u0026lt;/mo\u0026gt;\n    \u0026lt;mfrac\u0026gt;\n      \u0026lt;mrow\u0026gt;\n        \u0026lt;mo\u0026gt;\u0026amp;#x2212;\u0026lt;!-- − --\u0026gt;\u0026lt;/mo\u0026gt;\n        \u0026lt;mi\u0026gt;U\u0026lt;/mi\u0026gt;\n        \u0026lt;mrow\u0026gt;\n          \u0026lt;mo\u0026gt;(\u0026lt;/mo\u0026gt;\n          \u0026lt;mi\u0026gt;x\u0026lt;/mi\u0026gt;\n          \u0026lt;mo\u0026gt;)\u0026lt;/mo\u0026gt;\n        \u0026lt;/mrow\u0026gt;\n      \u0026lt;/mrow\u0026gt;\n      \u0026lt;mrow\u0026gt;\n        \u0026lt;mi\u0026gt;k\u0026lt;/mi\u0026gt;\n        \u0026lt;mi\u0026gt;T\u0026lt;/mi\u0026gt;\n      \u0026lt;/mrow\u0026gt;\n    \u0026lt;/mfrac\u0026gt;\n    \u0026lt;mo\u0026gt;)\u0026lt;/mo\u0026gt;\n  \u0026lt;/mrow\u0026gt;\n\u0026lt;/math\u0026gt;'\u003e,\u003c/p\u003e\r\n\u003cp\u003ethus ensuring that our sampling is physically accurate.\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003eSimulated annealing\u003c/strong\u003e\u003c/p\u003e\r\n\u003cp\u003eAn important consideration when evaluating moves with the Metropolis criterion is the temperature parameter T. High temperatures result in almost all moves being accepted, while low temperatures ensure that only decreases or \u003cem\u003every small\u003c/em\u003e increases in energy are accepted. An effective way to perform energy minimization is by starting at a high temperature and gradually reducing the temperature during the course of the simulation. This procedure is inspired by to the physical annealing procedures used in materials science to allow atomic crystal structures to gradually find a low-energy configuration during cooling, and as a result it is known as \u003cstrong\u003esimulated annealing\u003c/strong\u003e.\u003c/p\u003e\r\n\u003cp\u003eIn this assignment, you will use an exponential annealing schedule with an annealing rate of 0.999:\u003c/p\u003e\r\n\u003cp\u003e\u003cimg class=\"equation_image\" title=\"T_t=T_{start}\\cdot0.999^t\" src=\"https://canvas.stanford.edu/equation_images/T_t%253DT_%257Bstart%257D%255Ccdot0.999%255Et\" alt=\"LaTeX: T_t=T_{start}\\cdot0.999^t\" data-equation-content=\"T_t=T_{start}\\cdot0.999^t\" x-canvaslms-safe-mathml='\u0026lt;math xmlns=\"http://www.w3.org/1998/Math/MathML\"\u0026gt;\n  \u0026lt;msub\u0026gt;\n    \u0026lt;mi\u0026gt;T\u0026lt;/mi\u0026gt;\n    \u0026lt;mi\u0026gt;t\u0026lt;/mi\u0026gt;\n  \u0026lt;/msub\u0026gt;\n  \u0026lt;mo\u0026gt;=\u0026lt;/mo\u0026gt;\n  \u0026lt;msub\u0026gt;\n    \u0026lt;mi\u0026gt;T\u0026lt;/mi\u0026gt;\n    \u0026lt;mrow class=\"MJX-TeXAtom-ORD\"\u0026gt;\n      \u0026lt;mi\u0026gt;s\u0026lt;/mi\u0026gt;\n      \u0026lt;mi\u0026gt;t\u0026lt;/mi\u0026gt;\n      \u0026lt;mi\u0026gt;a\u0026lt;/mi\u0026gt;\n      \u0026lt;mi\u0026gt;r\u0026lt;/mi\u0026gt;\n      \u0026lt;mi\u0026gt;t\u0026lt;/mi\u0026gt;\n    \u0026lt;/mrow\u0026gt;\n  \u0026lt;/msub\u0026gt;\n  \u0026lt;mo\u0026gt;\u0026amp;#x22C5;\u0026lt;!-- ⋅ --\u0026gt;\u0026lt;/mo\u0026gt;\n  \u0026lt;msup\u0026gt;\n    \u0026lt;mn\u0026gt;0.999\u0026lt;/mn\u0026gt;\n    \u0026lt;mi\u0026gt;t\u0026lt;/mi\u0026gt;\n  \u0026lt;/msup\u0026gt;\n\u0026lt;/math\u0026gt;'\u003e,\u003c/p\u003e\r\n\u003cp\u003eso that the temperature at each step t is given by\u003c/p\u003e\r\n\u003cp\u003e\u003cimg class=\"equation_image\" title=\"T_t=0.999\\:\\cdot\\:T_{t-1}\" src=\"https://canvas.stanford.edu/equation_images/T_t%253D0.999%255C%253A%255Ccdot%255C%253AT_%257Bt-1%257D\" alt=\"LaTeX: T_t=0.999\\:\\cdot\\:T_{t-1}\" data-equation-content=\"T_t=0.999\\:\\cdot\\:T_{t-1}\" x-canvaslms-safe-mathml='\u0026lt;math xmlns=\"http://www.w3.org/1998/Math/MathML\"\u0026gt;\n  \u0026lt;msub\u0026gt;\n    \u0026lt;mi\u0026gt;T\u0026lt;/mi\u0026gt;\n    \u0026lt;mi\u0026gt;t\u0026lt;/mi\u0026gt;\n  \u0026lt;/msub\u0026gt;\n  \u0026lt;mo\u0026gt;=\u0026lt;/mo\u0026gt;\n  \u0026lt;mn\u0026gt;0.999\u0026lt;/mn\u0026gt;\n  \u0026lt;mspace width=\"mediummathspace\" /\u0026gt;\n  \u0026lt;mo\u0026gt;\u0026amp;#x22C5;\u0026lt;!-- ⋅ --\u0026gt;\u0026lt;/mo\u0026gt;\n  \u0026lt;mspace width=\"mediummathspace\" /\u0026gt;\n  \u0026lt;msub\u0026gt;\n    \u0026lt;mi\u0026gt;T\u0026lt;/mi\u0026gt;\n    \u0026lt;mrow class=\"MJX-TeXAtom-ORD\"\u0026gt;\n      \u0026lt;mi\u0026gt;t\u0026lt;/mi\u0026gt;\n      \u0026lt;mo\u0026gt;\u0026amp;#x2212;\u0026lt;!-- − --\u0026gt;\u0026lt;/mo\u0026gt;\n      \u0026lt;mn\u0026gt;1\u0026lt;/mn\u0026gt;\n    \u0026lt;/mrow\u0026gt;\n  \u0026lt;/msub\u0026gt;\n\u0026lt;/math\u0026gt;'\u003e\u003c/p\u003e\r\n\u003cp\u003eNote that the temperature is annealed after every move that is \u003cstrong\u003eaccepted\u003c/strong\u003e, not every move attempted. We also ignore the Boltzmann constant k for simplicity (i.e. k = 1). Here, we will use the following annealing schedules:\u003c/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eFor the 9-mer fragment assembly stage, anneal from \u003cimg class=\"equation_image\" title=\"T_{start}=100\" src=\"https://canvas.stanford.edu/equation_images/T_%257Bstart%257D%253D100\" alt=\"LaTeX: T_{start}=100\" data-equation-content=\"T_{start}=100\" x-canvaslms-safe-mathml='\u0026lt;math xmlns=\"http://www.w3.org/1998/Math/MathML\"\u0026gt;\n  \u0026lt;msub\u0026gt;\n    \u0026lt;mi\u0026gt;T\u0026lt;/mi\u0026gt;\n    \u0026lt;mrow class=\"MJX-TeXAtom-ORD\"\u0026gt;\n      \u0026lt;mi\u0026gt;s\u0026lt;/mi\u0026gt;\n      \u0026lt;mi\u0026gt;t\u0026lt;/mi\u0026gt;\n      \u0026lt;mi\u0026gt;a\u0026lt;/mi\u0026gt;\n      \u0026lt;mi\u0026gt;r\u0026lt;/mi\u0026gt;\n      \u0026lt;mi\u0026gt;t\u0026lt;/mi\u0026gt;\n    \u0026lt;/mrow\u0026gt;\n  \u0026lt;/msub\u0026gt;\n  \u0026lt;mo\u0026gt;=\u0026lt;/mo\u0026gt;\n  \u0026lt;mn\u0026gt;100\u0026lt;/mn\u0026gt;\n\u0026lt;/math\u0026gt;'\u003e to \u003cimg class=\"equation_image\" title=\"T_{end}=1\" src=\"https://canvas.stanford.edu/equation_images/T_%257Bend%257D%253D1\" alt=\"LaTeX: T_{end}=1\" data-equation-content=\"T_{end}=1\" x-canvaslms-safe-mathml='\u0026lt;math xmlns=\"http://www.w3.org/1998/Math/MathML\"\u0026gt;\n  \u0026lt;msub\u0026gt;\n    \u0026lt;mi\u0026gt;T\u0026lt;/mi\u0026gt;\n    \u0026lt;mrow class=\"MJX-TeXAtom-ORD\"\u0026gt;\n      \u0026lt;mi\u0026gt;e\u0026lt;/mi\u0026gt;\n      \u0026lt;mi\u0026gt;n\u0026lt;/mi\u0026gt;\n      \u0026lt;mi\u0026gt;d\u0026lt;/mi\u0026gt;\n    \u0026lt;/mrow\u0026gt;\n  \u0026lt;/msub\u0026gt;\n  \u0026lt;mo\u0026gt;=\u0026lt;/mo\u0026gt;\n  \u0026lt;mn\u0026gt;1\u0026lt;/mn\u0026gt;\n\u0026lt;/math\u0026gt;'\u003e\n\u003c/li\u003e\r\n\u003cli\u003eFor the 3-mer refinement stage, anneal from \u003cimg class=\"equation_image\" title=\"T_{start}=1\" src=\"https://canvas.stanford.edu/equation_images/T_%257Bstart%257D%253D1\" alt=\"LaTeX: T_{start}=1\" data-equation-content=\"T_{start}=1\" x-canvaslms-safe-mathml='\u0026lt;math xmlns=\"http://www.w3.org/1998/Math/MathML\"\u0026gt;\n  \u0026lt;msub\u0026gt;\n    \u0026lt;mi\u0026gt;T\u0026lt;/mi\u0026gt;\n    \u0026lt;mrow class=\"MJX-TeXAtom-ORD\"\u0026gt;\n      \u0026lt;mi\u0026gt;s\u0026lt;/mi\u0026gt;\n      \u0026lt;mi\u0026gt;t\u0026lt;/mi\u0026gt;\n      \u0026lt;mi\u0026gt;a\u0026lt;/mi\u0026gt;\n      \u0026lt;mi\u0026gt;r\u0026lt;/mi\u0026gt;\n      \u0026lt;mi\u0026gt;t\u0026lt;/mi\u0026gt;\n    \u0026lt;/mrow\u0026gt;\n  \u0026lt;/msub\u0026gt;\n  \u0026lt;mo\u0026gt;=\u0026lt;/mo\u0026gt;\n  \u0026lt;mn\u0026gt;1\u0026lt;/mn\u0026gt;\n\u0026lt;/math\u0026gt;'\u003eto \u003cimg class=\"equation_image\" title=\"T_{end}=0.1\" src=\"https://canvas.stanford.edu/equation_images/T_%257Bend%257D%253D0.1\" alt=\"LaTeX: T_{end}=0.1\" data-equation-content=\"T_{end}=0.1\" x-canvaslms-safe-mathml='\u0026lt;math xmlns=\"http://www.w3.org/1998/Math/MathML\"\u0026gt;\n  \u0026lt;msub\u0026gt;\n    \u0026lt;mi\u0026gt;T\u0026lt;/mi\u0026gt;\n    \u0026lt;mrow class=\"MJX-TeXAtom-ORD\"\u0026gt;\n      \u0026lt;mi\u0026gt;e\u0026lt;/mi\u0026gt;\n      \u0026lt;mi\u0026gt;n\u0026lt;/mi\u0026gt;\n      \u0026lt;mi\u0026gt;d\u0026lt;/mi\u0026gt;\n    \u0026lt;/mrow\u0026gt;\n  \u0026lt;/msub\u0026gt;\n  \u0026lt;mo\u0026gt;=\u0026lt;/mo\u0026gt;\n  \u0026lt;mn\u0026gt;0.1\u0026lt;/mn\u0026gt;\n\u0026lt;/math\u0026gt;'\u003e\n\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cp\u003e\u003cstrong\u003eEnergy minimization (relaxation)\u003c/strong\u003e\u003c/p\u003e\r\n\u003cp\u003eThe result of the first two stages is a folded protein, but it is essentially a complex combination of a large number of fragments from other proteins and is not required to be globally consistent. For that reason, we perform energy minimization on the output structure. To do this, we convert the protein structure back to a full-atom representation and run Rosetta’s \u003ca href=\"https://www.rosettacommons.org/docs/latest/application_documentation/structure_prediction/relax\"\u003eFastRelax\u003c/a\u003e minimization protocol. FastRelax efficiently optimizes the side chain configurations of the protein while allowing small changes to the overall backbone in order to find a minimum-energy structure. You do not need to implement this; we provide a \u003cstrong\u003erelax\u003c/strong\u003e function in \u003cstrong\u003eutils.py\u003c/strong\u003e that does this for you.\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003eEvaluation\u003c/strong\u003e\u003c/p\u003e\r\n\u003cp\u003eAfter minimization, the main evaluation metrics for the final folded protein are \u003cstrong\u003eenergy\u003c/strong\u003e and \u003cstrong\u003eroot-mean-square deviation (RMSD)\u003c/strong\u003e from the target structure. To calculate RMSD, we superimpose the predicted structure onto the target structure and measure RMSD between only the C atoms of the two structures:\u003c/p\u003e\r\n\u003cp\u003e\u003cimg class=\"equation_image\" title=\"RMSD\\left(A,\\:B\\right)=\\sqrt{\\frac{1}{N}\\sum_i\\left(C\\alpha_{i,A}-C\\alpha_{i,B}\\right)^2}\" src=\"https://canvas.stanford.edu/equation_images/RMSD%255Cleft(A%252C%255C%253AB%255Cright)%253D%255Csqrt%257B%255Cfrac%257B1%257D%257BN%257D%255Csum_i%255Cleft(C%255Calpha_%257Bi%252CA%257D-C%255Calpha_%257Bi%252CB%257D%255Cright)%255E2%257D\" alt=\"LaTeX: RMSD\\left(A,\\:B\\right)=\\sqrt{\\frac{1}{N}\\sum_i\\left(C\\alpha_{i,A}-C\\alpha_{i,B}\\right)^2}\" data-equation-content=\"RMSD\\left(A,\\:B\\right)=\\sqrt{\\frac{1}{N}\\sum_i\\left(C\\alpha_{i,A}-C\\alpha_{i,B}\\right)^2}\" x-canvaslms-safe-mathml='\u0026lt;math xmlns=\"http://www.w3.org/1998/Math/MathML\"\u0026gt;\n  \u0026lt;mi\u0026gt;R\u0026lt;/mi\u0026gt;\n  \u0026lt;mi\u0026gt;M\u0026lt;/mi\u0026gt;\n  \u0026lt;mi\u0026gt;S\u0026lt;/mi\u0026gt;\n  \u0026lt;mi\u0026gt;D\u0026lt;/mi\u0026gt;\n  \u0026lt;mrow\u0026gt;\n    \u0026lt;mo\u0026gt;(\u0026lt;/mo\u0026gt;\n    \u0026lt;mi\u0026gt;A\u0026lt;/mi\u0026gt;\n    \u0026lt;mo\u0026gt;,\u0026lt;/mo\u0026gt;\n    \u0026lt;mspace width=\"mediummathspace\" /\u0026gt;\n    \u0026lt;mi\u0026gt;B\u0026lt;/mi\u0026gt;\n    \u0026lt;mo\u0026gt;)\u0026lt;/mo\u0026gt;\n  \u0026lt;/mrow\u0026gt;\n  \u0026lt;mo\u0026gt;=\u0026lt;/mo\u0026gt;\n  \u0026lt;msqrt\u0026gt;\n    \u0026lt;mfrac\u0026gt;\n      \u0026lt;mn\u0026gt;1\u0026lt;/mn\u0026gt;\n      \u0026lt;mi\u0026gt;N\u0026lt;/mi\u0026gt;\n    \u0026lt;/mfrac\u0026gt;\n    \u0026lt;munder\u0026gt;\n      \u0026lt;mo\u0026gt;\u0026amp;#x2211;\u0026lt;!-- ∑ --\u0026gt;\u0026lt;/mo\u0026gt;\n      \u0026lt;mi\u0026gt;i\u0026lt;/mi\u0026gt;\n    \u0026lt;/munder\u0026gt;\n    \u0026lt;msup\u0026gt;\n      \u0026lt;mrow\u0026gt;\n        \u0026lt;mo\u0026gt;(\u0026lt;/mo\u0026gt;\n        \u0026lt;mi\u0026gt;C\u0026lt;/mi\u0026gt;\n        \u0026lt;msub\u0026gt;\n          \u0026lt;mi\u0026gt;\u0026amp;#x03B1;\u0026lt;!-- α --\u0026gt;\u0026lt;/mi\u0026gt;\n          \u0026lt;mrow class=\"MJX-TeXAtom-ORD\"\u0026gt;\n            \u0026lt;mi\u0026gt;i\u0026lt;/mi\u0026gt;\n            \u0026lt;mo\u0026gt;,\u0026lt;/mo\u0026gt;\n            \u0026lt;mi\u0026gt;A\u0026lt;/mi\u0026gt;\n          \u0026lt;/mrow\u0026gt;\n        \u0026lt;/msub\u0026gt;\n        \u0026lt;mo\u0026gt;\u0026amp;#x2212;\u0026lt;!-- − --\u0026gt;\u0026lt;/mo\u0026gt;\n        \u0026lt;mi\u0026gt;C\u0026lt;/mi\u0026gt;\n        \u0026lt;msub\u0026gt;\n          \u0026lt;mi\u0026gt;\u0026amp;#x03B1;\u0026lt;!-- α --\u0026gt;\u0026lt;/mi\u0026gt;\n          \u0026lt;mrow class=\"MJX-TeXAtom-ORD\"\u0026gt;\n            \u0026lt;mi\u0026gt;i\u0026lt;/mi\u0026gt;\n            \u0026lt;mo\u0026gt;,\u0026lt;/mo\u0026gt;\n            \u0026lt;mi\u0026gt;B\u0026lt;/mi\u0026gt;\n          \u0026lt;/mrow\u0026gt;\n        \u0026lt;/msub\u0026gt;\n        \u0026lt;mo\u0026gt;)\u0026lt;/mo\u0026gt;\n      \u0026lt;/mrow\u0026gt;\n      \u0026lt;mn\u0026gt;2\u0026lt;/mn\u0026gt;\n    \u0026lt;/msup\u0026gt;\n  \u0026lt;/msqrt\u0026gt;\n\u0026lt;/math\u0026gt;'\u003e\u003c/p\u003e\r\n\u003cp\u003ewhere A and B are the structure to be compared, and N is the number of residues in each structure. The superimposition and RMSD calculation is also implemented for you in the \u003cstrong\u003eutils.relax\u003c/strong\u003e function.\u003c/p\u003e\r\n\u003cp\u003eExample superposition of a protein before and after minimization\u003c/p\u003e\r\n\u003cp\u003e\u003cimg src=\"https://canvas.stanford.edu/users/186210/files/5031399/preview?verifier=b3NT15EBpP8k6ZY3EtgeVJqFjBJUJ7L5B6gBfdRr\" alt=\"Screen Shot 2019-10-15 at 12.46.49 PM.png\" width=\"1728\" height=\"1432\" data-api-endpoint=\"https://canvas.stanford.edu/api/v1/users/186210/files/5031399\" data-api-returntype=\"File\"\u003e\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003eImplementation summary\u003c/strong\u003e\u003c/p\u003e\r\n\u003cp\u003ePutting everything together, you will implement a Monte Carlo fragment search with simulated annealing as follows, using the class provided in \u003cstrong\u003eFragmentSampler.py\u003c/strong\u003e:\u003c/p\u003e\r\n\u003col start=\"2\"\u003e\r\n\u003cli\u003eAssemble 9-mers using MC procedure from T = 100 to T =1\r\n\u003col\u003e\r\n\u003cli\u003eAt each step:\r\n\u003col\u003e\r\n\u003cli\u003eSample random 9-residue window in sequence\u003c/li\u003e\r\n\u003cli\u003eGet list of candidate fragments at that position\u003c/li\u003e\r\n\u003cli\u003eSample random candidate fragment\u003c/li\u003e\r\n\u003cli\u003eReplace torsion angles of selected 9-residue window with torsions from selected fragment. Note that you will have to copy the protein here, because if the insertion is rejected it must be returned to its previous state.\u003c/li\u003e\r\n\u003cli\u003eMeasure energy and accept/reject using Metropolis criterion\u003c/li\u003e\r\n\u003cli\u003eIf accept, anneal T\u003c/li\u003e\r\n\u003c/ol\u003e\r\n\u003c/li\u003e\r\n\u003cli\u003eReturn the \u003cstrong\u003ebest\u003c/strong\u003e (lowest-energy) structure produced during this simulation.\u003cstrong\u003e This may or may not be the last structure generated.\u003c/strong\u003e\n\u003c/li\u003e\r\n\u003cli\u003eDuring the simulation, write the iteration, temperature, and energy to a log file for later reference\u003c/li\u003e\r\n\u003c/ol\u003e\r\n\u003c/li\u003e\r\n\u003cli\u003eAssemble 3-mers using MC procedure from T = 1 to T = 0.1, starting with the best structure from stage 1.\r\n\u003col\u003e\r\n\u003cli\u003eDo the same as above, but using 3-mer fragments\u003c/li\u003e\r\n\u003cli\u003e\n\u003cstrong\u003eAgain, keep track of the best (lowest-energy) structure produced during this simulation. \u003c/strong\u003eSave this in a PDB file called \u003cem\u003ebest.\u003c/em\u003e\u003cem\u003epdb\u003c/em\u003e.\u003c/li\u003e\r\n\u003cli\u003eDuring the simulation, write the iteration, temperature, and energy to a log file for later reference\u003c/li\u003e\r\n\u003c/ol\u003e\r\n\u003c/li\u003e\r\n\u003cli\u003ePerform energy minimization on the best structure from stage 2. After each simulation, make sure to log the energy and the RMSD returned after relaxation. The relax function also saves a few intermediate structures in PDB files for visualization: if the best structure from your simulation is \u003cem\u003ebest.pdb\u003c/em\u003e, then \u003cem\u003ebest_fast_relax.pdb \u003c/em\u003eis the relaxed structure, and \u003cem\u003ebest_fast_relax_aligned.pdb \u003c/em\u003eis the relaxed structure superimposed into the same coordinate space as the native structure.\u003c/li\u003e\r\n\u003c/ol\u003e\r\n\u003cp\u003e\u003cspan style=\"font-size: 14pt;\"\u003e2. Protein representation\u003c/span\u003e\u003c/p\u003e\r\n\u003cp\u003eWe use the Protein class in \u003cstrong\u003eProtein.py \u003c/strong\u003eto store all information about our current conformation.\u003c/p\u003e\r\n\u003cp\u003eWe store protein conformations using PyRosetta \u003cem\u003ePose objects\u003c/em\u003e. This makes our lives much easier by taking care of a lot of the complicated mechanics under the hood. You don’t need to worry about this too much, except realize that the \u003cem\u003eself.pose\u003c/em\u003e attribute in \u003cstrong\u003eProtein.py\u003c/strong\u003e is a Pose object. \u003cstrong\u003eDo not try to change this to a different type of object, it is critical for the simulation to work.\u003c/strong\u003e\u003c/p\u003e\r\n\u003cp\u003eSince we work in torsion space for all fragment sampling, the only interactions you need to do with the pose objects is (1) access the \u003cimg class=\"equation_image\" title=\"\\phi\" src=\"https://canvas.stanford.edu/equation_images/%255Cphi\" alt=\"LaTeX: \\phi\" data-equation-content=\"\\phi\" x-canvaslms-safe-mathml='\u0026lt;math xmlns=\"http://www.w3.org/1998/Math/MathML\"\u0026gt;\n  \u0026lt;mi\u0026gt;\u0026amp;#x03D5;\u0026lt;!-- ϕ --\u0026gt;\u0026lt;/mi\u0026gt;\n\u0026lt;/math\u0026gt;'\u003e and \u003cimg class=\"equation_image\" title=\"\\psi\" src=\"https://canvas.stanford.edu/equation_images/%255Cpsi\" alt=\"LaTeX: \\psi\" data-equation-content=\"\\psi\" x-canvaslms-safe-mathml='\u0026lt;math xmlns=\"http://www.w3.org/1998/Math/MathML\"\u0026gt;\n  \u0026lt;mi\u0026gt;\u0026amp;#x03C8;\u0026lt;!-- ψ --\u0026gt;\u0026lt;/mi\u0026gt;\n\u0026lt;/math\u0026gt;'\u003e angles at a position, and (2) set the \u003cimg class=\"equation_image\" title=\"\\phi\" src=\"https://canvas.stanford.edu/equation_images/%255Cphi\" alt=\"LaTeX: \\phi\" data-equation-content=\"\\phi\" x-canvaslms-safe-mathml='\u0026lt;math xmlns=\"http://www.w3.org/1998/Math/MathML\"\u0026gt;\n  \u0026lt;mi\u0026gt;\u0026amp;#x03D5;\u0026lt;!-- ϕ --\u0026gt;\u0026lt;/mi\u0026gt;\n\u0026lt;/math\u0026gt;'\u003e and \u003cimg class=\"equation_image\" title=\"\\psi\" src=\"https://canvas.stanford.edu/equation_images/%255Cpsi\" alt=\"LaTeX: \\psi\" data-equation-content=\"\\psi\" x-canvaslms-safe-mathml='\u0026lt;math xmlns=\"http://www.w3.org/1998/Math/MathML\"\u0026gt;\n  \u0026lt;mi\u0026gt;\u0026amp;#x03C8;\u0026lt;!-- ψ --\u0026gt;\u0026lt;/mi\u0026gt;\n\u0026lt;/math\u0026gt;'\u003e angles at a position to new values. See the following tutorial for information on how to do so: \u003ca href=\"https://www.cse.huji.ac.il/~fora/81855/exercises/ex4.pdf\"\u003ehttps://www.cse.huji.ac.il/~fora/81855/exercises/ex4.pdf\u003c/a\u003e\u003c/p\u003e\r\n\u003cp\u003eAnother important note about Pose objects: to copy a pose, you \u003cstrong\u003ecannot\u003c/strong\u003e simply define `pose_copy = pose`. This will simply create a new pointer to the same object in memory, so any changes made to `pose_copy` will also be made to `pose`. Instead, define a new pose and use `pose_copy.assign(pose)`, as shown in lines 34–35 of \u003cstrong\u003eProtein.py\u003c/strong\u003e.\u003c/p\u003e\r\n\u003cp\u003e\u003cspan style=\"font-size: 14pt;\"\u003e3. Fragment set representation\u003c/span\u003e\u003c/p\u003e\r\n\u003cp\u003eThe pre-calculated fragment libraries for each input protein are given in the *.frag files, and the RMSDs of each fragment relative to the target structure are given in the *.rmsd files. In \u003cstrong\u003eFragmentSet.py\u003c/strong\u003e, implement a class that holds this fragment set information so that it can be accessed by your simulation.\u003c/p\u003e\r\n\u003cp\u003eIn particular, in order to reduce the size of the sampling space, we do not sample from all fragments in the library at a given position. Instead, we \u003cem\u003ebias\u003c/em\u003e the simulator such that it only samples from the top-N closest fragments in RMSD to the target structure at each position. To do this, the class must do the following:\u003c/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eParse the .frag and .rmsd file for a structure and store them in some data structure (think about what is most efficient for fast access). Since we do all fragment replacements in torsion space, we only need to store the (\u003cimg class=\"equation_image\" title=\"\\phi\" src=\"https://canvas.stanford.edu/equation_images/%255Cphi\" alt=\"LaTeX: \\phi\" data-equation-content=\"\\phi\" x-canvaslms-safe-mathml='\u0026lt;math xmlns=\"http://www.w3.org/1998/Math/MathML\"\u0026gt;\n  \u0026lt;mi\u0026gt;\u0026amp;#x03D5;\u0026lt;!-- ϕ --\u0026gt;\u0026lt;/mi\u0026gt;\n\u0026lt;/math\u0026gt;'\u003e, \u003cimg class=\"equation_image\" title=\"\\psi\" src=\"https://canvas.stanford.edu/equation_images/%255Cpsi\" alt=\"LaTeX: \\psi\" data-equation-content=\"\\psi\" x-canvaslms-safe-mathml='\u0026lt;math xmlns=\"http://www.w3.org/1998/Math/MathML\"\u0026gt;\n  \u0026lt;mi\u0026gt;\u0026amp;#x03C8;\u0026lt;!-- ψ --\u0026gt;\u0026lt;/mi\u0026gt;\n\u0026lt;/math\u0026gt;'\u003e) angles for each fragment at each position.\u003c/li\u003e\r\n\u003cli\u003e\n\u003cstrong\u003eNote:\u003c/strong\u003e the \"position\" we refer to here is the position in the protein you are folding. This is the position denoted in the header lines of the fragment files (see screenshot below). The position in the third column represents the position in the protein from which the fragment is derived, and can be ignored.\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cpre\u003e    \u003cimg src=\"https://canvas.stanford.edu/users/186210/files/5081057/preview?verifier=b1X4f19j8D1mcud3Mu4unBLNsqfZNetu0pTxPmY2\" alt=\"Screen Shot 2019-10-24 at 9.39.46 PM-1.png\" width=\"667\" height=\"326\" data-api-endpoint=\"https://canvas.stanford.edu/api/v1/users/186210/files/5081057\" data-api-returntype=\"File\"\u003e\u003c/pre\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eImplement the function `get_lowRMS_frags`, which returns the top N fragments as a list of lists. Each sub-list represents a fragment, and each element is a (\u003cimg class=\"equation_image\" title=\"\\phi\" src=\"https://canvas.stanford.edu/equation_images/%255Cphi\" alt=\"LaTeX: \\phi\" data-equation-content=\"\\phi\" x-canvaslms-safe-mathml='\u0026lt;math xmlns=\"http://www.w3.org/1998/Math/MathML\"\u0026gt;\n  \u0026lt;mi\u0026gt;\u0026amp;#x03D5;\u0026lt;!-- ϕ --\u0026gt;\u0026lt;/mi\u0026gt;\n\u0026lt;/math\u0026gt;'\u003e, \u003cimg class=\"equation_image\" title=\"\\psi\" src=\"https://canvas.stanford.edu/equation_images/%255Cpsi\" alt=\"LaTeX: \\psi\" data-equation-content=\"\\psi\" x-canvaslms-safe-mathml='\u0026lt;math xmlns=\"http://www.w3.org/1998/Math/MathML\"\u0026gt;\n  \u0026lt;mi\u0026gt;\u0026amp;#x03C8;\u0026lt;!-- ψ --\u0026gt;\u0026lt;/mi\u0026gt;\n\u0026lt;/math\u0026gt;'\u003e) tuple representing the torsion at that fragment position in degrees. For example, a 3-mer fragment could be represented as the following: [(-60.892, 142.456), (-72.281, 128.933), (-132.337, -175.477)]. \u003cstrong\u003eThe autograder will test this function, so do not change the output format.\u003c/strong\u003e\n\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cp\u003e \u003c/p\u003e\r\n\u003cp\u003e\u003cspan style=\"font-size: 14pt;\"\u003e4. Main program specifications\u003c/span\u003e\u003c/p\u003e\r\n\u003cp\u003eSince the fragment assembly procedure is stochastic and is not guaranteed to find the minimum-energy conformation, we need to perform many simulations in order to find one that folds into the correct structure. In a real-life structure prediction setting, you would run on the order of 10,000 simulations to find the best folded structure. However, by using small, simple proteins and biased fragment sampling that considers only the top 3 fragments at each position, we do not have to do nearly as many to get a decent result.\u003c/p\u003e\r\n\u003cp\u003eUsing the file \u003cstrong\u003emain.py\u003c/strong\u003e, write a program that runs \u003cstrong\u003e10 \u003c/strong\u003efragment-based structure prediction simulations using the procedure outlined above. Each simulation should use a different random seed, and thus should produce a different final structure.\u003c/p\u003e\r\n\u003cp\u003eAfter you have run all 10 simulations, find the simulation with the \u003cstrong\u003elowest RMSD\u003c/strong\u003e using your log file \u003cem\u003esim_log.txt\u003c/em\u003e. You should be able to achieve a minimum RMSD of \u003cstrong\u003eless than 5 Å\u003c/strong\u003e. Finally, use PyMol to visualize \u003cem\u003ebest_fast_relax_aligned.pdb\u003c/em\u003e from the most successful simulation in the same window as \u003cem\u003e\u0026lt;target\u0026gt;.pdb\u003c/em\u003e. The two structures should overlap closely. Take a screenshot of your best result for 1FW4 and 1UBQ.\u003c/p\u003e\r\n\u003cp\u003e\u003cspan style=\"font-size: 14pt;\"\u003e\u003cstrong\u003eInputs\u003c/strong\u003e\u003c/span\u003e\u003c/p\u003e\r\n\u003cp\u003eYour program \u003cstrong\u003emain.py\u003c/strong\u003e should take the following command-line inputs. The argparse library in Python makes this very straightforward. For code development, simply run the simulations using the default values, using helix.fasta and only one simulation. Run 10 simulations for each of 1FW4.fasta and 1UBQ.fasta; you will be asked to experiment with the other parameters for the quiz. Example command:\u003c/p\u003e\r\n\u003cpre\u003epython main.py --fasta helix.fasta --logdir helix_log\u003c/pre\u003e\r\n\u003ctable\u003e\r\n\u003ctbody\u003e\r\n\u003ctr\u003e\r\n\u003ctd width=\"144\"\u003e\r\n\u003cp\u003e\u003cstrong\u003eParameter\u003c/strong\u003e\u003c/p\u003e\r\n\u003c/td\u003e\r\n\u003ctd width=\"270\"\u003e\r\n\u003cp\u003e\u003cstrong\u003eDescription\u003c/strong\u003e\u003c/p\u003e\r\n\u003c/td\u003e\r\n\u003ctd width=\"207\"\u003e\r\n\u003cp\u003e\u003cstrong\u003eDefault\u003c/strong\u003e\u003c/p\u003e\r\n\u003c/td\u003e\r\n\u003c/tr\u003e\r\n\u003ctr\u003e\r\n\u003ctd width=\"144\"\u003e\r\n\u003cp\u003e--fasta\u003c/p\u003e\r\n\u003c/td\u003e\r\n\u003ctd width=\"270\"\u003e\r\n\u003cp\u003e.fasta file containing sequence\u003c/p\u003e\r\n\u003c/td\u003e\r\n\u003ctd width=\"207\"\u003e\r\n\u003cp\u003eNone\u003c/p\u003e\r\n\u003c/td\u003e\r\n\u003c/tr\u003e\r\n\u003ctr\u003e\r\n\u003ctd width=\"144\"\u003e\r\n\u003cp\u003e--logdir\u003c/p\u003e\r\n\u003c/td\u003e\r\n\u003ctd width=\"270\"\u003e\r\n\u003cp\u003edirectory to save all log files\u003c/p\u003e\r\n\u003c/td\u003e\r\n\u003ctd width=\"207\"\u003e\r\n\u003cp\u003e'./'\u003c/p\u003e\r\n\u003c/td\u003e\r\n\u003c/tr\u003e\r\n\u003ctr\u003e\r\n\u003ctd width=\"144\"\u003e\r\n\u003cp\u003e--nsims\u003c/p\u003e\r\n\u003c/td\u003e\r\n\u003ctd width=\"270\"\u003e\r\n\u003cp\u003enumber of simulations\u003c/p\u003e\r\n\u003c/td\u003e\r\n\u003ctd width=\"207\"\u003e\r\n\u003cp\u003e1\u003c/p\u003e\r\n\u003c/td\u003e\r\n\u003c/tr\u003e\r\n\u003ctr\u003e\r\n\u003ctd width=\"144\"\u003e\r\n\u003cp\u003e--nfrags\u003c/p\u003e\r\n\u003c/td\u003e\r\n\u003ctd width=\"270\"\u003e\r\n\u003cp\u003enumber of fragments to sample from at each iteration\u003c/p\u003e\r\n\u003c/td\u003e\r\n\u003ctd width=\"207\"\u003e\r\n\u003cp\u003e3\u003c/p\u003e\r\n\u003c/td\u003e\r\n\u003c/tr\u003e\r\n\u003ctr\u003e\r\n\u003ctd width=\"144\"\u003e\r\n\u003cp\u003e--anneal_rate\u003c/p\u003e\r\n\u003c/td\u003e\r\n\u003ctd width=\"270\"\u003e\r\n\u003cp\u003etemperature annealing parameter\u003c/p\u003e\r\n\u003c/td\u003e\r\n\u003ctd width=\"207\"\u003e\r\n\u003cp\u003e0.999\u003c/p\u003e\r\n\u003c/td\u003e\r\n\u003c/tr\u003e\r\n\u003c/tbody\u003e\r\n\u003c/table\u003e\r\n\u003cp\u003e\u003cspan style=\"font-size: 14pt;\"\u003e\u003cstrong\u003eOutputs\u003c/strong\u003e\u003c/span\u003e\u003c/p\u003e\r\n\u003cp\u003e\u003cspan style=\"font-size: 12pt;\"\u003e\u003cstrong\u003eLog files: \u003c/strong\u003eYou should save the following \u003cstrong\u003etab-delimited\u003c/strong\u003e log files:\u003c/span\u003e\u003c/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003e\u003cspan style=\"font-size: 12pt;\"\u003eFor each input sequence, log a summary of all the simulations you have run, consisting of three columns, corresponding to the simulation number, the energy after relaxation, and the RMSD to target after relaxation: \u003c/span\u003e\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cpre\u003e\u003cspan style=\"font-size: 12pt;\"\u003e   sim_number    energy    rmsd\u003c/span\u003e\u003c/pre\u003e\r\n\u003cul\u003e\r\n\u003cli style=\"list-style-type: none;\"\u003e\r\n\u003cul\u003e\r\n\u003cli\u003e\u003cspan style=\"font-size: 12pt;\"\u003e \u003cstrong\u003eThis is the most important log file for the autograder. It must be saved in the main log directory (specified by --logdir) as \u003cem\u003esimulation_summary.txt\u003c/em\u003e.\u003c/strong\u003e\u003c/span\u003e\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003c/li\u003e\r\n\u003cli\u003e\u003cspan style=\"font-size: 12pt;\"\u003eFor each simulation, log\u003cem\u003e at least \u003c/em\u003ethe following quantities throughout the simulation:\u003c/span\u003e\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cpre\u003e\u003cspan style=\"font-size: 12pt;\"\u003e   iteration    temperature    energy\u003c/span\u003e\u003c/pre\u003e\r\n\u003cul\u003e\r\n\u003cli style=\"list-style-type: none;\"\u003e\r\n\u003cul\u003e\r\n\u003cli\u003e\u003cspan style=\"font-family: sans-serif; font-size: 12pt;\"\u003eYou can save other quantities if you to keep track of them, but you will need the above columns for the quiz.\u003c/span\u003e\u003c/li\u003e\r\n\u003cli\u003e\u003cspan style=\"font-family: sans-serif; font-size: 12pt;\"\u003eYou can log assembly and refinement stages to separate log files or the same one, it doesn't matter.\u003c/span\u003e\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003c/li\u003e\r\n\u003cli\u003e\r\n\u003cp\u003eWe \u003cstrong\u003ehighly\u003c/strong\u003e recommend creating a separate log directory for each simulation in order to store the PDB files and log files for each simulation. One possible directory structure is as follows (for the helix structure, with only 5 simulations). You don't need to save the initial or target structures, but it can be helpful in visualization.\u003c/p\u003e\r\n\u003cp\u003e            /helix_log\u003c/p\u003e\r\n\u003cp\u003e                 |__ /sim_01\u003c/p\u003e\r\n\u003cp\u003e                           |___ initial.pdb\u003c/p\u003e\r\n\u003cp\u003e                           |___ \u0026lt;target\u0026gt;.pdb\u003c/p\u003e\r\n\u003cp\u003e                           |___ best.pdb\u003c/p\u003e\r\n\u003cp\u003e                           |___ best_fast_relax.pdb\u003c/p\u003e\r\n\u003cp\u003e                           |___ best_fast_relax_aligned.pdb\u003c/p\u003e\r\n\u003cp\u003e                           |___ sim_01_log.txt\u003c/p\u003e\r\n\u003cp\u003e                 |__ /sim_02\u003c/p\u003e\r\n\u003cp\u003e                 |__ /sim_03\u003c/p\u003e\r\n\u003cp\u003e                 |__ /sim_04\u003c/p\u003e\r\n\u003cp\u003e                 |__ /sim_05\u003c/p\u003e\r\n\u003cp\u003e                 |__ simulation_summary.txt\u003c/p\u003e\r\n\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cp\u003e\u003cspan style=\"font-family: sans-serif; font-size: 12pt;\"\u003e\u003cstrong\u003ePDB files: \u003c/strong\u003eEach simulation should save at least \u003cem\u003ebest.pdb\u003c/em\u003e; after relaxation you should also get PDB files corresponding to relaxed and aligned structures.\u003c/span\u003e\u003c/p\u003e\r\n\u003cp\u003e\u003cspan style=\"font-size: 14pt;\"\u003e\u003cstrong\u003eHelpful hints:\u003c/strong\u003e\u003c/span\u003e\u003c/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eMake sure you are not repeating operations — this will result in inefficient code. This includes sampling positions and calculating the fragment candidates at that position.\u003c/li\u003e\r\n\u003cli\u003eA \"step\" corresponds to an \u003cstrong\u003eaccepted \u003c/strong\u003emove, not an \u003cstrong\u003eattempted \u003c/strong\u003emove. Make sure you only anneal temperature and move to the next step after accepting a move.\u003c/li\u003e\r\n\u003cli\u003eAnother way to reduce redundant sampling is to keep track of the fragments sampled at each position. If you sample every available fragment and do not accept any of them, you have likely already found the optimal fragment for the current configuration and it is reasonable to sample a new position.\u003c/li\u003e\r\n\u003cli\u003eYou can also speed things up by choosing smart data structures: lookups are much faster in hash-based objects like sets and dictionaries.\u003c/li\u003e\r\n\u003cli\u003eIt may be helpful to log certain quantities during the simulation to help you debug.\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cp\u003e\u003cspan style=\"font-size: 18pt;\"\u003eVisualization with PyMol\u003c/span\u003e\u003c/p\u003e\r\n\u003cp\u003eArguably the most interesting and satisfying part of any protein simulation is the visualization. Visually comparing the final folded structure of our protein to its native crystal structure allows us to better understand where our approach succeeds and where it struggles. It also provides a visual sanity check that a structure with a low RMSD and low energy actually does look similar to the real protein. Finally, visualizing how the structure changes over the course of the simulation helps us to understand how our simulation procedure works to find low-energy conformations.\u003c/p\u003e\r\n\u003cp\u003eOne of the most popular software programs for visualizing protein structures is PyMol, which is free for students and available on all platforms (Linux, Mac, and Windows). You can download PyMol from \u003ca href=\"https://pymol.org/\"\u003ehttps://pymol.org. \u003c/a\u003e\u003c/p\u003e\r\n\u003cp\u003eThe PyMol interface consists of a large display screen, a console at the top (boxed in red), and an object panel on the right side (boxed in green).\u003c/p\u003e\r\n\u003cp\u003e\u003cimg src=\"https://canvas.stanford.edu/users/186210/files/5031416/preview?verifier=WkGsIBStnMkJN1tX9gJyW8d5hQ2T1ajphe7hvxhO\" alt=\"Screen Shot 2019-10-14 at 8.27.54 PM.png\" width=\"2558\" height=\"1529\" data-api-endpoint=\"https://canvas.stanford.edu/api/v1/users/186210/files/5031416\" data-api-returntype=\"File\"\u003e\u003c/p\u003e\r\n\u003cp\u003eThe two main ways to interact with PyMol are by typing commands into the console and by using the buttons in the object panel. You will need to visualize some of your outputs for the project quiz. In addition to the tips listed below, there is a PyMol cheat sheet posted in the Project 3 files on Canvas.\u003c/p\u003e\r\n\u003cp\u003eBasic trackpad commands (for Mac, these may differ slightly on Windows):\u003c/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eRotate view: click and drag\u003c/li\u003e\r\n\u003cli\u003eZoom: two-finger pinch\u003c/li\u003e\r\n\u003cli\u003ePan: Option + click and drag\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cp\u003eSome important console commands:\u003c/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eTo load a structure:\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cpre\u003e    load /path/to/structure.pdb\u003c/pre\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eTo load a structure into a named object MyProtein (in PyMol syntax, commands are structured as 'command, object'):\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cpre\u003e    load /path/to/structure.pdb, MyProtein\u003c/pre\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eLoading multiple PDB files into one object results in \u003cstrong\u003eframes \u003c/strong\u003e(shown here as 1/100). If your files are labeled consistently, you can load multiple at once using the following command:\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cpre\u003e    for i in range(1,1001):cmd.load('pose_{}.pdb'.format(i), 'pose')\u003c/pre\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eThese frames can be played through one-at-a-time or in a continuous loop using the play buttons in the bottom right of the screen. You can control framerate and other options under the 'Movie' menu. Try saving PDB files for the first 100-1000 iterations of a simulation, and then load them into PyMol and play through the frames to watch your protein fold!\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cp\u003e\u003cimg src=\"https://canvas.stanford.edu/users/186210/files/5031422/preview?verifier=cfZSFpxh5STcYhcbshYS3yezOPEKyVM7EsCUbYjk\" alt=\"Screen Shot 2019-10-14 at 8.38.56 PM.png\" width=\"221\" height=\"228\" data-api-endpoint=\"https://canvas.stanford.edu/api/v1/users/186210/files/5031422\" data-api-returntype=\"File\"\u003e\u003c/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eTo delete an object:\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cpre\u003e    delete MyProtein\u003c/pre\u003e\r\n\u003cp\u003e \u003c/p\u003e\r\n\u003cp\u003eSome important notes about the object panel:\u003c/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eClicking the object name will toggle the object on/off\u003c/li\u003e\r\n\u003cli\u003eThe buttons ‘A’ (Action), ‘S’ (Show), ‘H’ (Hide), ‘L’ (Label), ‘C’ (Color) each reveal a menu that controls how the object is displayed. Play around with these menus a bit to get a sense for what each of them does.\u003c/li\u003e\r\n\u003cli\u003eFor the purposes of this assignment, we recommend visualizing the proteins in “cartoon” representation, which makes it easy to see the overall secondary structure of the protein (helices, sheets, and loops). Do this using ‘S’ \u0026gt; ‘as’ \u0026gt; ‘cartoon’.\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cp\u003e\u003cimg src=\"https://canvas.stanford.edu/users/186210/files/5031423/preview?verifier=qqhGOyO2ouGuLDO1oQYQ3ZOHpcruMzMZVEkohGKJ\" alt=\"Screen Shot 2019-10-14 at 8.48.10 PM.png\" width=\"224\" height=\"442\" data-api-endpoint=\"https://canvas.stanford.edu/api/v1/users/186210/files/5031423\" data-api-returntype=\"File\"\u003e       \u003cimg src=\"https://canvas.stanford.edu/users/186210/files/5031424/preview?verifier=fWk4pYLgKqOL2VYnWlcvvzpigV736KkffcsA3NTF\" alt=\"Screen Shot 2019-10-14 at 8.53.41 PM.png\" width=\"300\" height=\"333\" data-api-endpoint=\"https://canvas.stanford.edu/api/v1/users/186210/files/5031424\" data-api-returntype=\"File\"\u003e\u003c/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eColor is controlled using the ‘C’ menu. It can be useful to color by secondary structure (‘C’ \u0026gt; ‘by ss’) to visualize high-level fold, as shown below.\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cp\u003e\u003cimg src=\"https://canvas.stanford.edu/users/186210/files/5031427/preview?verifier=gFzGVVDGuahh0YK5JpcJWINuoDxbEHFtiuBl2glF\" alt=\"Screen Shot 2019-10-14 at 8.47.52 PM.png\" width=\"777\" height=\"773\" data-api-endpoint=\"https://canvas.stanford.edu/api/v1/users/186210/files/5031427\" data-api-returntype=\"File\"\u003e\u003c/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eTo select residues in the structure, you can simply click on the location you want to select. To view the corresponding position in the sequence or select residues by position, use the command\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cpre\u003e   set seq_view\u003c/pre\u003e\r\n\u003cul\u003e\r\n\u003cli dir=\"ltr\"\u003eThat command will result in the sequence appearing as shown below: you can select the amino acids by letter/position directly. This will be useful for the quiz.\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cp\u003e\u003cimg src=\"https://canvas.stanford.edu/users/186210/files/5070801/preview?verifier=vWczhT8aWz8jxboad1kYtWjZMe7eaTOwq0jsnfG2\" alt=\"Screen Shot 2019-10-22 at 10.15.35 PM.png\" width=\"811\" height=\"157\" data-api-endpoint=\"https://canvas.stanford.edu/api/v1/users/186210/files/5070801\" data-api-returntype=\"File\"\u003e\u003c/p\u003e\r\n\u003cp\u003e\u003cspan style=\"font-size: 18pt;\"\u003eSubmission Instructions\u003c/span\u003e\u003c/p\u003e\r\n\u003col\u003e\r\n\u003cli\u003eTake the quiz on Canvas. We recommend you take the quiz after having written the code and use your code, but you can take the quiz *without* having finished. It involves understanding the algorithm and how it works on different inputs. The quiz will take some time to complete, please budget accordingly. \u003c/li\u003e\r\n\u003cli\u003eUpload all source code to \u003ca href=\"https://www.gradescope.com/courses/49640\"\u003eGradescope \u003c/a\u003eas a zipped folder. This must include \u003cstrong\u003emain.py, FragmentSampler.py\u003c/strong\u003e,\u003cstrong\u003e FragmentSet.py\u003c/strong\u003e, and \u003cstrong\u003eProtein.py\u003c/strong\u003e. If you modify other files such as \u003cstrong\u003eutils.py\u003c/strong\u003e, you must include these in order for the autograder to work properly. Do not include irrelevant files.\u003c/li\u003e\r\n\u003c/ol\u003e\r\n\u003cp\u003e\u003cspan style=\"font-size: 18pt;\"\u003eReferences\u003c/span\u003e\u003c/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003e\u003ca href=\"https://www-sciencedirect-com.stanford.idm.oclc.org/science/article/pii/S0076687904830040\"\u003eStructure prediction with Rosetta\u003c/a\u003e\u003c/li\u003e\r\n\u003cli\u003e\u003ca href=\"https://www.rosettacommons.org/docs/latest/rosetta_basics/scoring/centroid-score-terms\"\u003eRosetta centroid energy function\u003c/a\u003e\u003c/li\u003e\r\n\u003cli\u003e\r\n\u003c/li\u003e\n\u003c/ul\u003e\r\n\u003cp\u003e \u003c/p\u003e\r\n\u003cp\u003e \u003c/p\u003e"},"WIKI_PAGE_REVISION":"12","WIKI_PAGE_SHOW_PATH":"/courses/105689/pages/project-3","WIKI_PAGE_EDIT_PATH":"/courses/105689/pages/project-3/edit","WIKI_PAGE_HISTORY_PATH":"/courses/105689/pages/project-3/revisions","COURSE_ID":"105689","MODULES_PATH":"/courses/105689/modules","wiki_page_menu_tools":[],"wiki_index_menu_tools":[],"DISPLAY_SHOW_ALL_LINK":true,"STUDENT_PLANNER_ENABLED":true,"IMMERSIVE_READER_ENABLED":false,"badge_counts":{"submissions":0},"notices":[],"active_context_tab":"pages"};
+  </script>
+
+  <link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/Los_Angeles-d9cac65c52.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/Los_Angeles-d9cac65c52.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/en_US-80a0ce259b.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/main-e-84df89efda.js" as="script" type="text/javascript"><script>
+//<![CDATA[
+
+      ;["https://du11hjcvx0uqb.cloudfront.net/br/dist/timezone/America/Los_Angeles-d9cac65c52.js", "https://du11hjcvx0uqb.cloudfront.net/br/dist/timezone/America/Los_Angeles-d9cac65c52.js", "https://du11hjcvx0uqb.cloudfront.net/br/dist/timezone/en_US-80a0ce259b.js", "https://du11hjcvx0uqb.cloudfront.net/br/dist/webpack-production/main-e-84df89efda.js"].forEach(function(src) {
+        var s = document.createElement('script')
+        s.src = src
+        s.async = false
+        document.head.appendChild(s)
+      });
+//]]>
+</script><script src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/Los_Angeles-d9cac65c52.js"></script><script src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/Los_Angeles-d9cac65c52.js"></script><script src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/en_US-80a0ce259b.js"></script><script src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/main-e-84df89efda.js"></script><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/0-c-4e3664802e.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/1-c-bc25e11701.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/2-c-392f3f9a7e.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/3-c-5622527691.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/4-c-b7f7834935.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/5-c-2a6efb3b7a.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/7-c-cedfd9c91b.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/6-c-76e6420813.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/8-c-621085fa31.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/9-c-7489284585.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/10-c-f6acf35591.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/11-c-bde04f7dbc.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/12-c-5be75fecea.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/14-c-09c47521f2.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/15-c-dd172de225.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/20-c-9f986cbca1.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/25-c-0fdc981354.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/26-c-31b553cd8e.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/29-c-fddc32f0e0.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/27-c-3f9e0046e4.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/33-c-aaf86243de.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/35-c-878400a672.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/46-c-d73a193809.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/51-c-218342604e.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/55-c-71b2835136.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/58-c-17406fe3fa.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/65-c-5bb036d687.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/60-c-c71e3a83bc.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/69-c-2d3d6fe688.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/wiki_page_show-c-fa4b97d0ac.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/213-c-eedfcd0a93.js" as="script" type="text/javascript"><link rel="preload" href="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/navigation_header-c-0257fbcc17.js" as="script" type="text/javascript"><script>
+//<![CDATA[
+(window.bundles || (window.bundles = [])).push('wiki_page_show');
+(window.bundles || (window.bundles = [])).push('navigation_header');
+//]]>
+</script>
+  <title>Project 3: Representations and Algorithms for Computational Molecular Biology</title>
+    <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', "UA-9138420-1", 'auto');
+    ga('send', 'pageview');
+    (window.requestIdleCallback || window.setTimeout)(function(){
+      var s=document.createElement('script'), m=document.getElementsByTagName('script')[0]
+      s.async=1; s.src='https://www.google-analytics.com/analytics.js'
+      m.parentNode.insertBefore(s,m)
+    });
+  </script>
+
+<script src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/Master_Canvas_Javascript_101119.js"></script><style type="text/css"></style><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/0-c-4e3664802e.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/1-c-bc25e11701.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/2-c-392f3f9a7e.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/3-c-5622527691.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/4-c-b7f7834935.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/5-c-2a6efb3b7a.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/7-c-cedfd9c91b.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/6-c-76e6420813.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/8-c-621085fa31.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/9-c-7489284585.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/10-c-f6acf35591.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/11-c-bde04f7dbc.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/12-c-5be75fecea.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/14-c-09c47521f2.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/15-c-dd172de225.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/20-c-9f986cbca1.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/25-c-0fdc981354.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/26-c-31b553cd8e.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/29-c-fddc32f0e0.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/27-c-3f9e0046e4.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/33-c-aaf86243de.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/35-c-878400a672.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/46-c-d73a193809.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/51-c-218342604e.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/55-c-71b2835136.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/58-c-17406fe3fa.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/65-c-5bb036d687.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/60-c-c71e3a83bc.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/69-c-2d3d6fe688.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/wiki_page_show-c-fa4b97d0ac.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/213-c-eedfcd0a93.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/navigation_header-c-0257fbcc17.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/19-c-8d66b1ffdd.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/22-c-a54cd3347a.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/23-c-9c0a6c0d4d.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/37-c-d615e173ff.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/42-c-dd993d2ab8.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/64-c-6e90787473.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/565-c-e31c33ed17.js"></script><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/591-c-0915df5969.js"></script><style type="text/css" data-glamor=""></style><style type="text/css">.mejs-offscreen{clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);clip-path:polygon(0px 0,0 0,0 0,0 0);position:absolute!important;height:1px;width:1px;overflow:hidden}.mejs-container{position:relative;background:#000;font-family:Helvetica,Arial,serif;text-align:left;vertical-align:top;text-indent:0}.mejs-fill-container,.mejs-fill-container .mejs-container{width:100%;height:100%}.mejs-fill-container{overflow:hidden}.mejs-container:focus{outline:0}.me-plugin{position:absolute}.mejs-embed,.mejs-embed body{width:100%;height:100%;margin:0;padding:0;background:#000;overflow:hidden}.mejs-fullscreen{overflow:hidden!important}.mejs-container-fullscreen{position:fixed;left:0;top:0;right:0;bottom:0;overflow:hidden;z-index:1000}.mejs-container-fullscreen .mejs-mediaelement,.mejs-container-fullscreen video{width:100%;height:100%}.mejs-clear{clear:both}.mejs-background{position:absolute;top:0;left:0}.mejs-mediaelement{position:absolute;top:0;left:0;width:100%;height:100%}.mejs-poster{position:absolute;top:0;left:0;background-size:contain;background-position:50% 50%;background-repeat:no-repeat}:root .mejs-poster img{display:none}.mejs-poster img{border:0;padding:0}.mejs-overlay{position:absolute;top:0;left:0}.mejs-overlay-play{cursor:pointer}.mejs-overlay-button{position:absolute;top:50%;left:50%;width:100px;height:100px;margin:-50px 0 0 -50px;background:url(https://du11hjcvx0uqb.cloudfront.net/br/dist/webpack-production/746c3af7a145a09239a36e5ef61cfea0.svg) no-repeat}.no-svg .mejs-overlay-button{background-image:url(https://du11hjcvx0uqb.cloudfront.net/br/dist/webpack-production/716436fb3df0d29e6b37dd62d952676a.png)}.mejs-overlay:hover .mejs-overlay-button{background-position:0 -100px}.mejs-overlay-loading{position:absolute;top:50%;left:50%;width:80px;height:80px;margin:-40px 0 0 -40px;background:#333;background:url(https://du11hjcvx0uqb.cloudfront.net/br/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(0,0,0,.9);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(50,50,50,.9)),to(rgba(0,0,0,.9)));background:-webkit-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:-moz-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:-o-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:-ms-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:linear-gradient(rgba(50,50,50,.9),rgba(0,0,0,.9))}.mejs-overlay-loading span{display:block;width:80px;height:80px;background:transparent url(https://du11hjcvx0uqb.cloudfront.net/br/dist/webpack-production/76b326f4d44222126fee21076595bef5.gif) 50% 50% no-repeat}.mejs-container .mejs-controls{position:absolute;list-style-type:none;margin:0;padding:0;bottom:0;left:0;background:url(https://du11hjcvx0uqb.cloudfront.net/br/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(0,0,0,.7);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(50,50,50,.7)),to(rgba(0,0,0,.7)));background:-webkit-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-moz-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-o-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-ms-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:linear-gradient(rgba(50,50,50,.7),rgba(0,0,0,.7));height:30px;width:100%}.mejs-container .mejs-controls div{list-style-type:none;background-image:none;display:block;float:left;margin:0;padding:0;width:26px;height:26px;font-size:11px;line-height:11px;font-family:Helvetica,Arial,serif;border:0}.mejs-controls .mejs-button button{cursor:pointer;display:block;font-size:0;line-height:0;text-decoration:none;margin:7px 5px;padding:0;position:absolute;height:16px;width:16px;border:0;background:transparent url(https://du11hjcvx0uqb.cloudfront.net/br/dist/webpack-production/40f56f5a736da4effeb790cedb8a52f0.svg) no-repeat}.no-svg .mejs-controls .mejs-button button{background-image:url(https://du11hjcvx0uqb.cloudfront.net/br/dist/webpack-production/24a0227fbdd3acfd86ff03fc3fc6c8a4.png)}.mejs-controls .mejs-button button:focus{outline:dotted 1px #999}.mejs-container .mejs-controls .mejs-time{color:#fff;display:block;height:17px;width:auto;padding:10px 3px 0;overflow:hidden;text-align:center;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}.mejs-container .mejs-controls .mejs-time a{color:#fff;font-size:11px;line-height:12px;display:block;float:left;margin:1px 2px 0 0;width:auto}.mejs-controls .mejs-play button{background-position:0 0}.mejs-controls .mejs-pause button{background-position:0 -16px}.mejs-controls .mejs-stop button{background-position:-112px 0}.mejs-controls div.mejs-time-rail{direction:ltr;width:200px;padding-top:5px}.mejs-controls .mejs-time-rail span,.mejs-controls .mejs-time-rail a{display:block;position:absolute;width:180px;height:10px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;cursor:pointer}.mejs-controls .mejs-time-rail .mejs-time-total{margin:5px;background:#333;background:rgba(50,50,50,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(30,30,30,.8)),to(rgba(60,60,60,.8)));background:-webkit-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-moz-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-o-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-ms-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:linear-gradient(rgba(30,30,30,.8),rgba(60,60,60,.8))}.mejs-controls .mejs-time-rail .mejs-time-buffering{width:100%;background-image:-o-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-webkit-gradient(linear,0 100%,100% 0,color-stop(0.25,rgba(255,255,255,.15)),color-stop(0.25,transparent),color-stop(0.5,transparent),color-stop(0.5,rgba(255,255,255,.15)),color-stop(0.75,rgba(255,255,255,.15)),color-stop(0.75,transparent),to(transparent));background-image:-webkit-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-moz-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-ms-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);-webkit-background-size:15px 15px;-moz-background-size:15px 15px;-o-background-size:15px 15px;background-size:15px 15px;-webkit-animation:buffering-stripes 2s linear infinite;-moz-animation:buffering-stripes 2s linear infinite;-ms-animation:buffering-stripes 2s linear infinite;-o-animation:buffering-stripes 2s linear infinite;animation:buffering-stripes 2s linear infinite}@-webkit-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@-moz-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@-ms-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@-o-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}.mejs-controls .mejs-time-rail .mejs-time-loaded{background:#3caac8;background:rgba(60,170,200,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(44,124,145,.8)),to(rgba(78,183,212,.8)));background:-webkit-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:-moz-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:-o-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:-ms-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:linear-gradient(rgba(44,124,145,.8),rgba(78,183,212,.8));width:0}.mejs-controls .mejs-time-rail .mejs-time-current{background:#fff;background:rgba(255,255,255,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(255,255,255,.9)),to(rgba(200,200,200,.8)));background:-webkit-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-moz-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-o-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-ms-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:linear-gradient(rgba(255,255,255,.9),rgba(200,200,200,.8));width:0}.mejs-controls .mejs-time-rail .mejs-time-handle{display:none;position:absolute;margin:0;width:10px;background:#fff;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;cursor:pointer;border:solid 2px #333;top:-2px;text-align:center}.mejs-controls .mejs-time-rail .mejs-time-float{position:absolute;display:none;background:#eee;width:36px;height:17px;border:solid 1px #333;top:-26px;margin-left:-18px;text-align:center;color:#111}.mejs-controls .mejs-time-rail .mejs-time-float-current{margin:2px;width:30px;display:block;text-align:center;left:0}.mejs-controls .mejs-time-rail .mejs-time-float-corner{position:absolute;display:block;width:0;height:0;line-height:0;border:solid 5px #eee;border-color:#eee transparent transparent;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;top:15px;left:13px}.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float{width:48px}.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float-current{width:44px}.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float-corner{left:18px}.mejs-controls .mejs-fullscreen-button button{background-position:-32px 0}.mejs-controls .mejs-unfullscreen button{background-position:-32px -16px}.mejs-controls .mejs-volume-button{}.mejs-controls .mejs-mute button{background-position:-16px -16px}.mejs-controls .mejs-unmute button{background-position:-16px 0}.mejs-controls .mejs-volume-button{position:relative}.mejs-controls .mejs-volume-button .mejs-volume-slider{height:115px;width:25px;background:url(https://du11hjcvx0uqb.cloudfront.net/br/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;top:-115px;left:0;z-index:1;position:absolute;margin:0}.mejs-controls .mejs-volume-button:hover{-webkit-border-radius:0 0 4px 4px;-moz-border-radius:0 0 4px 4px;border-radius:0 0 4px 4px}.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-total{position:absolute;left:11px;top:8px;width:2px;height:100px;background:#ddd;background:rgba(255,255,255,.5);margin:0}.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current{position:absolute;left:11px;top:8px;width:2px;height:100px;background:#ddd;background:rgba(255,255,255,.9);margin:0}.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-handle{position:absolute;left:4px;top:-3px;width:16px;height:6px;background:#ddd;background:rgba(255,255,255,.9);cursor:N-resize;-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px;margin:0}.mejs-controls a.mejs-horizontal-volume-slider{height:26px;width:56px;position:relative;display:block;float:left;vertical-align:middle}.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total{position:absolute;left:0;top:11px;width:50px;height:8px;margin:0;padding:0;font-size:1px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background:#333;background:rgba(50,50,50,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(30,30,30,.8)),to(rgba(60,60,60,.8)));background:-webkit-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-moz-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-o-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-ms-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:linear-gradient(rgba(30,30,30,.8),rgba(60,60,60,.8))}.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current{position:absolute;left:0;top:11px;width:50px;height:8px;margin:0;padding:0;font-size:1px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background:#fff;background:rgba(255,255,255,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(255,255,255,.9)),to(rgba(200,200,200,.8)));background:-webkit-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-moz-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-o-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-ms-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:linear-gradient(rgba(255,255,255,.9),rgba(200,200,200,.8))}.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-handle{display:none}.mejs-controls .mejs-captions-button{position:relative}.mejs-controls .mejs-captions-button button{background-position:-48px 0}.mejs-controls .mejs-captions-button .mejs-captions-selector{position:absolute;bottom:26px;right:-51px;width:85px;height:100px;background:url(https://du11hjcvx0uqb.cloudfront.net/br/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);border:solid 1px transparent;padding:10px 10px 0;overflow:hidden;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.mejs-controls .mejs-captions-button .mejs-captions-selector ul{margin:0;padding:0;display:block;list-style-type:none!important;overflow:hidden}.mejs-controls .mejs-captions-button .mejs-captions-selector ul li{margin:0 0 6px;padding:0;list-style-type:none!important;display:block;color:#fff;overflow:hidden}.mejs-controls .mejs-captions-button .mejs-captions-selector ul li input{clear:both;float:left;margin:3px 3px 0 5px}.mejs-controls .mejs-captions-button .mejs-captions-selector ul li label{width:55px;float:left;padding:4px 0 0;line-height:15px;font-family:Helvetica,Arial,serif;font-size:10px}.mejs-controls .mejs-captions-button .mejs-captions-translations{font-size:10px;margin:0 0 5px}.mejs-chapters{position:absolute;top:0;left:0;border-right:solid 1px #fff;width:10000px;z-index:1}.mejs-chapters .mejs-chapter{position:absolute;float:left;background:#222;background:rgba(0,0,0,.7);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(50,50,50,.7)),to(rgba(0,0,0,.7)));background:-webkit-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-moz-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-o-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-ms-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:linear-gradient(rgba(50,50,50,.7),rgba(0,0,0,.7));filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#323232, endColorstr=#000000);overflow:hidden;border:0}.mejs-chapters .mejs-chapter .mejs-chapter-block{font-size:11px;color:#fff;padding:5px;display:block;border-right:solid 1px #333;border-bottom:solid 1px #333;cursor:pointer}.mejs-chapters .mejs-chapter .mejs-chapter-block-last{border-right:0}.mejs-chapters .mejs-chapter .mejs-chapter-block:hover{background:#666;background:rgba(102,102,102,.7);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(102,102,102,.7)),to(rgba(50,50,50,.6)));background:-webkit-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:-moz-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:-o-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:-ms-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:linear-gradient(rgba(102,102,102,.7),rgba(50,50,50,.6));filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#666666, endColorstr=#323232)}.mejs-chapters .mejs-chapter .mejs-chapter-block .ch-title{font-size:12px;font-weight:700;display:block;white-space:nowrap;text-overflow:ellipsis;margin:0 0 3px;line-height:12px}.mejs-chapters .mejs-chapter .mejs-chapter-block .ch-timespan{font-size:12px;line-height:12px;margin:3px 0 4px;display:block;white-space:nowrap;text-overflow:ellipsis}.mejs-captions-layer{position:absolute;bottom:0;left:0;text-align:center;line-height:20px;font-size:16px;color:#fff}.mejs-captions-layer a{color:#fff;text-decoration:underline}.mejs-captions-layer[lang=ar]{font-size:20px;font-weight:400}.mejs-captions-position{position:absolute;width:100%;bottom:15px;left:0}.mejs-captions-position-hover{bottom:35px}.mejs-captions-text,.mejs__captions-text *{padding:0;background:url(https://du11hjcvx0uqb.cloudfront.net/br/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(20,20,20,.5);white-space:pre-wrap;-webkit-box-shadow:5px 0 0 rgba(20,20,20,.5),-5px 0 0 rgba(20,20,20,.5);box-shadow:5px 0 0 rgba(20,20,20,.5),-5px 0 0 rgba(20,20,20,.5)}.me-cannotplay{}.me-cannotplay a{color:#fff;font-weight:700}.me-cannotplay span{padding:15px;display:block}.mejs-controls .mejs-loop-off button{background-position:-64px -16px}.mejs-controls .mejs-loop-on button{background-position:-64px 0}.mejs-controls .mejs-backlight-off button{background-position:-80px -16px}.mejs-controls .mejs-backlight-on button{background-position:-80px 0}.mejs-controls .mejs-picturecontrols-button{background-position:-96px 0}.mejs-contextmenu{position:absolute;width:150px;padding:10px;border-radius:4px;top:0;left:0;background:#fff;border:solid 1px #999;z-index:1001}.mejs-contextmenu .mejs-contextmenu-separator{height:1px;font-size:0;margin:5px 6px;background:#333}.mejs-contextmenu .mejs-contextmenu-item{font-family:Helvetica,Arial,serif;font-size:12px;padding:4px 6px;cursor:pointer;color:#333}.mejs-contextmenu .mejs-contextmenu-item:hover{background:#2C7C91;color:#fff}.mejs-controls .mejs-sourcechooser-button{position:relative}.mejs-controls .mejs-sourcechooser-button button{background-position:-128px 0}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector{position:absolute;bottom:26px;right:-10px;width:130px;height:100px;background:url(https://du11hjcvx0uqb.cloudfront.net/br/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);border:solid 1px transparent;padding:10px;overflow:hidden;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul{margin:0;padding:0;display:block;list-style-type:none!important;overflow:hidden}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li{margin:0 0 6px;padding:0;list-style-type:none!important;display:block;color:#fff;overflow:hidden}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li input{clear:both;float:left;margin:3px 3px 0 5px}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li label{width:100px;float:left;padding:4px 0 0;line-height:15px;font-family:Helvetica,Arial,serif;font-size:10px}.mejs-postroll-layer{position:absolute;bottom:0;left:0;width:100%;height:100%;background:url(https://du11hjcvx0uqb.cloudfront.net/br/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);z-index:1000;overflow:hidden}.mejs-postroll-layer-content{width:100%;height:100%}.mejs-postroll-close{position:absolute;right:0;top:0;background:url(https://du11hjcvx0uqb.cloudfront.net/br/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);color:#fff;padding:4px;z-index:100;cursor:pointer}div.mejs-speed-button{width:46px!important;position:relative}.mejs-controls .mejs-button.mejs-speed-button button{background:transparent;width:36px;font-size:11px;line-height:normal;color:#fff}.mejs-controls .mejs-speed-button .mejs-speed-selector{position:absolute;top:-100px;left:-10px;width:60px;height:100px;background:url(https://du11hjcvx0uqb.cloudfront.net/br/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);border:solid 1px transparent;padding:0;overflow:hidden;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li label.mejs-speed-selected{color:rgba(33,248,248,1)}.mejs-controls .mejs-speed-button .mejs-speed-selector ul{margin:0;padding:0;display:block;list-style-type:none!important;overflow:hidden}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li{margin:0 0 6px;padding:0 10px;list-style-type:none!important;display:block;color:#fff;overflow:hidden}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li input{clear:both;float:left;margin:3px 3px 0 5px}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li label{width:60px;float:left;padding:4px 0 0;line-height:15px;font-family:Helvetica,Arial,serif;font-size:11px;color:#fff;margin-left:5px;cursor:pointer}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li:hover{background-color:#c8c8c8!important;background-color:rgba(255,255,255,.4)!important}.mejs-controls .mejs-button.mejs-jump-forward-button{background:transparent url(https://du11hjcvx0uqb.cloudfront.net/br/dist/webpack-production/15e1ac8cbacc2efdf1ac2677de48a253.png) no-repeat 3px 3px}.mejs-controls .mejs-button.mejs-jump-forward-button button{background:transparent;font-size:9px;line-height:normal;color:#fff}.mejs-controls .mejs-button.mejs-skip-back-button{background:transparent url(https://du11hjcvx0uqb.cloudfront.net/br/dist/webpack-production/cd6dc830eb45b3a5a96bbc936ff54846.png) no-repeat 3px 3px}.mejs-controls .mejs-button.mejs-skip-back-button button{background:transparent;font-size:9px;line-height:normal;color:#fff}</style><style type="text/css">/*
+ * Copyright (C) 2014 - present Instructure, Inc.
+ *
+ * This file is part of Canvas.
+ *
+ * Canvas is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU Affero General Public License as published by the Free
+ * Software Foundation, version 3 of the License.
+ *
+ * Canvas is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+ * A PARTICULAR PURPOSE. See the GNU Affero General Public License for more
+ * details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along
+ * with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/* customizations to mediaelementplayer css */
+
+/*
+  Because this file is not proccessed by our brandable_css sass pipeline,
+  it cannot use our sass-direction helpers. So we have to handle RTL manually
+  by putting direction-specific styles in [dir="ltr"] or [dir="rtl"] blocks.
+*/
+/* stylelint-disable property-blacklist, declaration-property-value-blacklist */
+
+/* good menu widths */
+.mejs-sourcechooser-selector {
+  width: 160px;
+}
+.mejs-sourcechooser-selector label {
+  width: 160px !important;
+}
+
+.mejs-captions-selector {
+  width: 105px;
+}
+[dir="ltr"]  .mejs-captions-selector { text-align: left }
+[dir="rtl"]  .mejs-captions-selector { text-align: right }
+
+.mejs-captions-selector label {
+  width: 70px !important;
+}
+
+/* Subtitile upload link */
+.mejs-captions-selector .upload-track {
+  color: white;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+[dir="ltr"] .mejs-captions-selector .upload-track {
+  margin-right: 0px;
+  margin-left: 5px;
+  float: left;
+}
+[dir="rtl"] .mejs-captions-selector .upload-track {
+  margin-left: 0px;
+  margin-right: 5px;
+  float: right;
+}
+
+/* "x" button to remove a subtitle */
+.mejs-captions-selector a[data-remove] {
+  position: absolute;
+  top: 0;
+  color: white;
+}
+[dir="ltr"] .mejs-captions-selector a[data-remove] { right: 0 }
+[dir="rtl"] .mejs-captions-selector a[data-remove] { left: 0 }
+
+
+/* style menu items without a radio button */
+.mejs-button [role="menu"] {
+  padding: 0 !important;
+}
+ /* compensate for above 0 padding */
+ .mejs-button [role="menu"] ul li {
+  position: relative;
+  padding: 0 10px !important;
+}
+/* add a hover effect */
+.mejs-button [role="menu"] ul li:hover {
+  background-color: #c8c8c8 !important;
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+.mejs-button [role="menu"] ul li input {
+  border: 0;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+.mejs-button [role="menu"] ul li label {
+  cursor: pointer;
+}
+[dir="ltr"] .mejs-button [role="menu"] ul li label { margin-left: 5px }
+[dir="rtl"] .mejs-button [role="menu"] ul li label { margin-right: 5px }
+
+
+.mejs-button [role="menu"] label.mejs-selected {
+  color: #21f8f8 !important;
+}
+
+/* stylelint-enable property-blacklist, declaration-property-value-blacklist */
+</style><script charset="utf-8" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/605-c-d1c8d45332.js"></script></head>
+
+<body class="with-left-side course-menu-expanded padless-content pages primary-nav-expanded context-course_105689 show webkit chrome no-touch">
+
+<noscript>
+  <div role="alert" class="ic-flash-static ic-flash-error">
+    <div class="ic-flash__icon" aria-hidden="true">
+      <i class="icon-warning"></i>
+    </div>
+    <h1>You need to have JavaScript enabled in order to access this site.</h1>
+  </div>
+</noscript>
+
+
+
+
+<ul id="flash_message_holder"></ul>
+<div id="flash_screenreader_holder" role="alert" aria-live="assertive" aria-relevant="additions" class="screenreader-only" aria-atomic="false"></div>
+
+<div id="application" class="ic-app">
+  
+  <header id="header" class="ic-app-header no-print ">
+    <a href="https://canvas.stanford.edu/courses/105689/pages/project-3#content" id="skip_navigation_link">Skip To Content</a>
+      <div role="region" class="ic-app-header__main-navigation" aria-label="Global Navigation">
+        <div class="ic-app-header__logomark-container">
+          <a href="https://canvas.stanford.edu/" class="ic-app-header__logomark">
+            <span class="screenreader-only">Dashboard</span>
+          </a>
+        </div>
+        <ul id="menu" class="ic-app-header__menu-list">
+            <li class="menu-item ic-app-header__menu-list-item ">
+              <a id="global_nav_profile_link" role="button" href="https://canvas.stanford.edu/profile" class="ic-app-header__menu-list-link">
+                <div class="menu-item-icon-container" aria-hidden="true">
+                  <div class="ic-avatar ">
+                    <img src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/avatar-50.png" alt="Doug Chang">
+                  </div>
+                </div>
+                <div class="menu-item__text">
+                  Account
+                </div>
+              </a>
+            </li>
+          <li class="ic-app-header__menu-list-item ">
+            <a id="global_nav_dashboard_link" href="https://canvas.stanford.edu/" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--dashboard" version="1.1" x="0" y="0" viewBox="0 0 280 200" enable-background="new 0 0 280 200" xml:space="preserve"><path d="M273.09,180.75H197.47V164.47h62.62A122.16,122.16,0,1,0,17.85,142a124,124,0,0,0,2,22.51H90.18v16.29H6.89l-1.5-6.22A138.51,138.51,0,0,1,1.57,142C1.57,65.64,63.67,3.53,140,3.53S278.43,65.64,278.43,142a137.67,137.67,0,0,1-3.84,32.57ZM66.49,87.63,50.24,71.38,61.75,59.86,78,76.12Zm147,0L202,76.12l16.25-16.25,11.51,11.51ZM131.85,53.82v-23h16.29v23Zm15.63,142.3a31.71,31.71,0,0,1-28-16.81c-6.4-12.08-15.73-72.29-17.54-84.25a8.15,8.15,0,0,1,13.58-7.2c8.88,8.21,53.48,49.72,59.88,61.81a31.61,31.61,0,0,1-27.9,46.45ZM121.81,116.2c4.17,24.56,9.23,50.21,12,55.49A15.35,15.35,0,1,0,161,157.3C158.18,152,139.79,133.44,121.81,116.2Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">Dashboard</div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ic-app-header__menu-list-item--active">
+            <a id="global_nav_courses_link" role="button" href="https://canvas.stanford.edu/courses" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--courses" version="1.1" x="0" y="0" viewBox="0 0 280 259" enable-background="new 0 0 280 259" xml:space="preserve"><path d="M73.31,198c-11.93,0-22.22,8-24,18.73a26.67,26.67,0,0,0-.3,3.63v.3a22,22,0,0,0,5.44,14.65,22.47,22.47,0,0,0,17.22,8H200V228.19h-134V213.08H200V198Zm21-105.74h90.64V62H94.3ZM79.19,107.34V46.92H200v60.42Zm7.55,30.21V122.45H192.49v15.11ZM71.65,16.71A22.72,22.72,0,0,0,49,39.36V190.88a41.12,41.12,0,0,1,24.32-8h157V16.71ZM33.88,39.36A37.78,37.78,0,0,1,71.65,1.6H245.36V198H215.15v45.32h22.66V258.4H71.65a37.85,37.85,0,0,1-37.76-37.76Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Courses
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_calendar_link" href="https://canvas.stanford.edu/calendar" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--calendar" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M197.07,213.38h16.31V197.07H197.07Zm-16.31,16.31V180.76h48.92v48.92Zm-48.92-16.31h16.31V197.07H131.85Zm-16.31,16.31V180.76h48.92v48.92ZM66.62,213.38H82.93V197.07H66.62ZM50.32,229.68V180.76H99.24v48.92Zm146.75-81.53h16.31V131.85H197.07Zm-16.31,16.31V115.54h48.92v48.92Zm-48.92-16.31h16.31V131.85H131.85Zm-16.31,16.31V115.54h48.92v48.92ZM66.62,148.15H82.93V131.85H66.62ZM50.32,164.46V115.54H99.24v48.92ZM34,262.29H246V82.93H34ZM246,66.62V42.16A8.17,8.17,0,0,0,237.84,34H213.38v8.15a8.15,8.15,0,1,1-16.31,0V34H82.93v8.15a8.15,8.15,0,0,1-16.31,0V34H42.16A8.17,8.17,0,0,0,34,42.16V66.62Zm-8.15-48.92a24.49,24.49,0,0,1,24.46,24.46V278.6H17.71V42.16A24.49,24.49,0,0,1,42.16,17.71H66.62V9.55a8.15,8.15,0,0,1,16.31,0v8.15H197.07V9.55a8.15,8.15,0,1,1,16.31,0v8.15Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Calendar
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_conversations_link" href="https://canvas.stanford.edu/conversations" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container">
+                <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--inbox" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M91.72,120.75h96.56V104.65H91.72Zm0,48.28h80.47V152.94H91.72Zm0-96.56h80.47V56.37H91.72Zm160.94,34.88H228.52V10.78h-177v96.56H27.34A24.17,24.17,0,0,0,3.2,131.48V244.14a24.17,24.17,0,0,0,24.14,24.14H252.66a24.17,24.17,0,0,0,24.14-24.14V131.48A24.17,24.17,0,0,0,252.66,107.34Zm0,16.09a8.06,8.06,0,0,1,8,8v51.77l-32.19,19.31V123.44ZM67.58,203.91v-177H212.42v177ZM27.34,123.44H51.48v79.13L19.29,183.26V131.48A8.06,8.06,0,0,1,27.34,123.44ZM252.66,252.19H27.34a8.06,8.06,0,0,1-8-8V202l30,18H230.75l30-18v42.12A8.06,8.06,0,0,1,252.66,252.19Z"></path></svg>
+</span>
+                <span class="menu-item__badge"></span>
+              </div>
+              <div class="menu-item__text">
+                Inbox
+              </div>
+            </a>
+          </li>
+            
+
+
+          <li class="ic-app-header__menu-list-item">
+           <a id="global_nav_help_link" role="button" class="ic-app-header__menu-list-link" data-track-category="help system" data-track-label="help button" href="http://help.instructure.com/">
+              <div class="menu-item-icon-container" role="presentation">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg menu-item__icon svg-icon-help" version="1.1" x="0" y="0" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve" fill="currentColor"><path d="M100,127.88A11.15,11.15,0,1,0,111.16,139,11.16,11.16,0,0,0,100,127.88Zm8.82-88.08a33.19,33.19,0,0,1,23.5,23.5,33.54,33.54,0,0,1-24,41.23,3.4,3.4,0,0,0-2.74,3.15v9.06H94.42v-9.06a14.57,14.57,0,0,1,11.13-14,22.43,22.43,0,0,0,13.66-10.27,22.73,22.73,0,0,0,2.31-17.37A21.92,21.92,0,0,0,106,50.59a22.67,22.67,0,0,0-19.68,3.88,22.18,22.18,0,0,0-8.65,17.64H66.54a33.25,33.25,0,0,1,13-26.47A33.72,33.72,0,0,1,108.82,39.8ZM100,5.2A94.8,94.8,0,1,0,194.8,100,94.91,94.91,0,0,0,100,5.2m0,178.45A83.65,83.65,0,1,1,183.65,100,83.73,83.73,0,0,1,100,183.65" transform="translate(-5.2 -5.2)"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Help
+              </div>
+</a>          </li>
+        </ul>
+      </div>
+      <div class="ic-app-header__secondary-navigation">
+        <ul class="ic-app-header__menu-list">
+          <li class="menu-item ic-app-header__menu-list-item">
+            <button id="primaryNavToggle" class="ic-app-header__menu-list-link ic-app-header__menu-list-link--nav-toggle" aria-label="Minimize global navigation" title="Minimize global navigation">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--navtoggle" version="1.1" x="0" y="0" width="40" height="32" viewBox="0 0 40 32" xml:space="preserve">
+  <path d="M39.5,30.28V2.48H37.18v27.8Zm-4.93-13.9L22.17,4,20.53,5.61l9.61,9.61H.5v2.31H30.14l-9.61,9.61,1.64,1.64Z"></path>
+</svg>
+
+              </div>
+            </button>
+          </li>
+        </ul>
+      </div>
+    <div id="global_nav_tray_container"></div>
+  </header>
+
+
+  <div id="instructure_ajax_error_box">
+    <div style="text-align: right; background-color: #fff;"><a href="https://canvas.stanford.edu/courses/105689/pages/project-3#" class="close_instructure_ajax_error_box_link">Close</a></div>
+    <iframe id="instructure_ajax_error_result" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/saved_resource.html" style="border: 0;" title="Error"></iframe>
+  </div>
+
+  <div id="wrapper" class="ic-Layout-wrapper">
+      <div class="ic-app-nav-toggle-and-crumbs no-print">
+          <button type="button" id="courseMenuToggle" class="Button Button--link ic-app-course-nav-toggle" aria-live="polite" aria-label="Hide Courses Navigation Menu" title="Hide Courses Navigation Menu">
+            <i class="icon-hamburger" aria-hidden="true"></i>
+          </button>
+          <div class="ic-app-crumbs">
+        <nav id="breadcrumbs" role="navigation" aria-label="breadcrumbs"><ul><li class="home"><a href="https://canvas.stanford.edu/"><span class="ellipsible">      <i class="icon-home" title="My Dashboard">
+        <span class="screenreader-only">My Dashboard</span>
+      </i>
+</span></a></li><li><a href="https://canvas.stanford.edu/courses/105689"><span class="ellipsible">F19-BIOMEDIN-214-01...</span></a></li><li><a href="https://canvas.stanford.edu/courses/105689/pages"><span class="ellipsible">Pages</span></a></li><li><span class="ellipsible">Project 3</span></li></ul></nav>
+        </div>
+      </div>
+    <div id="main" class="ic-Layout-columns">
+        <div class="ic-Layout-watermark"></div>
+        <div id="left-side" class="ic-app-course-menu list-view-a11y-left-menu-flag" style="display: block">
+              <span id="section-tabs-header-subtitle" class="ellipsis">Fall 2019</span>
+            <nav role="navigation" aria-label="Courses Navigation Menu"><ul id="section-tabs"><li class="section"><a href="https://canvas.stanford.edu/courses/105689" title="Home" class="home" tabindex="0">Home</a></li><li class="section"><a href="https://canvas.stanford.edu/courses/105689/external_tools/4450" title="Course Videos" class="context_external_tool_4450" tabindex="0">Course Videos</a></li><li class="section"><a href="https://canvas.stanford.edu/courses/105689/announcements" title="Announcements" class="announcements" tabindex="0">Announcements</a></li><li class="section"><a href="https://canvas.stanford.edu/courses/105689/assignments" title="Assignments" class="assignments" tabindex="0">Assignments</a></li><li class="section"><a href="https://canvas.stanford.edu/courses/105689/grades" title="Grades" class="grades" tabindex="0">Grades</a></li><li class="section"><a href="https://canvas.stanford.edu/courses/105689/users" title="People" class="people" tabindex="0">People</a></li><li class="section"><a href="https://canvas.stanford.edu/courses/105689/wiki" title="Pages" aria-current="page" class="pages active" tabindex="0">Pages</a></li><li class="section"><a href="https://canvas.stanford.edu/courses/105689/files" title="Files" class="files" tabindex="0">Files</a></li><li class="section"><a href="https://canvas.stanford.edu/courses/105689/assignments/syllabus" title="Syllabus" class="syllabus" tabindex="0">Syllabus</a></li><li class="section"><a href="https://canvas.stanford.edu/courses/105689/quizzes" title="Quizzes" class="quizzes" tabindex="0">Quizzes</a></li><li class="section"><a href="https://canvas.stanford.edu/courses/105689/modules" title="Modules" class="modules" tabindex="0">Modules</a></li><li class="section"><a href="https://canvas.stanford.edu/courses/105689/external_tools/5384" title="Zoom" class="context_external_tool_5384" tabindex="0">Zoom</a></li></ul></nav>
+        </div>
+      <div id="not_right_side" class="ic-app-main-content">
+        <div id="content-wrapper" class="ic-Layout-contentWrapper">
+          
+          <div id="content" class="ic-Layout-contentMain" role="main">
+            
+
+  
+
+<div id="wiki_page_show">
+<div class="header-bar-outer-container">
+  <div class="header-bar-container sticky-toolbar sticky" data-sticky="">
+    <div class="header-bar flex-container">
+      <div class="header-bar-left header-left-flex">
+        
+          
+            <a class="btn view_all_pages" href="https://canvas.stanford.edu/courses/105689/pages">View All Pages</a>
+          
+        
+      </div>
+      <div class="header-bar-right header-right-flex">
+        
+          
+          
+            
+          
+        
+        
+          
+        
+        
+        
+      </div>
+    </div>
+    <div class="page-changed-alert" role="alert" aria-atomic="true" aria-live="polite"></div>
+  </div>
+</div>
+
+
+<div class="show-content user_content clearfix enhanced">
+  <h1 class="page-title">Project 3</h1>
+  
+    
+  
+  
+    <p><span style="font-size: 18pt;">Important Information</span></p>
+<ol>
+<li>Project 3 is due by <strong>11:59pm on November&nbsp;12, 2018</strong>. One late period may be used to extend this deadline to&nbsp;11:59pm on November&nbsp;14, 2018. <strong>No submissions will be accepted after November&nbsp;14.</strong>
+</li>
+</ol>
+<ol start="2">
+<li>Programming projects must be completed individually. You may discuss algorithms with others, but the coding should be done alone. You must explicitly name everyone with whom you discussed this project in the header comments of your code and in the collaboration attestation in the project quiz. Students must abide by the terms of the Stanford Honor Code.</li>
+<li>Remember to consult Piazza, as many common questions will be asked and answered there.</li>
+<li>Prior to beginning the assignment, please read the <a href="https://canvas.stanford.edu/courses/105689/pages/code-policy" data-api-endpoint="https://canvas.stanford.edu/api/v1/courses/105689/pages/code-policy" data-api-returntype="Page">Code Policy</a>.</li>
+<li>Your source code must run <strong>exactly</strong> as specified below. We will be unit testing your code on Gradescope.</li>
+</ol>
+<p><span style="font-size: 18pt;">Files to Download</span></p>
+<p>You can download all files required for the project&nbsp;<a href="https://canvas.stanford.edu/courses/105689/files/folder/p3">here</a>.</p>
+<p><strong>PyRosetta</strong>: Many of the utility functions in this project require PyRosetta, a Python wrapper for the Rosetta software suite. You will need to request an academic license for free at this link: <a href="https://els.comotion.uw.edu/express_license_technologies/pyrosetta" class="external" target="_blank" rel="noreferrer noopener"><span>https://els.comotion.uw.edu/express_license_technologies/pyrosetta</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a>.</p>
+<p>Once approved, download the latest PyRosetta from <a href="http://www.pyrosetta.org/dow" class="external" target="_blank" rel="noreferrer noopener"><span>http://www.pyrosetta.org/dow</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a>. Make sure you select the right distribution for your machine (Linux/MacOS vs. Windows). Follow the appropriate installation instructions at the bottom of the page.</p>
+<p>**<strong>Make sure to do this step as early as possible—installing PyRosetta may take a while**</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Biopython:</strong> The other dependency you will need is <a href="https://biopython.org/wiki/Documentation" class="external" target="_blank" rel="noreferrer noopener"><span>Biopython</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a>, which is useful for interacting with PDB files. This can be installed using `pip install biopython`.</p>
+<p><span style="font-size: 18pt;">Introduction</span></p>
+<p>Proteins are extraordinary molecular machines that perform and mediate fundamental functions in living organisms, including molecular signaling, reaction catalysis, and energy transformation. This remarkable diversity in function of natural proteins is made possible by variations in their three-dimensional structures, each of which has been optimized through evolution to perform its particular function. It is also known that a protein’s structure is determined by its amino acid sequence, and that the folded conformation of a protein corresponds to the minimum-energy state for its sequence. Thus, the ability to predict the structure of a protein from its amino acid sequence alone would be very useful for addressing many biological problems, such as predicting protein function from genomic data and rationally engineering novel proteins to perform a desired function. For this reason, the problem of <strong>protein structure prediction</strong> has been a holy grail in structural bioinformatics for decades.</p>
+<p>We will focus on <em>ab initio </em>structure prediction, which aims to fold a protein from sequence alone without using a template structure. In this project, you will implement a fragment assembly algorithm, one of the most widely-used and successful approaches for <em>ab initio </em>protein structure prediction. This is a simplified version of the Rosetta protein folding algorithm described in lecture, which uses a Monte Carlo simulation with simulated annealing to iteratively assemble fragments from known protein structures into a novel structure that matches the input sequence. For more information on Rosetta’s fragment assembly approach, see the following reference:</p>
+<p>Rohl, Carol A., Charlie E. M. Strauss, Kira M. S. Misura, and David Baker. 2004. “Protein Structure Prediction Using Rosetta.” <em>Methods in Enzymology</em>, 383:66–93. Academic Press.</p>
+<p><strong>Learning Goals</strong></p>
+<ul>
+<li>Understand the energetic factors that drive protein folding, and how that influences the relationship between sequence and structure</li>
+<li>Implement a Monte Carlo simulated annealing protocol, and understand the effect of different parameters on the simulation</li>
+<li>Fold a protein de novo and visualize using PyMol</li>
+</ul>
+<p><span style="font-size: 18pt;">Data Formats</span></p>
+<p>We include data files in the following formats:</p>
+<p><strong>.fasta files:</strong> These files contain protein sequences, represented as a string of 1-letter amino acid codes. The lines starting with the symbol “&gt;” simply denote the protein and chain that the sequence comes from.</p>
+<p><strong>.pdb files:</strong> This file format is used to store protein structures derived from X-ray crystallography data. These files are fixed-width and contain metadata information as well as the identity and xyz-coordinates of every atom in the protein. More information on the PDB file format is available on <a href="https://en.wikipedia.org/wiki/Protein_Data_Bank_(file_format)" class="external" target="_blank" rel="noreferrer noopener"><span>Wikipedia</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a>, but this is not necessary to complete the project; we provide functions to interact with PDB files as necessary.</p>
+<p><strong>.frag files:</strong> The fragment assembly protocol you will be implementing requires sampling from a “fragment library”, which contains a set of candidate fragments for each sequence position in the input protein. These fragment libraries are generated by comparing short windows in the input sequence with known protein structures using PSI-BLAST (a variation of BLAST for protein sequences) and secondary structure prediction. Based on these comparisons, the most similar fragments (typically the top 200) are generated for each position. We have pre-computed 3- and 9-residue fragment libraries and provide them to you in Rosetta fragment file format (see <a href="https://www.rosettacommons.org/docs/latest/rosetta_basics/file_types/fragment-file" class="external" target="_blank" rel="noreferrer noopener"><span>here</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a> for details). The only important data are the <strong>phi </strong>and <strong>psi</strong> columns, but it is useful to be familiar with the other information contained in these files.</p>
+<p><strong>.rmsd files:</strong> Typically, in <em>ab initio</em> folding you do not have access to the target structure (for obvious reasons), so you must sample randomly from the fragment library at each position. However, for this assignment you will be implementing <em>biased </em>forward folding, in which we reduce our sample space of fragments to only those which are closest in structure to the target fold. We have pre-calculated the root-mean-square deviation (RMSD) between each fragment in the fragment library and its corresponding fragment in the native structure. These files are tab-delimited with the following three columns:</p>
+<pre>position&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fragment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rmsd</pre>
+<p>You do not need to modify these files, although the script used to generate the .rmsd files is given to you in <em>code/get_lowRMS_frags.py</em> if you are interested.</p>
+<p><span style="font-size: 18pt;">Project Overview</span></p>
+<p>In this assignment, you will fold some small target (or "native") proteins. We give you data for three proteins:</p>
+<ol>
+<li>Helix – this is a simple 17-residue alpha helix. We <strong>strongly </strong>recommend you use this structure for debugging and testing your code, as it should take less than 5 minutes to fold.</li>
+<li>1FW4 – this is the crystal structure of the C-terminal domain of calmodulin, an important calcium binding signaling protein.</li>
+<li>1UBQ – this is the crystal structure of ubiquitin, a small regulatory protein that is present in almost all eukaryotic tissues.</li>
+</ol>
+<p>Implement the fragment assembly protocol for <em>ab initio</em> protein folding by following the implementation details below. In each simulation, you will fold the protein from an extended configuration using two stages: (1) a coarse assembly stage, which samples fragments of length 9, and (2) a refinement stage, which samples fragments of length 3. After the full simulation, you will perform an energy minimization and report (1) the final energy of the folded conformation and (2) the RMSD to the target structure (in Angstroms).</p>
+<p>First, make sure your program works consistently on <em>helix.pdb</em>. The total simulation should take 5 minutes or less on your local machine and achieve a final RMSD of less than 1Å to the target structure.</p>
+<p>Then, run 10 simulations each for 1FW4 and 1UBQ. Since these proteins are slightly larger, each simulation could take 5-10 minutes. <strong>With this in mind, make sure you leave enough time to run all of these simulations. </strong>If it is taking longer than 10 minutes per simulation, think about how you could implement your code more efficiently—the most common reason for inefficient simulations is unnecessarily repeating operations during sampling.</p>
+<p>Finally, visualize the lowest-RMSD structures in PyMol (details below).</p>
+<p><span style="font-size: 18pt;">Implementation Details</span></p>
+<p><span style="font-size: 14pt;">1. Monte Carlo sampling with simulated annealing</span></p>
+<p><strong>Monte Carlo fragment sampling</strong></p>
+<p>This is probably the most widely used and successful strategy for folding a protein <em>ab initio</em>. This approach is so effective because it provides a <strong>fast</strong>, <strong>knowledge-based</strong> strategy for searching the space of possible structures for a protein. This conformational space is intractably large, especially for longer sequences, so a naïve sampling approach that permutes the protein structure at random is likely to take a very long time to reach a “good” structure. However, we can leverage the more than 150,000 known protein structures in the PDB to selectively sample regions of the space that we predict to be close to the target structure. This results in <strong>fragment libraries</strong> that are customized for the protein of interest, containing short sections of structures that have similar sequences to short windows of the input sequence. By sampling these fragments, we are able to effectively “jump” rapidly between different regions of the conformational space in search of low-energy configurations. In short, the procedure consists of a series of steps, or moves, where each move consists of two stages: (1) a fragment-based move in the conformational space and (2) an evaluation of the favorability of the move.</p>
+<p>A typical <em>ab initio</em> folding protocol, such as Rosetta, starts with a round of coarse fragment assembly using 9-residue fragments. Each Monte Carlo move proceeds as follows:</p>
+<ol>
+<li>Sample a random position in the protein chain. Note that this position corresponds to the <strong>left-hand side</strong> of the fragment window. Think carefully about which positions in the chain you can actually sample from; there are restrictions imposed by the fragment length and the definition of a torsional angle (for example, position 1 does not have a <img class="equation_image" title="\phi" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/%5Cphi" alt="LaTeX: \phi" data-equation-content="\phi" style="max-width: 11px;"><span class="hidden-readable"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>ϕ<!-- ϕ --></mi>
+</math></span> angle!).</li>
+<li>Retrieve list of candidate fragments for that position (see below).</li>
+<li>Sample a random fragment from this list of candidates</li>
+<li>Insert the sampled fragment into the current protein chain at the sampled position <strong>in torsion space. </strong>In other words, replace each torsion angle (<img class="equation_image" title="\phi" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/%5Cphi" alt="LaTeX: \phi" data-equation-content="\phi" style="max-width: 11px;"><span class="hidden-readable"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>ϕ<!-- ϕ --></mi>
+</math></span> and <img class="equation_image" title="\psi" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/%5Cpsi" alt="LaTeX: \psi" data-equation-content="\psi" style="max-width: 12px;"><span class="hidden-readable"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>ψ<!-- ψ --></mi>
+</math></span>) in the current protein chain with corresponding torsion angles from the selected fragment.</li>
+<li>Score the resulting conformation and accept or reject using the Metropolis criterion (see below).</li>
+</ol>
+<p>After this coarse 9-mer assembly, we perform a refinement stage that uses the same Monte Carlo procedure to sample from 3-mer fragments. This enables a finer adjustment of the torsions in small regions of the protein, which provides more precision in regions such as small loops.</p>
+<p><strong>Choice of scoring function</strong></p>
+<p>After making a move, we then need to evaluate whether the move was beneficial. To do this, we must define a scoring function. Since it has been shown that a protein sequence will fold into the conformation with the lowest free energy, the scoring function should represent the energy of the structure as well as possible; we call this the <strong>energy function.</strong></p>
+<p>For maximum accuracy, we could calculate energy using every atom in the simulation. However, this is extremely expensive and the full-atom conformational space is not very smooth, making Monte Carlo more difficult. To alleviate these issues, rather than calculating energy over every atom in the protein, we use a <strong>centroid </strong>representation of each amino acid. In a centroid representation, the backbone atoms (N, C, C, O) remain the same, but the side chain is simplified to a single pseudo-“atom”, whose position is determined by the centroid of the side chain and whose radius and atomic properties (charge, polarity, etc.) are determined by the residue’s identity. This not only makes energy calculation faster, but also smooths out the energy landscape to aid in sampling. In this project, we use the Rosetta ‘score3’ centroid energy function, which is largely knowledge-based (i.e. derived from statistics calculated over known structures, rather than physics equations). See Table 1 in this <a href="https://www-sciencedirect-com.stanford.idm.oclc.org/science/article/pii/S0076687904830040" class="external" target="_blank" rel="noreferrer noopener"><span>paper</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a> for a detailed description of each energy term. You will not be asked to calculate any of these terms, but you will need to have a conceptual understanding of their meaning for the quiz.</p>
+<p><img src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/Screen Shot 2019-10-15 at 5.29.19 PM.png" alt="Screen Shot 2019-10-15 at 5.29.19 PM.png" width="2022" height="1134" data-api-endpoint="https://canvas.stanford.edu/api/v1/users/186210/files/5031348" data-api-returntype="File" style="max-width: 900px;"></p>
+<p>Visualization of all-atom vs. centroid representations. (<a href="http://pubs.acs.org/doi/pdf/10.1021/acs.chemrev.6b00163" class="external" target="_blank" rel="noreferrer noopener"><span>Kmiecik et al., 2016</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a>)</p>
+<p><strong>Metropolis criterion</strong></p>
+<p>After making a single move (i.e. permuting a fragment) and measuring the energy of the resulting structure, you need a way to decide whether or not to accept the move. Since we are seeking the global energy minimum, we generally want to accept moves that decrease energy and reject moves that increase it. However, a naïve solution that simply rejects all moves that increase energy will by construction force the simulation to find the nearest energy minimum, regardless of whether it is a global minimum. This results in sub-optimal structures for most simulations. We can relax this criterion by accepting some moves that increase energy, allowing the simulation to escape local minima and explore the energy landscape. Specifically, we accept moves with a probability that depends on how much the energy increases using the <strong>Metropolis criterion:</strong></p>
+<p><strong><img class="equation_image" title="P\left(accept\right)=\begin{cases} 1&amp;\Delta E \leq 0\\exp\left(\frac{-\Delta E}{kT}\right)&amp;\Delta E &gt; 0\end{cases}" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/P%5Cleft(accept%5Cright)%3D%5Cbegin%7Bcases%7D%201%26%5CDelta%20E%20%5Cleq%200%5C%5Cexp%5Cleft(%5Cfrac%7B-%5CDelta%20E%7D%7BkT%7D%5Cright)%26%5CDelta%20E%20%3E%200%5Cend%7Bcases%7D" alt="LaTeX: P\left(accept\right)=\begin{cases} 1&amp;\Delta E \leq 0\\exp\left(\frac{-\Delta E}{kT}\right)&amp;\Delta E &gt; 0\end{cases}" data-equation-content="P\left(accept\right)=\begin{cases} 1&amp;\Delta E \leq 0\\exp\left(\frac{-\Delta E}{kT}\right)&amp;\Delta E &gt; 0\end{cases}" style="max-width: 302px;"><span class="hidden-readable"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>P</mi>
+  <mrow>
+    <mo>(</mo>
+    <mi>a</mi>
+    <mi>c</mi>
+    <mi>c</mi>
+    <mi>e</mi>
+    <mi>p</mi>
+    <mi>t</mi>
+    <mo>)</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow>
+    <mo>{</mo>
+    <mtable columnalign="left left" rowspacing=".2em" columnspacing="1em" displaystyle="false">
+      <mtr>
+        <mtd>
+          <mn>1</mn>
+        </mtd>
+        <mtd>
+          <mi mathvariant="normal">Δ<!-- Δ --></mi>
+          <mi>E</mi>
+          <mo>≤<!-- ≤ --></mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>e</mi>
+          <mi>x</mi>
+          <mi>p</mi>
+          <mrow>
+            <mo>(</mo>
+            <mfrac>
+              <mrow>
+                <mo>−<!-- − --></mo>
+                <mi mathvariant="normal">Δ<!-- Δ --></mi>
+                <mi>E</mi>
+              </mrow>
+              <mrow>
+                <mi>k</mi>
+                <mi>T</mi>
+              </mrow>
+            </mfrac>
+            <mo>)</mo>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mi mathvariant="normal">Δ<!-- Δ --></mi>
+          <mi>E</mi>
+          <mo>&gt;</mo>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+    <mo fence="true" stretchy="true" symmetric="true"></mo>
+  </mrow>
+</math></span> </strong></p>
+<p>where <img class="equation_image" title="\Delta E=E_{after}-E_{before}" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/%5CDelta%20E%3DE_%7Bafter%7D-E_%7Bbefore%7D" alt="LaTeX: \Delta E=E_{after}-E_{before}" data-equation-content="\Delta E=E_{after}-E_{before}" style="max-width: 177px;"><span class="hidden-readable"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi mathvariant="normal">Δ<!-- Δ --></mi>
+  <mi>E</mi>
+  <mo>=</mo>
+  <msub>
+    <mi>E</mi>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>a</mi>
+      <mi>f</mi>
+      <mi>t</mi>
+      <mi>e</mi>
+      <mi>r</mi>
+    </mrow>
+  </msub>
+  <mo>−<!-- − --></mo>
+  <msub>
+    <mi>E</mi>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>b</mi>
+      <mi>e</mi>
+      <mi>f</mi>
+      <mi>o</mi>
+      <mi>r</mi>
+      <mi>e</mi>
+    </mrow>
+  </msub>
+</math></span> is the change in energy produced by the move, k is the Boltzmann constant (k = 1 for this project), and T is the temperature of the system. Using this criterion, we guarantee that if we run the simulation for long enough (i.e. as time goes to infinity), the probability of observing any particular configuration is given by the Boltzmann distribution</p>
+<p><img class="equation_image" title="P\left(x\right)\propto exp\left(\frac{-U\left(x\right)}{kT}\right)" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/P%5Cleft(x%5Cright)%5Cpropto%20exp%5Cleft(%5Cfrac%7B-U%5Cleft(x%5Cright)%7D%7BkT%7D%5Cright)" alt="LaTeX: P\left(x\right)\propto exp\left(\frac{-U\left(x\right)}{kT}\right)" data-equation-content="P\left(x\right)\propto exp\left(\frac{-U\left(x\right)}{kT}\right)" style="max-width: 166px;"><span class="hidden-readable"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>P</mi>
+  <mrow>
+    <mo>(</mo>
+    <mi>x</mi>
+    <mo>)</mo>
+  </mrow>
+  <mo>∝<!-- ∝ --></mo>
+  <mi>e</mi>
+  <mi>x</mi>
+  <mi>p</mi>
+  <mrow>
+    <mo>(</mo>
+    <mfrac>
+      <mrow>
+        <mo>−<!-- − --></mo>
+        <mi>U</mi>
+        <mrow>
+          <mo>(</mo>
+          <mi>x</mi>
+          <mo>)</mo>
+        </mrow>
+      </mrow>
+      <mrow>
+        <mi>k</mi>
+        <mi>T</mi>
+      </mrow>
+    </mfrac>
+    <mo>)</mo>
+  </mrow>
+</math></span>,</p>
+<p>thus ensuring that our sampling is physically accurate.</p>
+<p><strong>Simulated annealing</strong></p>
+<p>An important consideration when evaluating moves with the Metropolis criterion is the temperature parameter T. High temperatures result in almost all moves being accepted, while low temperatures ensure that only decreases or <em>very small</em> increases in energy are accepted. An effective way to perform energy minimization is by starting at a high temperature and gradually reducing the temperature during the course of the simulation. This procedure is inspired by to the physical annealing procedures used in materials science to allow atomic crystal structures to gradually find a low-energy configuration during cooling, and as a result it is known as <strong>simulated annealing</strong>.</p>
+<p>In this assignment, you will use an exponential annealing schedule with an annealing rate of 0.999:</p>
+<p><img class="equation_image" title="T_t=T_{start}\cdot0.999^t" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/T_t%3DT_%7Bstart%7D%5Ccdot0.999%5Et" alt="LaTeX: T_t=T_{start}\cdot0.999^t" data-equation-content="T_t=T_{start}\cdot0.999^t" style="max-width: 146px;"><span class="hidden-readable"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msub>
+    <mi>T</mi>
+    <mi>t</mi>
+  </msub>
+  <mo>=</mo>
+  <msub>
+    <mi>T</mi>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>s</mi>
+      <mi>t</mi>
+      <mi>a</mi>
+      <mi>r</mi>
+      <mi>t</mi>
+    </mrow>
+  </msub>
+  <mo>⋅<!-- ⋅ --></mo>
+  <msup>
+    <mn>0.999</mn>
+    <mi>t</mi>
+  </msup>
+</math></span>,</p>
+<p>so that the temperature at each step t is given by</p>
+<p><img class="equation_image" title="T_t=0.999\:\cdot\:T_{t-1}" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/T_t%3D0.999%5C%3A%5Ccdot%5C%3AT_%7Bt-1%7D" alt="LaTeX: T_t=0.999\:\cdot\:T_{t-1}" data-equation-content="T_t=0.999\:\cdot\:T_{t-1}" style="max-width: 141px;"><span class="hidden-readable"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msub>
+    <mi>T</mi>
+    <mi>t</mi>
+  </msub>
+  <mo>=</mo>
+  <mn>0.999</mn>
+  <mspace width="mediummathspace"></mspace>
+  <mo>⋅<!-- ⋅ --></mo>
+  <mspace width="mediummathspace"></mspace>
+  <msub>
+    <mi>T</mi>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>t</mi>
+      <mo>−<!-- − --></mo>
+      <mn>1</mn>
+    </mrow>
+  </msub>
+</math></span></p>
+<p>Note that the temperature is annealed after every move that is <strong>accepted</strong>, not every move attempted. We also ignore the Boltzmann constant k for simplicity (i.e. k = 1). Here, we will use the following annealing schedules:</p>
+<ul>
+<li>For the 9-mer fragment assembly stage, anneal from <img class="equation_image" title="T_{start}=100" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/T_%7Bstart%7D%3D100" alt="LaTeX: T_{start}=100" data-equation-content="T_{start}=100" style="max-width: 94px;"><span class="hidden-readable"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msub>
+    <mi>T</mi>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>s</mi>
+      <mi>t</mi>
+      <mi>a</mi>
+      <mi>r</mi>
+      <mi>t</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mn>100</mn>
+</math></span> to <img class="equation_image" title="T_{end}=1" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/T_%7Bend%7D%3D1" alt="LaTeX: T_{end}=1" data-equation-content="T_{end}=1" style="max-width: 68px;"><span class="hidden-readable"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msub>
+    <mi>T</mi>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>e</mi>
+      <mi>n</mi>
+      <mi>d</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mn>1</mn>
+</math></span>
+</li>
+<li>For the 3-mer refinement stage, anneal from&nbsp;<img class="equation_image" title="T_{start}=1" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/T_%7Bstart%7D%3D1" alt="LaTeX: T_{start}=1" data-equation-content="T_{start}=1" style="max-width: 76px;"><span class="hidden-readable"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msub>
+    <mi>T</mi>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>s</mi>
+      <mi>t</mi>
+      <mi>a</mi>
+      <mi>r</mi>
+      <mi>t</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mn>1</mn>
+</math></span>to&nbsp;<img class="equation_image" title="T_{end}=0.1" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/T_%7Bend%7D%3D0.1" alt="LaTeX: T_{end}=0.1" data-equation-content="T_{end}=0.1" style="max-width: 82px;"><span class="hidden-readable"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msub>
+    <mi>T</mi>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>e</mi>
+      <mi>n</mi>
+      <mi>d</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mn>0.1</mn>
+</math></span>
+</li>
+</ul>
+<p><strong>Energy minimization (relaxation)</strong></p>
+<p>The result of the first two stages is a folded protein, but it is essentially a complex combination of a large number of fragments from other proteins and is not required to be globally consistent. For that reason, we perform energy minimization on the output structure. To do this, we convert the protein structure back to a full-atom representation and run Rosetta’s <a href="https://www.rosettacommons.org/docs/latest/application_documentation/structure_prediction/relax" class="external" target="_blank" rel="noreferrer noopener"><span>FastRelax</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a> minimization protocol. FastRelax efficiently optimizes the side chain configurations of the protein while allowing small changes to the overall backbone in order to find a minimum-energy structure. You do not need to implement this; we provide a <strong>relax</strong> function in <strong>utils.py</strong> that does this for you.</p>
+<p><strong>Evaluation</strong></p>
+<p>After minimization, the main evaluation metrics for the final folded protein are <strong>energy</strong> and <strong>root-mean-square deviation (RMSD)</strong> from the target structure. To calculate RMSD, we superimpose the predicted structure onto the target structure and measure RMSD between only the C&nbsp;atoms of the two structures:</p>
+<p><img class="equation_image" title="RMSD\left(A,\:B\right)=\sqrt{\frac{1}{N}\sum_i\left(C\alpha_{i,A}-C\alpha_{i,B}\right)^2}" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/RMSD%5Cleft(A%2C%5C%3AB%5Cright)%3D%5Csqrt%7B%5Cfrac%7B1%7D%7BN%7D%5Csum_i%5Cleft(C%5Calpha_%7Bi%2CA%7D-C%5Calpha_%7Bi%2CB%7D%5Cright)%5E2%7D" alt="LaTeX: RMSD\left(A,\:B\right)=\sqrt{\frac{1}{N}\sum_i\left(C\alpha_{i,A}-C\alpha_{i,B}\right)^2}" data-equation-content="RMSD\left(A,\:B\right)=\sqrt{\frac{1}{N}\sum_i\left(C\alpha_{i,A}-C\alpha_{i,B}\right)^2}" style="max-width: 351px;"><span class="hidden-readable"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>R</mi>
+  <mi>M</mi>
+  <mi>S</mi>
+  <mi>D</mi>
+  <mrow>
+    <mo>(</mo>
+    <mi>A</mi>
+    <mo>,</mo>
+    <mspace width="mediummathspace"></mspace>
+    <mi>B</mi>
+    <mo>)</mo>
+  </mrow>
+  <mo>=</mo>
+  <msqrt>
+    <mfrac>
+      <mn>1</mn>
+      <mi>N</mi>
+    </mfrac>
+    <munder>
+      <mo>∑<!-- ∑ --></mo>
+      <mi>i</mi>
+    </munder>
+    <msup>
+      <mrow>
+        <mo>(</mo>
+        <mi>C</mi>
+        <msub>
+          <mi>α<!-- α --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mo>,</mo>
+            <mi>A</mi>
+          </mrow>
+        </msub>
+        <mo>−<!-- − --></mo>
+        <mi>C</mi>
+        <msub>
+          <mi>α<!-- α --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mo>,</mo>
+            <mi>B</mi>
+          </mrow>
+        </msub>
+        <mo>)</mo>
+      </mrow>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+</math></span></p>
+<p>where A and B are the structure to be compared, and N is the number of residues in each structure. The superimposition and RMSD calculation is also implemented for you in the <strong>utils.relax</strong> function.</p>
+<p>Example superposition of a protein before and after minimization</p>
+<p><img src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/Screen Shot 2019-10-15 at 12.46.49 PM.png" alt="Screen Shot 2019-10-15 at 12.46.49 PM.png" width="1728" height="1432" data-api-endpoint="https://canvas.stanford.edu/api/v1/users/186210/files/5031399" data-api-returntype="File" style="max-width: 900px;"></p>
+<p><strong>Implementation summary</strong></p>
+<p>Putting everything together, you will implement a Monte Carlo fragment search with simulated annealing as follows, using the class provided in <strong>FragmentSampler.py</strong>:</p>
+<ol start="2">
+<li>Assemble 9-mers using MC procedure from T = 100 to T =1
+<ol>
+<li>At each step:
+<ol>
+<li>Sample random 9-residue window in sequence</li>
+<li>Get list of candidate fragments at that position</li>
+<li>Sample random candidate fragment</li>
+<li>Replace torsion angles of selected 9-residue window with torsions from selected fragment. Note that you will have to copy the protein here, because if the insertion is rejected it must be returned to its previous state.</li>
+<li>Measure energy and accept/reject using Metropolis criterion</li>
+<li>If accept, anneal T</li>
+</ol>
+</li>
+<li>Return the <strong>best</strong> (lowest-energy) structure produced during this simulation.<strong> This may or may not be the last structure generated.</strong>
+</li>
+<li>During the simulation, write the iteration, temperature, and energy to a log file for later reference</li>
+</ol>
+</li>
+<li>Assemble 3-mers using MC procedure from T = 1 to T = 0.1, starting with the best structure from stage 1.
+<ol>
+<li>Do the same as above, but using 3-mer fragments</li>
+<li>
+<strong>Again, keep track of the best (lowest-energy) structure produced during this simulation. </strong>Save this in a PDB file called <em>best.</em><em>pdb</em>.</li>
+<li>During the simulation, write the iteration, temperature, and energy to a log file for later reference</li>
+</ol>
+</li>
+<li>Perform energy minimization on the best structure from stage 2. After each simulation, make sure to log the energy and the RMSD returned after relaxation. The relax function also saves a few intermediate structures in PDB files for visualization: if the best structure from your simulation is <em>best.pdb</em>, then <em>best_fast_relax.pdb </em>is the relaxed structure, and <em>best_fast_relax_aligned.pdb </em>is the relaxed structure superimposed into the same coordinate space as the native structure.</li>
+</ol>
+<p><span style="font-size: 14pt;">2. Protein representation</span></p>
+<p>We use the Protein class in <strong>Protein.py </strong>to store all information about our current conformation.</p>
+<p>We store protein conformations using PyRosetta <em>Pose objects</em>. This makes our lives much easier by taking care of a lot of the complicated mechanics under the hood. You don’t need to worry about this too much, except realize that the <em>self.pose</em> attribute in <strong>Protein.py</strong> is a Pose object. <strong>Do not try to change this to a different type of object, it is critical for the simulation to work.</strong></p>
+<p>Since we work in torsion space for all fragment sampling, the only interactions you need to do with the pose objects is (1) access the <img class="equation_image" title="\phi" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/%5Cphi" alt="LaTeX: \phi" data-equation-content="\phi" style="max-width: 11px;"><span class="hidden-readable"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>ϕ<!-- ϕ --></mi>
+</math></span>&nbsp;and <img class="equation_image" title="\psi" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/%5Cpsi" alt="LaTeX: \psi" data-equation-content="\psi" style="max-width: 13px;"><span class="hidden-readable"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>ψ<!-- ψ --></mi>
+</math></span>&nbsp;angles at a position, and (2) set the <img class="equation_image" title="\phi" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/%5Cphi" alt="LaTeX: \phi" data-equation-content="\phi" style="max-width: 11px;"><span class="hidden-readable"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>ϕ<!-- ϕ --></mi>
+</math></span>&nbsp;and <img class="equation_image" title="\psi" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/%5Cpsi" alt="LaTeX: \psi" data-equation-content="\psi" style="max-width: 12px;"><span class="hidden-readable"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>ψ<!-- ψ --></mi>
+</math></span>&nbsp;angles at a position to new values. See the following tutorial for information on how to do so: <a href="https://www.cse.huji.ac.il/~fora/81855/exercises/ex4.pdf" class="external" target="_blank" rel="noreferrer noopener"><span>https://www.cse.huji.ac.il/~fora/81855/exercises/ex4.pdf</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a></p>
+<p>Another important note about Pose objects: to copy a pose, you <strong>cannot</strong> simply define `pose_copy = pose`. This will simply create a new pointer to the same object in memory, so any changes made to `pose_copy` will also be made to `pose`. Instead, define a new pose and use `pose_copy.assign(pose)`, as shown in lines 34–35 of <strong>Protein.py</strong>.</p>
+<p><span style="font-size: 14pt;">3. Fragment set representation</span></p>
+<p>The pre-calculated fragment libraries for each input protein are given in the *.frag files, and the RMSDs of each fragment relative to the target structure are given in the *.rmsd files. In <strong>FragmentSet.py</strong>, implement a class that holds this fragment set information so that it can be accessed by your simulation.</p>
+<p>In particular, in order to reduce the size of the sampling space, we do not sample from all fragments in the library at a given position. Instead, we <em>bias</em> the simulator such that it only samples from the top-N closest fragments in RMSD to the target structure at each position. To do this, the class must do the following:</p>
+<ul>
+<li>Parse the .frag and .rmsd file for a structure and store them in some data structure (think about what is most efficient for fast access). Since we do all fragment replacements in torsion space, we only need to store the (<img class="equation_image" title="\phi" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/%5Cphi" alt="LaTeX: \phi" data-equation-content="\phi" style="max-width: 12px;"><span class="hidden-readable"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>ϕ<!-- ϕ --></mi>
+</math></span>, <img class="equation_image" title="\psi" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/%5Cpsi" alt="LaTeX: \psi" data-equation-content="\psi" style="max-width: 12px;"><span class="hidden-readable"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>ψ<!-- ψ --></mi>
+</math></span>) angles for each fragment at each position.</li>
+<li>
+<strong>Note:</strong> the "position" we refer to here is the position in the protein you are folding. This is the position denoted in the header lines of the fragment files (see screenshot below). The position in the third column represents the position in the protein from which the fragment is derived, and can be ignored.</li>
+</ul>
+<pre>    <img src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/Screen Shot 2019-10-24 at 9.39.46 PM-1.png" alt="Screen Shot 2019-10-24 at 9.39.46 PM-1.png" width="667" height="326" data-api-endpoint="https://canvas.stanford.edu/api/v1/users/186210/files/5081057" data-api-returntype="File" style="max-width: 667px;"></pre>
+<ul>
+<li>Implement the function `get_lowRMS_frags`, which returns the top N fragments as a list of lists. Each sub-list represents a fragment, and each element is a (<img class="equation_image" title="\phi" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/%5Cphi" alt="LaTeX: \phi" data-equation-content="\phi" style="max-width: 11px;"><span class="hidden-readable"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>ϕ<!-- ϕ --></mi>
+</math></span>, <img class="equation_image" title="\psi" src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/%5Cpsi" alt="LaTeX: \psi" data-equation-content="\psi" style="max-width: 12px;"><span class="hidden-readable"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>ψ<!-- ψ --></mi>
+</math></span>) tuple representing the torsion at that fragment position in degrees. For example, a 3-mer fragment could be represented as the following: [(-60.892, 142.456), (-72.281, 128.933), (-132.337, -175.477)]. <strong>The autograder will test this function, so do not change the output format.</strong>
+</li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="font-size: 14pt;">4. Main program specifications</span></p>
+<p>Since the fragment assembly procedure is stochastic and is not guaranteed to find the minimum-energy conformation, we need to perform many simulations in order to find one that folds into the correct structure. In a real-life structure prediction setting, you would run on the order of 10,000 simulations to find the best folded structure. However, by using small, simple proteins and biased fragment sampling that considers only the top 3 fragments at each position, we do not have to do nearly as many to get a decent result.</p>
+<p>Using the file <strong>main.py</strong>, write a program that runs <strong>10 </strong>fragment-based structure prediction simulations using the procedure outlined above. Each simulation should use a different random seed, and thus should produce a different final structure.</p>
+<p>After you have run all 10 simulations, find the simulation with the <strong>lowest RMSD</strong> using your log file <em>sim_log.txt</em>. You should be able to achieve a minimum RMSD of <strong>less than 5 Å</strong>. Finally, use PyMol to visualize <em>best_fast_relax_aligned.pdb</em> from the most successful simulation in the same window as <em>&lt;target&gt;.pdb</em>. The two structures should overlap closely. Take a screenshot of your best result for 1FW4 and 1UBQ.</p>
+<p><span style="font-size: 14pt;"><strong>Inputs</strong></span></p>
+<p>Your program <strong>main.py</strong> should take the following command-line inputs. The argparse library in Python makes this very straightforward. For code development, simply run the simulations using the default values, using helix.fasta and only one simulation. Run 10 simulations for each of 1FW4.fasta and 1UBQ.fasta; you will be asked to experiment with the other parameters for the quiz. Example command:</p>
+<pre>python main.py --fasta helix.fasta --logdir helix_log</pre>
+<table>
+<tbody>
+<tr>
+<td width="144">
+<p><strong>Parameter</strong></p>
+</td>
+<td width="270">
+<p><strong>Description</strong></p>
+</td>
+<td width="207">
+<p><strong>Default</strong></p>
+</td>
+</tr>
+<tr>
+<td width="144">
+<p>--fasta</p>
+</td>
+<td width="270">
+<p>.fasta file containing sequence</p>
+</td>
+<td width="207">
+<p>None</p>
+</td>
+</tr>
+<tr>
+<td width="144">
+<p>--logdir</p>
+</td>
+<td width="270">
+<p>directory to save all log files</p>
+</td>
+<td width="207">
+<p>'./'</p>
+</td>
+</tr>
+<tr>
+<td width="144">
+<p>--nsims</p>
+</td>
+<td width="270">
+<p>number of simulations</p>
+</td>
+<td width="207">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td width="144">
+<p>--nfrags</p>
+</td>
+<td width="270">
+<p>number of fragments to sample from at each iteration</p>
+</td>
+<td width="207">
+<p>3</p>
+</td>
+</tr>
+<tr>
+<td width="144">
+<p>--anneal_rate</p>
+</td>
+<td width="270">
+<p>temperature annealing parameter</p>
+</td>
+<td width="207">
+<p>0.999</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-size: 14pt;"><strong>Outputs</strong></span></p>
+<p><span style="font-size: 12pt;"><strong>Log files: </strong>You should save the following <strong>tab-delimited</strong> log files:</span></p>
+<ul>
+<li><span style="font-size: 12pt;">For each input sequence, log a summary of all the simulations you have run, consisting of three columns, corresponding to the simulation number, the energy after relaxation, and the RMSD to target after relaxation: </span></li>
+</ul>
+<pre><span style="font-size: 12pt;">   sim_number    energy    rmsd</span></pre>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li><span style="font-size: 12pt;"> <strong>This is the most important log file for the autograder. It must be saved in the main log directory (specified by --logdir) as&nbsp;<em>simulation_summary.txt</em>.</strong></span></li>
+</ul>
+</li>
+<li><span style="font-size: 12pt;">For each simulation, log<em> at least </em>the following quantities throughout the simulation:</span></li>
+</ul>
+<pre><span style="font-size: 12pt;">   iteration    temperature    energy</span></pre>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li><span style="font-family: sans-serif; font-size: 12pt;">You can save other quantities if you to keep track of them, but you will need the above columns for the quiz.</span></li>
+<li><span style="font-family: sans-serif; font-size: 12pt;">You can log assembly and refinement stages to separate log files or the same one, it doesn't matter.</span></li>
+</ul>
+</li>
+<li>
+<p>We <strong>highly</strong> recommend creating a separate log directory for each simulation in order to store the PDB files and log files for each simulation. One possible directory structure is as follows (for the helix structure, with only 5 simulations). You don't need to save the initial or target structures, but it can be helpful in visualization.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /helix_log</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; |__ /sim_01</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |___ initial.pdb</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |___ &lt;target&gt;.pdb</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |___ best.pdb</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |___ best_fast_relax.pdb</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |___ best_fast_relax_aligned.pdb</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; |___ sim_01_log.txt</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; |__ /sim_02</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; |__ /sim_03</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; |__ /sim_04</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; |__ /sim_05</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; |__ simulation_summary.txt</p>
+</li>
+</ul>
+<p><span style="font-family: sans-serif; font-size: 12pt;"><strong>PDB files: </strong>Each simulation should save at least <em>best.pdb</em>; after relaxation you should also get PDB files corresponding to relaxed and aligned structures.</span></p>
+<p><span style="font-size: 14pt;"><strong>Helpful hints:</strong></span></p>
+<ul>
+<li>Make sure you are not repeating operations — this will result in inefficient code. This includes sampling positions and calculating the fragment candidates at that position.</li>
+<li>A "step" corresponds to an&nbsp;<strong>accepted </strong>move, not an&nbsp;<strong>attempted&nbsp;</strong>move. Make sure you only anneal temperature and move to the next step after accepting a move.</li>
+<li>Another way to reduce redundant sampling is to keep track of the fragments sampled at each position. If you sample every available fragment and do not accept any of them, you have likely already found the optimal fragment for the current configuration and it is reasonable to sample a new position.</li>
+<li>You can also speed things up by choosing smart data structures: lookups are much faster in hash-based objects like sets and dictionaries.</li>
+<li>It may be helpful to log certain quantities during the simulation to help you debug.</li>
+</ul>
+<p><span style="font-size: 18pt;">Visualization with PyMol</span></p>
+<p>Arguably the most interesting and satisfying part of any protein simulation is the visualization. Visually comparing the final folded structure of our protein to its native crystal structure allows us to better understand where our approach succeeds and where it struggles. It also provides a visual sanity check that a structure with a low RMSD and low energy actually does look similar to the real protein. Finally, visualizing how the structure changes over the course of the simulation helps us to understand how our simulation procedure works to find low-energy conformations.</p>
+<p>One of the most popular software programs for visualizing protein structures is PyMol, which is free for students and available on all platforms (Linux, Mac, and Windows). You can download PyMol from <a href="https://pymol.org/" class="external" target="_blank" rel="noreferrer noopener"><span>https://pymol.org. </span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a></p>
+<p>The PyMol interface consists of a large display screen, a console at the top (boxed in red), and an object panel on the right side (boxed in green).</p>
+<p><img src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/Screen Shot 2019-10-14 at 8.27.54 PM.png" alt="Screen Shot 2019-10-14 at 8.27.54 PM.png" width="2558" height="1529" data-api-endpoint="https://canvas.stanford.edu/api/v1/users/186210/files/5031416" data-api-returntype="File" style="max-width: 900px;"></p>
+<p>The two main ways to interact with PyMol are by typing commands into the console and by using the buttons in the object panel. You will need to visualize some of your outputs for the project quiz. In addition to the tips listed below, there is a PyMol cheat sheet posted in the Project 3 files on Canvas.</p>
+<p>Basic trackpad commands (for Mac, these may differ slightly on Windows):</p>
+<ul>
+<li>Rotate view: click and drag</li>
+<li>Zoom: two-finger pinch</li>
+<li>Pan: Option + click and drag</li>
+</ul>
+<p>Some important console commands:</p>
+<ul>
+<li>To load a structure:</li>
+</ul>
+<pre>    load /path/to/structure.pdb</pre>
+<ul>
+<li>To load a structure into a named object MyProtein (in PyMol syntax, commands are structured as 'command, object'):</li>
+</ul>
+<pre>    load /path/to/structure.pdb, MyProtein</pre>
+<ul>
+<li>Loading multiple PDB files into one object results in <strong>frames </strong>(shown here as 1/100). If your files are labeled consistently, you can load multiple at once using the following command:</li>
+</ul>
+<pre>    for i in range(1,1001):cmd.load('pose_{}.pdb'.format(i), 'pose')</pre>
+<ul>
+<li>These frames can be played through one-at-a-time or in a continuous loop using the play buttons in the bottom right of the screen. You can control framerate and other options under the 'Movie' menu. Try saving PDB files for the first 100-1000 iterations of a simulation, and then load them into PyMol and play through the frames to watch your protein fold!</li>
+</ul>
+<p><img src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/Screen Shot 2019-10-14 at 8.38.56 PM.png" alt="Screen Shot 2019-10-14 at 8.38.56 PM.png" width="221" height="228" data-api-endpoint="https://canvas.stanford.edu/api/v1/users/186210/files/5031422" data-api-returntype="File" style="max-width: 221px;"></p>
+<ul>
+<li>To delete an object:</li>
+</ul>
+<pre>    delete MyProtein</pre>
+<p>&nbsp;</p>
+<p>Some important notes about the object panel:</p>
+<ul>
+<li>Clicking the object name will toggle the object on/off</li>
+<li>The buttons ‘A’ (Action), ‘S’ (Show), ‘H’ (Hide), ‘L’ (Label), ‘C’ (Color) each reveal a menu that controls how the object is displayed. Play around with these menus a bit to get a sense for what each of them does.</li>
+<li>For the purposes of this assignment, we recommend visualizing the proteins in “cartoon” representation, which makes it easy to see the overall secondary structure of the protein (helices, sheets, and loops). Do this using ‘S’ &gt; ‘as’ &gt; ‘cartoon’.</li>
+</ul>
+<p><img src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/Screen Shot 2019-10-14 at 8.48.10 PM.png" alt="Screen Shot 2019-10-14 at 8.48.10 PM.png" width="224" height="442" data-api-endpoint="https://canvas.stanford.edu/api/v1/users/186210/files/5031423" data-api-returntype="File" style="max-width: 224px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<img src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/Screen Shot 2019-10-14 at 8.53.41 PM.png" alt="Screen Shot 2019-10-14 at 8.53.41 PM.png" width="300" height="333" data-api-endpoint="https://canvas.stanford.edu/api/v1/users/186210/files/5031424" data-api-returntype="File" style="max-width: 300px;"></p>
+<ul>
+<li>Color is controlled using the ‘C’ menu. It can be useful to color by secondary structure (‘C’ &gt; ‘by ss’) to visualize high-level fold, as shown below.</li>
+</ul>
+<p><img src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/Screen Shot 2019-10-14 at 8.47.52 PM.png" alt="Screen Shot 2019-10-14 at 8.47.52 PM.png" width="777" height="773" data-api-endpoint="https://canvas.stanford.edu/api/v1/users/186210/files/5031427" data-api-returntype="File" style="max-width: 777px;"></p>
+<ul>
+<li>To select residues in the structure, you can simply click on the location you want to select. To view the corresponding position in the sequence or select residues by position, use the command</li>
+</ul>
+<pre>   set seq_view</pre>
+<ul>
+<li dir="ltr">That command will result in the sequence appearing as shown below: you can select the amino acids by letter/position directly. This will be useful for the quiz.</li>
+</ul>
+<p><img src="./Project 3_ Representations and Algorithms for Computational Molecular Biology_files/Screen Shot 2019-10-22 at 10.15.35 PM.png" alt="Screen Shot 2019-10-22 at 10.15.35 PM.png" width="811" height="157" data-api-endpoint="https://canvas.stanford.edu/api/v1/users/186210/files/5070801" data-api-returntype="File" style="max-width: 811px;"></p>
+<p><span style="font-size: 18pt;">Submission Instructions</span></p>
+<ol>
+<li>Take the quiz on Canvas. We recommend you take the quiz after having written the code and use your code, but you can take the quiz *without* having finished. It involves understanding the algorithm and how it works on different inputs. The quiz will take some time to complete, please budget accordingly.&nbsp;</li>
+<li>Upload all source code to <a href="https://www.gradescope.com/courses/49640" class="external" target="_blank" rel="noreferrer noopener"><span>Gradescope&nbsp;</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a>as a zipped folder. This must include <strong>main.py, FragmentSampler.py</strong>,<strong> FragmentSet.py</strong>, and <strong>Protein.py</strong>. If you modify other files such as <strong>utils.py</strong>, you must include these in order for the autograder to work properly. Do not include irrelevant files.</li>
+</ol>
+<p><span style="font-size: 18pt;">References</span></p>
+<ul>
+<li><a href="https://www-sciencedirect-com.stanford.idm.oclc.org/science/article/pii/S0076687904830040" class="external" target="_blank" rel="noreferrer noopener"><span>Structure prediction with Rosetta</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a></li>
+<li><a href="https://www.rosettacommons.org/docs/latest/rosetta_basics/scoring/centroid-score-terms" class="external" target="_blank" rel="noreferrer noopener"><span>Rosetta centroid energy function</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a></li>
+<li>
+</li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+  
+</div>
+<div style=""><div class="module-sequence-padding"></div>
+<div class="module-sequence-footer" role="navigation" aria-label="Module Navigation">
+  <div class="module-sequence-footer-content">
+    
+      <a href="https://canvas.stanford.edu/courses/105689/modules/items/503163" role="button" class="Button module-sequence-footer-button--previous" data-tooltip="right" data-html-tooltip-title="&lt;strong style=&#39;float:left&#39;&gt;Previous Module:&lt;/strong&gt; &lt;br&gt; Project 2" aria-describedby="msf0-previous-desc">
+        <i class="icon-mini-arrow-left"></i>Previous
+        <span id="msf0-previous-desc" class="hidden" hidden="">Previous Module: Project 2</span>
+      </a>
+    
+
+    
+      <span class="module-sequence-footer-button--next" data-tooltip="left" data-html-tooltip-title="&lt;i class=&#39;icon-assignment&#39;&gt;&lt;/i&gt; Project 3 Code">
+        <a href="https://canvas.stanford.edu/courses/105689/modules/items/503165" role="button" class="Button" aria-describedby="msf0-next-desc">
+          Next<i class="icon-mini-arrow-right"></i>
+          <span id="msf0-next-desc" class="hidden" hidden="">Next: Project 3 Code</span>
+        </a>
+      </span>
+    
+  </div>
+</div>
+</div></div>
+
+          </div>
+        </div>
+        <div id="right-side-wrapper" class="ic-app-main-content__secondary">
+          <aside id="right-side" role="complementary">
+            
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div style="display:none;"><!-- Everything inside of this should always stay hidden -->
+        <div id="page_view_id">e012ec05-5b27-469c-93bf-2e6a3d9b0c91</div>
+    </div>
+  <div id="aria_alerts" class="hide-text affix" role="alert" aria-live="assertive"></div>
+  <div id="StudentTray__Container"></div>
+  
+
+
+
+<script>
+//<![CDATA[
+
+      ;["https://instructure-uploads.s3.amazonaws.com/account_35910000000000001/attachments/5011125/Master_Canvas_Javascript_101119.js"].forEach(function(src) {
+        var s = document.createElement('script')
+        s.src = src
+        s.async = false
+        document.head.appendChild(s)
+      });
+//]]>
+</script>
+
+</div> <!-- #application -->
+
+
+<div id="nav-tray-portal" style="position: relative; z-index: 99;"></div></body></html>

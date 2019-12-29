@@ -1,0 +1,122 @@
+import utils
+import numpy as np
+import os
+
+class FragmentSet(object):
+	def __init__(self, fragfile, rmsdfile):
+		"""
+		This class contains the fragment library for the input protein. It must do the following:
+		- Read in fragment file and parse fragments at each position. Fragment files are of the form <protein>_<frag_len>mers.frag
+		- Read in RMSD file containing pre-calculated RMSD to native structure for each fragment at each position.
+		- Based on fragments and their corresponding RMSDs, rank fragments at each position by RMSD
+		
+		"""
+		self.fragfile = fragfile
+		self.rmsdfile  = rmsdfile
+		self.clean = self.lowRMSFragments(3,self.fragfile,self.rmsdfile)
+
+	def clean_fragfile(self,fragfile):
+		'''
+    	input: kmer frag file
+    	output: file without position lines
+    	'''
+		with open(fragfile,"r") as fh:
+			lines = fh.readlines()
+    	    #print("len(lines):",len(lines))
+			num_lines=0
+			pos={}
+			clean=[]
+			for x in range(0,len(lines)):
+				if "position" in lines[x]:
+					clean=[]
+					curr_pos = lines[x].split()[1]
+					#print("curr_pos:",curr_pos)
+					pos[curr_pos] = clean
+				elif not "position" in lines[x] and len(lines[x])>1:
+					#print(lines[x])
+					clean.append(lines[x])
+			#print(len(clean))
+		return pos
+
+	def clean_rmsdfile(self,rmsd):
+		'''
+		input: kmer rmsd file
+		output: list of lines
+		'''
+		with open(rmsd,"r") as fh:
+		    lines = fh.readlines()
+		    #print("len:",len(lines))
+		return lines	
+
+	def lowRMSFragments(self,N,fragfile,rmsdfile):
+		'''
+		input: N=3(top N to return for lowest rmsd), fragfile, rmsdfile
+		output: tuple (key, RMSD, list of 9mers) ex. ('1', '0.2901950776576996',[...])
+		'''
+		clean_frag = self.clean_fragfile(fragfile)
+		rmsd_list = self.clean_rmsdfile(rmsdfile)
+
+		position_kmers = {} #keys or position, list of rmsd,9mer tuples
+		pos_ninemer=[]
+		num_rmsd = 0
+		for keys in clean_frag.keys():
+		    #print(keys)
+		    num_9mer=0
+		    ninemer_tuples=[] #list of 9mers 
+		    pos_ninemer = [] #position or key,rmsd, ninemer_tuples
+		    #reset to and verify ignore 2 left over if 9mer 
+		    for idx in range(0,200):
+		        #print("keys",keys,"idx:",idx," nine_mers:",clean_frag[keys][idx])
+		        if num_9mer!=8: #offset by 1 bc we put it in a 0 indexed list from clean_fragfile
+		            #print("phi:",clean_frag[keys][idx].split()[5], " psi:",clean_frag[keys][idx].split()[6])
+		            ninemer_tuples.append( (float(clean_frag[keys][idx].split()[5]),float(clean_frag[keys][idx].split()[6])))
+		            num_9mer+=1
+		        elif num_9mer==8:
+		            #print("phi:",clean_frag[keys][idx].split()[5], " psi:",clean_frag[keys][idx].split()[6])
+		            ninemer_tuples.append((float(clean_frag[keys][idx].split()[5]),float(clean_frag[keys][idx].split()[6])))
+		            num_9mer=0
+		            #print("rmsd:",rmsd_list[num_rmsd])
+		            #print("rmsd pos:",rmsd_list[num_rmsd].split()[0],"rmsd 9mer:",rmsd_list[num_rmsd].split()[1]," rmsd:",rmsd_list[num_rmsd].split()[2] )
+		            pos_ninemer.append((keys,rmsd_list[num_rmsd].split()[2],ninemer_tuples))
+		            #print("pos_ninemer:",pos_ninemer)
+		            num_rmsd+=1
+		            ninemer_tuples=[]
+		    #sort and retrun in top 200. 
+		    #print("len ninemer")
+		    position_kmers[keys] = pos_ninemer
+		final = {}
+		#N=3
+		for keys in position_kmers.keys():
+		    #print(keys,position_kmers[keys][0:N])
+		    sortMe = sorted(position_kmers[keys], key=lambda x: x[1])
+		    #print("sorted:",sortMe[0:N])
+		    final[keys] = sortMe[0:N]
+		return final
+
+	def clean_topN(self,list_with_position_rmsd):
+		clean_me = []
+		for idx in range(0,len(list_with_position_rmsd)):
+		    clean_me.append(list_with_position_rmsd[idx][2])
+		return clean_me
+
+	def get_lowRMS_fragments(self, pos, N):
+		"""
+		Returns the top-ranked fragments by RMSD at a defined position in the chain
+		--------
+		Params
+			- pos (int): fragment position in chain (1-indexed)
+			- N (int): number of fragments to return
+		Returns
+			- lowRMS_fragments (list): top N fragments at pos by RMSD. This should be a list of lists of (phi, psi) tuples. 
+			  For example, a 3-mer fragment could be represented as the following: [(-60.892, 142.456), (-72.281, 128.933), (-132.337, -175.477)]
+		"""
+		final = self.lowRMSFragments(N,self.fragfile,self.rmsdfile)
+		clean = final[str(pos)]
+		return self.clean_topN(clean)
+		#select position from final and clean, removing the key and rmsd 
+
+
+
+
+
+

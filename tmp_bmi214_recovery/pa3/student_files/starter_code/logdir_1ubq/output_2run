@@ -1,0 +1,91 @@
+PyRosetta-4 2019 [Rosetta PyRosetta4.Release.python36.mac 2019.44+release.5aed75f2e796a33ab71515b6c1daa321eb2294a2 2019-10-29T08:37:43] retrieved from: http://www.pyrosetta.org
+(C) Copyright Rosetta Commons Member Institutions. Created in JHU by Sergey Lyskov and PyRosetta Team.
+PyRosetta-4 2019 [Rosetta PyRosetta4.Release.python36.mac 2019.44+release.5aed75f2e796a33ab71515b6c1daa321eb2294a2 2019-10-29T08:37:43] retrieved from: http://www.pyrosetta.org
+(C) Copyright Rosetta Commons Member Institutions. Created in JHU by Sergey Lyskov and PyRosetta Team.
+PyRosetta-4 2019 [Rosetta PyRosetta4.Release.python36.mac 2019.44+release.5aed75f2e796a33ab71515b6c1daa321eb2294a2 2019-10-29T08:37:43] retrieved from: http://www.pyrosetta.org
+(C) Copyright Rosetta Commons Member Institutions. Created in JHU by Sergey Lyskov and PyRosetta Team.
+PyRosetta-4 2019 [Rosetta PyRosetta4.Release.python36.mac 2019.44+release.5aed75f2e796a33ab71515b6c1daa321eb2294a2 2019-10-29T08:37:43] retrieved from: http://www.pyrosetta.org
+(C) Copyright Rosetta Commons Member Institutions. Created in JHU by Sergey Lyskov and PyRosetta Team.
+main logdir: logdir_1ubq/
+********AUTOSHAMER main.py ../starter_data/1ubq.fasta logdir_1ubq/ 10 3 0.999
+******AUTOSHAMER simulate()
+***AUTOSHAMER running sim: 1
+***AUTOSHAMER*** FragmentSampler fastA**** lines[0].strip >1ubq_A
+MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG
+*******AUTOSHAMER FragmentSampler simulate:****** logdir: logdir_1ubq/  self.os_dir: ../starter_data
+initial score 1533.1993407388777
+final score -67.42350047721449
+RMSD to native 13.615903166283708
+idx: 1  score: -67.42350047721449  rmsd: 13.615903166283708
+***AUTOSHAMER running sim: 2
+***AUTOSHAMER*** FragmentSampler fastA**** lines[0].strip >1ubq_A
+MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG
+*******AUTOSHAMER FragmentSampler simulate:****** logdir: logdir_1ubq/  self.os_dir: ../starter_data
+initial score 4137.897614196876
+final score -67.03151320913611
+RMSD to native 16.162528371502738
+idx: 2  score: -67.03151320913611  rmsd: 16.162528371502738
+***AUTOSHAMER running sim: 3
+***AUTOSHAMER*** FragmentSampler fastA**** lines[0].strip >1ubq_A
+MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG
+*******AUTOSHAMER FragmentSampler simulate:****** logdir: logdir_1ubq/  self.os_dir: ../starter_data
+initial score 3938.043525689688
+final score -45.30471338206497
+RMSD to native 13.951979935351329
+idx: 3  score: -45.30471338206497  rmsd: 13.951979935351329
+***AUTOSHAMER running sim: 4
+***AUTOSHAMER*** FragmentSampler fastA**** lines[0].strip >1ubq_A
+MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG
+*******AUTOSHAMER FragmentSampler simulate:****** logdir: logdir_1ubq/  self.os_dir: ../starter_data
+initial score 2638.152243482902
+final score -65.55702526231653
+RMSD to native 12.740384821947654
+idx: 4  score: -65.55702526231653  rmsd: 12.740384821947654
+***AUTOSHAMER running sim: 5
+***AUTOSHAMER*** FragmentSampler fastA**** lines[0].strip >1ubq_A
+MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG
+*******AUTOSHAMER FragmentSampler simulate:****** logdir: logdir_1ubq/  self.os_dir: ../starter_data
+initial score 2047.684028410382
+final score -70.33681294833924
+RMSD to native 13.711019627015322
+idx: 5  score: -70.33681294833924  rmsd: 13.711019627015322
+***AUTOSHAMER running sim: 6
+***AUTOSHAMER*** FragmentSampler fastA**** lines[0].strip >1ubq_A
+MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG
+*******AUTOSHAMER FragmentSampler simulate:****** logdir: logdir_1ubq/  self.os_dir: ../starter_data
+initial score 1895.4108485781658
+final score -57.38766512289779
+RMSD to native 13.443126014032968
+idx: 6  score: -57.38766512289779  rmsd: 13.443126014032968
+***AUTOSHAMER running sim: 7
+***AUTOSHAMER*** FragmentSampler fastA**** lines[0].strip >1ubq_A
+MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG
+*******AUTOSHAMER FragmentSampler simulate:****** logdir: logdir_1ubq/  self.os_dir: ../starter_data
+initial score 2491.027592605477
+final score -79.41521545655681
+RMSD to native 14.614644512795955
+idx: 7  score: -79.41521545655681  rmsd: 14.614644512795955
+***AUTOSHAMER running sim: 8
+***AUTOSHAMER*** FragmentSampler fastA**** lines[0].strip >1ubq_A
+MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG
+*******AUTOSHAMER FragmentSampler simulate:****** logdir: logdir_1ubq/  self.os_dir: ../starter_data
+initial score 3536.1217910533646
+final score -27.664504514425218
+RMSD to native 16.454330935154786
+idx: 8  score: -27.664504514425218  rmsd: 16.454330935154786
+***AUTOSHAMER running sim: 9
+***AUTOSHAMER*** FragmentSampler fastA**** lines[0].strip >1ubq_A
+MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG
+*******AUTOSHAMER FragmentSampler simulate:****** logdir: logdir_1ubq/  self.os_dir: ../starter_data
+initial score 1702.5385397920943
+final score -53.65200201604334
+RMSD to native 14.015771498451628
+idx: 9  score: -53.65200201604334  rmsd: 14.015771498451628
+***AUTOSHAMER running sim: 10
+***AUTOSHAMER*** FragmentSampler fastA**** lines[0].strip >1ubq_A
+MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG
+*******AUTOSHAMER FragmentSampler simulate:****** logdir: logdir_1ubq/  self.os_dir: ../starter_data
+initial score 1409.5370739940327
+final score -58.53666637480188
+RMSD to native 14.673742996707102
+idx: 10  score: -58.53666637480188  rmsd: 14.673742996707102
