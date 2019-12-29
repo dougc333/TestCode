@@ -1,0 +1,16 @@
+PyRosetta-4 2019 [Rosetta PyRosetta4.Release.python36.mac 2019.44+release.5aed75f2e796a33ab71515b6c1daa321eb2294a2 2019-10-29T08:37:43] retrieved from: http://www.pyrosetta.org
+(C) Copyright Rosetta Commons Member Institutions. Created in JHU by Sergey Lyskov and PyRosetta Team.
+PyRosetta-4 2019 [Rosetta PyRosetta4.Release.python36.mac 2019.44+release.5aed75f2e796a33ab71515b6c1daa321eb2294a2 2019-10-29T08:37:43] retrieved from: http://www.pyrosetta.org
+(C) Copyright Rosetta Commons Member Institutions. Created in JHU by Sergey Lyskov and PyRosetta Team.
+PyRosetta-4 2019 [Rosetta PyRosetta4.Release.python36.mac 2019.44+release.5aed75f2e796a33ab71515b6c1daa321eb2294a2 2019-10-29T08:37:43] retrieved from: http://www.pyrosetta.org
+(C) Copyright Rosetta Commons Member Institutions. Created in JHU by Sergey Lyskov and PyRosetta Team.
+PyRosetta-4 2019 [Rosetta PyRosetta4.Release.python36.mac 2019.44+release.5aed75f2e796a33ab71515b6c1daa321eb2294a2 2019-10-29T08:37:43] retrieved from: http://www.pyrosetta.org
+(C) Copyright Rosetta Commons Member Institutions. Created in JHU by Sergey Lyskov and PyRosetta Team.
+main logdir: logdir_1fw4/
+********AUTOSHAMER main.py ../starter_data/1fw4.fasta logdir_1fw4/ 10 3 0.999
+******AUTOSHAMER simulate()
+***AUTOSHAMER running sim: 1
+***AUTOSHAMER*** FragmentSampler fastA**** lines[0].strip >1fw4_A
+SEEEIREAFRVFDKDGNGYISAAELRHVMTNLGEKLTDEEVDEMIREADIDGDGQVNYEEFVQMM
+*******AUTOSHAMER FragmentSampler simulate:****** logdir: logdir_1fw4/  self.os_dir: ../starter_data
+initial score 1170.7441781058221

@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/* CSS Document */
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/*Footer*/
+	#footer .footer-logo {
+		background-color: transparent;
+		background-image: url("http://web.stanford.edu/group/coursework/canvas/CanvasSkins/canvas_.png");
+		/*background-image: url("/dist/images/footer-logo-d79e095197.png");*/
+		background-repeat: no-repeat;
+		background-position: left top;
+		display: inline-block;
+		height: 40px;
+		margin: 0 20px 0 0;
+		width: 170px
+	}
+	
+	@media (min--moz-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+	#footer .footer-logo {
+		/*background-image: url("http://web.stanford.edu/group/coursework/canvas/CanvasSkins/canvas_.png"); http://web.stanford.edu/group/canvas/assets/images/CardinalRedBG_30H.png */
+		/*background-image: url("/dist/images/footer-logo@2x-26a48f9228.png");*/
+		background-image: url("http://web.stanford.edu/group/coursework/canvas/CanvasSkins/canvas_.png");
+		background-size: 170px 40px
+	}
+	}
+
+	
+	/*Removes footer links*/
+	#footer .ic-app-footer__links a:nth-of-type(1), #footer .ic-app-footer__links a:nth-of-type(4), #footer .ic-app-footer__links a:nth-of-type(5){
+		display:none;
+	}
+		/*Removes footer links Login*/
+		#footer .ic-Login-footer__links a:nth-of-type(1), #footer .ic-Login-footer__links a:nth-of-type(5), #footer .ic-Login-footer__links a:nth-of-type(6){
+			display:none;			
+		}
+	
+	/*End Removes footer links*/
+/*End Footer*/
+/*Removes upload and embed new image*/ 
+#right-side-wrapper a.upload_new_image_link{ 
+visibility:hidden; 
+} 
+/*End upload and embed removal*/
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/ 

@@ -1,0 +1,14 @@
+
+
+
+
+
+Analysis Type:	PANTHER Overrepresentation Test (Released 20190711)
+Annotation Version and Release Date:	GO Ontology database  Released 2019-07-03
+Analyzed List:	upload_1 (Rattus norvegicus)
+Reference List:	Rattus norvegicus (all genes in database)
+Test Type:	FISHER
+Correction:	FDR
+GO biological process complete	Rattus norvegicus - REFLIST (21465)	upload_1 (16)	upload_1 (expected)	upload_1 (over/under)	upload_1 (fold Enrichment)	upload_1 (raw P-value)	upload_1 (FDR)
+cellular response to chemical stimulus (GO:0070887)	2748	10	2.05	+	4.88	4.59E-06	3.67E-02
+response to chemical (GO:0042221)	5308	13	3.96	+	3.29	3.35E-06	5.37E-02

@@ -1,0 +1,6 @@
+
+
+
+kmeans: raw data genes in 2d data. 3 clusters visually but you dont know this beforehand. You can pick k=4. The orange points pick 4 at random and where do you assign there? Assign orange to center and calculate cetner of mass. keep on adding points that are random and assign to clusters and do silhouette analysis. You can pick clusters from the silhouette. O(n) where n is the number of data points. 
+
+

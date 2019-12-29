@@ -1,0 +1,19 @@
+PyRosetta-4 2019 [Rosetta PyRosetta4.Release.python36.mac 2019.44+release.5aed75f2e796a33ab71515b6c1daa321eb2294a2 2019-10-29T08:37:43] retrieved from: http://www.pyrosetta.org
+(C) Copyright Rosetta Commons Member Institutions. Created in JHU by Sergey Lyskov and PyRosetta Team.
+PyRosetta-4 2019 [Rosetta PyRosetta4.Release.python36.mac 2019.44+release.5aed75f2e796a33ab71515b6c1daa321eb2294a2 2019-10-29T08:37:43] retrieved from: http://www.pyrosetta.org
+(C) Copyright Rosetta Commons Member Institutions. Created in JHU by Sergey Lyskov and PyRosetta Team.
+PyRosetta-4 2019 [Rosetta PyRosetta4.Release.python36.mac 2019.44+release.5aed75f2e796a33ab71515b6c1daa321eb2294a2 2019-10-29T08:37:43] retrieved from: http://www.pyrosetta.org
+(C) Copyright Rosetta Commons Member Institutions. Created in JHU by Sergey Lyskov and PyRosetta Team.
+PyRosetta-4 2019 [Rosetta PyRosetta4.Release.python36.mac 2019.44+release.5aed75f2e796a33ab71515b6c1daa321eb2294a2 2019-10-29T08:37:43] retrieved from: http://www.pyrosetta.org
+(C) Copyright Rosetta Commons Member Institutions. Created in JHU by Sergey Lyskov and PyRosetta Team.
+main logdir: logdir_anneal1/
+********AUTOSHAMER main.py ../starter_data/1ubq.fasta logdir_anneal1/ 1 3 0.99
+******AUTOSHAMER simulate()
+***AUTOSHAMER running sim: 1
+***AUTOSHAMER*** FragmentSampler fastA**** lines[0].strip >1ubq_A
+MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG
+*******AUTOSHAMER FragmentSampler simulate:****** logdir: logdir_anneal1/  self.os_dir: ../starter_data
+initial score 1572.6923540942541
+final score -78.10862192926874
+RMSD to native 14.84952474061838
+idx: 1  score: -78.10862192926874  rmsd: 14.84952474061838

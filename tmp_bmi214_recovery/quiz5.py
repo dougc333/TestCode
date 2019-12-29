@@ -1,0 +1,21 @@
+import align_quiz_functions 
+
+print("quiz2 human chimp")
+avg_mis = align_quiz_functions.count_mismatches("q2_output/human_chimp.output")
+avg_gap,avg_gap_len = align_quiz_functions.count_gaps("q2_output/human_chimp.output")
+print("quiz4 human bacteria")
+avg_mis = align_quiz_functions.count_mismatches("q2_output/human_chimp.output")
+avg_gap,avg_gap_len = align_quiz_functions.count_gaps("q2_output/human_chimp.output")
+print("pam40 human chimp")
+avg_mis = align_quiz_functions.count_mismatches("q5_output/quiz5_pam40_human_chimp.output")
+avg_gap,avg_gap_len = align_quiz_functions.count_gaps("q5_output/quiz5_pam40_human_chimp.output")
+print("pam40 bacteria")
+avg_mis = align_quiz_functions.count_mismatches("q5_output/quiz5_pam40_human_bacteria.output")
+avg_gap,avg_gap_len = align_quiz_functions.count_gaps("q5_output/quiz5_pam40_human_bacteria.output")
+print("blosum62 human bacteria")
+avg_mis = align_quiz_functions.count_mismatches("q5_output/quiz5_blosum62_human_bacteria.output")
+avg_gap,avg_gap_len = align_quiz_functions.count_gaps("q5_output/quiz5_blosum62_human_bacteria.output")
+print("blosum62 human chimp")
+avg_mis = align_quiz_functions.count_mismatches("q5_output/quiz5_blosum62_human_chimp.output")
+avg_gap,avg_gap_len = align_quiz_functions.count_gaps("q5_output/quiz5_blosum62_human_chimp.output")
+

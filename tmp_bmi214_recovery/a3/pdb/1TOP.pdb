@@ -1,0 +1,1577 @@
+HEADER    CONTRACTILE SYSTEM PROTEIN              11-AUG-93   1TOP      1TOP   2
+COMPND    TROPONIN C                                                    1TOP   3
+SOURCE    CHICKEN (GALLUS GALLUS) SKELETAL MUSCLE                       1TOP   4
+AUTHOR    M.SUNDARALINGAM                                               1TOP   5
+REVDAT   1   31-JAN-94 1TOP    0                                        1TOP   6
+JRNL        AUTH   K.A.SATYSHUR,D.PYZALSKA,S.T.RAO,M.GREASER,           1TOP   7
+JRNL        AUTH 2 M.SUNDARALINGAM                                      1TOP   8
+JRNL        TITL   STRUCTURE OF CHICKEN SKELETAL MUSCLE TROPONIN-C      1TOP   9
+JRNL        TITL 2 AT 1.78 ANGSTROMS RESOLUTION                         1TOP  10
+JRNL        REF    TO BE PUBLISHED                                      1TOP  11
+JRNL        REFN                                                   353  1TOP  12
+REMARK   1                                                              1TOP  13
+REMARK   1 REFERENCE 1                                                  1TOP  14
+REMARK   1  AUTH   K.A.SATYSHUR,S.T.RAO,D.PYZALSKA,W.DRENDEL,           1TOP  15
+REMARK   1  AUTH 2 M.GREASER,M.SUNDARALINGAM                            1TOP  16
+REMARK   1  TITL   REFINED STRUCTURE OF CHICKEN SKELETAL MUSCLE         1TOP  17
+REMARK   1  TITL 2 TROPONIN C IN THE TWO-CALCIUM STATE AT 2-*ANGSTROMS  1TOP  18
+REMARK   1  TITL 3 RESOLUTION                                           1TOP  19
+REMARK   1  REF    J.BIOL.CHEM.                  V. 263  1628 1988      1TOP  20
+REMARK   1  REFN   ASTM JBCHA3  US ISSN 0021-9258                  071  1TOP  21
+REMARK   1 REFERENCE 2                                                  1TOP  22
+REMARK   1  AUTH   M.SUNDARALINGAM,R.BERGSTROM,G.STRASBURG,S.T.RAO,     1TOP  23
+REMARK   1  AUTH 2 P.ROYCHOWDHURY,M.GREASER,B.C.WANG                    1TOP  24
+REMARK   1  TITL   MOLECULAR STRUCTURE OF TROPONIN C FROM CHICKEN       1TOP  25
+REMARK   1  TITL 2 SKELETAL MUSCLE AT 3-*ANGSTROM RESOLUTION            1TOP  26
+REMARK   1  REF    SCIENCE                       V. 227   945 1985      1TOP  27
+REMARK   1  REFN   ASTM SCIEAS  US ISSN 0036-8075                  038  1TOP  28
+REMARK   1 REFERENCE 3                                                  1TOP  29
+REMARK   1  AUTH   G.M.STRASBURG,M.L.GREASER,M.SUNDARALINGAM            1TOP  30
+REMARK   1  TITL   X-*RAY DIFFRACTION STUDIES OF TROPONIN-*C CRYSTALS   1TOP  31
+REMARK   1  TITL 2 FROM RABBIT AND CHICKEN SKELETAL MUSCLES             1TOP  32
+REMARK   1  REF    J.BIOL.CHEM.                  V. 255  3806 1980      1TOP  33
+REMARK   1  REFN   ASTM JBCHA3  US ISSN 0021-9258                  071  1TOP  34
+REMARK   1 REFERENCE 4                                                  1TOP  35
+REMARK   1  AUTH   J.M.WILKINSON                                        1TOP  36
+REMARK   1  TITL   THE AMINO ACID SEQUENCE OF TROPONIN C FROM CHICKEN   1TOP  37
+REMARK   1  TITL 2 SKELETAL MUSCLE                                      1TOP  38
+REMARK   1  REF    /FEBS$ LETT.                  V.  70   254 1976      1TOP  39
+REMARK   1  REFN   ASTM FEBLAL  NE ISSN 0014-5793                  165  1TOP  40
+REMARK   2                                                              1TOP  41
+REMARK   2 RESOLUTION. 1.78 ANGSTROMS.                                  1TOP  42
+REMARK   3                                                              1TOP  43
+REMARK   3 REFINEMENT.                                                  1TOP  44
+REMARK   3   PROGRAM                    X-PLOR                          1TOP  45
+REMARK   3   AUTHORS                    BRUNGER                         1TOP  46
+REMARK   3   R VALUE                    0.168                           1TOP  47
+REMARK   3   RMSD BOND DISTANCES        0.012  ANGSTROMS                1TOP  48
+REMARK   3   RMSD BOND ANGLES           2.3    DEGREES                  1TOP  49
+REMARK   4                                                              1TOP  50
+REMARK   4 A FEW RESIDUES HAVE TWO ALTERNATE SIDE CHAIN CONFORMATIONS.  1TOP  51
+SEQRES   1    162  ALA SER MET THR ASP GLN GLN ALA GLU ALA ARG ALA PHE  1TOP  52
+SEQRES   2    162  LEU SER GLU GLU MET ILE ALA GLU PHE LYS ALA ALA PHE  1TOP  53
+SEQRES   3    162  ASP MET PHE ASP ALA ASP GLY GLY GLY ASP ILE SER THR  1TOP  54
+SEQRES   4    162  LYS GLU LEU GLY THR VAL MET ARG MET LEU GLY GLN ASN  1TOP  55
+SEQRES   5    162  PRO THR LYS GLU GLU LEU ASP ALA ILE ILE GLU GLU VAL  1TOP  56
+SEQRES   6    162  ASP GLU ASP GLY SER GLY THR ILE ASP PHE GLU GLU PHE  1TOP  57
+SEQRES   7    162  LEU VAL MET MET VAL ARG GLN MET LYS GLU ASP ALA LYS  1TOP  58
+SEQRES   8    162  GLY LYS SER GLU GLU GLU LEU ALA ASN CYS PHE ARG ILE  1TOP  59
+SEQRES   9    162  PHE ASP LYS ASN ALA ASP GLY PHE ILE ASP ILE GLU GLU  1TOP  60
+SEQRES  10    162  LEU GLY GLU ILE LEU ARG ALA THR GLY GLU HIS VAL THR  1TOP  61
+SEQRES  11    162  GLU GLU ASP ILE GLU ASP LEU MET LYS ASP SER ASP LYS  1TOP  62
+SEQRES  12    162  ASN ASN ASP GLY ARG ILE ASP PHE ASP GLU PHE LEU LYS  1TOP  63
+SEQRES  13    162  MET MET GLU GLY VAL GLN                              1TOP  64
+FTNOTE   1                                                              1TOP  65
+FTNOTE   1     GLU     159  - GLY     160     OMEGA ANGLE =   144.906   1TOP  66
+FTNOTE   1 PEPTIDE BOND DEVIATES SIGNIFICANTLY FROM TRANS CONFORMATION  1TOP  67
+HET     CA    163       1     CALCIUM +2 COUNTER ION                    1TOP  68
+HET     CA    164       1     CALCIUM +2 COUNTER ION                    1TOP  69
+HET    SO4    225       5     SULFATE                                   1TOP  70
+FORMUL   2   CA    2(CA1)                                               1TOP  71
+FORMUL   3  SO4    O4 S1                                                1TOP  72
+FORMUL   4  HOH   *164(H2 O1)                                           1TOP  73
+HELIX    1 NT  MET      3  ALA     12  1                                1TOP  74
+HELIX    2 A   GLU     16  ASP     27  1                                1TOP  75
+HELIX    3 B   LEU     42  MET     48  1                                1TOP  76
+HELIX    4 C   LYS     55  VAL     65  1                                1TOP  77
+HELIX    5 LCH PHE     75  PHE    105  1 D HELIX,D/E LINKER,E HELIX     1TOP  78
+HELIX    6 F   ILE    115  ALA    124  1                                1TOP  79
+HELIX    7 G   GLU    131  SER    141  1                                1TOP  80
+HELIX    8 H   PHE    151  GLU    159  1                                1TOP  81
+SHEET    1 B1  2 GLY    35  THR    39  0                                1TOP  82
+SHEET    2 B1  2 GLY    71  PHE    75 -1                                1TOP  83
+SHEET    1 B2  2 ILE   113  ILE   113  0                                1TOP  84
+SHEET    2 B2  2 ILE   149  ILE   149 -1                                1TOP  85
+CRYST1   66.700   66.700   60.800  90.00  90.00 120.00 P 32 2 1      6  1TOP  86
+ORIGX1      1.000000  0.000000  0.000000        0.00000                 1TOP  87
+ORIGX2      0.000000  1.000000  0.000000        0.00000                 1TOP  88
+ORIGX3      0.000000  0.000000  1.000000        0.00000                 1TOP  89
+SCALE1      0.014993  0.008656  0.000000        0.00000                 1TOP  90
+SCALE2      0.000000  0.017312  0.000000        0.00000                 1TOP  91
+SCALE3      0.000000  0.000000  0.016447        0.00000                 1TOP  92
+ATOM      1  N   ALA     1       0.129  19.007   2.120  1.00 59.16      1TOP  93
+ATOM      2  CA  ALA     1       1.380  19.446   2.710  1.00 96.80      1TOP  94
+ATOM      3  C   ALA     1       1.649  18.570   3.935  1.00 55.00      1TOP  95
+ATOM      4  O   ALA     1       0.839  18.599   4.863  1.00 48.53      1TOP  96
+ATOM      5  CB  ALA     1       1.293  20.912   3.200  1.00 41.62      1TOP  97
+ATOM      6  N   SER     2       2.694  17.738   3.927  1.00 55.87      1TOP  98
+ATOM      7  CA  SER     2       3.186  17.097   5.130  1.00 53.66      1TOP  99
+ATOM      8  C   SER     2       3.739  18.141   6.106  1.00 58.21      1TOP 100
+ATOM      9  O   SER     2       3.890  19.313   5.735  1.00 36.15      1TOP 101
+ATOM     10  CB  SER     2       4.300  16.123   4.738  1.00 45.33      1TOP 102
+ATOM     11  OG  SER     2       5.411  16.724   4.077  1.00 52.18      1TOP 103
+ATOM     12  N   MET     3       4.049  17.750   7.344  1.00 35.16      1TOP 104
+ATOM     13  CA  MET     3       4.800  18.606   8.231  1.00 39.57      1TOP 105
+ATOM     14  C   MET     3       6.106  19.101   7.640  1.00 33.67      1TOP 106
+ATOM     15  O   MET     3       6.432  20.278   7.742  1.00 24.31      1TOP 107
+ATOM     16  CB  MET     3       5.072  17.952   9.564  1.00 39.05      1TOP 108
+ATOM     17  CG  MET     3       4.369  18.753  10.634  1.00 74.46      1TOP 109
+ATOM     18  SD  MET     3       4.512  20.569  10.474  1.00 78.80      1TOP 110
+ATOM     19  CE  MET     3       2.989  21.052  11.268  1.00 60.76      1TOP 111
+ATOM     20  N   THR     4       6.847  18.235   6.980  1.00 25.52      1TOP 112
+ATOM     21  CA  THR     4       8.070  18.643   6.348  1.00 23.69      1TOP 113
+ATOM     22  C   THR     4       7.790  19.599   5.209  1.00 28.38      1TOP 114
+ATOM     23  O   THR     4       8.489  20.607   5.076  1.00 32.99      1TOP 115
+ATOM     24  CB  THR     4       8.827  17.410   5.879  1.00 30.65      1TOP 116
+ATOM     25  OG1 THR     4       7.836  16.576   5.275  1.00 83.49      1TOP 117
+ATOM     26  CG2 THR     4       9.536  16.724   7.038  1.00 51.04      1TOP 118
+ATOM     27  N   ASP     5       6.742  19.361   4.424  1.00 22.47      1TOP 119
+ATOM     28  CA  ASP     5       6.337  20.328   3.427  1.00 21.91      1TOP 120
+ATOM     29  C   ASP     5       6.009  21.680   4.023  1.00 20.32      1TOP 121
+ATOM     30  O   ASP     5       6.501  22.711   3.551  1.00 22.28      1TOP 122
+ATOM     31  CB  ASP     5       5.151  19.821   2.661  1.00 36.13      1TOP 123
+ATOM     32  CG  ASP     5       5.433  18.605   1.775  1.00 58.46      1TOP 124
+ATOM     33  OD1 ASP     5       6.590  18.305   1.465  1.00 45.02      1TOP 125
+ATOM     34  OD2 ASP     5       4.472  17.941   1.393  1.00 57.63      1TOP 126
+ATOM     35  N   GLN     6       5.246  21.691   5.126  1.00 23.06      1TOP 127
+ATOM     36  CA  GLN     6       4.914  22.926   5.850  1.00 24.56      1TOP 128
+ATOM     37  C   GLN     6       6.161  23.607   6.414  1.00 18.11      1TOP 129
+ATOM     38  O   GLN     6       6.291  24.826   6.337  1.00 17.65      1TOP 130
+ATOM     39  CB  GLN     6       3.981  22.675   7.024  1.00 26.31      1TOP 131
+ATOM     40  CG  GLN     6       2.547  22.337   6.686  1.00 26.59      1TOP 132
+ATOM     41  CD  GLN     6       1.765  22.130   7.975  1.00 33.59      1TOP 133
+ATOM     42  OE1 GLN     6       1.562  23.031   8.785  1.00 36.77      1TOP 134
+ATOM     43  NE2 GLN     6       1.353  20.917   8.278  1.00 33.25      1TOP 135
+ATOM     44  N   GLN     7       7.097  22.846   6.968  1.00 14.91      1TOP 136
+ATOM     45  CA  GLN     7       8.374  23.358   7.426  1.00 19.33      1TOP 137
+ATOM     46  C   GLN     7       9.191  23.949   6.259  1.00 18.75      1TOP 138
+ATOM     47  O   GLN     7       9.748  25.044   6.416  1.00 20.74      1TOP 139
+ATOM     48  CB  GLN     7       9.135  22.242   8.138  1.00 13.10      1TOP 140
+ATOM     49  CG  GLN     7       8.473  21.824   9.446  1.00 19.92      1TOP 141
+ATOM     50  CD  GLN     7       9.134  20.601  10.040  1.00 26.08      1TOP 142
+ATOM     51  OE1 GLN     7      10.160  20.121   9.559  1.00 20.11      1TOP 143
+ATOM     52  NE2 GLN     7       8.593  20.040  11.099  1.00 16.96      1TOP 144
+ATOM     53  N   ALA     8       9.255  23.342   5.061  1.00 19.49      1TOP 145
+ATOM     54  CA  ALA     8       9.980  23.901   3.912  1.00 21.92      1TOP 146
+ATOM     55  C   ALA     8       9.342  25.185   3.412  1.00 20.95      1TOP 147
+ATOM     56  O   ALA     8      10.018  26.138   3.019  1.00 20.18      1TOP 148
+ATOM     57  CB  ALA     8       9.984  22.922   2.746  1.00 21.30      1TOP 149
+ATOM     58  N   GLU     9       8.017  25.260   3.422  1.00 15.95      1TOP 150
+ATOM     59  CA  GLU     9       7.320  26.497   3.076  1.00 21.65      1TOP 151
+ATOM     60  C   GLU     9       7.518  27.574   4.123  1.00 15.03      1TOP 152
+ATOM     61  O   GLU     9       7.664  28.740   3.766  1.00 18.70      1TOP 153
+ATOM     62  CB  GLU     9       5.827  26.289   2.888  1.00 26.14      1TOP 154
+ATOM     63  CG  GLU     9       5.639  25.335   1.716  1.00 69.13      1TOP 155
+ATOM     64  CD  GLU     9       4.197  25.003   1.376  1.00 91.80      1TOP 156
+ATOM     65  OE1 GLU     9       3.585  25.789   0.644  1.00 89.00      1TOP 157
+ATOM     66  OE2 GLU     9       3.706  23.964   1.835  1.00 86.00      1TOP 158
+ATOM     67  N   ALA    10       7.552  27.225   5.415  1.00 17.12      1TOP 159
+ATOM     68  CA  ALA    10       7.819  28.181   6.497  1.00 21.94      1TOP 160
+ATOM     69  C   ALA    10       9.207  28.743   6.330  1.00 21.03      1TOP 161
+ATOM     70  O   ALA    10       9.362  29.965   6.287  1.00 16.29      1TOP 162
+ATOM     71  CB  ALA    10       7.742  27.563   7.888  1.00 16.88      1TOP 163
+ATOM     72  N   ARG    11      10.226  27.913   6.105  1.00 11.75      1TOP 164
+ATOM     73  CA  ARG    11      11.545  28.445   5.782  1.00 13.90      1TOP 165
+ATOM     74  C   ARG    11      11.616  29.326   4.529  1.00 20.34      1TOP 166
+ATOM     75  O   ARG    11      12.321  30.344   4.520  1.00 19.70      1TOP 167
+ATOM     76  CB  ARG    11      12.579  27.348   5.682  1.00 17.68      1TOP 168
+ATOM     77  CG  ARG    11      12.931  26.817   7.053  1.00 17.93      1TOP 169
+ATOM     78  CD  ARG    11      14.209  25.994   6.913  1.00 18.23      1TOP 170
+ATOM     79  NE  ARG    11      14.712  25.626   8.228  1.00 19.11      1TOP 171
+ATOM     80  CZ  ARG    11      15.719  26.278   8.829  1.00 20.86      1TOP 172
+ATOM     81  NH1 ARG    11      16.454  27.185   8.152  1.00 12.60      1TOP 173
+ATOM     82  NH2 ARG    11      15.949  26.049  10.137  1.00 14.22      1TOP 174
+ATOM     83  N   ALA    12      10.881  29.012   3.458  1.00 20.08      1TOP 175
+ATOM     84  CA  ALA    12      10.945  29.801   2.224  1.00 24.35      1TOP 176
+ATOM     85  C   ALA    12      10.276  31.179   2.353  1.00 29.85      1TOP 177
+ATOM     86  O   ALA    12      10.595  32.128   1.626  1.00 21.96      1TOP 178
+ATOM     87  CB  ALA    12      10.247  29.005   1.128  1.00 18.96      1TOP 179
+ATOM     88  N   PHE    13       9.335  31.308   3.305  1.00 18.14      1TOP 180
+ATOM     89  CA  PHE    13       8.618  32.548   3.591  1.00 14.54      1TOP 181
+ATOM     90  C   PHE    13       9.452  33.600   4.300  1.00 12.41      1TOP 182
+ATOM     91  O   PHE    13       9.110  34.792   4.283  1.00 12.68      1TOP 183
+ATOM     92  CB  PHE    13       7.376  32.200   4.411  1.00 13.24      1TOP 184
+ATOM     93  CG  PHE    13       6.372  33.324   4.620  1.00 15.88      1TOP 185
+ATOM     94  CD1 PHE    13       6.480  34.147   5.735  1.00 18.47      1TOP 186
+ATOM     95  CD2 PHE    13       5.325  33.492   3.721  1.00 14.23      1TOP 187
+ATOM     96  CE1 PHE    13       5.539  35.138   5.919  1.00 15.62      1TOP 188
+ATOM     97  CE2 PHE    13       4.395  34.490   3.927  1.00 12.28      1TOP 189
+ATOM     98  CZ  PHE    13       4.511  35.316   5.016  1.00 12.49      1TOP 190
+ATOM     99  N   LEU    14      10.547  33.187   4.939  1.00  9.45      1TOP 191
+ATOM    100  CA  LEU    14      11.322  34.057   5.807  1.00 14.68      1TOP 192
+ATOM    101  C   LEU    14      12.717  34.259   5.245  1.00 13.48      1TOP 193
+ATOM    102  O   LEU    14      13.251  33.376   4.565  1.00 13.33      1TOP 194
+ATOM    103  CB  LEU    14      11.443  33.438   7.202  1.00 14.23      1TOP 195
+ATOM    104  CG  LEU    14      10.166  33.124   7.978  1.00 13.14      1TOP 196
+ATOM    105  CD1 LEU    14      10.465  32.294   9.235  1.00 12.54      1TOP 197
+ATOM    106  CD2 LEU    14       9.457  34.430   8.292  1.00 12.39      1TOP 198
+ATOM    107  N   SER    15      13.347  35.427   5.448  1.00 12.10      1TOP 199
+ATOM    108  CA  SER    15      14.729  35.592   4.982  1.00 16.46      1TOP 200
+ATOM    109  C   SER    15      15.617  34.845   5.967  1.00 16.97      1TOP 201
+ATOM    110  O   SER    15      15.239  34.698   7.142  1.00 19.36      1TOP 202
+ATOM    111  CB  SER    15      15.149  37.054   4.941  1.00 14.08      1TOP 203
+ATOM    112  OG  SER    15      14.984  37.574   6.259  1.00 23.29      1TOP 204
+ATOM    113  N   GLU    16      16.793  34.411   5.547  1.00 14.10      1TOP 205
+ATOM    114  CA  GLU    16      17.644  33.649   6.426  1.00 14.35      1TOP 206
+ATOM    115  C   GLU    16      18.086  34.410   7.685  1.00 15.31      1TOP 207
+ATOM    116  O   GLU    16      18.150  33.838   8.783  1.00 15.26      1TOP 208
+ATOM    117  CB  GLU    16      18.793  33.084   5.638  1.00 13.26      1TOP 209
+ATOM    118  CG  GLU    16      19.778  32.252   6.475  1.00 16.46      1TOP 210
+ATOM    119  CD  GLU    16      19.224  31.061   7.242  1.00 15.12      1TOP 211
+ATOM    120  OE1 GLU    16      18.369  30.334   6.739  1.00 20.74      1TOP 212
+ATOM    121  OE2 GLU    16      19.659  30.876   8.371  1.00 23.74      1TOP 213
+ATOM    122  N   GLU    17      18.312  35.723   7.609  1.00 10.54      1TOP 214
+ATOM    123  CA  GLU    17      18.689  36.480   8.806  1.00 11.08      1TOP 215
+ATOM    124  C   GLU    17      17.548  36.510   9.802  1.00 13.75      1TOP 216
+ATOM    125  O   GLU    17      17.807  36.459  11.008  1.00 13.16      1TOP 217
+ATOM    126  CB  GLU    17      19.168  37.903   8.507  1.00 14.78      1TOP 218
+ATOM    127  CG  GLU    17      18.190  38.846   7.782  1.00 19.27      1TOP 219
+ATOM    128  CD  GLU    17      18.165  38.803   6.248  1.00 19.68      1TOP 220
+ATOM    129  OE1 GLU    17      18.579  37.819   5.623  1.00 18.12      1TOP 221
+ATOM    130  OE2 GLU    17      17.683  39.776   5.665  1.00 18.27      1TOP 222
+ATOM    131  N   MET    18      16.293  36.516   9.313  1.00 11.38      1TOP 223
+ATOM    132  CA  MET    18      15.151  36.501  10.209  1.00 16.11      1TOP 224
+ATOM    133  C   MET    18      15.064  35.158  10.919  1.00 15.18      1TOP 225
+ATOM    134  O   MET    18      14.818  35.111  12.126  1.00 11.13      1TOP 226
+ATOM    135  CB  MET    18      13.861  36.782   9.472  1.00 11.44      1TOP 227
+ATOM    136  CG  MET    18      12.770  36.931  10.516  1.00 14.46      1TOP 228
+ATOM    137  SD  MET    18      11.281  37.714   9.847  1.00 19.70      1TOP 229
+ATOM    138  CE  MET    18      11.865  39.358  10.026  1.00 19.17      1TOP 230
+ATOM    139  N   ILE    19      15.304  34.067  10.196  1.00 10.99      1TOP 231
+ATOM    140  CA  ILE    19      15.336  32.720  10.780  1.00  9.93      1TOP 232
+ATOM    141  C   ILE    19      16.402  32.628  11.868  1.00 15.58      1TOP 233
+ATOM    142  O   ILE    19      16.142  32.111  12.958  1.00 13.68      1TOP 234
+ATOM    143  CB  ILE    19      15.537  31.605   9.719  1.00 13.12      1TOP 235
+ATOM    144  CG1 ILE    19      14.380  31.577   8.746  1.00 11.12      1TOP 236
+ATOM    145  CG2 ILE    19      15.673  30.227  10.389  1.00 13.70      1TOP 237
+ATOM    146  CD1 ILE    19      14.685  30.666   7.548  1.00 15.09      1TOP 238
+ATOM    147  N   ALA    20      17.596  33.145  11.608  1.00 10.66      1TOP 239
+ATOM    148  CA  ALA    20      18.637  33.102  12.631  1.00 19.89      1TOP 240
+ATOM    149  C   ALA    20      18.315  34.000  13.848  1.00 17.79      1TOP 241
+ATOM    150  O   ALA    20      18.606  33.654  14.994  1.00 13.94      1TOP 242
+ATOM    151  CB  ALA    20      19.970  33.523  12.008  1.00 14.96      1TOP 243
+ATOM    152  N   GLU    21      17.643  35.136  13.651  1.00 12.99      1TOP 244
+ATOM    153  CA  GLU    21      17.186  35.977  14.744  1.00  9.47      1TOP 245
+ATOM    154  C   GLU    21      16.198  35.201  15.585  1.00 18.33      1TOP 246
+ATOM    155  O   GLU    21      16.303  35.216  16.826  1.00 14.85      1TOP 247
+ATOM    156  CB  GLU    21      16.508  37.171  14.177  1.00  8.57      1TOP 248
+ATOM    157  CG  GLU    21      15.997  38.107  15.224  1.00 11.79      1TOP 249
+ATOM    158  CD  GLU    21      14.915  38.948  14.585  1.00 22.16      1TOP 250
+ATOM    159  OE1 GLU    21      15.233  39.868  13.848  1.00 22.29      1TOP 251
+ATOM    160  OE2 GLU    21      13.739  38.680  14.793  1.00 33.49      1TOP 252
+ATOM    161  N   PHE    22      15.242  34.480  14.950  1.00 11.51      1TOP 253
+ATOM    162  CA  PHE    22      14.254  33.709  15.687  1.00  8.45      1TOP 254
+ATOM    163  C   PHE    22      14.940  32.595  16.432  1.00 16.37      1TOP 255
+ATOM    164  O   PHE    22      14.612  32.354  17.601  1.00 13.38      1TOP 256
+ATOM    165  CB  PHE    22      13.231  33.105  14.801  1.00  7.78      1TOP 257
+ATOM    166  CG  PHE    22      12.267  34.071  14.137  1.00  9.64      1TOP 258
+ATOM    167  CD1 PHE    22      12.270  35.430  14.389  1.00 14.57      1TOP 259
+ATOM    168  CD2 PHE    22      11.343  33.541  13.271  1.00 12.49      1TOP 260
+ATOM    169  CE1 PHE    22      11.317  36.243  13.817  1.00 11.33      1TOP 261
+ATOM    170  CE2 PHE    22      10.410  34.367  12.674  1.00 18.34      1TOP 262
+ATOM    171  CZ  PHE    22      10.387  35.712  12.963  1.00 12.16      1TOP 263
+ATOM    172  N   LYS    23      15.953  31.946  15.833  1.00 13.25      1TOP 264
+ATOM    173  CA  LYS    23      16.686  30.903  16.535  1.00 16.32      1TOP 265
+ATOM    174  C   LYS    23      17.486  31.441  17.707  1.00 17.96      1TOP 266
+ATOM    175  O   LYS    23      17.599  30.766  18.733  1.00 14.79      1TOP 267
+ATOM    176  CB  LYS    23      17.610  30.090  15.626  1.00 11.89      1TOP 268
+ATOM    177  CG  LYS    23      17.802  28.748  16.351  1.00 14.03      1TOP 269
+ATOM    178  CD  LYS    23      18.308  27.616  15.491  1.00 31.38      1TOP 270
+ATOM    179  CE  LYS    23      18.364  26.320  16.320  1.00 26.20      1TOP 271
+ATOM    180  NZ  LYS    23      19.530  26.347  17.190  1.00 22.14      1TOP 272
+ATOM    181  N   ALA    24      18.030  32.647  17.611  1.00 12.96      1TOP 273
+ATOM    182  CA  ALA    24      18.766  33.241  18.710  1.00 19.70      1TOP 274
+ATOM    183  C   ALA    24      17.863  33.385  19.953  1.00 20.99      1TOP 275
+ATOM    184  O   ALA    24      18.288  33.052  21.064  1.00 18.25      1TOP 276
+ATOM    185  CB  ALA    24      19.284  34.588  18.251  1.00 13.73      1TOP 277
+ATOM    186  N   ALA    25      16.602  33.807  19.833  1.00 14.25      1TOP 278
+ATOM    187  CA  ALA    25      15.700  33.884  20.970  1.00 16.99      1TOP 279
+ATOM    188  C   ALA    25      15.269  32.504  21.445  1.00 15.23      1TOP 280
+ATOM    189  O   ALA    25      15.318  32.224  22.643  1.00 17.03      1TOP 281
+ATOM    190  CB  ALA    25      14.447  34.661  20.580  1.00 17.51      1TOP 282
+ATOM    191  N   PHE    26      14.905  31.593  20.531  1.00 13.39      1TOP 283
+ATOM    192  CA  PHE    26      14.506  30.212  20.828  1.00 12.97      1TOP 284
+ATOM    193  C   PHE    26      15.584  29.532  21.681  1.00 19.75      1TOP 285
+ATOM    194  O   PHE    26      15.296  28.929  22.718  1.00 14.81      1TOP 286
+ATOM    195  CB  PHE    26      14.295  29.502  19.464  1.00 11.97      1TOP 287
+ATOM    196  CG  PHE    26      13.751  28.081  19.492  1.00 13.02      1TOP 288
+ATOM    197  CD1 PHE    26      14.621  27.022  19.606  1.00  8.82      1TOP 289
+ATOM    198  CD2 PHE    26      12.402  27.857  19.412  1.00  7.93      1TOP 290
+ATOM    199  CE1 PHE    26      14.128  25.736  19.664  1.00 13.91      1TOP 291
+ATOM    200  CE2 PHE    26      11.922  26.575  19.440  1.00 16.90      1TOP 292
+ATOM    201  CZ  PHE    26      12.776  25.506  19.577  1.00 11.87      1TOP 293
+ATOM    202  N   ASP    27      16.855  29.659  21.285  1.00 17.87      1TOP 294
+ATOM    203  CA  ASP    27      17.999  29.033  21.924  1.00 16.48      1TOP 295
+ATOM    204  C   ASP    27      18.200  29.442  23.351  1.00 20.33      1TOP 296
+ATOM    205  O   ASP    27      18.673  28.620  24.144  1.00 20.98      1TOP 297
+ATOM    206  CB  ASP    27      19.304  29.247  21.154  1.00 10.06      1TOP 298
+ATOM    207  CG  ASP    27      19.420  28.391  19.877  1.00 26.06      1TOP 299
+ATOM    208  OD1 ASP    27      18.603  27.497  19.604  1.00 14.84      1TOP 300
+ATOM    209  OD2 ASP    27      20.342  28.632  19.111  1.00 21.17      1TOP 301
+ATOM    210  N   MET    28      17.752  30.630  23.725  1.00 19.53      1TOP 302
+ATOM    211  CA  MET    28      17.826  31.084  25.107  1.00 28.19      1TOP 303
+ATOM    212  C   MET    28      16.940  30.234  26.040  1.00 31.74      1TOP 304
+ATOM    213  O   MET    28      17.133  30.212  27.257  1.00 21.76      1TOP 305
+ATOM    214  CB  MET    28      17.428  32.563  25.116  1.00 25.75      1TOP 306
+ATOM    215  CG  MET    28      17.625  33.259  26.463  1.00 63.83      1TOP 307
+ATOM    216  SD  MET    28      17.312  35.048  26.507  1.00 56.03      1TOP 308
+ATOM    217  CE  MET    28      15.623  35.054  27.045  1.00 47.33      1TOP 309
+ATOM    218  N   PHE    29      15.946  29.504  25.538  1.00 20.58      1TOP 310
+ATOM    219  CA  PHE    29      15.082  28.688  26.368  1.00 20.82      1TOP 311
+ATOM    220  C   PHE    29      15.377  27.216  26.187  1.00 18.54      1TOP 312
+ATOM    221  O   PHE    29      14.659  26.345  26.700  1.00 22.49      1TOP 313
+ATOM    222  CB  PHE    29      13.624  28.950  26.026  1.00 15.17      1TOP 314
+ATOM    223  CG  PHE    29      13.209  30.374  26.354  1.00 18.31      1TOP 315
+ATOM    224  CD1 PHE    29      13.450  31.378  25.437  1.00 22.53      1TOP 316
+ATOM    225  CD2 PHE    29      12.614  30.654  27.563  1.00 22.35      1TOP 317
+ATOM    226  CE1 PHE    29      13.092  32.674  25.716  1.00 23.87      1TOP 318
+ATOM    227  CE2 PHE    29      12.237  31.960  27.839  1.00 26.81      1TOP 319
+ATOM    228  CZ  PHE    29      12.485  32.957  26.917  1.00 24.12      1TOP 320
+ATOM    229  N   ASP    30      16.397  26.887  25.413  1.00 23.10      1TOP 321
+ATOM    230  CA  ASP    30      16.680  25.483  25.198  1.00 34.34      1TOP 322
+ATOM    231  C   ASP    30      17.619  25.070  26.320  1.00 42.68      1TOP 323
+ATOM    232  O   ASP    30      17.229  24.195  27.101  1.00 56.19      1TOP 324
+ATOM    233  CB  ASP    30      17.215  25.188  23.787  1.00 35.20      1TOP 325
+ATOM    234  CG  ASP    30      17.708  23.777  23.452  1.00 48.21      1TOP 326
+ATOM    235  OD1 ASP    30      17.575  22.834  24.248  1.00 21.48      1TOP 327
+ATOM    236  OD2 ASP    30      18.245  23.642  22.352  1.00 29.20      1TOP 328
+ATOM    237  N   ALA    31      18.819  25.657  26.414  1.00 32.22      1TOP 329
+ATOM    238  CA  ALA    31      19.789  25.418  27.506  1.00108.47      1TOP 330
+ATOM    239  C   ALA    31      20.533  24.094  27.331  1.00 64.50      1TOP 331
+ATOM    240  O   ALA    31      21.756  24.047  27.215  1.00 68.01      1TOP 332
+ATOM    241  CB  ALA    31      19.207  25.453  28.959  1.00 45.75      1TOP 333
+ATOM    242  N   ASP    32      19.736  23.029  27.254  1.00 49.99      1TOP 334
+ATOM    243  CA  ASP    32      20.130  21.681  26.907  1.00 67.49      1TOP 335
+ATOM    244  C   ASP    32      20.720  21.556  25.494  1.00 48.13      1TOP 336
+ATOM    245  O   ASP    32      21.297  20.538  25.139  1.00 47.17      1TOP 337
+ATOM    246  CB  ASP    32      18.836  20.894  27.138  1.00 37.49      1TOP 338
+ATOM    247  CG  ASP    32      18.883  19.416  26.818  1.00 83.40      1TOP 339
+ATOM    248  OD1 ASP    32      19.425  18.664  27.631  1.00108.73      1TOP 340
+ATOM    249  OD2 ASP    32      18.369  19.036  25.760  1.00 89.43      1TOP 341
+ATOM    250  N   GLY    33      20.600  22.535  24.603  1.00 41.74      1TOP 342
+ATOM    251  CA  GLY    33      21.227  22.442  23.298  1.00 30.59      1TOP 343
+ATOM    252  C   GLY    33      20.572  21.406  22.403  1.00 40.64      1TOP 344
+ATOM    253  O   GLY    33      21.140  21.137  21.359  1.00 33.82      1TOP 345
+ATOM    254  N   GLY    34      19.385  20.845  22.719  1.00 37.35      1TOP 346
+ATOM    255  CA  GLY    34      18.735  19.808  21.914  1.00 40.75      1TOP 347
+ATOM    256  C   GLY    34      17.953  20.264  20.667  1.00 50.15      1TOP 348
+ATOM    257  O   GLY    34      17.419  19.406  19.961  1.00 40.32      1TOP 349
+ATOM    258  N   GLY    35      17.810  21.555  20.352  1.00 25.04      1TOP 350
+ATOM    259  CA  GLY    35      16.971  22.010  19.266  1.00 19.87      1TOP 351
+ATOM    260  C   GLY    35      15.498  22.095  19.612  1.00 26.13      1TOP 352
+ATOM    261  O   GLY    35      14.647  22.126  18.701  1.00 28.75      1TOP 353
+ATOM    262  N   ASP    36      15.164  22.134  20.909  1.00 22.05      1TOP 354
+ATOM    263  CA  ASP    36      13.781  22.275  21.320  1.00 18.52      1TOP 355
+ATOM    264  C   ASP    36      13.574  22.939  22.665  1.00 17.73      1TOP 356
+ATOM    265  O   ASP    36      14.502  23.074  23.472  1.00 16.02      1TOP 357
+ATOM    266  CB  ASP    36      13.002  20.973  21.261  1.00 21.00      1TOP 358
+ATOM    267  CG  ASP    36      13.538  19.795  22.022  1.00 31.32      1TOP 359
+ATOM    268  OD1 ASP    36      13.866  19.886  23.207  1.00 25.12      1TOP 360
+ATOM    269  OD2 ASP    36      13.606  18.755  21.390  1.00 34.56      1TOP 361
+ATOM    270  N   ILE    37      12.337  23.364  22.878  1.00 12.16      1TOP 362
+ATOM    271  CA  ILE    37      11.982  24.096  24.070  1.00 11.87      1TOP 363
+ATOM    272  C   ILE    37      10.727  23.447  24.623  1.00 10.82      1TOP 364
+ATOM    273  O   ILE    37       9.996  22.734  23.919  1.00 16.43      1TOP 365
+ATOM    274  CB  ILE    37      11.741  25.612  23.824  1.00 14.33      1TOP 366
+ATOM    275  CG1 ILE    37      10.552  25.893  22.896  1.00 10.25      1TOP 367
+ATOM    276  CG2 ILE    37      13.042  26.255  23.308  1.00 17.77      1TOP 368
+ATOM    277  CD1 ILE    37      10.202  27.413  22.747  1.00 18.05      1TOP 369
+ATOM    278  N   SER    38      10.478  23.707  25.896  1.00 16.68      1TOP 370
+ATOM    279  CA  SER    38       9.237  23.293  26.537  1.00 18.61      1TOP 371
+ATOM    280  C   SER    38       8.097  24.049  25.881  1.00 16.11      1TOP 372
+ATOM    281  O   SER    38       8.207  25.244  25.583  1.00 13.84      1TOP 373
+ATOM    282  CB  SER    38       9.272  23.653  28.033  1.00 15.26      1TOP 374
+ATOM    283  OG  SER    38       8.002  23.365  28.614  1.00 15.82      1TOP 375
+ATOM    284  N   THR    39       6.980  23.365  25.750  1.00 14.34      1TOP 376
+ATOM    285  CA  THR    39       5.757  23.964  25.211  1.00 21.37      1TOP 377
+ATOM    286  C   THR    39       5.188  25.001  26.170  1.00 17.77      1TOP 378
+ATOM    287  O   THR    39       4.436  25.883  25.769  1.00 20.40      1TOP 379
+ATOM    288  CB  THR    39       4.706  22.884  24.958  1.00 25.87      1TOP 380
+ATOM    289  OG1 THR    39       4.631  22.190  26.204  1.00 26.81      1TOP 381
+ATOM    290  CG2 THR    39       5.009  21.961  23.780  1.00 20.93      1TOP 382
+ATOM    291  N   LYS    40       5.540  24.919  27.456  1.00 14.09      1TOP 383
+ATOM    292  CA  LYS    40       5.231  25.985  28.410  1.00 16.21      1TOP 384
+ATOM    293  C   LYS    40       5.884  27.318  28.111  1.00 22.04      1TOP 385
+ATOM    294  O   LYS    40       5.460  28.316  28.669  1.00 19.09      1TOP 386
+ATOM    295  CB  LYS    40       5.632  25.643  29.820  1.00 18.18      1TOP 387
+ATOM    296  CG  LYS    40       5.013  24.367  30.277  1.00 32.67      1TOP 388
+ATOM    297  CD  LYS    40       3.500  24.490  30.337  1.00 51.68      1TOP 389
+ATOM    298  CE  LYS    40       3.077  23.041  30.443  1.00 85.09      1TOP 390
+ATOM    299  NZ  LYS    40       1.641  22.826  30.537  1.00 73.23      1TOP 391
+ATOM    300  N   GLU    41       6.967  27.361  27.331  1.00 14.41      1TOP 392
+ATOM    301  CA  GLU    41       7.657  28.584  26.976  1.00 18.11      1TOP 393
+ATOM    302  C   GLU    41       7.330  29.099  25.571  1.00 16.36      1TOP 394
+ATOM    303  O   GLU    41       7.801  30.168  25.140  1.00 14.59      1TOP 395
+ATOM    304  CB  GLU    41       9.174  28.364  27.083  1.00 22.91      1TOP 396
+ATOM    305  CG  GLU    41       9.763  28.127  28.480  1.00 27.28      1TOP 397
+ATOM    306  CD  GLU    41       9.376  29.182  29.507  1.00 44.10      1TOP 398
+ATOM    307  OE1 GLU    41       9.514  30.383  29.262  1.00 36.77      1TOP 399
+ATOM    308  OE2 GLU    41       8.910  28.780  30.570  1.00 48.19      1TOP 400
+ATOM    309  N   LEU    42       6.472  28.395  24.833  1.00 15.68      1TOP 401
+ATOM    310  CA  LEU    42       6.157  28.761  23.458  1.00 16.19      1TOP 402
+ATOM    311  C   LEU    42       5.528  30.130  23.382  1.00 17.69      1TOP 403
+ATOM    312  O   LEU    42       5.926  30.942  22.552  1.00 13.30      1TOP 404
+ATOM    313  CB  LEU    42       5.171  27.778  22.866  1.00 18.34      1TOP 405
+ATOM    314  CG  LEU    42       4.762  27.962  21.416  1.00 21.10      1TOP 406
+ATOM    315  CD1 LEU    42       5.995  27.933  20.518  1.00 15.36      1TOP 407
+ATOM    316  CD2 LEU    42       3.803  26.874  21.018  1.00 14.01      1TOP 408
+ATOM    317  N   GLY    43       4.564  30.421  24.246  1.00 13.43      1TOP 409
+ATOM    318  CA  GLY    43       3.911  31.721  24.253  1.00 16.31      1TOP 410
+ATOM    319  C   GLY    43       4.897  32.838  24.486  1.00 12.47      1TOP 411
+ATOM    320  O   GLY    43       4.877  33.858  23.772  1.00 11.77      1TOP 412
+ATOM    321  N   THR    44       5.798  32.655  25.453  1.00 13.11      1TOP 413
+ATOM    322  CA  THR    44       6.813  33.678  25.768  1.00 15.14      1TOP 414
+ATOM    323  C   THR    44       7.722  33.967  24.553  1.00 12.31      1TOP 415
+ATOM    324  O   THR    44       7.950  35.112  24.159  1.00 13.94      1TOP 416
+ATOM    325  CB  THR    44       7.653  33.222  27.026  1.00 15.45      1TOP 417
+ATOM    326  OG1 THR    44       6.785  32.968  28.109  1.00 16.89      1TOP 418
+ATOM    327  CG2 THR    44       8.624  34.287  27.517  1.00 25.32      1TOP 419
+ATOM    328  N   VAL    45       8.227  32.938  23.884  1.00  9.56      1TOP 420
+ATOM    329  CA  VAL    45       9.128  33.177  22.775  1.00 12.17      1TOP 421
+ATOM    330  C   VAL    45       8.367  33.834  21.626  1.00 12.93      1TOP 422
+ATOM    331  O   VAL    45       8.854  34.763  20.970  1.00 12.99      1TOP 423
+ATOM    332  CB  VAL    45       9.841  31.896  22.340  1.00 18.37      1TOP 424
+ATOM    333  CG1 VAL    45      10.950  32.291  21.342  1.00 24.02      1TOP 425
+ATOM    334  CG2 VAL    45      10.487  31.207  23.531  1.00 15.05      1TOP 426
+ATOM    335  N   MET    46       7.131  33.408  21.382  1.00 12.40      1TOP 427
+ATOM    336  CA  MET    46       6.338  34.010  20.336  1.00  8.56      1TOP 428
+ATOM    337  C   MET    46       6.093  35.496  20.580  1.00 16.83      1TOP 429
+ATOM    338  O   MET    46       6.262  36.321  19.669  1.00 12.09      1TOP 430
+ATOM    339  CB  MET    46       5.028  33.252  20.108  1.00 13.61      1TOP 431
+ATOM    340  CG  MET    46       5.174  31.909  19.372  1.00 14.22      1TOP 432
+ATOM    341  SD  MET    46       3.584  31.089  19.065  1.00 18.48      1TOP 433
+ATOM    342  CE  MET    46       3.109  31.618  17.440  1.00 25.80      1TOP 434
+ATOM    343  N   ARG    47       5.759  35.869  21.810  1.00 14.98      1TOP 435
+ATOM    344  CA  ARG    47       5.494  37.279  22.109  1.00 14.14      1TOP 436
+ATOM    345  C   ARG    47       6.763  38.130  22.110  1.00 15.18      1TOP 437
+ATOM    346  O   ARG    47       6.754  39.290  21.671  1.00 12.55      1TOP 438
+ATOM    347  CB  ARG    47       4.762  37.394  23.433  1.00 17.13      1TOP 439
+ATOM    348  CG  ARG    47       3.443  36.661  23.437  1.00 11.52      1TOP 440
+ATOM    349  CD  ARG    47       2.929  36.790  24.850  1.00 20.31      1TOP 441
+ATOM    350  NE  ARG    47       1.892  35.802  25.039  1.00 31.24      1TOP 442
+ATOM    351  CZ  ARG    47       2.028  34.783  25.883  1.00 12.41      1TOP 443
+ATOM    352  NH1 ARG    47       3.043  34.664  26.726  1.00 19.85      1TOP 444
+ATOM    353  NH2 ARG    47       1.116  33.833  25.843  1.00 25.87      1TOP 445
+ATOM    354  N   MET    48       7.905  37.563  22.530  1.00 12.07      1TOP 446
+ATOM    355  CA  MET    48       9.206  38.200  22.385  1.00 14.26      1TOP 447
+ATOM    356  C   MET    48       9.480  38.536  20.937  1.00 20.10      1TOP 448
+ATOM    357  O   MET    48      10.127  39.533  20.642  1.00 17.21      1TOP 449
+ATOM    358  CB  MET    48      10.348  37.279  22.766  1.00 13.32      1TOP 450
+ATOM    359  CG  MET    48      10.564  37.153  24.250  1.00 25.29      1TOP 451
+ATOM    360  SD  MET    48      11.848  35.928  24.591  1.00 27.09      1TOP 452
+ATOM    361  CE  MET    48      13.267  36.699  23.874  1.00 26.09      1TOP 453
+ATOM    362  N   LEU    49       9.042  37.667  20.026  1.00 13.81      1TOP 454
+ATOM    363  CA  LEU    49       9.216  37.878  18.610  1.00 10.86      1TOP 455
+ATOM    364  C   LEU    49       8.036  38.581  17.965  1.00 14.32      1TOP 456
+ATOM    365  O   LEU    49       7.908  38.551  16.743  1.00 19.54      1TOP 457
+ATOM    366  CB  LEU    49       9.575  36.572  17.887  1.00 17.57      1TOP 458
+ATOM    367  CG  LEU    49      10.894  35.936  18.355  1.00 26.61      1TOP 459
+ATOM    368  CD1 LEU    49      11.025  34.501  17.870  1.00 15.63      1TOP 460
+ATOM    369  CD2 LEU    49      12.102  36.791  17.937  1.00 19.13      1TOP 461
+ATOM    370  N   GLY    50       7.182  39.254  18.732  1.00 13.77      1TOP 462
+ATOM    371  CA  GLY    50       6.235  40.206  18.175  1.00 16.79      1TOP 463
+ATOM    372  C   GLY    50       4.899  39.616  17.780  1.00 15.64      1TOP 464
+ATOM    373  O   GLY    50       4.078  40.308  17.170  1.00 17.23      1TOP 465
+ATOM    374  N   GLN    51       4.642  38.353  18.113  1.00 14.32      1TOP 466
+ATOM    375  CA  GLN    51       3.393  37.719  17.714  1.00 17.93      1TOP 467
+ATOM    376  C   GLN    51       2.469  37.757  18.898  1.00 23.94      1TOP 468
+ATOM    377  O   GLN    51       2.901  37.795  20.043  1.00 18.32      1TOP 469
+ATOM    378  CB  GLN    51       3.542  36.277  17.260  1.00 12.51      1TOP 470
+ATOM    379  CG  GLN    51       4.474  36.159  16.094  1.00 23.00      1TOP 471
+ATOM    380  CD  GLN    51       4.133  37.065  14.916  1.00 22.99      1TOP 472
+ATOM    381  OE1 GLN    51       4.967  37.834  14.447  1.00 60.36      1TOP 473
+ATOM    382  NE2 GLN    51       2.935  37.079  14.357  1.00 32.04      1TOP 474
+ATOM    383  N   ASN    52       1.177  37.678  18.636  1.00 16.86      1TOP 475
+ATOM    384  CA  ASN    52       0.196  37.744  19.706  1.00 32.15      1TOP 476
+ATOM    385  C   ASN    52      -0.843  36.612  19.612  1.00 17.97      1TOP 477
+ATOM    386  O   ASN    52      -2.007  36.835  19.256  1.00 20.28      1TOP 478
+ATOM    387  CB  ASN    52      -0.442  39.139  19.702  1.00 26.80      1TOP 479
+ATOM    388  CG  ASN    52      -0.868  39.561  18.291  1.00 72.75      1TOP 480
+ATOM    389  OD1 ASN    52      -0.110  40.223  17.577  1.00 80.40      1TOP 481
+ATOM    390  ND2 ASN    52      -2.015  39.168  17.748  1.00 97.52      1TOP 482
+ATOM    391  N   PRO    53      -0.483  35.339  19.817  1.00 17.82      1TOP 483
+ATOM    392  CA  PRO    53      -1.446  34.232  19.830  1.00 12.75      1TOP 484
+ATOM    393  C   PRO    53      -2.373  34.382  21.029  1.00 14.50      1TOP 485
+ATOM    394  O   PRO    53      -1.938  34.842  22.097  1.00 16.24      1TOP 486
+ATOM    395  CB  PRO    53      -0.549  33.012  20.024  1.00 14.66      1TOP 487
+ATOM    396  CG  PRO    53       0.664  33.553  20.790  1.00 19.40      1TOP 488
+ATOM    397  CD  PRO    53       0.883  34.872  20.076  1.00 15.51      1TOP 489
+ATOM    398  N   THR    54      -3.631  34.003  20.917  1.00 16.34      1TOP 490
+ATOM    399  CA  THR    54      -4.478  33.926  22.110  1.00 16.69      1TOP 491
+ATOM    400  C   THR    54      -4.112  32.680  22.908  1.00 17.19      1TOP 492
+ATOM    401  O   THR    54      -3.465  31.762  22.382  1.00 12.74      1TOP 493
+ATOM    402  CB  THR    54      -5.940  33.867  21.690  1.00 11.35      1TOP 494
+ATOM    403  OG1 THR    54      -6.116  32.608  21.051  1.00 14.29      1TOP 495
+ATOM    404  CG2 THR    54      -6.384  35.014  20.775  1.00 11.24      1TOP 496
+ATOM    405  N   LYS    55      -4.560  32.563  24.151  1.00 11.88      1TOP 497
+ATOM    406  CA  LYS    55      -4.363  31.327  24.890  1.00 12.52      1TOP 498
+ATOM    407  C   LYS    55      -4.978  30.105  24.182  1.00 19.18      1TOP 499
+ATOM    408  O   LYS    55      -4.381  29.015  24.155  1.00 15.11      1TOP 500
+ATOM    409  CB  LYS    55      -4.901  31.468  26.320  1.00 11.86      1TOP 501
+ATOM    410  CG  LYS    55      -3.830  31.910  27.334  1.00 36.20      1TOP 502
+ATOM    411  CD  LYS    55      -3.318  33.306  26.982  1.00 72.58      1TOP 503
+ATOM    412  CE  LYS    55      -2.487  34.123  27.993  1.00 77.00      1TOP 504
+ATOM    413  NZ  LYS    55      -2.238  35.504  27.556  1.00 31.60      1TOP 505
+ATOM    414  N   GLU    56      -6.169  30.261  23.576  1.00 10.84      1TOP 506
+ATOM    415  CA  GLU    56      -6.801  29.161  22.851  1.00  7.22      1TOP 507
+ATOM    416  C   GLU    56      -5.911  28.740  21.677  1.00 10.34      1TOP 508
+ATOM    417  O   GLU    56      -5.761  27.539  21.392  1.00 14.72      1TOP 509
+ATOM    418  CB  GLU    56      -8.192  29.598  22.388  1.00  9.28      1TOP 510
+ATOM    419  CG  GLU    56      -9.095  28.558  21.728  1.00 18.09      1TOP 511
+ATOM    420  CD  GLU    56      -8.819  28.361  20.255  1.00 35.53      1TOP 512
+ATOM    421  OE1 GLU    56      -8.532  29.341  19.556  1.00 37.26      1TOP 513
+ATOM    422  OE2 GLU    56      -8.876  27.217  19.797  1.00 57.68      1TOP 514
+ATOM    423  N   GLU    57      -5.294  29.693  20.992  1.00 10.62      1TOP 515
+ATOM    424  CA  GLU    57      -4.428  29.356  19.873  1.00 12.00      1TOP 516
+ATOM    425  C   GLU    57      -3.223  28.566  20.329  1.00 11.65      1TOP 517
+ATOM    426  O   GLU    57      -2.845  27.588  19.689  1.00 15.41      1TOP 518
+ATOM    427  CB  GLU    57      -3.955  30.602  19.125  1.00 12.84      1TOP 519
+ATOM    428  CG  GLU    57      -5.075  31.101  18.235  1.00 13.78      1TOP 520
+ATOM    429  CD  GLU    57      -4.923  32.513  17.671  1.00 19.17      1TOP 521
+ATOM    430  OE1 GLU    57      -4.040  33.278  18.062  1.00 15.16      1TOP 522
+ATOM    431  OE2 GLU    57      -5.747  32.849  16.831  1.00 22.68      1TOP 523
+ATOM    432  N   LEU    58      -2.625  28.969  21.439  1.00 13.50      1TOP 524
+ATOM    433  CA  LEU    58      -1.469  28.280  21.989  1.00 11.43      1TOP 525
+ATOM    434  C   LEU    58      -1.812  26.866  22.419  1.00 13.98      1TOP 526
+ATOM    435  O   LEU    58      -1.069  25.921  22.123  1.00 13.90      1TOP 527
+ATOM    436  CB  LEU    58      -0.952  29.017  23.199  1.00 13.91      1TOP 528
+ATOM    437  CG  LEU    58       0.271  29.885  23.145  1.00 33.78      1TOP 529
+ATOM    438  CD1 LEU    58       1.060  29.809  21.843  1.00 18.77      1TOP 530
+ATOM    439  CD2 LEU    58      -0.176  31.256  23.599  1.00 22.69      1TOP 531
+ATOM    440  N   ASP    59      -2.963  26.675  23.076  1.00 14.09      1TOP 532
+ATOM    441  CA  ASP    59      -3.380  25.329  23.415  1.00 12.34      1TOP 533
+ATOM    442  C   ASP    59      -3.530  24.484  22.172  1.00 11.11      1TOP 534
+ATOM    443  O   ASP    59      -3.075  23.344  22.190  1.00 14.97      1TOP 535
+ATOM    444  CB  ASP    59      -4.674  25.350  24.198  1.00 11.01      1TOP 536
+ATOM    445  CG  ASP    59      -4.520  25.824  25.633  1.00 18.63      1TOP 537
+ATOM    446  OD1 ASP    59      -3.407  26.031  26.114  1.00 18.81      1TOP 538
+ATOM    447  OD2 ASP    59      -5.537  26.022  26.277  1.00 19.17      1TOP 539
+ATOM    448  N   ALA    60      -4.096  25.042  21.095  1.00 11.42      1TOP 540
+ATOM    449  CA  ALA    60      -4.343  24.295  19.882  1.00  9.79      1TOP 541
+ATOM    450  C   ALA    60      -3.005  23.881  19.275  1.00 17.51      1TOP 542
+ATOM    451  O   ALA    60      -2.809  22.732  18.854  1.00 15.63      1TOP 543
+ATOM    452  CB  ALA    60      -5.113  25.191  18.926  1.00 11.86      1TOP 544
+ATOM    453  N   ILE    61      -2.015  24.771  19.280  1.00 14.15      1TOP 545
+ATOM    454  CA  ILE    61      -0.681  24.500  18.742  1.00 17.36      1TOP 546
+ATOM    455  C   ILE    61       0.033  23.410  19.544  1.00 21.75      1TOP 547
+ATOM    456  O   ILE    61       0.589  22.464  18.968  1.00 22.63      1TOP 548
+ATOM    457  CB  ILE    61       0.164  25.802  18.717  1.00 19.58      1TOP 549
+ATOM    458  CG1 ILE    61      -0.324  26.758  17.627  1.00 17.93      1TOP 550
+ATOM    459  CG2 ILE    61       1.664  25.510  18.587  1.00 23.90      1TOP 551
+ATOM    460  CD1 ILE    61       0.144  28.209  17.885  1.00 19.13      1TOP 552
+ATOM    461  N   ILE    62       0.008  23.524  20.871  1.00 16.51      1TOP 553
+ATOM    462  CA  ILE    62       0.676  22.582  21.747  1.00 15.98      1TOP 554
+ATOM    463  C   ILE    62       0.103  21.186  21.492  1.00 20.33      1TOP 555
+ATOM    464  O   ILE    62       0.829  20.192  21.372  1.00 20.28      1TOP 556
+ATOM    465  CB  ILE    62       0.473  23.086  23.168  1.00 11.73      1TOP 557
+ATOM    466  CG1 ILE    62       1.367  24.274  23.389  1.00 18.32      1TOP 558
+ATOM    467  CG2 ILE    62       0.722  22.003  24.197  1.00 19.07      1TOP 559
+ATOM    468  CD1 ILE    62       1.005  25.109  24.629  1.00 16.57      1TOP 560
+ATOM    469  N   GLU    63      -1.213  21.093  21.335  1.00 18.78      1TOP 561
+ATOM    470  CA  GLU    63      -1.862  19.827  21.102  1.00 18.78      1TOP 562
+ATOM    471  C   GLU    63      -1.478  19.280  19.747  1.00 18.71      1TOP 563
+ATOM    472  O   GLU    63      -1.297  18.062  19.620  1.00 20.22      1TOP 564
+ATOM    473  CB AGLU    63      -3.354  19.957  21.341  0.50 35.13      1TOP 565
+ATOM    474  CB BGLU    63      -3.410  20.001  21.231  0.50 39.39      1TOP 566
+ATOM    475  CG AGLU    63      -3.596  20.176  22.837  0.50 11.63      1TOP 567
+ATOM    476  CG BGLU    63      -4.418  19.363  20.223  0.50 29.41      1TOP 568
+ATOM    477  CD AGLU    63      -4.838  20.962  23.239  0.50  9.17      1TOP 569
+ATOM    478  CD BGLU    63      -5.191  20.368  19.307  0.50 79.91      1TOP 570
+ATOM    479  OE1AGLU    63      -5.806  21.036  22.488  0.50  7.88      1TOP 571
+ATOM    480  OE1BGLU    63      -6.154  20.997  19.797  0.50 20.94      1TOP 572
+ATOM    481  OE2AGLU    63      -4.809  21.511  24.331  0.50 12.35      1TOP 573
+ATOM    482  OE2BGLU    63      -4.867  20.528  18.106  0.50  6.93      1TOP 574
+ATOM    483  N   GLU    64      -1.279  20.160  18.749  1.00 20.61      1TOP 575
+ATOM    484  CA  GLU    64      -0.806  19.716  17.436  1.00 14.36      1TOP 576
+ATOM    485  C   GLU    64       0.601  19.135  17.467  1.00 24.43      1TOP 577
+ATOM    486  O   GLU    64       0.855  18.097  16.842  1.00 19.65      1TOP 578
+ATOM    487  CB  GLU    64      -0.836  20.857  16.471  1.00 15.35      1TOP 579
+ATOM    488  CG  GLU    64      -0.436  20.476  15.044  1.00 16.08      1TOP 580
+ATOM    489  CD  GLU    64      -0.716  21.532  13.994  1.00 18.26      1TOP 581
+ATOM    490  OE1 GLU    64      -1.470  22.462  14.263  1.00 14.22      1TOP 582
+ATOM    491  OE2 GLU    64      -0.163  21.427  12.903  1.00 18.15      1TOP 583
+ATOM    492  N   VAL    65       1.535  19.806  18.146  1.00 16.60      1TOP 584
+ATOM    493  CA  VAL    65       2.946  19.388  18.171  1.00 16.38      1TOP 585
+ATOM    494  C   VAL    65       3.336  18.366  19.263  1.00 42.86      1TOP 586
+ATOM    495  O   VAL    65       4.385  17.711  19.167  1.00 24.28      1TOP 587
+ATOM    496  CB  VAL    65       3.853  20.622  18.271  1.00 14.51      1TOP 588
+ATOM    497  CG1 VAL    65       3.660  21.527  17.068  1.00 17.15      1TOP 589
+ATOM    498  CG2 VAL    65       3.655  21.374  19.574  1.00 18.67      1TOP 590
+ATOM    499  N   ASP    66       2.534  18.168  20.312  1.00 25.63      1TOP 591
+ATOM    500  CA  ASP    66       2.925  17.344  21.433  1.00 19.88      1TOP 592
+ATOM    501  C   ASP    66       2.122  16.069  21.570  1.00 18.84      1TOP 593
+ATOM    502  O   ASP    66       1.837  15.582  22.667  1.00 24.45      1TOP 594
+ATOM    503  CB  ASP    66       2.875  18.147  22.718  1.00 26.13      1TOP 595
+ATOM    504  CG  ASP    66       3.642  17.438  23.826  1.00 41.73      1TOP 596
+ATOM    505  OD1 ASP    66       4.579  16.688  23.552  1.00 32.49      1TOP 597
+ATOM    506  OD2 ASP    66       3.278  17.614  24.977  1.00 40.19      1TOP 598
+ATOM    507  N   GLU    67       1.816  15.444  20.452  1.00 20.78      1TOP 599
+ATOM    508  CA  GLU    67       1.112  14.193  20.506  1.00 37.31      1TOP 600
+ATOM    509  C   GLU    67       1.929  13.094  21.176  1.00 29.77      1TOP 601
+ATOM    510  O   GLU    67       1.328  12.284  21.882  1.00 36.58      1TOP 602
+ATOM    511  CB  GLU    67       0.483  13.839  19.146  1.00 47.34      1TOP 603
+ATOM    512  CG  GLU    67      -0.715  14.797  18.890  1.00 71.31      1TOP 604
+ATOM    513  CD  GLU    67      -1.587  14.636  17.629  1.00103.55      1TOP 605
+ATOM    514  OE1 GLU    67      -1.694  13.520  17.098  1.00 93.68      1TOP 606
+ATOM    515  OE2 GLU    67      -2.175  15.642  17.195  1.00 66.34      1TOP 607
+ATOM    516  N   ASP    68       3.263  13.044  21.129  1.00 19.77      1TOP 608
+ATOM    517  CA  ASP    68       3.968  12.002  21.874  1.00 28.58      1TOP 609
+ATOM    518  C   ASP    68       4.131  12.240  23.373  1.00 24.38      1TOP 610
+ATOM    519  O   ASP    68       4.718  11.424  24.091  1.00 22.58      1TOP 611
+ATOM    520  CB  ASP    68       5.294  11.647  21.242  1.00 24.66      1TOP 612
+ATOM    521  CG  ASP    68       6.394  12.704  21.238  1.00 40.37      1TOP 613
+ATOM    522  OD1 ASP    68       6.344  13.659  22.006  1.00 35.24      1TOP 614
+ATOM    523  OD2 ASP    68       7.319  12.575  20.433  1.00 57.36      1TOP 615
+ATOM    524  N   GLY    69       3.684  13.397  23.851  1.00 16.18      1TOP 616
+ATOM    525  CA  GLY    69       3.816  13.647  25.262  1.00 16.68      1TOP 617
+ATOM    526  C   GLY    69       5.254  13.983  25.671  1.00 26.83      1TOP 618
+ATOM    527  O   GLY    69       5.581  13.902  26.853  1.00 22.84      1TOP 619
+ATOM    528  N   SER    70       6.170  14.447  24.812  1.00 22.35      1TOP 620
+ATOM    529  CA  SER    70       7.514  14.792  25.260  1.00 20.88      1TOP 621
+ATOM    530  C   SER    70       7.548  16.180  25.903  1.00 21.34      1TOP 622
+ATOM    531  O   SER    70       8.559  16.583  26.481  1.00 24.80      1TOP 623
+ATOM    532  CB  SER    70       8.481  14.732  24.097  1.00 26.11      1TOP 624
+ATOM    533  OG  SER    70       8.153  15.713  23.104  1.00 26.22      1TOP 625
+ATOM    534  N   GLY    71       6.460  16.958  25.751  1.00 18.86      1TOP 626
+ATOM    535  CA  GLY    71       6.326  18.307  26.304  1.00 18.68      1TOP 627
+ATOM    536  C   GLY    71       7.208  19.379  25.681  1.00 16.08      1TOP 628
+ATOM    537  O   GLY    71       7.442  20.415  26.308  1.00 17.71      1TOP 629
+ATOM    538  N   THR    72       7.706  19.131  24.475  1.00 17.62      1TOP 630
+ATOM    539  CA  THR    72       8.585  20.057  23.777  1.00 16.10      1TOP 631
+ATOM    540  C   THR    72       8.059  20.395  22.380  1.00 15.68      1TOP 632
+ATOM    541  O   THR    72       7.193  19.695  21.844  1.00 17.00      1TOP 633
+ATOM    542  CB  THR    72       9.985  19.430  23.670  1.00 13.98      1TOP 634
+ATOM    543  OG1 THR    72       9.909  18.137  23.039  1.00 19.21      1TOP 635
+ATOM    544  CG2 THR    72      10.700  19.390  25.008  1.00 17.92      1TOP 636
+ATOM    545  N   ILE    73       8.587  21.458  21.800  1.00 18.25      1TOP 637
+ATOM    546  CA  ILE    73       8.385  21.783  20.393  1.00 20.33      1TOP 638
+ATOM    547  C   ILE    73       9.767  22.026  19.761  1.00 18.98      1TOP 639
+ATOM    548  O   ILE    73      10.590  22.688  20.415  1.00 17.62      1TOP 640
+ATOM    549  CB  ILE    73       7.445  23.015  20.238  1.00 15.72      1TOP 641
+ATOM    550  CG1 ILE    73       7.201  23.348  18.750  1.00 11.87      1TOP 642
+ATOM    551  CG2 ILE    73       7.939  24.200  21.061  1.00 11.91      1TOP 643
+ATOM    552  CD1 ILE    73       6.076  24.360  18.420  1.00 13.88      1TOP 644
+ATOM    553  N   ASP    74      10.088  21.475  18.579  1.00 11.01      1TOP 645
+ATOM    554  CA  ASP    74      11.371  21.739  17.974  1.00 14.51      1TOP 646
+ATOM    555  C   ASP    74      11.353  23.025  17.150  1.00 10.41      1TOP 647
+ATOM    556  O   ASP    74      10.284  23.565  16.830  1.00 13.53      1TOP 648
+ATOM    557  CB  ASP    74      11.911  20.568  17.145  1.00 15.55      1TOP 649
+ATOM    558  CG  ASP    74      11.058  20.203  15.949  1.00 24.72      1TOP 650
+ATOM    559  OD1 ASP    74      10.874  21.003  15.034  1.00 19.91      1TOP 651
+ATOM    560  OD2 ASP    74      10.552  19.092  15.946  1.00 41.37      1TOP 652
+ATOM    561  N   PHE    75      12.528  23.468  16.709  1.00 15.03      1TOP 653
+ATOM    562  CA  PHE    75      12.657  24.723  15.997  1.00 11.87      1TOP 654
+ATOM    563  C   PHE    75      11.936  24.715  14.674  1.00 10.15      1TOP 655
+ATOM    564  O   PHE    75      11.322  25.717  14.323  1.00 12.40      1TOP 656
+ATOM    565  CB  PHE    75      14.127  25.058  15.783  1.00 12.77      1TOP 657
+ATOM    566  CG  PHE    75      14.333  26.442  15.189  1.00 14.67      1TOP 658
+ATOM    567  CD1 PHE    75      13.894  27.557  15.873  1.00 13.83      1TOP 659
+ATOM    568  CD2 PHE    75      14.915  26.567  13.946  1.00 12.96      1TOP 660
+ATOM    569  CE1 PHE    75      14.041  28.795  15.299  1.00 15.49      1TOP 661
+ATOM    570  CE2 PHE    75      15.061  27.812  13.393  1.00 10.49      1TOP 662
+ATOM    571  CZ  PHE    75      14.626  28.921  14.075  1.00 11.35      1TOP 663
+ATOM    572  N   GLU    76      11.986  23.623  13.921  1.00 11.88      1TOP 664
+ATOM    573  CA  GLU    76      11.300  23.576  12.640  1.00 16.21      1TOP 665
+ATOM    574  C   GLU    76       9.788  23.705  12.787  1.00 14.76      1TOP 666
+ATOM    575  O   GLU    76       9.134  24.384  11.985  1.00 14.30      1TOP 667
+ATOM    576  CB  GLU    76      11.639  22.292  11.877  1.00 18.34      1TOP 668
+ATOM    577  CG  GLU    76      13.131  22.093  11.608  1.00 16.47      1TOP 669
+ATOM    578  CD  GLU    76      13.804  23.229  10.871  1.00 29.51      1TOP 670
+ATOM    579  OE1 GLU    76      13.299  23.658   9.833  1.00 24.04      1TOP 671
+ATOM    580  OE2 GLU    76      14.836  23.692  11.353  1.00 32.43      1TOP 672
+ATOM    581  N   GLU    77       9.204  23.098  13.827  1.00 13.59      1TOP 673
+ATOM    582  CA  GLU    77       7.777  23.208  14.090  1.00 14.09      1TOP 674
+ATOM    583  C   GLU    77       7.481  24.600  14.592  1.00 17.03      1TOP 675
+ATOM    584  O   GLU    77       6.440  25.162  14.233  1.00 14.02      1TOP 676
+ATOM    585  CB  GLU    77       7.246  22.229  15.136  1.00 16.01      1TOP 677
+ATOM    586  CG  GLU    77       7.552  20.769  14.868  1.00 30.52      1TOP 678
+ATOM    587  CD  GLU    77       7.323  19.856  16.064  1.00 46.55      1TOP 679
+ATOM    588  OE1 GLU    77       7.977  20.023  17.091  1.00 31.74      1TOP 680
+ATOM    589  OE2 GLU    77       6.497  18.956  15.964  1.00 57.18      1TOP 681
+ATOM    590  N   PHE    78       8.379  25.167  15.406  1.00 13.49      1TOP 682
+ATOM    591  CA  PHE    78       8.258  26.549  15.846  1.00 12.47      1TOP 683
+ATOM    592  C   PHE    78       8.158  27.502  14.643  1.00 15.94      1TOP 684
+ATOM    593  O   PHE    78       7.291  28.378  14.606  1.00 12.99      1TOP 685
+ATOM    594  CB  PHE    78       9.451  26.865  16.709  1.00  8.00      1TOP 686
+ATOM    595  CG  PHE    78       9.508  28.330  17.071  1.00 14.79      1TOP 687
+ATOM    596  CD1 PHE    78       8.666  28.823  18.052  1.00 18.21      1TOP 688
+ATOM    597  CD2 PHE    78      10.413  29.165  16.432  1.00 19.32      1TOP 689
+ATOM    598  CE1 PHE    78       8.748  30.162  18.420  1.00 16.20      1TOP 690
+ATOM    599  CE2 PHE    78      10.479  30.499  16.807  1.00 20.26      1TOP 691
+ATOM    600  CZ  PHE    78       9.654  30.994  17.800  1.00 14.37      1TOP 692
+ATOM    601  N   LEU    79       8.977  27.366  13.615  1.00  9.63      1TOP 693
+ATOM    602  CA  LEU    79       8.876  28.219  12.438  1.00 11.69      1TOP 694
+ATOM    603  C   LEU    79       7.535  28.082  11.728  1.00 17.59      1TOP 695
+ATOM    604  O   LEU    79       6.958  29.093  11.312  1.00 12.65      1TOP 696
+ATOM    605  CB  LEU    79      10.022  27.969  11.429  1.00 14.25      1TOP 697
+ATOM    606  CG  LEU    79      11.468  28.352  11.761  1.00 19.07      1TOP 698
+ATOM    607  CD1 LEU    79      12.387  27.922  10.612  1.00 12.91      1TOP 699
+ATOM    608  CD2 LEU    79      11.607  29.846  12.108  1.00  9.40      1TOP 700
+ATOM    609  N   VAL    80       6.996  26.862  11.567  1.00 13.49      1TOP 701
+ATOM    610  CA  VAL    80       5.663  26.669  10.996  1.00  9.99      1TOP 702
+ATOM    611  C   VAL    80       4.632  27.492  11.773  1.00 16.08      1TOP 703
+ATOM    612  O   VAL    80       3.843  28.211  11.134  1.00 10.88      1TOP 704
+ATOM    613  CB  VAL    80       5.278  25.155  10.921  1.00 10.55      1TOP 705
+ATOM    614  CG1 VAL    80       3.861  24.893  10.437  1.00 11.43      1TOP 706
+ATOM    615  CG2 VAL    80       6.195  24.450   9.949  1.00  7.27      1TOP 707
+ATOM    616  N   MET    81       4.657  27.434  13.122  1.00 11.82      1TOP 708
+ATOM    617  CA  MET    81       3.698  28.139  13.980  1.00 16.14      1TOP 709
+ATOM    618  C   MET    81       3.828  29.665  13.943  1.00 15.61      1TOP 710
+ATOM    619  O   MET    81       2.830  30.396  13.892  1.00 12.26      1TOP 711
+ATOM    620  CB  MET    81       3.778  27.608  15.424  1.00  8.91      1TOP 712
+ATOM    621  CG  MET    81       3.510  26.073  15.518  1.00 10.66      1TOP 713
+ATOM    622  SD  MET    81       2.003  25.544  14.633  1.00 16.84      1TOP 714
+ATOM    623  CE  MET    81       2.269  23.796  14.454  1.00 14.35      1TOP 715
+ATOM    624  N   MET    82       5.072  30.167  13.921  1.00 13.00      1TOP 716
+ATOM    625  CA  MET    82       5.330  31.579  13.743  1.00 11.27      1TOP 717
+ATOM    626  C   MET    82       4.774  32.068  12.412  1.00 10.83      1TOP 718
+ATOM    627  O   MET    82       4.181  33.131  12.381  1.00 12.27      1TOP 719
+ATOM    628  CB  MET    82       6.831  31.800  13.763  1.00  9.55      1TOP 720
+ATOM    629  CG  MET    82       7.433  31.782  15.167  1.00 19.53      1TOP 721
+ATOM    630  SD  MET    82       6.937  33.157  16.233  1.00 16.20      1TOP 722
+ATOM    631  CE  MET    82       7.844  34.454  15.520  1.00 12.12      1TOP 723
+ATOM    632  N   VAL    83       4.965  31.384  11.272  1.00 12.47      1TOP 724
+ATOM    633  CA  VAL    83       4.475  31.822   9.969  1.00  9.33      1TOP 725
+ATOM    634  C   VAL    83       2.966  31.798   9.950  1.00 11.71      1TOP 726
+ATOM    635  O   VAL    83       2.339  32.735   9.428  1.00 15.08      1TOP 727
+ATOM    636  CB  VAL    83       5.123  30.941   8.862  1.00 10.62      1TOP 728
+ATOM    637  CG1 VAL    83       4.544  31.237   7.476  1.00 13.44      1TOP 729
+ATOM    638  CG2 VAL    83       6.647  31.247   8.799  1.00 12.20      1TOP 730
+ATOM    639  N   ARG    84       2.326  30.776  10.526  1.00 11.08      1TOP 731
+ATOM    640  CA  ARG    84       0.870  30.816  10.654  1.00 11.51      1TOP 732
+ATOM    641  C   ARG    84       0.423  32.059  11.389  1.00 13.28      1TOP 733
+ATOM    642  O   ARG    84      -0.466  32.783  10.927  1.00 16.29      1TOP 734
+ATOM    643  CB  ARG    84       0.323  29.632  11.426  1.00  8.44      1TOP 735
+ATOM    644  CG  ARG    84       0.400  28.358  10.662  1.00 15.73      1TOP 736
+ATOM    645  CD  ARG    84      -0.339  27.311  11.495  1.00 25.71      1TOP 737
+ATOM    646  NE  ARG    84      -0.122  26.002  10.919  1.00 17.59      1TOP 738
+ATOM    647  CZ  ARG    84      -0.353  24.879  11.595  1.00 20.03      1TOP 739
+ATOM    648  NH1 ARG    84      -0.878  24.903  12.817  1.00 17.26      1TOP 740
+ATOM    649  NH2 ARG    84      -0.022  23.716  11.021  1.00 15.83      1TOP 741
+ATOM    650  N   GLN    85       1.039  32.364  12.521  1.00 12.06      1TOP 742
+ATOM    651  CA  GLN    85       0.643  33.525  13.303  1.00 10.27      1TOP 743
+ATOM    652  C   GLN    85       0.922  34.836  12.571  1.00 16.20      1TOP 744
+ATOM    653  O   GLN    85       0.127  35.778  12.669  1.00 15.18      1TOP 745
+ATOM    654  CB  GLN    85       1.363  33.541  14.649  1.00 15.00      1TOP 746
+ATOM    655  CG  GLN    85       0.647  34.313  15.732  1.00 22.03      1TOP 747
+ATOM    656  CD  GLN    85      -0.719  33.721  16.047  1.00 17.39      1TOP 748
+ATOM    657  OE1 GLN    85      -0.844  32.527  16.314  1.00 17.41      1TOP 749
+ATOM    658  NE2 GLN    85      -1.791  34.496  16.021  1.00 23.44      1TOP 750
+ATOM    659  N   MET    86       2.040  34.963  11.869  1.00 15.39      1TOP 751
+ATOM    660  CA  MET    86       2.375  36.177  11.138  1.00 13.53      1TOP 752
+ATOM    661  C   MET    86       1.332  36.442  10.097  1.00 12.65      1TOP 753
+ATOM    662  O   MET    86       0.813  37.547   9.964  1.00 17.47      1TOP 754
+ATOM    663  CB  MET    86       3.696  36.019  10.434  1.00 16.29      1TOP 755
+ATOM    664  CG  MET    86       4.865  36.216  11.391  1.00 21.90      1TOP 756
+ATOM    665  SD  MET    86       6.430  35.873  10.553  1.00 28.05      1TOP 757
+ATOM    666  CE  MET    86       7.090  34.919  11.851  1.00 45.59      1TOP 758
+ATOM    667  N   LYS    87       0.933  35.390   9.406  1.00 13.27      1TOP 759
+ATOM    668  CA  LYS    87      -0.080  35.579   8.406  1.00 14.63      1TOP 760
+ATOM    669  C   LYS    87      -1.412  35.983   9.012  1.00 23.27      1TOP 761
+ATOM    670  O   LYS    87      -2.134  36.831   8.470  1.00 18.32      1TOP 762
+ATOM    671  CB  LYS    87      -0.259  34.340   7.571  1.00 14.64      1TOP 763
+ATOM    672  CG  LYS    87       0.930  34.030   6.688  1.00 15.63      1TOP 764
+ATOM    673  CD  LYS    87       0.685  32.651   6.156  1.00 17.43      1TOP 765
+ATOM    674  CE  LYS    87       1.814  32.300   5.228  1.00 25.97      1TOP 766
+ATOM    675  NZ  LYS    87       1.660  30.962   4.675  1.00 37.69      1TOP 767
+ATOM    676  N   GLU    88      -1.788  35.393  10.137  1.00 13.56      1TOP 768
+ATOM    677  CA  GLU    88      -3.066  35.734  10.734  1.00 15.70      1TOP 769
+ATOM    678  C   GLU    88      -3.023  37.170  11.244  1.00 16.51      1TOP 770
+ATOM    679  O   GLU    88      -3.980  37.906  10.974  1.00 25.52      1TOP 771
+ATOM    680  CB  GLU    88      -3.350  34.758  11.861  1.00 17.32      1TOP 772
+ATOM    681  CG  GLU    88      -4.646  34.985  12.619  1.00 30.12      1TOP 773
+ATOM    682  CD  GLU    88      -4.780  34.143  13.888  1.00 50.36      1TOP 774
+ATOM    683  OE1 GLU    88      -4.551  32.922  13.844  1.00 33.50      1TOP 775
+ATOM    684  OE2 GLU    88      -5.119  34.734  14.919  1.00 27.00      1TOP 776
+ATOM    685  N   ASP    89      -1.954  37.617  11.925  1.00 17.53      1TOP 777
+ATOM    686  CA  ASP    89      -1.898  38.942  12.532  1.00 18.76      1TOP 778
+ATOM    687  C   ASP    89      -1.865  39.979  11.406  1.00 31.67      1TOP 779
+ATOM    688  O   ASP    89      -2.655  40.943  11.435  1.00 26.52      1TOP 780
+ATOM    689  CB  ASP    89      -0.730  39.133  13.592  1.00 28.19      1TOP 781
+ATOM    690  CG  ASP    89      -0.684  38.193  14.846  1.00 50.67      1TOP 782
+ATOM    691  OD1 ASP    89      -1.665  37.505  15.160  1.00 27.82      1TOP 783
+ATOM    692  OD2 ASP    89       0.350  38.122  15.535  1.00 33.49      1TOP 784
+ATOM    693  N   ALA    90      -1.035  39.798  10.374  1.00 18.68      1TOP 785
+ATOM    694  CA  ALA    90      -1.021  40.711   9.242  1.00 18.55      1TOP 786
+ATOM    695  C   ALA    90      -2.393  40.877   8.606  1.00 16.15      1TOP 787
+ATOM    696  O   ALA    90      -2.842  41.997   8.401  1.00 35.16      1TOP 788
+ATOM    697  CB  ALA    90      -0.004  40.284   8.184  1.00 17.73      1TOP 789
+ATOM    698  N   LYS    91      -3.157  39.816   8.378  1.00 19.55      1TOP 790
+ATOM    699  CA  LYS    91      -4.532  39.872   7.880  1.00 22.92      1TOP 791
+ATOM    700  C   LYS    91      -5.435  40.741   8.743  1.00 34.87      1TOP 792
+ATOM    701  O   LYS    91      -6.234  41.562   8.283  1.00 27.99      1TOP 793
+ATOM    702  CB  LYS    91      -5.026  38.419   7.855  1.00 32.84      1TOP 794
+ATOM    703  CG  LYS    91      -6.503  38.024   7.849  1.00 55.43      1TOP 795
+ATOM    704  CD  LYS    91      -7.184  38.221   6.494  1.00 96.66      1TOP 796
+ATOM    705  CE  LYS    91      -8.567  37.557   6.506  1.00 90.39      1TOP 797
+ATOM    706  NZ  LYS    91      -9.255  37.699   5.230  1.00 97.26      1TOP 798
+ATOM    707  N   GLY    92      -5.280  40.598  10.050  1.00 29.16      1TOP 799
+ATOM    708  CA  GLY    92      -6.085  41.377  10.970  1.00 27.92      1TOP 800
+ATOM    709  C   GLY    92      -5.691  42.840  10.920  1.00 24.80      1TOP 801
+ATOM    710  O   GLY    92      -6.549  43.725  11.035  1.00 27.71      1TOP 802
+ATOM    711  N   LYS    93      -4.405  43.123  10.738  1.00 17.27      1TOP 803
+ATOM    712  CA  LYS    93      -3.950  44.495  10.666  1.00 25.84      1TOP 804
+ATOM    713  C   LYS    93      -4.510  45.114   9.405  1.00 34.99      1TOP 805
+ATOM    714  O   LYS    93      -5.011  46.240   9.479  1.00 31.12      1TOP 806
+ATOM    715  CB  LYS    93      -2.458  44.524  10.591  1.00 22.08      1TOP 807
+ATOM    716  CG  LYS    93      -1.762  45.496  11.522  1.00 51.61      1TOP 808
+ATOM    717  CD  LYS    93      -1.392  46.826  10.870  1.00 46.58      1TOP 809
+ATOM    718  CE  LYS    93      -0.019  47.304  11.380  1.00 62.29      1TOP 810
+ATOM    719  NZ  LYS    93      -0.133  48.487  12.220  1.00 82.06      1TOP 811
+ATOM    720  N   SER    94      -4.498  44.406   8.268  1.00 23.99      1TOP 812
+ATOM    721  CA  SER    94      -4.987  44.971   7.017  1.00 33.97      1TOP 813
+ATOM    722  C   SER    94      -6.474  45.269   7.061  1.00 19.33      1TOP 814
+ATOM    723  O   SER    94      -6.862  46.359   6.639  1.00 22.74      1TOP 815
+ATOM    724  CB  SER    94      -4.646  44.096   5.803  1.00 16.91      1TOP 816
+ATOM    725  OG  SER    94      -5.271  42.855   5.929  1.00 53.18      1TOP 817
+ATOM    726  N   GLU    95      -7.315  44.378   7.588  1.00 26.51      1TOP 818
+ATOM    727  CA  GLU    95      -8.737  44.670   7.789  1.00 39.02      1TOP 819
+ATOM    728  C   GLU    95      -9.062  45.892   8.669  1.00 38.41      1TOP 820
+ATOM    729  O   GLU    95      -9.925  46.744   8.380  1.00 26.81      1TOP 821
+ATOM    730  CB  GLU    95      -9.433  43.466   8.364  1.00 29.96      1TOP 822
+ATOM    731  CG  GLU    95      -9.385  42.264   7.449  1.00 58.90      1TOP 823
+ATOM    732  CD  GLU    95      -9.946  41.000   8.087  1.00 76.94      1TOP 824
+ATOM    733  OE1 GLU    95      -9.889  40.815   9.311  1.00 74.81      1TOP 825
+ATOM    734  OE2 GLU    95     -10.445  40.186   7.318  1.00 81.55      1TOP 826
+ATOM    735  N   GLU    96      -8.316  46.021   9.756  1.00 23.14      1TOP 827
+ATOM    736  CA  GLU    96      -8.432  47.165  10.649  1.00 35.71      1TOP 828
+ATOM    737  C   GLU    96      -8.090  48.475   9.919  1.00 17.82      1TOP 829
+ATOM    738  O   GLU    96      -8.840  49.455   9.983  1.00 20.36      1TOP 830
+ATOM    739  CB  GLU    96      -7.445  46.912  11.745  1.00 27.59      1TOP 831
+ATOM    740  CG  GLU    96      -7.825  47.527  13.053  1.00 57.87      1TOP 832
+ATOM    741  CD  GLU    96      -6.603  47.677  13.948  1.00 92.70      1TOP 833
+ATOM    742  OE1 GLU    96      -6.051  46.666  14.409  1.00 70.97      1TOP 834
+ATOM    743  OE2 GLU    96      -6.205  48.826  14.161  1.00 98.93      1TOP 835
+ATOM    744  N   GLU    97      -6.971  48.508   9.183  1.00 18.87      1TOP 836
+ATOM    745  CA  GLU    97      -6.571  49.653   8.396  1.00 18.50      1TOP 837
+ATOM    746  C   GLU    97      -7.553  49.979   7.303  1.00 26.82      1TOP 838
+ATOM    747  O   GLU    97      -7.856  51.159   7.129  1.00 29.59      1TOP 839
+ATOM    748  CB  GLU    97      -5.191  49.484   7.806  1.00 20.91      1TOP 840
+ATOM    749  CG  GLU    97      -4.087  49.501   8.874  1.00 32.14      1TOP 841
+ATOM    750  CD  GLU    97      -4.043  50.781   9.688  1.00 18.75      1TOP 842
+ATOM    751  OE1 GLU    97      -3.572  51.795   9.197  1.00 69.47      1TOP 843
+ATOM    752  OE2 GLU    97      -4.490  50.780  10.826  1.00 69.52      1TOP 844
+ATOM    753  N   LEU    98      -8.125  49.002   6.600  1.00 18.23      1TOP 845
+ATOM    754  CA  LEU    98      -9.123  49.280   5.570  1.00 18.62      1TOP 846
+ATOM    755  C   LEU    98     -10.404  49.898   6.179  1.00 21.59      1TOP 847
+ATOM    756  O   LEU    98     -10.932  50.869   5.618  1.00 20.06      1TOP 848
+ATOM    757  CB  LEU    98      -9.408  48.017   4.739  1.00 13.53      1TOP 849
+ATOM    758  CG  LEU    98      -8.312  47.608   3.766  1.00 15.21      1TOP 850
+ATOM    759  CD1 LEU    98      -8.456  46.183   3.285  1.00 17.85      1TOP 851
+ATOM    760  CD2 LEU    98      -8.310  48.549   2.593  1.00 21.17      1TOP 852
+ATOM    761  N   ALA    99     -10.888  49.424   7.339  1.00 14.97      1TOP 853
+ATOM    762  CA  ALA    99     -12.017  50.032   8.042  1.00 23.16      1TOP 854
+ATOM    763  C   ALA    99     -11.715  51.485   8.433  1.00 19.86      1TOP 855
+ATOM    764  O   ALA    99     -12.581  52.349   8.250  1.00 20.95      1TOP 856
+ATOM    765  CB  ALA    99     -12.416  49.224   9.296  1.00 10.68      1TOP 857
+ATOM    766  N   ASN   100     -10.490  51.828   8.866  1.00 22.10      1TOP 858
+ATOM    767  CA  ASN   100     -10.163  53.226   9.148  1.00 26.14      1TOP 859
+ATOM    768  C   ASN   100     -10.115  54.055   7.874  1.00 17.76      1TOP 860
+ATOM    769  O   ASN   100     -10.663  55.149   7.852  1.00 26.52      1TOP 861
+ATOM    770  CB  ASN   100      -8.848  53.402   9.906  1.00 27.02      1TOP 862
+ATOM    771  CG  ASN   100      -8.824  52.711  11.261  1.00 18.99      1TOP 863
+ATOM    772  OD1 ASN   100      -7.731  52.411  11.725  1.00 36.13      1TOP 864
+ATOM    773  ND2 ASN   100      -9.868  52.457  11.868  1.00 34.45      1TOP 865
+ATOM    774  N   CYS   101      -9.522  53.568   6.799  1.00 16.64      1TOP 866
+ATOM    775  CA  CYS   101      -9.525  54.210   5.496  1.00 19.56      1TOP 867
+ATOM    776  C   CYS   101     -10.930  54.520   5.006  1.00 18.48      1TOP 868
+ATOM    777  O   CYS   101     -11.160  55.605   4.467  1.00 18.42      1TOP 869
+ATOM    778  CB ACYS   101      -8.738  53.299   4.528  0.50 13.89      1TOP 870
+ATOM    779  CB BCYS   101      -8.892  53.362   4.424  0.50 24.30      1TOP 871
+ATOM    780  SG ACYS   101      -8.575  53.684   2.755  0.50 16.22      1TOP 872
+ATOM    781  SG BCYS   101      -7.107  53.288   4.531  0.50 41.93      1TOP 873
+ATOM    782  N   PHE   102     -11.902  53.624   5.203  1.00 19.69      1TOP 874
+ATOM    783  CA  PHE   102     -13.262  53.867   4.750  1.00 16.89      1TOP 875
+ATOM    784  C   PHE   102     -13.865  55.002   5.569  1.00 24.79      1TOP 876
+ATOM    785  O   PHE   102     -14.523  55.901   5.025  1.00 17.34      1TOP 877
+ATOM    786  CB  PHE   102     -14.102  52.612   4.911  1.00  9.99      1TOP 878
+ATOM    787  CG  PHE   102     -15.481  52.757   4.334  1.00 10.40      1TOP 879
+ATOM    788  CD1 PHE   102     -15.653  52.560   2.991  1.00 13.44      1TOP 880
+ATOM    789  CD2 PHE   102     -16.550  53.109   5.149  1.00 19.19      1TOP 881
+ATOM    790  CE1 PHE   102     -16.909  52.754   2.454  1.00 25.40      1TOP 882
+ATOM    791  CE2 PHE   102     -17.809  53.289   4.617  1.00 18.90      1TOP 883
+ATOM    792  CZ  PHE   102     -17.982  53.115   3.259  1.00 18.23      1TOP 884
+ATOM    793  N   ARG   103     -13.641  55.001   6.887  1.00 22.99      1TOP 885
+ATOM    794  CA  ARG   103     -14.231  56.039   7.738  1.00 52.05      1TOP 886
+ATOM    795  C   ARG   103     -13.677  57.425   7.400  1.00 22.52      1TOP 887
+ATOM    796  O   ARG   103     -14.409  58.406   7.476  1.00 24.92      1TOP 888
+ATOM    797  CB  ARG   103     -14.254  55.668   9.259  1.00 24.97      1TOP 889
+ATOM    798  CG  ARG   103     -15.078  54.362   9.449  1.00 27.36      1TOP 890
+ATOM    799  CD  ARG   103     -15.692  54.141  10.827  1.00 28.04      1TOP 891
+ATOM    800  NE  ARG   103     -14.687  54.195  11.874  1.00 30.72      1TOP 892
+ATOM    801  CZ  ARG   103     -13.976  53.133  12.265  1.00 45.31      1TOP 893
+ATOM    802  NH1 ARG   103     -14.118  51.940  11.690  1.00 33.92      1TOP 894
+ATOM    803  NH2 ARG   103     -13.108  53.280  13.274  1.00 50.76      1TOP 895
+ATOM    804  N   ILE   104     -12.426  57.522   6.950  1.00 26.59      1TOP 896
+ATOM    805  CA  ILE   104     -11.873  58.755   6.422  1.00 26.17      1TOP 897
+ATOM    806  C   ILE   104     -12.451  59.127   5.073  1.00 25.91      1TOP 898
+ATOM    807  O   ILE   104     -12.869  60.277   4.908  1.00 26.68      1TOP 899
+ATOM    808  CB  ILE   104     -10.323  58.713   6.403  1.00 28.48      1TOP 900
+ATOM    809  CG1 ILE   104      -9.794  58.775   7.843  1.00 39.61      1TOP 901
+ATOM    810  CG2 ILE   104      -9.688  59.807   5.543  1.00 31.59      1TOP 902
+ATOM    811  CD1 ILE   104      -8.264  58.552   7.931  1.00 60.34      1TOP 903
+ATOM    812  N   PHE   105     -12.439  58.240   4.079  1.00 16.52      1TOP 904
+ATOM    813  CA  PHE   105     -13.053  58.495   2.788  1.00 17.27      1TOP 905
+ATOM    814  C   PHE   105     -14.516  58.943   2.906  1.00 24.56      1TOP 906
+ATOM    815  O   PHE   105     -15.017  59.800   2.162  1.00 17.37      1TOP 907
+ATOM    816  CB  PHE   105     -13.048  57.207   2.001  1.00 29.07      1TOP 908
+ATOM    817  CG  PHE   105     -11.922  56.902   1.016  1.00 57.16      1TOP 909
+ATOM    818  CD1 PHE   105     -10.750  56.309   1.434  1.00 31.02      1TOP 910
+ATOM    819  CD2 PHE   105     -12.142  57.105  -0.345  1.00 67.39      1TOP 911
+ATOM    820  CE1 PHE   105      -9.836  55.872   0.485  1.00 48.47      1TOP 912
+ATOM    821  CE2 PHE   105     -11.221  56.683  -1.283  1.00 43.21      1TOP 913
+ATOM    822  CZ  PHE   105     -10.066  56.044  -0.866  1.00 38.83      1TOP 914
+ATOM    823  N   ASP   106     -15.298  58.368   3.816  1.00 11.07      1TOP 915
+ATOM    824  CA  ASP   106     -16.701  58.713   3.927  1.00 10.47      1TOP 916
+ATOM    825  C   ASP   106     -16.851  59.939   4.822  1.00 14.99      1TOP 917
+ATOM    826  O   ASP   106     -17.262  59.832   5.976  1.00 19.31      1TOP 918
+ATOM    827  CB  ASP   106     -17.448  57.525   4.482  1.00 13.62      1TOP 919
+ATOM    828  CG  ASP   106     -18.927  57.723   4.727  1.00 23.99      1TOP 920
+ATOM    829  OD1 ASP   106     -19.548  58.640   4.181  1.00 15.49      1TOP 921
+ATOM    830  OD2 ASP   106     -19.456  56.912   5.476  1.00 14.98      1TOP 922
+ATOM    831  N   LYS   107     -16.636  61.106   4.216  1.00 15.77      1TOP 923
+ATOM    832  CA  LYS   107     -16.551  62.388   4.919  1.00 19.48      1TOP 924
+ATOM    833  C   LYS   107     -17.774  62.772   5.701  1.00 16.05      1TOP 925
+ATOM    834  O   LYS   107     -17.717  63.374   6.757  1.00 20.44      1TOP 926
+ATOM    835  CB  LYS   107     -16.292  63.501   3.916  1.00 25.35      1TOP 927
+ATOM    836  CG  LYS   107     -14.917  63.309   3.372  1.00 43.79      1TOP 928
+ATOM    837  CD  LYS   107     -14.520  64.368   2.374  1.00 59.54      1TOP 929
+ATOM    838  CE  LYS   107     -13.400  63.768   1.515  1.00 68.13      1TOP 930
+ATOM    839  NZ  LYS   107     -13.830  62.524   0.864  1.00 55.38      1TOP 931
+ATOM    840  N   ASN   108     -18.920  62.479   5.091  1.00 24.24      1TOP 932
+ATOM    841  CA  ASN   108     -20.192  62.710   5.747  1.00 23.93      1TOP 933
+ATOM    842  C   ASN   108     -20.737  61.634   6.681  1.00 26.10      1TOP 934
+ATOM    843  O   ASN   108     -21.868  61.732   7.163  1.00 20.05      1TOP 935
+ATOM    844  CB  ASN   108     -21.183  63.062   4.698  1.00 20.58      1TOP 936
+ATOM    845  CG  ASN   108     -21.638  61.908   3.804  1.00 18.98      1TOP 937
+ATOM    846  OD1 ASN   108     -21.036  60.807   3.611  1.00 23.23      1TOP 938
+ATOM    847  ND2 ASN   108     -22.761  62.225   3.170  1.00 27.60      1TOP 939
+ATOM    848  N   ALA   109     -19.952  60.559   6.894  1.00 20.53      1TOP 940
+ATOM    849  CA  ALA   109     -20.296  59.452   7.775  1.00 14.50      1TOP 941
+ATOM    850  C   ALA   109     -21.649  58.817   7.525  1.00 23.59      1TOP 942
+ATOM    851  O   ALA   109     -22.345  58.398   8.434  1.00 22.10      1TOP 943
+ATOM    852  CB  ALA   109     -20.175  59.893   9.245  1.00 18.79      1TOP 944
+ATOM    853  N   ASP   110     -22.060  58.689   6.255  1.00 18.67      1TOP 945
+ATOM    854  CA  ASP   110     -23.334  58.045   5.975  1.00 17.08      1TOP 946
+ATOM    855  C   ASP   110     -23.249  56.584   5.623  1.00 20.93      1TOP 947
+ATOM    856  O   ASP   110     -24.243  55.999   5.213  1.00 24.00      1TOP 948
+ATOM    857  CB  ASP   110     -24.078  58.786   4.882  1.00 18.81      1TOP 949
+ATOM    858  CG  ASP   110     -23.536  58.773   3.443  1.00 31.21      1TOP 950
+ATOM    859  OD1 ASP   110     -22.453  58.250   3.188  1.00 18.79      1TOP 951
+ATOM    860  OD2 ASP   110     -24.204  59.329   2.571  1.00 17.88      1TOP 952
+ATOM    861  N   GLY   111     -22.055  55.998   5.662  1.00 14.24      1TOP 953
+ATOM    862  CA  GLY   111     -21.875  54.604   5.296  1.00 13.24      1TOP 954
+ATOM    863  C   GLY   111     -21.634  54.355   3.810  1.00 18.40      1TOP 955
+ATOM    864  O   GLY   111     -21.587  53.210   3.351  1.00 17.48      1TOP 956
+ATOM    865  N   PHE   112     -21.488  55.407   3.006  1.00  9.52      1TOP 957
+ATOM    866  CA  PHE   112     -21.144  55.238   1.605  1.00 12.33      1TOP 958
+ATOM    867  C   PHE   112     -20.127  56.299   1.199  1.00 10.70      1TOP 959
+ATOM    868  O   PHE   112     -20.139  57.483   1.715  1.00 22.25      1TOP 960
+ATOM    869  CB  PHE   112     -22.394  55.456   0.718  1.00 21.56      1TOP 961
+ATOM    870  CG  PHE   112     -23.636  54.626   1.052  1.00 28.74      1TOP 962
+ATOM    871  CD1 PHE   112     -23.801  53.359   0.518  1.00 29.53      1TOP 963
+ATOM    872  CD2 PHE   112     -24.612  55.146   1.876  1.00 27.36      1TOP 964
+ATOM    873  CE1 PHE   112     -24.934  52.621   0.807  1.00 21.08      1TOP 965
+ATOM    874  CE2 PHE   112     -25.731  54.389   2.184  1.00 21.48      1TOP 966
+ATOM    875  CZ  PHE   112     -25.898  53.129   1.649  1.00 23.01      1TOP 967
+ATOM    876  N   ILE   113     -19.283  55.864   0.257  1.00  7.76      1TOP 968
+ATOM    877  CA  ILE   113     -18.450  56.772  -0.553  1.00 12.28      1TOP 969
+ATOM    878  C   ILE   113     -19.192  57.146  -1.838  1.00 13.74      1TOP 970
+ATOM    879  O   ILE   113     -19.524  56.280  -2.642  1.00 15.81      1TOP 971
+ATOM    880  CB  ILE   113     -17.059  56.150  -0.893  1.00 13.08      1TOP 972
+ATOM    881  CG1 ILE   113     -16.378  55.771   0.423  1.00 15.85      1TOP 973
+ATOM    882  CG2 ILE   113     -16.118  57.098  -1.640  1.00  8.39      1TOP 974
+ATOM    883  CD1 ILE   113     -15.154  54.933   0.108  1.00 26.60      1TOP 975
+ATOM    884  N   ASP   114     -19.508  58.417  -2.067  1.00 14.68      1TOP 976
+ATOM    885  CA  ASP   114     -20.263  58.785  -3.271  1.00 10.96      1TOP 977
+ATOM    886  C   ASP   114     -19.264  59.355  -4.252  1.00  7.39      1TOP 978
+ATOM    887  O   ASP   114     -18.078  59.474  -3.875  1.00 12.71      1TOP 979
+ATOM    888  CB  ASP   114     -21.369  59.773  -2.945  1.00 11.79      1TOP 980
+ATOM    889  CG  ASP   114     -20.980  61.078  -2.267  1.00 20.28      1TOP 981
+ATOM    890  OD1 ASP   114     -19.985  61.709  -2.617  1.00 17.42      1TOP 982
+ATOM    891  OD2 ASP   114     -21.703  61.493  -1.372  1.00 15.98      1TOP 983
+ATOM    892  N   ILE   115     -19.658  59.781  -5.469  1.00 15.19      1TOP 984
+ATOM    893  CA  ILE   115     -18.682  60.225  -6.488  1.00 19.91      1TOP 985
+ATOM    894  C   ILE   115     -17.999  61.494  -6.049  1.00 14.98      1TOP 986
+ATOM    895  O   ILE   115     -16.827  61.677  -6.359  1.00 15.81      1TOP 987
+ATOM    896  CB  ILE   115     -19.051  60.503  -8.005  1.00 24.44      1TOP 988
+ATOM    897  CG1 ILE   115     -20.498  60.681  -8.298  1.00 43.62      1TOP 989
+ATOM    898  CG2 ILE   115     -18.281  59.704  -9.069  1.00 25.20      1TOP 990
+ATOM    899  CD1 ILE   115     -20.972  62.078  -7.901  1.00 48.64      1TOP 991
+ATOM    900  N   GLU   116     -18.684  62.380  -5.323  1.00 13.19      1TOP 992
+ATOM    901  CA  GLU   116     -18.005  63.574  -4.837  1.00 16.64      1TOP 993
+ATOM    902  C   GLU   116     -16.922  63.266  -3.836  1.00 14.35      1TOP 994
+ATOM    903  O   GLU   116     -15.831  63.819  -3.963  1.00 20.19      1TOP 995
+ATOM    904  CB  GLU   116     -18.960  64.583  -4.268  1.00 22.34      1TOP 996
+ATOM    905  CG  GLU   116     -19.772  65.120  -5.438  1.00 38.72      1TOP 997
+ATOM    906  CD  GLU   116     -21.271  64.914  -5.306  1.00 69.96      1TOP 998
+ATOM    907  OE1 GLU   116     -21.720  63.766  -5.194  1.00 83.18      1TOP 999
+ATOM    908  OE2 GLU   116     -21.983  65.917  -5.314  1.00 87.14      1TOP1000
+ATOM    909  N   GLU   117     -17.152  62.377  -2.871  1.00 16.25      1TOP1001
+ATOM    910  CA  GLU   117     -16.113  62.019  -1.892  1.00 20.68      1TOP1002
+ATOM    911  C   GLU   117     -14.949  61.298  -2.580  1.00 16.23      1TOP1003
+ATOM    912  O   GLU   117     -13.768  61.529  -2.268  1.00 15.87      1TOP1004
+ATOM    913  CB  GLU   117     -16.628  61.122  -0.761  1.00 13.57      1TOP1005
+ATOM    914  CG  GLU   117     -17.713  61.810   0.070  1.00 21.01      1TOP1006
+ATOM    915  CD  GLU   117     -18.548  60.927   0.992  1.00 18.61      1TOP1007
+ATOM    916  OE1 GLU   117     -18.942  59.847   0.594  1.00 14.28      1TOP1008
+ATOM    917  OE2 GLU   117     -18.840  61.324   2.110  1.00 20.62      1TOP1009
+ATOM    918  N   LEU   118     -15.283  60.433  -3.543  1.00 10.97      1TOP1010
+ATOM    919  CA  LEU   118     -14.268  59.659  -4.259  1.00 13.93      1TOP1011
+ATOM    920  C   LEU   118     -13.409  60.623  -5.084  1.00 17.17      1TOP1012
+ATOM    921  O   LEU   118     -12.176  60.525  -5.012  1.00 17.59      1TOP1013
+ATOM    922  CB  LEU   118     -14.915  58.598  -5.171  1.00 16.15      1TOP1014
+ATOM    923  CG  LEU   118     -13.985  57.690  -5.955  1.00  8.92      1TOP1015
+ATOM    924  CD1 LEU   118     -13.179  56.821  -5.017  1.00 11.38      1TOP1016
+ATOM    925  CD2 LEU   118     -14.800  56.829  -6.855  1.00  9.80      1TOP1017
+ATOM    926  N   GLY   119     -13.996  61.587  -5.810  1.00 15.16      1TOP1018
+ATOM    927  CA  GLY   119     -13.233  62.510  -6.626  1.00 14.07      1TOP1019
+ATOM    928  C   GLY   119     -12.308  63.378  -5.787  1.00 20.04      1TOP1020
+ATOM    929  O   GLY   119     -11.144  63.648  -6.127  1.00 16.91      1TOP1021
+ATOM    930  N   GLU   120     -12.827  63.786  -4.635  1.00 17.36      1TOP1022
+ATOM    931  CA  GLU   120     -12.059  64.640  -3.758  1.00 12.87      1TOP1023
+ATOM    932  C   GLU   120     -10.862  63.907  -3.139  1.00 21.07      1TOP1024
+ATOM    933  O   GLU   120      -9.735  64.426  -3.097  1.00 18.97      1TOP1025
+ATOM    934  CB  GLU   120     -13.029  65.109  -2.741  1.00 15.73      1TOP1026
+ATOM    935  CG  GLU   120     -12.484  66.260  -1.963  1.00 38.09      1TOP1027
+ATOM    936  CD  GLU   120     -13.452  66.803  -0.919  1.00 54.77      1TOP1028
+ATOM    937  OE1 GLU   120     -14.551  66.271  -0.735  1.00 69.88      1TOP1029
+ATOM    938  OE2 GLU   120     -13.084  67.785  -0.286  1.00 67.78      1TOP1030
+ATOM    939  N   ILE   121     -11.020  62.675  -2.661  1.00 11.40      1TOP1031
+ATOM    940  CA  ILE   121      -9.893  61.917  -2.162  1.00 12.58      1TOP1032
+ATOM    941  C   ILE   121      -8.931  61.651  -3.287  1.00 13.13      1TOP1033
+ATOM    942  O   ILE   121      -7.732  61.831  -3.087  1.00 19.31      1TOP1034
+ATOM    943  CB  ILE   121     -10.376  60.593  -1.556  1.00 27.04      1TOP1035
+ATOM    944  CG1 ILE   121     -11.278  60.843  -0.369  1.00 19.93      1TOP1036
+ATOM    945  CG2 ILE   121      -9.196  59.737  -1.084  1.00 24.45      1TOP1037
+ATOM    946  CD1 ILE   121     -10.566  61.495   0.849  1.00 32.49      1TOP1038
+ATOM    947  N   LEU   122      -9.351  61.254  -4.478  1.00 11.37      1TOP1039
+ATOM    948  CA  LEU   122      -8.378  60.970  -5.527  1.00 11.14      1TOP1040
+ATOM    949  C   LEU   122      -7.647  62.213  -6.016  1.00 16.86      1TOP1041
+ATOM    950  O   LEU   122      -6.429  62.191  -6.221  1.00 13.71      1TOP1042
+ATOM    951  CB  LEU   122      -9.014  60.178  -6.689  1.00 15.04      1TOP1043
+ATOM    952  CG  LEU   122      -9.622  58.773  -6.409  1.00 21.39      1TOP1044
+ATOM    953  CD1 LEU   122     -10.001  58.086  -7.722  1.00 17.42      1TOP1045
+ATOM    954  CD2 LEU   122      -8.719  57.877  -5.616  1.00 13.71      1TOP1046
+ATOM    955  N   ARG   123      -8.302  63.351  -6.186  1.00 11.82      1TOP1047
+ATOM    956  CA  ARG   123      -7.599  64.550  -6.602  1.00 10.95      1TOP1048
+ATOM    957  C   ARG   123      -6.587  64.981  -5.579  1.00 14.23      1TOP1049
+ATOM    958  O   ARG   123      -5.510  65.436  -5.922  1.00 14.83      1TOP1050
+ATOM    959  CB AARG   123      -8.579  65.674  -6.912  0.50 18.02      1TOP1051
+ATOM    960  CB BARG   123      -8.547  65.710  -6.737  0.50 19.61      1TOP1052
+ATOM    961  CG AARG   123      -9.346  65.438  -8.205  0.50  6.31      1TOP1053
+ATOM    962  CG BARG   123      -9.254  65.842  -8.055  0.50 26.98      1TOP1054
+ATOM    963  CD AARG   123     -10.180  66.671  -8.568  0.50 27.66      1TOP1055
+ATOM    964  CD BARG   123     -10.034  67.146  -7.941  0.50 46.07      1TOP1056
+ATOM    965  NE AARG   123     -10.697  66.572  -9.917  0.50 17.25      1TOP1057
+ATOM    966  NE BARG   123     -11.399  66.916  -7.504  0.50 52.53      1TOP1058
+ATOM    967  CZ AARG   123     -11.902  66.099 -10.198  0.50  2.36      1TOP1059
+ATOM    968  CZ BARG   123     -12.002  67.458  -6.433  0.50 23.67      1TOP1060
+ATOM    969  NH1AARG   123     -12.816  65.900  -9.258  0.50 10.04      1TOP1061
+ATOM    970  NH1BARG   123     -11.436  68.237  -5.492  0.50 13.07      1TOP1062
+ATOM    971  NH2AARG   123     -12.206  65.884 -11.475  0.50  7.86      1TOP1063
+ATOM    972  NH2BARG   123     -13.279  67.153  -6.329  0.50 11.24      1TOP1064
+ATOM    973  N   ALA   124      -6.857  64.765  -4.288  1.00 16.20      1TOP1065
+ATOM    974  CA  ALA   124      -5.937  65.231  -3.245  1.00 13.38      1TOP1066
+ATOM    975  C   ALA   124      -4.657  64.441  -3.208  1.00 14.08      1TOP1067
+ATOM    976  O   ALA   124      -3.711  64.815  -2.524  1.00 16.81      1TOP1068
+ATOM    977  CB  ALA   124      -6.583  65.124  -1.884  1.00 16.35      1TOP1069
+ATOM    978  N   THR   125      -4.582  63.330  -3.927  1.00 14.77      1TOP1070
+ATOM    979  CA  THR   125      -3.346  62.574  -3.944  1.00 17.59      1TOP1071
+ATOM    980  C   THR   125      -2.309  63.320  -4.778  1.00 17.27      1TOP1072
+ATOM    981  O   THR   125      -1.121  63.015  -4.689  1.00 16.83      1TOP1073
+ATOM    982  CB  THR   125      -3.570  61.191  -4.553  1.00 14.85      1TOP1074
+ATOM    983  OG1 THR   125      -3.872  61.433  -5.937  1.00 20.48      1TOP1075
+ATOM    984  CG2 THR   125      -4.638  60.363  -3.790  1.00 11.46      1TOP1076
+ATOM    985  N   GLY   126      -2.720  64.235  -5.658  1.00 15.80      1TOP1077
+ATOM    986  CA  GLY   126      -1.789  64.943  -6.519  1.00 17.02      1TOP1078
+ATOM    987  C   GLY   126      -1.610  64.294  -7.862  1.00 15.24      1TOP1079
+ATOM    988  O   GLY   126      -0.938  64.837  -8.741  1.00 18.96      1TOP1080
+ATOM    989  N   GLU   127      -2.168  63.108  -8.035  1.00 12.20      1TOP1081
+ATOM    990  CA  GLU   127      -2.116  62.425  -9.311  1.00 14.99      1TOP1082
+ATOM    991  C   GLU   127      -2.909  63.167 -10.358  1.00 16.23      1TOP1083
+ATOM    992  O   GLU   127      -3.882  63.871 -10.047  1.00 20.32      1TOP1084
+ATOM    993  CB  GLU   127      -2.699  61.057  -9.163  1.00 17.84      1TOP1085
+ATOM    994  CG  GLU   127      -1.687  60.103  -8.586  1.00 17.13      1TOP1086
+ATOM    995  CD  GLU   127      -0.529  59.909  -9.545  1.00 24.51      1TOP1087
+ATOM    996  OE1 GLU   127      -0.732  59.665 -10.736  1.00 20.33      1TOP1088
+ATOM    997  OE2 GLU   127       0.599  60.013  -9.098  1.00 20.52      1TOP1089
+ATOM    998  N   HIS   128      -2.558  63.069 -11.629  1.00 21.47      1TOP1090
+ATOM    999  CA  HIS   128      -3.349  63.749 -12.632  1.00 35.20      1TOP1091
+ATOM   1000  C   HIS   128      -4.486  62.818 -12.978  1.00 22.09      1TOP1092
+ATOM   1001  O   HIS   128      -4.423  62.084 -13.955  1.00 28.02      1TOP1093
+ATOM   1002  CB  HIS   128      -2.534  64.189 -13.866  1.00 27.68      1TOP1094
+ATOM   1003  CG  HIS   128      -1.603  65.336 -13.508  1.00 63.32      1TOP1095
+ATOM   1004  ND1 HIS   128      -1.399  66.506 -14.109  1.00 69.70      1TOP1096
+ATOM   1005  CD2 HIS   128      -0.765  65.300 -12.412  1.00 72.20      1TOP1097
+ATOM   1006  CE1 HIS   128      -0.472  67.145 -13.417  1.00 74.18      1TOP1098
+ATOM   1007  NE2 HIS   128      -0.100  66.411 -12.396  1.00 69.45      1TOP1099
+ATOM   1008  N   VAL   129      -5.494  62.802 -12.122  1.00 18.01      1TOP1100
+ATOM   1009  CA  VAL   129      -6.674  61.978 -12.351  1.00 16.81      1TOP1101
+ATOM   1010  C   VAL   129      -7.694  62.892 -13.007  1.00 20.24      1TOP1102
+ATOM   1011  O   VAL   129      -7.808  64.044 -12.576  1.00 21.91      1TOP1103
+ATOM   1012  CB  VAL   129      -7.408  61.459 -11.103  1.00 22.85      1TOP1104
+ATOM   1013  CG1 VAL   129      -7.832  60.022 -11.269  1.00 16.79      1TOP1105
+ATOM   1014  CG2 VAL   129      -6.678  61.734  -9.819  1.00 28.62      1TOP1106
+ATOM   1015  N   THR   130      -8.467  62.410 -13.993  1.00 17.62      1TOP1107
+ATOM   1016  CA  THR   130      -9.508  63.200 -14.652  1.00 22.09      1TOP1108
+ATOM   1017  C   THR   130     -10.865  62.765 -14.095  1.00 23.38      1TOP1109
+ATOM   1018  O   THR   130     -10.961  61.702 -13.453  1.00 18.31      1TOP1110
+ATOM   1019  CB  THR   130      -9.429  62.994 -16.190  1.00 17.98      1TOP1111
+ATOM   1020  OG1 THR   130      -9.860  61.651 -16.396  1.00 17.06      1TOP1112
+ATOM   1021  CG2 THR   130      -8.022  63.172 -16.774  1.00 16.12      1TOP1113
+ATOM   1022  N   GLU   131     -11.951  63.503 -14.358  1.00 12.55      1TOP1114
+ATOM   1023  CA  GLU   131     -13.275  63.072 -13.933  1.00 16.44      1TOP1115
+ATOM   1024  C   GLU   131     -13.659  61.738 -14.549  1.00 13.69      1TOP1116
+ATOM   1025  O   GLU   131     -14.335  60.923 -13.920  1.00 12.05      1TOP1117
+ATOM   1026  CB  GLU   131     -14.362  64.095 -14.274  1.00 21.25      1TOP1118
+ATOM   1027  CG  GLU   131     -15.739  63.883 -13.570  1.00 15.64      1TOP1119
+ATOM   1028  CD  GLU   131     -15.693  63.759 -12.051  1.00 27.29      1TOP1120
+ATOM   1029  OE1 GLU   131     -14.981  64.534 -11.394  1.00 28.37      1TOP1121
+ATOM   1030  OE2 GLU   131     -16.379  62.880 -11.518  1.00 21.58      1TOP1122
+ATOM   1031  N   GLU   132     -13.194  61.467 -15.765  1.00 14.46      1TOP1123
+ATOM   1032  CA  GLU   132     -13.503  60.213 -16.416  1.00 11.54      1TOP1124
+ATOM   1033  C   GLU   132     -12.837  59.045 -15.709  1.00  9.88      1TOP1125
+ATOM   1034  O   GLU   132     -13.431  57.965 -15.553  1.00 12.55      1TOP1126
+ATOM   1035  CB  GLU   132     -13.006  60.346 -17.803  1.00 22.73      1TOP1127
+ATOM   1036  CG  GLU   132     -13.113  59.126 -18.652  1.00 23.52      1TOP1128
+ATOM   1037  CD  GLU   132     -12.748  59.461 -20.087  1.00 31.99      1TOP1129
+ATOM   1038  OE1 GLU   132     -11.561  59.533 -20.407  1.00 29.73      1TOP1130
+ATOM   1039  OE2 GLU   132     -13.686  59.645 -20.848  1.00 29.38      1TOP1131
+ATOM   1040  N   ASP   133     -11.602  59.245 -15.250  1.00 15.16      1TOP1132
+ATOM   1041  CA  ASP   133     -10.931  58.211 -14.469  1.00 14.09      1TOP1133
+ATOM   1042  C   ASP   133     -11.701  57.943 -13.190  1.00 13.34      1TOP1134
+ATOM   1043  O   ASP   133     -11.911  56.781 -12.833  1.00 13.53      1TOP1135
+ATOM   1044  CB  ASP   133      -9.495  58.587 -14.115  1.00 13.40      1TOP1136
+ATOM   1045  CG  ASP   133      -8.530  58.821 -15.287  1.00 21.31      1TOP1137
+ATOM   1046  OD1 ASP   133      -8.695  58.262 -16.369  1.00 15.06      1TOP1138
+ATOM   1047  OD2 ASP   133      -7.587  59.581 -15.102  1.00 14.72      1TOP1139
+ATOM   1048  N   ILE   134     -12.177  58.989 -12.503  1.00 11.71      1TOP1140
+ATOM   1049  CA  ILE   134     -12.927  58.831 -11.247  1.00 13.40      1TOP1141
+ATOM   1050  C   ILE   134     -14.236  58.118 -11.495  1.00 12.29      1TOP1142
+ATOM   1051  O   ILE   134     -14.582  57.164 -10.809  1.00 12.17      1TOP1143
+ATOM   1052  CB  ILE   134     -13.142  60.240 -10.641  1.00 20.44      1TOP1144
+ATOM   1053  CG1 ILE   134     -11.792  60.848 -10.257  1.00 20.78      1TOP1145
+ATOM   1054  CG2 ILE   134     -14.120  60.224  -9.464  1.00 17.23      1TOP1146
+ATOM   1055  CD1 ILE   134     -11.872  62.376 -10.079  1.00 16.91      1TOP1147
+ATOM   1056  N   GLU   135     -14.992  58.529 -12.494  1.00 11.20      1TOP1148
+ATOM   1057  CA  GLU   135     -16.221  57.850 -12.888  1.00  9.64      1TOP1149
+ATOM   1058  C   GLU   135     -15.962  56.404 -13.264  1.00 11.50      1TOP1150
+ATOM   1059  O   GLU   135     -16.784  55.559 -12.936  1.00 12.42      1TOP1151
+ATOM   1060  CB  GLU   135     -16.827  58.523 -14.119  1.00 13.33      1TOP1152
+ATOM   1061  CG  GLU   135     -17.447  59.871 -13.824  1.00 21.31      1TOP1153
+ATOM   1062  CD  GLU   135     -17.898  60.707 -15.029  1.00 47.42      1TOP1154
+ATOM   1063  OE1 GLU   135     -17.427  60.453 -16.145  1.00 42.03      1TOP1155
+ATOM   1064  OE2 GLU   135     -18.707  61.626 -14.834  1.00 36.98      1TOP1156
+ATOM   1065  N   ASP   136     -14.869  56.057 -13.949  1.00 10.78      1TOP1157
+ATOM   1066  CA  ASP   136     -14.542  54.683 -14.287  1.00  8.93      1TOP1158
+ATOM   1067  C   ASP   136     -14.263  53.860 -13.053  1.00 11.40      1TOP1159
+ATOM   1068  O   ASP   136     -14.719  52.721 -12.989  1.00 12.19      1TOP1160
+ATOM   1069  CB  ASP   136     -13.308  54.586 -15.170  1.00  9.47      1TOP1161
+ATOM   1070  CG  ASP   136     -13.460  55.066 -16.611  1.00 17.60      1TOP1162
+ATOM   1071  OD1 ASP   136     -14.573  55.101 -17.127  1.00 15.90      1TOP1163
+ATOM   1072  OD2 ASP   136     -12.452  55.416 -17.229  1.00 15.96      1TOP1164
+ATOM   1073  N   LEU   137     -13.542  54.374 -12.053  1.00 10.03      1TOP1165
+ATOM   1074  CA  LEU   137     -13.375  53.612 -10.805  1.00 12.22      1TOP1166
+ATOM   1075  C   LEU   137     -14.734  53.405 -10.103  1.00 12.79      1TOP1167
+ATOM   1076  O   LEU   137     -15.060  52.291  -9.652  1.00 13.92      1TOP1168
+ATOM   1077  CB  LEU   137     -12.384  54.297  -9.872  1.00  7.64      1TOP1169
+ATOM   1078  CG  LEU   137     -11.976  53.500  -8.625  1.00 11.19      1TOP1170
+ATOM   1079  CD1 LEU   137     -11.359  52.178  -8.992  1.00 12.09      1TOP1171
+ATOM   1080  CD2 LEU   137     -11.040  54.322  -7.758  1.00 11.01      1TOP1172
+ATOM   1081  N   MET   138     -15.580  54.442 -10.038  1.00 12.04      1TOP1173
+ATOM   1082  CA  MET   138     -16.906  54.338  -9.429  1.00 12.27      1TOP1174
+ATOM   1083  C   MET   138     -17.694  53.237 -10.086  1.00 16.54      1TOP1175
+ATOM   1084  O   MET   138     -18.117  52.313  -9.399  1.00 14.20      1TOP1176
+ATOM   1085  CB  MET   138     -17.650  55.654  -9.488  1.00  6.13      1TOP1177
+ATOM   1086  CG  MET   138     -19.046  55.615  -8.947  1.00  7.84      1TOP1178
+ATOM   1087  SD  MET   138     -19.144  54.950  -7.256  1.00 23.33      1TOP1179
+ATOM   1088  CE  MET   138     -18.666  56.345  -6.287  1.00 16.18      1TOP1180
+ATOM   1089  N   LYS   139     -17.805  53.251 -11.409  1.00 11.68      1TOP1181
+ATOM   1090  CA  LYS   139     -18.668  52.312 -12.120  1.00 10.84      1TOP1182
+ATOM   1091  C   LYS   139     -18.146  50.912 -11.930  1.00 14.35      1TOP1183
+ATOM   1092  O   LYS   139     -18.899  49.966 -11.735  1.00 16.94      1TOP1184
+ATOM   1093  CB  LYS   139     -18.640  52.622 -13.637  1.00 18.60      1TOP1185
+ATOM   1094  CG  LYS   139     -19.541  53.749 -14.097  1.00 42.15      1TOP1186
+ATOM   1095  CD  LYS   139     -19.027  54.327 -15.429  1.00 60.67      1TOP1187
+ATOM   1096  CE  LYS   139     -19.942  55.417 -16.027  1.00 84.36      1TOP1188
+ATOM   1097  NZ  LYS   139     -19.277  56.198 -17.065  1.00 54.43      1TOP1189
+ATOM   1098  N   ASP   140     -16.838  50.738 -11.973  1.00 12.85      1TOP1190
+ATOM   1099  CA  ASP   140     -16.280  49.415 -11.817  1.00 20.90      1TOP1191
+ATOM   1100  C   ASP   140     -16.417  48.882 -10.391  1.00 21.56      1TOP1192
+ATOM   1101  O   ASP   140     -16.467  47.669 -10.224  1.00 24.25      1TOP1193
+ATOM   1102  CB AASP   140     -14.834  49.380 -12.323  0.50 16.76      1TOP1194
+ATOM   1103  CB BASP   140     -14.794  49.446 -12.102  0.50 16.04      1TOP1195
+ATOM   1104  CG AASP   140     -14.601  49.702 -13.816  0.50 18.41      1TOP1196
+ATOM   1105  CG BASP   140     -14.273  48.046 -12.344  0.50 32.85      1TOP1197
+ATOM   1106  OD1AASP   140     -15.524  49.982 -14.579  0.50 11.76      1TOP1198
+ATOM   1107  OD1BASP   140     -14.587  47.515 -13.401  0.50 61.76      1TOP1199
+ATOM   1108  OD2AASP   140     -13.443  49.682 -14.213  0.50 25.75      1TOP1200
+ATOM   1109  OD2BASP   140     -13.563  47.475 -11.514  0.50 38.59      1TOP1201
+ATOM   1110  N   SER   141     -16.494  49.727  -9.376  1.00 12.23      1TOP1202
+ATOM   1111  CA  SER   141     -16.532  49.242  -8.004  1.00 12.79      1TOP1203
+ATOM   1112  C   SER   141     -17.952  49.108  -7.464  1.00 14.83      1TOP1204
+ATOM   1113  O   SER   141     -18.245  48.411  -6.489  1.00 10.46      1TOP1205
+ATOM   1114  CB  SER   141     -15.759  50.242  -7.156  1.00 14.19      1TOP1206
+ATOM   1115  OG  SER   141     -14.443  50.377  -7.650  1.00 15.12      1TOP1207
+ATOM   1116  N   ASP   142     -18.871  49.800  -8.117  1.00 11.73      1TOP1208
+ATOM   1117  CA  ASP   142     -20.242  49.816  -7.740  1.00 14.81      1TOP1209
+ATOM   1118  C   ASP   142     -20.998  48.640  -8.343  1.00 25.58      1TOP1210
+ATOM   1119  O   ASP   142     -21.751  48.741  -9.313  1.00 16.63      1TOP1211
+ATOM   1120  CB  ASP   142     -20.876  51.146  -8.138  1.00 13.51      1TOP1212
+ATOM   1121  CG  ASP   142     -22.354  51.346  -7.763  1.00 15.60      1TOP1213
+ATOM   1122  OD1 ASP   142     -22.846  50.755  -6.799  1.00 13.38      1TOP1214
+ATOM   1123  OD2 ASP   142     -23.012  52.110  -8.459  1.00 16.27      1TOP1215
+ATOM   1124  N   LYS   143     -20.950  47.560  -7.558  1.00 15.87      1TOP1216
+ATOM   1125  CA  LYS   143     -21.608  46.330  -7.994  1.00 24.21      1TOP1217
+ATOM   1126  C   LYS   143     -23.123  46.340  -8.137  1.00 22.87      1TOP1218
+ATOM   1127  O   LYS   143     -23.706  45.807  -9.081  1.00 17.06      1TOP1219
+ATOM   1128  CB  LYS   143     -21.140  45.197  -7.096  1.00 16.05      1TOP1220
+ATOM   1129  CG  LYS   143     -19.630  45.072  -7.196  1.00 34.08      1TOP1221
+ATOM   1130  CD  LYS   143     -19.265  44.865  -8.666  1.00 55.60      1TOP1222
+ATOM   1131  CE  LYS   143     -17.822  45.169  -8.930  1.00 63.28      1TOP1223
+ATOM   1132  NZ  LYS   143     -17.619  45.221 -10.371  1.00 64.15      1TOP1224
+ATOM   1133  N   ASN   144     -23.788  46.957  -7.154  1.00 18.51      1TOP1225
+ATOM   1134  CA  ASN   144     -25.252  47.034  -7.180  1.00 12.73      1TOP1226
+ATOM   1135  C   ASN   144     -25.790  48.256  -7.930  1.00 15.42      1TOP1227
+ATOM   1136  O   ASN   144     -26.979  48.533  -7.854  1.00 15.43      1TOP1228
+ATOM   1137  CB  ASN   144     -25.777  46.993  -5.740  1.00  9.70      1TOP1229
+ATOM   1138  CG  ASN   144     -25.470  48.259  -4.911  1.00 15.67      1TOP1230
+ATOM   1139  OD1 ASN   144     -24.513  49.088  -5.093  1.00 15.58      1TOP1231
+ATOM   1140  ND2 ASN   144     -26.366  48.397  -3.948  1.00 16.47      1TOP1232
+ATOM   1141  N   ASN   145     -24.979  49.066  -8.626  1.00 10.08      1TOP1233
+ATOM   1142  CA  ASN   145     -25.450  50.210  -9.425  1.00 14.32      1TOP1234
+ATOM   1143  C   ASN   145     -26.287  51.306  -8.752  1.00 29.17      1TOP1235
+ATOM   1144  O   ASN   145     -27.172  51.917  -9.364  1.00 18.94      1TOP1236
+ATOM   1145  CB  ASN   145     -26.135  49.742 -10.707  1.00 22.20      1TOP1237
+ATOM   1146  CG  ASN   145     -25.204  48.929 -11.599  1.00 30.39      1TOP1238
+ATOM   1147  OD1 ASN   145     -24.180  49.420 -12.078  1.00 27.05      1TOP1239
+ATOM   1148  ND2 ASN   145     -25.511  47.657 -11.816  1.00 18.38      1TOP1240
+ATOM   1149  N   ASP   146     -26.052  51.528  -7.444  1.00 15.04      1TOP1241
+ATOM   1150  CA  ASP   146     -26.707  52.628  -6.748  1.00 11.31      1TOP1242
+ATOM   1151  C   ASP   146     -25.937  53.933  -6.785  1.00 17.74      1TOP1243
+ATOM   1152  O   ASP   146     -26.249  54.849  -6.036  1.00 21.81      1TOP1244
+ATOM   1153  CB  ASP   146     -26.998  52.262  -5.289  1.00 13.79      1TOP1245
+ATOM   1154  CG  ASP   146     -25.817  51.982  -4.360  1.00 22.27      1TOP1246
+ATOM   1155  OD1 ASP   146     -24.675  52.039  -4.799  1.00 12.53      1TOP1247
+ATOM   1156  OD2 ASP   146     -26.045  51.675  -3.186  1.00 25.15      1TOP1248
+ATOM   1157  N   GLY   147     -24.844  53.995  -7.535  1.00 16.38      1TOP1249
+ATOM   1158  CA  GLY   147     -24.044  55.209  -7.617  1.00 18.34      1TOP1250
+ATOM   1159  C   GLY   147     -23.007  55.415  -6.518  1.00 29.78      1TOP1251
+ATOM   1160  O   GLY   147     -22.243  56.390  -6.551  1.00 25.65      1TOP1252
+ATOM   1161  N   ARG   148     -22.976  54.502  -5.538  1.00 19.40      1TOP1253
+ATOM   1162  CA  ARG   148     -22.015  54.589  -4.445  1.00 14.01      1TOP1254
+ATOM   1163  C   ARG   148     -21.428  53.266  -4.007  1.00 11.10      1TOP1255
+ATOM   1164  O   ARG   148     -21.909  52.138  -4.354  1.00 14.04      1TOP1256
+ATOM   1165  CB  ARG   148     -22.662  55.331  -3.285  1.00 24.16      1TOP1257
+ATOM   1166  CG  ARG   148     -23.904  54.647  -2.852  1.00 28.85      1TOP1258
+ATOM   1167  CD  ARG   148     -24.986  55.571  -2.371  1.00 31.25      1TOP1259
+ATOM   1168  NE  ARG   148     -25.961  54.655  -1.793  1.00 73.50      1TOP1260
+ATOM   1169  CZ  ARG   148     -27.226  54.947  -1.466  1.00 79.26      1TOP1261
+ATOM   1170  NH1 ARG   148     -27.711  56.188  -1.523  1.00 81.87      1TOP1262
+ATOM   1171  NH2 ARG   148     -28.031  53.945  -1.090  1.00 82.63      1TOP1263
+ATOM   1172  N   ILE   149     -20.367  53.486  -3.233  1.00  8.84      1TOP1264
+ATOM   1173  CA  ILE   149     -19.500  52.410  -2.736  1.00 14.77      1TOP1265
+ATOM   1174  C   ILE   149     -19.707  52.206  -1.232  1.00 18.76      1TOP1266
+ATOM   1175  O   ILE   149     -19.410  53.078  -0.417  1.00 11.53      1TOP1267
+ATOM   1176  CB  ILE   149     -18.003  52.707  -3.062  1.00 18.23      1TOP1268
+ATOM   1177  CG1 ILE   149     -17.806  52.880  -4.577  1.00 12.64      1TOP1269
+ATOM   1178  CG2 ILE   149     -17.082  51.604  -2.501  1.00 13.12      1TOP1270
+ATOM   1179  CD1 ILE   149     -16.406  53.378  -4.952  1.00 13.41      1TOP1271
+ATOM   1180  N   ASP   150     -20.263  51.054  -0.853  1.00 11.91      1TOP1272
+ATOM   1181  CA  ASP   150     -20.466  50.819   0.576  1.00 12.89      1TOP1273
+ATOM   1182  C   ASP   150     -19.241  50.072   1.063  1.00 14.96      1TOP1274
+ATOM   1183  O   ASP   150     -18.358  49.759   0.241  1.00 14.84      1TOP1275
+ATOM   1184  CB  ASP   150     -21.731  50.024   0.817  1.00 13.16      1TOP1276
+ATOM   1185  CG  ASP   150     -21.811  48.653   0.149  1.00 27.03      1TOP1277
+ATOM   1186  OD1 ASP   150     -20.805  48.042  -0.165  1.00 17.07      1TOP1278
+ATOM   1187  OD2 ASP   150     -22.917  48.171  -0.049  1.00 26.77      1TOP1279
+ATOM   1188  N   PHE   151     -19.164  49.655   2.316  1.00  9.85      1TOP1280
+ATOM   1189  CA  PHE   151     -17.927  49.087   2.825  1.00 15.70      1TOP1281
+ATOM   1190  C   PHE   151     -17.609  47.735   2.212  1.00 12.20      1TOP1282
+ATOM   1191  O   PHE   151     -16.449  47.437   1.923  1.00 13.41      1TOP1283
+ATOM   1192  CB  PHE   151     -17.945  49.042   4.362  1.00 21.10      1TOP1284
+ATOM   1193  CG  PHE   151     -16.673  48.517   4.985  1.00 14.21      1TOP1285
+ATOM   1194  CD1 PHE   151     -15.509  49.232   4.880  1.00 13.62      1TOP1286
+ATOM   1195  CD2 PHE   151     -16.695  47.321   5.679  1.00 19.95      1TOP1287
+ATOM   1196  CE1 PHE   151     -14.370  48.761   5.507  1.00 37.99      1TOP1288
+ATOM   1197  CE2 PHE   151     -15.551  46.856   6.290  1.00 21.12      1TOP1289
+ATOM   1198  CZ  PHE   151     -14.381  47.583   6.227  1.00 21.32      1TOP1290
+ATOM   1199  N   ASP   152     -18.601  46.895   1.954  1.00 12.21      1TOP1291
+ATOM   1200  CA  ASP   152     -18.330  45.651   1.259  1.00 15.10      1TOP1292
+ATOM   1201  C   ASP   152     -17.714  45.870  -0.138  1.00 11.27      1TOP1293
+ATOM   1202  O   ASP   152     -16.697  45.245  -0.485  1.00 12.23      1TOP1294
+ATOM   1203  CB AASP   152     -19.630  44.834   1.127  0.50 20.40      1TOP1295
+ATOM   1204  CB BASP   152     -19.623  44.813   1.230  0.50 25.14      1TOP1296
+ATOM   1205  CG AASP   152     -19.520  43.572   0.269  0.50 16.12      1TOP1297
+ATOM   1206  CG BASP   152     -20.114  44.336   2.604  0.50 40.97      1TOP1298
+ATOM   1207  OD1AASP   152     -18.886  42.618   0.702  0.50 19.93      1TOP1299
+ATOM   1208  OD1BASP   152     -20.167  45.101   3.571  0.50 42.16      1TOP1300
+ATOM   1209  OD2AASP   152     -20.070  43.559  -0.833  0.50 27.29      1TOP1301
+ATOM   1210  OD2BASP   152     -20.469  43.166   2.717  0.50 58.62      1TOP1302
+ATOM   1211  N   GLU   153     -18.266  46.776  -0.951  1.00 10.94      1TOP1303
+ATOM   1212  CA  GLU   153     -17.712  47.056  -2.270  1.00 12.20      1TOP1304
+ATOM   1213  C   GLU   153     -16.310  47.700  -2.156  1.00 20.57      1TOP1305
+ATOM   1214  O   GLU   153     -15.466  47.496  -3.034  1.00 13.34      1TOP1306
+ATOM   1215  CB  GLU   153     -18.622  47.991  -3.018  1.00  9.41      1TOP1307
+ATOM   1216  CG  GLU   153     -19.977  47.390  -3.385  1.00 10.07      1TOP1308
+ATOM   1217  CD  GLU   153     -20.992  48.419  -3.895  1.00 13.83      1TOP1309
+ATOM   1218  OE1 GLU   153     -20.969  49.567  -3.462  1.00 10.91      1TOP1310
+ATOM   1219  OE2 GLU   153     -21.865  48.084  -4.692  1.00 12.94      1TOP1311
+ATOM   1220  N   PHE   154     -16.033  48.483  -1.076  1.00 18.81      1TOP1312
+ATOM   1221  CA  PHE   154     -14.732  49.136  -0.803  1.00 14.44      1TOP1313
+ATOM   1222  C   PHE   154     -13.662  48.080  -0.603  1.00 17.66      1TOP1314
+ATOM   1223  O   PHE   154     -12.597  48.153  -1.227  1.00 13.95      1TOP1315
+ATOM   1224  CB  PHE   154     -14.810  50.018   0.452  1.00 11.50      1TOP1316
+ATOM   1225  CG  PHE   154     -13.529  50.712   0.904  1.00 14.18      1TOP1317
+ATOM   1226  CD1 PHE   154     -13.021  51.771   0.183  1.00 17.61      1TOP1318
+ATOM   1227  CD2 PHE   154     -12.860  50.278   2.043  1.00 18.59      1TOP1319
+ATOM   1228  CE1 PHE   154     -11.832  52.371   0.581  1.00 18.40      1TOP1320
+ATOM   1229  CE2 PHE   154     -11.669  50.868   2.429  1.00 17.22      1TOP1321
+ATOM   1230  CZ  PHE   154     -11.157  51.915   1.701  1.00 21.07      1TOP1322
+ATOM   1231  N   LEU   155     -13.976  47.092   0.247  1.00 13.12      1TOP1323
+ATOM   1232  CA  LEU   155     -13.076  45.994   0.497  1.00 12.31      1TOP1324
+ATOM   1233  C   LEU   155     -12.751  45.287  -0.810  1.00 24.59      1TOP1325
+ATOM   1234  O   LEU   155     -11.579  45.060  -1.086  1.00 17.72      1TOP1326
+ATOM   1235  CB  LEU   155     -13.732  45.054   1.468  1.00 13.87      1TOP1327
+ATOM   1236  CG  LEU   155     -13.287  44.999   2.918  1.00 41.19      1TOP1328
+ATOM   1237  CD1 LEU   155     -12.566  46.242   3.411  1.00 23.42      1TOP1329
+ATOM   1238  CD2 LEU   155     -14.448  44.563   3.796  1.00 22.41      1TOP1330
+ATOM   1239  N   LYS   156     -13.745  44.996  -1.648  1.00 13.53      1TOP1331
+ATOM   1240  CA  LYS   156     -13.513  44.395  -2.955  1.00 14.65      1TOP1332
+ATOM   1241  C   LYS   156     -12.699  45.294  -3.877  1.00 25.09      1TOP1333
+ATOM   1242  O   LYS   156     -11.830  44.859  -4.618  1.00 20.24      1TOP1334
+ATOM   1243  CB  LYS   156     -14.810  44.042  -3.656  1.00 15.13      1TOP1335
+ATOM   1244  CG  LYS   156     -15.598  42.932  -2.975  1.00 27.65      1TOP1336
+ATOM   1245  CD  LYS   156     -16.737  42.572  -3.924  1.00 65.86      1TOP1337
+ATOM   1246  CE  LYS   156     -17.704  43.754  -4.191  1.00 75.19      1TOP1338
+ATOM   1247  NZ  LYS   156     -19.009  43.290  -4.646  1.00 74.97      1TOP1339
+ATOM   1248  N   MET   157     -12.955  46.590  -3.871  1.00 13.75      1TOP1340
+ATOM   1249  CA  MET   157     -12.237  47.509  -4.712  1.00  9.29      1TOP1341
+ATOM   1250  C   MET   157     -10.765  47.514  -4.325  1.00 18.76      1TOP1342
+ATOM   1251  O   MET   157      -9.869  47.418  -5.166  1.00 17.79      1TOP1343
+ATOM   1252  CB  MET   157     -12.857  48.881  -4.512  1.00 10.66      1TOP1344
+ATOM   1253  CG  MET   157     -12.153  49.972  -5.299  1.00 19.13      1TOP1345
+ATOM   1254  SD  MET   157     -12.940  51.554  -4.976  1.00 23.84      1TOP1346
+ATOM   1255  CE  MET   157     -11.851  52.083  -3.681  1.00 27.46      1TOP1347
+ATOM   1256  N   MET   158     -10.509  47.604  -3.028  1.00 15.47      1TOP1348
+ATOM   1257  CA  MET   158      -9.160  47.767  -2.535  1.00 13.63      1TOP1349
+ATOM   1258  C   MET   158      -8.394  46.479  -2.674  1.00 16.99      1TOP1350
+ATOM   1259  O   MET   158      -7.273  46.504  -3.165  1.00 18.04      1TOP1351
+ATOM   1260  CB  MET   158      -9.187  48.188  -1.072  1.00 14.78      1TOP1352
+ATOM   1261  CG  MET   158      -9.703  49.632  -0.919  1.00 16.46      1TOP1353
+ATOM   1262  SD  MET   158      -8.719  50.904  -1.758  1.00 22.65      1TOP1354
+ATOM   1263  CE  MET   158      -7.461  51.124  -0.547  1.00 16.28      1TOP1355
+ATOM   1264  N   GLU   159      -8.981  45.361  -2.262  1.00 14.45   1  1TOP1356
+ATOM   1265  CA  GLU   159      -8.285  44.089  -2.261  1.00 16.56   1  1TOP1357
+ATOM   1266  C   GLU   159      -8.253  43.413  -3.586  1.00 34.15   1  1TOP1358
+ATOM   1267  O   GLU   159      -7.406  42.538  -3.765  1.00 33.80   1  1TOP1359
+ATOM   1268  CB  GLU   159      -8.794  43.116  -1.263  1.00 17.37   1  1TOP1360
+ATOM   1269  CG  GLU   159      -8.206  43.654   0.009  1.00 28.70   1  1TOP1361
+ATOM   1270  CD  GLU   159      -8.793  43.064   1.262  1.00 35.89   1  1TOP1362
+ATOM   1271  OE1 GLU   159     -10.003  43.157   1.428  1.00 48.03   1  1TOP1363
+ATOM   1272  OE2 GLU   159      -8.038  42.544   2.083  1.00 85.61   1  1TOP1364
+ATOM   1273  N   GLY   160      -9.200  43.707  -4.470  1.00 46.15   1  1TOP1365
+ATOM   1274  CA  GLY   160      -8.936  43.759  -5.892  1.00 31.46   1  1TOP1366
+ATOM   1275  C   GLY   160      -9.228  42.422  -6.544  1.00 69.85   1  1TOP1367
+ATOM   1276  O   GLY   160      -9.890  42.298  -7.580  1.00129.58   1  1TOP1368
+ATOM   1277  N   VAL   161      -8.569  41.425  -5.976  1.00 71.08      1TOP1369
+ATOM   1278  CA  VAL   161      -8.752  40.044  -6.337  1.00 74.17      1TOP1370
+ATOM   1279  C   VAL   161     -10.087  39.622  -5.794  1.00 89.27      1TOP1371
+ATOM   1280  O   VAL   161     -10.804  38.872  -6.461  1.00116.50      1TOP1372
+ATOM   1281  CB  VAL   161      -7.611  39.201  -5.742  1.00 77.10      1TOP1373
+ATOM   1282  CG1 VAL   161      -7.895  37.700  -5.768  1.00 49.12      1TOP1374
+ATOM   1283  CG2 VAL   161      -6.347  39.565  -6.527  1.00 91.85      1TOP1375
+ATOM   1284  N   GLN   162     -10.227  40.046  -4.534  1.00 82.34      1TOP1376
+ATOM   1285  CA  GLN   162     -11.451  39.999  -3.768  1.00 80.77      1TOP1377
+ATOM   1286  C   GLN   162     -12.337  41.118  -4.282  1.00 82.89      1TOP1378
+ATOM   1287  O   GLN   162     -11.782  42.144  -4.665  1.00 90.08      1TOP1379
+ATOM   1288  CB  GLN   162     -11.046  40.254  -2.346  1.00 59.78      1TOP1380
+ATOM   1289  CG  GLN   162     -12.177  40.593  -1.420  1.00 50.72      1TOP1381
+ATOM   1290  CD  GLN   162     -11.705  40.735   0.001  1.00 68.41      1TOP1382
+ATOM   1291  OE1 GLN   162     -10.929  39.946   0.540  1.00 72.52      1TOP1383
+ATOM   1292  NE2 GLN   162     -12.161  41.768   0.678  1.00 48.90      1TOP1384
+ATOM   1293  OXT GLN   162     -13.554  40.957  -4.280  1.00 73.99      1TOP1385
+TER    1294      GLN   162                                              1TOP1386
+HETATM 1295 CA    CA   163     -20.502  59.428   2.342  1.00 15.06      1TOP1387
+HETATM 1296 CA    CA   164     -22.973  50.398  -4.571  1.00 13.36      1TOP1388
+HETATM 1297  O   HOH   165      -1.433  37.947   5.661  1.00 26.81      1TOP1389
+HETATM 1298  O   HOH   166     -19.790  63.953   1.944  1.00 27.28      1TOP1390
+HETATM 1299  O   HOH   167      -6.608  61.593  -0.657  1.00 61.52      1TOP1391
+HETATM 1300  O   HOH   168      -8.842  66.822 -15.205  1.00 34.21      1TOP1392
+HETATM 1301  O   HOH   170     -22.395  59.088  -6.185  1.00 20.24      1TOP1393
+HETATM 1302  O   HOH   172       9.939  18.417  13.080  1.00 53.64      1TOP1394
+HETATM 1303  O   HOH   173      -0.724  43.908   7.590  1.00 23.96      1TOP1395
+HETATM 1304  O   HOH   174      -3.729  23.163  15.565  1.00 13.67      1TOP1396
+HETATM 1305  O   HOH   175       2.418  39.616  11.290  1.00 74.43      1TOP1397
+HETATM 1306  O   HOH   176     -21.488  59.759   1.248  1.00 31.39      1TOP1398
+HETATM 1307  O   HOH   177     -29.491  48.980  -6.230  1.00 52.46      1TOP1399
+HETATM 1308  O   HOH   178       1.995  61.623  -7.244  1.00 33.04      1TOP1400
+HETATM 1309  O   HOH   179      -8.910  60.911 -18.825  1.00 36.29      1TOP1401
+HETATM 1310  O   HOH   181      10.678  24.709   9.538  1.00109.78      1TOP1402
+HETATM 1311  O   HOH   182       0.393  65.146  -3.328  1.00 94.88      1TOP1403
+HETATM 1312  O   HOH   183      -6.864  37.503  11.243  1.00 62.18      1TOP1404
+HETATM 1313  O   HOH   184     -13.660  48.026  12.416  1.00 61.63      1TOP1405
+HETATM 1314  O   HOH   185       5.799  20.994  12.624  1.00 41.97      1TOP1406
+HETATM 1315  O   HOH   186     -17.195  57.857   8.575  1.00 20.48      1TOP1407
+HETATM 1316  O   HOH   187     -24.372  58.829  -0.068  1.00 78.73      1TOP1408
+HETATM 1317  O   HOH   188       4.118  17.408  13.615  1.00 65.02      1TOP1409
+HETATM 1318  O   HOH   189     -23.928  59.348  10.787  1.00 64.86      1TOP1410
+HETATM 1319  O   HOH   190      -7.188  68.267  -4.818  1.00 53.39      1TOP1411
+HETATM 1320  O   HOH   191     -20.993  50.642   4.337  1.00 27.26      1TOP1412
+HETATM 1321  O   HOH   192      17.555  24.975  20.043  1.00 40.54      1TOP1413
+HETATM 1322  O   HOH   193      -5.466  24.653  28.834  1.00 24.48      1TOP1414
+HETATM 1323  O   HOH   194      -7.488  25.199  22.107  1.00 22.17      1TOP1415
+HETATM 1324  O   HOH   195      -0.131  61.810 -12.277  1.00 23.46      1TOP1416
+HETATM 1325  O   HOH   196     -22.001  53.115 -10.800  1.00 26.91      1TOP1417
+HETATM 1326  O   HOH   197       6.232  17.025  21.492  1.00 31.36      1TOP1418
+HETATM 1327  O   HOH   198       7.308  17.995  18.944  1.00 58.72      1TOP1419
+HETATM 1328  O   HOH   199       1.168  25.726   8.171  1.00 21.63      1TOP1420
+HETATM 1329  O   HOH   200       0.069  30.111  14.843  1.00 34.30      1TOP1421
+HETATM 1330  O   HOH   201     -27.798  49.395   0.537  1.00 50.48      1TOP1422
+HETATM 1331  O   HOH   202      11.973  37.555   6.615  1.00 20.16      1TOP1423
+HETATM 1332  O   HOH   204      12.143  25.409  27.566  1.00 31.06      1TOP1424
+HETATM 1333  O   HOH   205      -4.327  36.131  17.563  1.00 37.12      1TOP1425
+HETATM 1334  O   HOH   206       1.547  64.487 -10.652  1.00 81.38      1TOP1426
+HETATM 1335  O   HOH   207      -5.665  60.039 -16.971  1.00 33.38      1TOP1427
+HETATM 1336  O   HOH   208      -0.183  36.877  23.188  1.00 22.95      1TOP1428
+HETATM 1337  O   HOH   209     -23.500  50.378  -3.138  1.00 37.52      1TOP1429
+HETATM 1338  O   HOH   210     -23.007  45.821  -4.046  1.00 24.90      1TOP1430
+HETATM 1339  O   HOH   211      -3.751  40.731   4.275  1.00 38.13      1TOP1431
+HETATM 1340  O   HOH   212       4.063  40.467  21.289  1.00 40.26      1TOP1432
+HETATM 1341  O   HOH   213     -18.387  55.559   7.698  1.00 21.92      1TOP1433
+HETATM 1342  O   HOH   214      14.867  31.067   3.397  1.00 34.68      1TOP1434
+HETATM 1343  O   HOH   216      -1.589  37.925  25.426  1.00 39.38      1TOP1435
+HETATM 1344  O   HOH   217      -7.584  22.854  23.176  1.00 29.34      1TOP1436
+HETATM 1345  O   HOH   218      19.360  37.646   2.727  1.00 33.83      1TOP1437
+HETATM 1346  O   HOH   219      -6.877  28.039  17.121  1.00 57.34      1TOP1438
+HETATM 1347  O   HOH   220      16.894  41.976   7.195  1.00 23.37      1TOP1439
+HETATM 1348  O   HOH   221      16.958  34.788   2.772  1.00 44.43      1TOP1440
+HETATM 1349  O   HOH   222      12.490  25.767   1.979  1.00 33.00      1TOP1441
+HETATM 1350  O   HOH   223      -5.117  65.751  -8.603  1.00 31.95      1TOP1442
+HETATM 1351  O   HOH   224      -9.234  67.201  -3.275  1.00 30.45      1TOP1443
+HETATM 1352  S   SO4   225       1.615  31.436  28.271  1.00 38.57      1TOP1444
+HETATM 1353  O1  SO4   225       0.393  32.024  27.886  1.00 46.60      1TOP1445
+HETATM 1354  O2  SO4   225       1.987  31.845  29.585  1.00 49.13      1TOP1446
+HETATM 1355  O3  SO4   225       2.603  31.826  27.347  1.00 67.32      1TOP1447
+HETATM 1356  O4  SO4   225       1.498  30.026  28.191  1.00 54.35      1TOP1448
+HETATM 1357  O   HOH   227     -21.716  55.758 -11.461  1.00 34.95      1TOP1449
+HETATM 1358  O   HOH   228       0.233  13.452  24.653  1.00 84.27      1TOP1450
+HETATM 1359  O   HOH   229     -16.196  63.415  -8.704  1.00 22.69      1TOP1451
+HETATM 1360  O   HOH   230       3.598  34.125  30.837  1.00 69.98      1TOP1452
+HETATM 1361  O   HOH   231     -23.258  45.790  -1.432  1.00 31.39      1TOP1453
+HETATM 1362  O   HOH   232     -13.130  48.216  -8.672  1.00 28.49      1TOP1454
+HETATM 1363  O   HOH   233     -29.354  51.750 -11.867  1.00 55.64      1TOP1455
+HETATM 1364  O   HOH   234       5.297  30.796  27.685  1.00 22.15      1TOP1456
+HETATM 1365  O   HOH   235     -20.764  64.163  -0.849  1.00 37.56      1TOP1457
+HETATM 1366  O   HOH   236     -21.599  50.501 -11.729  1.00 40.53      1TOP1458
+HETATM 1367  O   HOH   237       9.618  34.079  -0.255  1.00 17.38      1TOP1459
+HETATM 1368  O   HOH   238      11.215  16.536  27.716  1.00 37.73      1TOP1460
+HETATM 1369  O   HOH   239       5.791  15.753  29.206  1.00 29.69      1TOP1461
+HETATM 1370  O   HOH   240       3.193  28.647  26.005  1.00 24.34      1TOP1462
+HETATM 1371  O   HOH   241     -17.699  50.080 -16.444  1.00 43.83      1TOP1463
+HETATM 1372  O   HOH   242     -18.347  51.135 -18.808  1.00 30.18      1TOP1464
+HETATM 1373  O   HOH   244     -16.336  46.618  -5.479  1.00 16.23      1TOP1465
+HETATM 1374  O   HOH   246      14.539  21.789  26.061  1.00 40.62      1TOP1466
+HETATM 1375  O   HOH   247      21.364  27.961  25.586  1.00 58.76      1TOP1467
+HETATM 1376  O   HOH   248      20.172  26.231  23.990  1.00 62.70      1TOP1468
+HETATM 1377  O   HOH   249      21.643  26.101  20.727  1.00103.83      1TOP1469
+HETATM 1378  O   HOH   250       9.978  18.060  20.095  1.00 42.97      1TOP1470
+HETATM 1379  O   HOH   251      12.411  17.562  19.018  1.00 87.47      1TOP1471
+HETATM 1380  O   HOH   252      15.114  18.019  18.933  1.00 71.87      1TOP1472
+HETATM 1381  O   HOH   254      -0.209  33.670  29.765  1.00 57.70      1TOP1473
+HETATM 1382  O   HOH   255     -14.416  45.828  -7.288  1.00 24.48      1TOP1474
+HETATM 1383  O   HOH   258      -3.967  37.957  21.345  1.00 42.54      1TOP1475
+HETATM 1384  O   HOH   260      -6.431  27.897  14.366  1.00 53.82      1TOP1476
+HETATM 1385  O   HOH   262      -0.079  19.980  10.587  1.00 37.14      1TOP1477
+HETATM 1386  O   HOH   263       0.745  18.616  25.726  1.00 71.60      1TOP1478
+HETATM 1387  O   HOH   264       2.922  20.093  26.258  1.00 53.62      1TOP1479
+HETATM 1388  O   HOH   266      16.968  36.524   0.638  1.00 88.63      1TOP1480
+HETATM 1389  O   HOH   267      16.835  23.108  13.379  1.00 44.36      1TOP1481
+HETATM 1390  O   HOH   268      14.534  21.921  15.087  1.00 86.81      1TOP1482
+HETATM 1391  O   HOH   269      12.898  18.851  13.357  1.00103.59      1TOP1483
+HETATM 1392  O   HOH   270       3.003  27.999   8.553  1.00 22.09      1TOP1484
+HETATM 1393  O   HOH   271       3.904  26.385   6.525  1.00 35.93      1TOP1485
+HETATM 1394  O   HOH   273      -1.466  30.042   7.407  1.00 63.80      1TOP1486
+HETATM 1395  O   HOH   274      -2.546  31.645   9.416  1.00 31.84      1TOP1487
+HETATM 1396  O   HOH   276       1.672  41.050  15.592  1.00 89.24      1TOP1488
+HETATM 1397  O   HOH   278     -12.371  44.785   7.536  1.00 92.46      1TOP1489
+HETATM 1398  O   HOH   279      -9.040  42.613  11.958  1.00 93.77      1TOP1490
+HETATM 1399  O   HOH   280      -2.290  45.626   5.717  1.00 51.99      1TOP1491
+HETATM 1400  O   HOH   281      -6.878  55.495   2.442  1.00 20.34      1TOP1492
+HETATM 1401  O   HOH   283      22.465  30.077  19.998  1.00 42.27      1TOP1493
+HETATM 1402  O   HOH   284      21.788  31.719  22.174  1.00 80.34      1TOP1494
+HETATM 1403  O   HOH   285      -5.155  59.810   5.260  1.00 57.73      1TOP1495
+HETATM 1404  O   HOH   286      -7.663  63.060   1.548  1.00 68.03      1TOP1496
+HETATM 1405  O   HOH   288     -11.106  62.960   3.881  1.00 63.13      1TOP1497
+HETATM 1406  O   HOH   289      -9.704  65.069   0.618  1.00 48.86      1TOP1498
+HETATM 1407  O   HOH   290     -21.471  47.475   3.119  1.00 67.95      1TOP1499
+HETATM 1408  O   HOH   291     -16.236  42.856   1.022  1.00 40.50      1TOP1500
+HETATM 1409  O   HOH   292     -23.688  43.391  -0.128  1.00 52.31      1TOP1501
+HETATM 1410  O   HOH   293     -18.426  41.314  -1.992  1.00 48.35      1TOP1502
+HETATM 1411  O   HOH   294      -9.730  38.829  -8.998  1.00 45.50      1TOP1503
+HETATM 1412  O   HOH   295      -8.697  34.888  -4.438  1.00 41.08      1TOP1504
+HETATM 1413  O   HOH   296      16.520  28.332   5.381  1.00 50.47      1TOP1505
+HETATM 1414  O   HOH   297      18.960  30.506   2.906  1.00 77.01      1TOP1506
+HETATM 1415  O   HOH   298      17.486  22.981   8.299  1.00 69.34      1TOP1507
+HETATM 1416  O   HOH   304      -3.910  41.357  14.121  1.00 51.30      1TOP1508
+HETATM 1417  O   HOH   306       2.673  27.970  29.669  1.00 41.47      1TOP1509
+HETATM 1418  O   HOH   307      17.999  28.248  29.586  1.00 80.86      1TOP1510
+HETATM 1419  O   HOH   308     -27.514  60.722   6.776  1.00100.64      1TOP1511
+HETATM 1420  O   HOH   309     -26.742  56.202   6.079  1.00 70.41      1TOP1512
+HETATM 1421  O   HOH   310      -9.372  66.347 -12.596  1.00 38.45      1TOP1513
+HETATM 1422  O   HOH   311      -4.033  67.915  -6.111  1.00 77.84      1TOP1514
+HETATM 1423  O   HOH   312      -4.216  62.611 -16.854  1.00 63.42      1TOP1515
+HETATM 1424  O   HOH   313     -16.152  57.598 -17.338  1.00 36.99      1TOP1516
+HETATM 1425  O   HOH   316     -11.628  47.554 -13.791  1.00 31.61      1TOP1517
+HETATM 1426  O   HOH   317     -11.540  43.871 -12.394  1.00 46.79      1TOP1518
+HETATM 1427  O   HOH   318     -19.454  57.035 -12.748  1.00 45.70      1TOP1519
+HETATM 1428  O   HOH   322      10.302  39.918  14.478  1.00 40.67      1TOP1520
+HETATM 1429  O   HOH   323       5.292  39.605  11.989  1.00 47.53      1TOP1521
+HETATM 1430  O   HOH   324      -2.557  39.552  23.160  1.00 42.27      1TOP1522
+HETATM 1431  O   HOH   325      -1.300  28.840  27.479  1.00 54.30      1TOP1523
+HETATM 1432  O   HOH   326       9.292  19.356  28.638  1.00 65.07      1TOP1524
+HETATM 1433  O   HOH   327      -2.876  26.239  29.110  1.00 49.91      1TOP1525
+HETATM 1434  O   HOH   331      11.082  20.506   4.602  1.00 54.52      1TOP1526
+HETATM 1435  O   HOH   332      -4.421  16.437  23.075  1.00 52.69      1TOP1527
+HETATM 1436  O   HOH   333       2.625  15.693  17.643  1.00 84.21      1TOP1528
+HETATM 1437  O   HOH   334       4.852  14.987  19.687  1.00 71.44      1TOP1529
+HETATM 1438  O   HOH   337       2.577  26.428   3.905  1.00 66.31      1TOP1530
+HETATM 1439  O   HOH   338      18.693  17.103  18.871  1.00 43.91      1TOP1531
+HETATM 1440  O   HOH   341      13.913  41.952  11.781  1.00 59.35      1TOP1532
+HETATM 1441  O   HOH   344       1.129  29.449   7.239  1.00 24.15      1TOP1533
+HETATM 1442  O   HOH   345       3.700  14.952   1.355  1.00 56.53      1TOP1534
+HETATM 1443  O   HOH   346       9.277  15.691   1.667  1.00 63.34      1TOP1535
+HETATM 1444  O   HOH   347      -3.598  28.077  16.705  1.00 28.45      1TOP1536
+HETATM 1445  O   HOH   348      -1.435  34.326  24.764  1.00 37.99      1TOP1537
+HETATM 1446  O   HOH   350     -11.807   9.970 -10.812  1.00 57.80      1TOP1538
+HETATM 1447  O   HOH   351       1.115  18.002   7.586  1.00 79.95      1TOP1539
+HETATM 1448  O   HOH   355     -25.528  49.085  -1.059  1.00 75.77      1TOP1540
+HETATM 1449  O   HOH   357       0.666  24.294   2.297  1.00 97.23      1TOP1541
+HETATM 1450  O   HOH   360     -24.226  60.911   8.490  1.00 58.03      1TOP1542
+HETATM 1451  O   HOH   363      -7.967  57.900   2.536  1.00 38.29      1TOP1543
+HETATM 1452  O   HOH   369      -6.734  62.062   5.592  1.00 86.69      1TOP1544
+HETATM 1453  O   HOH   372      -4.325  37.557  15.205  1.00 49.67      1TOP1545
+HETATM 1454  O   HOH   373      -2.599  27.804   8.129  1.00 57.01      1TOP1546
+HETATM 1455  O   HOH   376     -19.682  53.242   7.912  1.00 69.69      1TOP1547
+HETATM 1456  O   HOH   377     -16.267  50.649   8.958  1.00 32.22      1TOP1548
+HETATM 1457  O   HOH   378     -22.670  61.765  11.391  1.00 86.12      1TOP1549
+HETATM 1458  O   HOH   380     -22.302  58.077  -9.111  1.00 41.76      1TOP1550
+HETATM 1459  O   HOH   381     -15.733  65.951  -8.251  1.00 56.35      1TOP1551
+HETATM 1460  O   HOH   382     -15.565  66.209  -5.645  1.00 33.11      1TOP1552
+HETATM 1461  O   HOH   383     -20.062  63.305 -12.119  1.00 63.46      1TOP1553
+HETATM 1462  O   HOH   385     -14.860  45.014 -12.851  1.00 57.11      1TOP1554
+HETATM 1463  O   HOH   386       7.754  14.449   3.618  1.00 63.07      1TOP1555
+HETATM 1464  O   HOH   387      19.733  23.557  18.207  1.00 42.87      1TOP1556
+HETATM 1465  O   HOH   388      20.706  20.846  18.555  1.00 90.69      1TOP1557
+CONECT  829  828 1295                                                   1TOP1558
+CONECT  846  845 1295                                                   1TOP1559
+CONECT  868  867 1295                                                   1TOP1560
+CONECT  916  915 1295                                                   1TOP1561
+CONECT 1122 1121 1296                                                   1TOP1562
+CONECT 1139 1138 1296                                                   1TOP1563
+CONECT 1155 1154 1296                                                   1TOP1564
+CONECT 1164 1163 1296                                                   1TOP1565
+CONECT 1295  829  846  868  916                                         1TOP1566
+CONECT 1295 1306                                                        1TOP1567
+CONECT 1296 1122 1139 1155 1164                                         1TOP1568
+CONECT 1296 1337                                                        1TOP1569
+CONECT 1306 1295                                                        1TOP1570
+CONECT 1337 1296                                                        1TOP1571
+CONECT 1352 1353 1354 1355 1356                                         1TOP1572
+CONECT 1353 1352                                                        1TOP1573
+CONECT 1354 1352                                                        1TOP1574
+CONECT 1355 1352                                                        1TOP1575
+CONECT 1356 1352                                                        1TOP1576
+MASTER       39    3    3    8    4    0    0    6 1464    1   19   13  1TOP1577
+END                                                                     1TOP1578
