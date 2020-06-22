@@ -1,2 +1,0 @@
-solr for healthapi
-
