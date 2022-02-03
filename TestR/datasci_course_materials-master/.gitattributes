@@ -1,3 +1,0 @@
-capstone/blight/data filter=lfs diff=lfs merge=lfs -text
-*sv filter=lfs diff=lfs merge=lfs -text
-capstone/blight/data/detroit-blight-violations.csv filter=lfs diff=lfs merge=lfs -text

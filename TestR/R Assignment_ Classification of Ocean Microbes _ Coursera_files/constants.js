@@ -1,1 +1,0 @@
-define("bundles/assess/lib/constants",["require","exports","module"],function(require,exports,module){"use strict";module.exports={defaultUserHtmlClass:"coursera-assess-user",legacyUserHtmlClass:"coursera-assess-user-legacy",htmlGuideLink:"https://instructor-support.desk.com/customer/portal/articles/1441676#html"}});

@@ -1,1 +1,0 @@
-define("bundles/page/common/headerTypeToProps",["require","exports","module"],function(require,exports,module){"use strict";module.exports={ondemand:{hasCatalogButton:!1,hideInstitutions:!0,hideSearch:!0,isFullWidth:!0,fromOrigami:!0},checkout:{hasCatalogButton:!1,hideInstitutions:!0,hideSearch:!0,isFullWidth:!1,fromOrigami:!0}}});
